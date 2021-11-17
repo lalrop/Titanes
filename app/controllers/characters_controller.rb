@@ -42,7 +42,7 @@ class CharactersController < ApplicationController
 
   private
     def character_params
-      params.require(:character).permit(:name,:gloria,:distrito_id,:raza_id,:dinero,:experiencia,:salud,:potencialidad,:frenesis,:fuerza_de_voluntad,:hambre,:hidratacion,:atletismo,:estabilidad,:pelea,:destreza,:esquivar,:resistencia,:fuerza,:finta,:alerta,:sigilo,:percep_espacial,:medicina,:armas_cc,:armas_de_fuego,:armas_larga_distancia,:etiqueta,:fisica,:informatica,:arqueologia,:conducir,:criminalistica,:linguistica,:negocios,:ocultismo,:quimica,:simpatia,:persuasion,:pilotear_navegar,:autocontrol,:trato_con_animales,:topografia_geologia,:supervivencia)
+      params.require(:character).permit(:name,:gloria,:distrito_id,:raza_id,:dinero,:experiencia,:salud,:potencialidad,:frenesis,:fuerza_de_voluntad,:hambre,:hidratacion,:atletismo,:estabilidad,:pelea,:destreza,:esquivar,:resistencia,:fuerza,:finta,:alerta,:sigilo,:percep_espacial,:medicina,:armas_cc,:armas_de_fuego,:armas_larga_distancia,:etiqueta,:fisica,:informatica,:arqueologia,:conducir,:criminalistica,:linguistica,:negocios,:ocultismo,:quimica,:simpatia,:persuasion,:pilotear_navegar,:autocontrol,:trato_con_animales,:topografia_geologia,:supervivencia, {avatar:[]})
     end
   
 end

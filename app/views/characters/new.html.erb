@@ -5,9 +5,9 @@
   Raza : <%= f.select :raza_id, [['Humano', 1],['Gimpisto',2],['Destello', 3],['Chechenia',4],['Gag',5],['Fanderei',6],['Andorak',7],['Winvhel',8],['Chadack',9],['Ritulillo',10]]%><br>
   Potencialidad: <%= f.number_field :potencialidad, min:0, max:45 %><br>
   Frenesis: <%= f.number_field :frenesis, min:0, max:45 %><br>
-
-    <div>
-        <%= f.submit %>
-    </div>
+  Imagen: <%= f.file_field :avatar%>
+  <div>
+      <%= f.submit %>
+  </div>
 
 <%end%> 
