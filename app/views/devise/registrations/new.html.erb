@@ -1,0 +1,33 @@
+<h2 class="my-4">Registro</h2>
+<div class="text-center">
+
+  <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+    <%= render "devise/shared/error_messages", resource: resource %>
+
+    <div class="field my-4">
+      <%= f.label :email, class:"fw-bold text-light" %><br />
+      <%= f.email_field :email, autofocus: true, autocomplete: "Email", class:"text-center my-2 bg-transparent text-white" %>
+    </div>
+
+    <div class="field my-4">
+      <%= f.label :password, "Contraseña", class:"fw-bold text-light" %>
+      <% if @minimum_password_length %>
+      <em class="fw-bold text-light"">(<%= @minimum_password_length %> caracteres minimos)</em>
+      <% end %><br />
+      <%= f.password_field :password, autocomplete: "Nueva Contraseña",class:"text-center my-2 bg-transparent text-white" %>
+    </div>
+
+    <div class="field my-4 ">
+      <%= f.label :password_confirmation, "Repitela camaron! No hay tiempo...", class:"fw-bold text-light" %><br />
+      <%= f.password_field :password_confirmation, autocomplete: "Nueva Contraseña", class:"text-center my-2 bg-transparent text-white" %>
+    </div>
+
+    <div class="actions row">
+      <%= f.submit "Resgistrarse", class:"btn btn-danger" %>
+      <%= button_to "Volver", characters_path, method: :get, class:"btn btn-secondary my-2"%>
+    </div>
+
+  <% end %>
+
+
+</div>

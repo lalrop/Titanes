@@ -1,0 +1,21 @@
+<%= form_for @character do |f| %>
+    <div>
+        Atletismo: <%= f.number_field :atletismo, in:0..10 %><br>
+        Estabilidad: <%= f.number_field :estabilidad, in:0..10 %><br>
+        Pelea:<%= f.number_field :pelea, in:0..10 %><br>
+        Destreza: <%= f.number_field :destreza, in:0..10 %><br>
+        Esquivar:<%= f.number_field :esquivar, in:0..10 %><br>
+        Resistencia: <%= f.number_field :resistencia, in:0..10 %><br>
+        Fuerza: <%= f.number_field :fuerza, in:0..10 %><br>
+        Finta: <%= f.number_field :finta, in:0..5 %><br>
+        Alerta: <%= f.number_field :alerta, in:0..5 %><br>
+        Sigilo: <%= f.number_field :sigilo, in:0..5 %><br>
+        Percepcion espacial: <%= f.number_field :percep_espacial, in:0..5 %><br>
+        Medicina: <%= f.number_field :medicina, in:0..5 %><br>
+    </div>
+    <div>
+        <%= f.submit 'Completar' %>
+    </div>
+<%end%>  
+
+

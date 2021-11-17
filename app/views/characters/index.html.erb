@@ -1,0 +1,28 @@
+<h1>Personajes</h1>
+
+<div class="d-flex flex-row">
+    <% @characters.each do |character|%>
+        <div class="card my-5 bg-transparent" style="width: 18rem;">
+            
+            <div class="card-body">
+                <img src="..." class="card-img-top" alt="...">
+                <h5 class="card-title">
+                    <%= character.name%>
+                </h5>
+                <ul class="list-group">
+                    <li class="list-group-item bg-transparent border border-light text-light">Gloria: <%=character.gloria%></li>
+                    <li class="list-group-item bg-transparent border border-light text-light">Distrito: <%=character.distrito_id%></li>
+                    <li class="list-group-item bg-transparent border border-light text-light">Salud: <%=character.salud%></li>
+                    <li class="list-group-item bg-transparent border border-light text-light">Potencialidad: <%=character.potencialidad%></li>
+                    <li class="list-group-item bg-transparent border border-light text-light">Frenesis: <%=character.frenesis%></li>
+
+                </ul>
+                <a href="<%=character_path(character)%>" class="btn btn-danger my-4">Ver mas...</a>
+                
+            </div>
+        </div>
+    <%end%>
+</div>
+
+<%= button_to 'Crear Personaje', new_character_path, method: :get%>
+<%= button_to 'Salir', destroy_user_session_path, method: :delete%>

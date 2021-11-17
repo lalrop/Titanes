@@ -1,0 +1,53 @@
+ <table>
+  <tr>
+    <td>Atletismo:</td>
+    <td><%= @character.atletismo%></td>
+  </tr>
+  <tr>
+    <td>Estabilidad:</td>
+    <td><%= @character.estabilidad %></td>
+  </tr>
+    <tr>
+    <td>Pelea</td>
+    <td><%= @character.pelea %></td>
+  </tr>
+    <tr>
+    <td>Destreza</td>
+    <td><%= @character.destreza %></td>
+  </tr>
+    <tr>
+    <td>Esquivar</td>
+    <td><%= @character.esquivar %></td>
+  </tr>
+    <tr>
+    <td>Resistencia</td>
+    <td><%= @character.resistencia %></td>
+  </tr>
+    <tr>
+    <td>Fuerza</td>
+    <td><%= @character.fuerza %></td>
+  </tr>
+  <tr>
+    <td>Finta</td>
+    <td><%= @character.finta %></td>
+  </tr>
+  <tr>
+    <td>Alerta</td>
+    <td><%= @character.alerta %></td>
+  </tr>
+  <tr>
+    <td>Sigilo</td>
+    <td><%= @character.sigilo %></td>
+  </tr>
+  <tr>
+    <td>Percepcion espacial</td>
+    <td><%= @character.percep_espacial %></td>
+  </tr>
+  <tr>
+    <td>Medicina</td>
+    <td><%= @character.medicina %></td>
+  </tr>
+
+</table> 
+
+<%= button_to 'Salir', characters_path, method: :get%>
