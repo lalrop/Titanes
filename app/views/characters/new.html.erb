@@ -23,7 +23,18 @@
     </div>
   </div>
 
-  Raza : <%= f.select :raza_id, [['Humano', 1],['Gimpisto',2],['Destello', 3],['Chechenia',4],['Gag',5],['Fanderei',6],['Andorak',7],['Winvhel',8],['Chadack',9],['Ritulillo',10]]%><br>
+  <div>
+    Raza : <%= f.select :raza_id, [['Humano', 1],['Gimpisto',2],['Destello', 3],['Chechenia',4],['Gag',5],['Fanderei',6],['Andorak',7],['Winvhel',8],['Chadack',9],['Ritulillo',10]]%><br>
+    
+    <div id="liveToast2" class="toast align-items-center text-white bg-dark" role="alert" aria-live="assertive" aria-atomic="true" data-bs-delay="8000">
+      <div class="d-flex">
+        <div class="toast-body">
+        </div>
+        <button type="button" class="btn-close me-2 m-auto" data-bs-dismiss="toast" aria-label="Close"></button>
+      </div>
+    </div>
+
+  </div>
   
   Potencialidad: <%= f.number_field :potencialidad, min:0, max:45 %><br>
   
@@ -51,13 +62,37 @@
   "Los khaleos (gentilicio utilizado para los habitantes de Khronos) viven mostrando un aparente desinterés. Pero no te dejes engañar, no es más que una máscara para esconder una pasional y profunda personalidad, llena de secretos y deseos. Las ofensas no los afectan, se consideran los más veloces del reino, por lo tanto… ¿Cómo es posible que sientan aversión por seres que están por debajo en la jerarquía de poder? Viven su ego a través de una mirada misericordiosa hacia los demás, y no como un orgullo desbocado –a menos que quieran provocar a alguien–.",
   "Nos conocen como los hinchabolas de Hochland, los payasos, irresponsables seres de eterna sonrisa, ¡los imbéciles! Jekjekejke. Rehuyen de nosotros por nuestra costumbre de exhibir… ehmm… sus defectos, apuntarles sus vergüenzas y reír hasta no parar. Rehuyen de nuestra mente creativa, capaz de… de… jekjekejke asaltar un asilo para organizar una carrera de sillitas de ruedas, ¿por qué no?"];
   
-  
+
+  var toastTrigger2 = document.getElementById('character_raza_id');
+  var toastLiveExample2 = document.getElementById('liveToast2');
+  var descripcionesRazas = ["El ser humano Titán puede entenderse como un humano que trasciende sus propias habilidades naturales. Es capaz de usar el Frènesis y la Potencialidad por voluntad propia, además poseer la capacidad de discernimiento, la cual lo faculta para controlar sus impulsos. Una capacidad que muy pocas especies tienen.",
+  "Nativos del territorio compuesto por el distrito de Woohan, especialmente en el sector de las montañas. Su apariencia es similar a la de un mono, poseen pelo en todo el cuerpo, una extensa cola y en su rostro mantienen los mismos rasgos que los primates. Un símil a esta especie es el rey mono Sun Wukong de la mitología china. ",
+  "Marginados desde sus inicios, los Destellos son una raza de seres humanos con una particularidad especial en la piel que les permite absorber la luz del día y reflejarla a modo de incandescencia por las noches.Morfológicamente los Destellos son igual que los humanos, con algunas diferencias más marcadas, como la piel lechosa y el pelo blanco por completo. El lector puede asemejar a esta raza con las personas que padecen albinismo, con la salvedad de que los Destellos absorben con satisfacción la luz.",
+  "Con una proporción levemente más larga en el tamaño de sus piernas en relación al cuerpo, los Chechenias son una raza que comparten la morfología de los seres humanos con algunos rasgos propios de los felinos. Orejas un poco puntiagudas, dedos alargados con uñas retráctiles y ojos algo más grandes, con una fina pupila vertical que en momentos de excitación los diferencian de forma más notoria con la especie humana.",
+  "Como una rama hermana de la especie humana, los Gags poseen una altura promedio de 5 metros con grandes manos, pies, abundante vello en la espalda y pecho (independiente del género), y una voz tremendamente ronca. Entre todas las especies con características humanoides, esta es la más alta, corpulenta y lenta. A causa de su gran tamaño, las conexiones involucradas en transmitir la percepción del entorno al cerebro, es decir, las señales producidas por los sentidos, son lentas. Tienen una personalidad más pausada, con una capacidad de razonamiento más lánguida, lo cual les ha valido ser considerados como 'tontos'.",
+  "Los Fanderei son humanoides de piel entre azuleja y celeste. Por lo general, son de facciones finas, contextura esbelta y miden entre 1.8 a 2 metros de altura. Al momento de nacer, los Fanderei sufren una especie de trance, en el cual se reproduce la escena de separación entre Gianna, la Diosa de la Luna, y Gabandur, el Señor del Inframundo. En aquel trance el Fanderei sufre convulsiones debido a una lucha interna entre esas dos energías. La energía que predomine será la que defina el humor y características especiales en el Fanderei.",
+  "Tienen un cuerpo humanoide, de contextura delgada y esbelta. Poseen un rostro con características humanas, a excepción de una frente de sutiles escamas, al igual que sus mejillas por sobre los costados de la mandíbula. Sus ojos están marcados por ojeras negras que rodean unos 0.3 centímetros la cuenca ocular.Suelen ser de personalidad retraída, introspectiva, escondiendo sus sentimientos y emociones en todo momento.",
+  "Son humanoides de piel grisácea, extremadamente delgados, sus huesos se marcan bajo la piel debido a la carencia de musculatura. Sus rostros tienen la particularidad de estar marcados con una horrible fisura que une los extremos derecho e izquierdo de los labios con cada ojo respectivo. Nacen ciegos y con las cuerdas vocales casi totalmente destruidas, su tono de voz es similar al de los fumadores que la han perdido casi por completo.",
+  "Los Chadacks son humanoides corpulentos, pero sobre la base de grasa, cuya distinción de los humanos, además de la grotesca complexión, yace en que poseen cola y cabeza de cerdo. Miden entre 1.7 a 2.4 metros. Existen variaciones rosadas, cafés y amarillas en cuanto a su color de piel. Carecen de cabello y de la mayoría de los vellos. No obstante, a los Chadacks que nacen con la nariz más humana les tiende a crecer un pequeño bigote. ",
+  "Los Ritulillos son humanoides con características físicas similares a las de una rata. Gruesas paletas y largos bigotes delatan su roedora apariencia. Suelen medir entre 1.48 a 1.58 mts. La codicia y avaricia de los Ritulillos es desmesurada. Se desenvuelven con excelencia a la hora de realizar cualquier tipo de negocios."]
+
   if (toastTrigger) {
     toastTrigger.addEventListener('click', function () {
-      toastLiveExample.textContent = descripciones[toastTrigger.value -1]
+      toastLiveExample.textContent = descripcionesDistritos[toastTrigger.value -1]
       var toast = new bootstrap.Toast(toastLiveExample)
 
       toast.show()
     })
   }
+
+  if (toastTrigger2) {
+    toastTrigger2.addEventListener('click', function () {
+      toastLiveExample2.textContent = descripcionesRazas[toastTrigger2.value -1]
+      var toast = new bootstrap.Toast(toastLiveExample2)
+
+      toast.show()
+    })
+  }
+
+  
 </script>
