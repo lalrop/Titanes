@@ -1,29 +1,13 @@
 <%# Pensar la forma para que aparezca la informacion de manera colapsable.
 Quizas crear un modelo con las descripciones de cada atributo?? %>
 
- <table>
+ <table class="text-center">
   <tr>
     <td>
-      
-        <a class="btn btn-primary" data-bs-toggle="collapse" href="#atletismo" role="button" aria-expanded="false" aria-controls="collapseExample">
-          Atletismo
-        </a>
-      
-      <div>
-        <div class="collapse collapse-horizontal" id="atletismo">
-          <div class="card card-body" style="width:300px">
-            Some placeholder content for the collapse component. This panel is hidden by default but revealed when the user activates the relevant trigger.
-          </div>
-        </div>
-      </div>
+      Atletismo
     </td>
     <td><%= @character.atletismo%></td>
   </tr>
-
-
-
-
-
   <tr>
     <td>Estabilidad:</td>
     <td><%= @character.estabilidad %></td>
@@ -68,7 +52,7 @@ Quizas crear un modelo con las descripciones de cada atributo?? %>
     <td>Medicina</td>
     <td><%= @character.medicina %></td>
   </tr>
+</table>
 
-</table> 
-
-<%= button_to 'Salir', characters_path, method: :get%>
+    <%= button_to 'Editar', edit_character_path(@character.id), class:"btn btn-danger mt-3", method: :get%>
+    <%= button_to 'Salir', characters_path, method: :get, class:"btn btn-light my-3"%>

@@ -5,7 +5,6 @@
         <div class="card my-5 bg-transparent" style="width: 18rem;">
             
             <div class="card-body">
-                <img src="..." class="card-img-top" alt="...">
                 <h5 class="card-title">
                     <%= character.name%>
                 </h5>
@@ -17,7 +16,15 @@
                     <li class="list-group-item bg-transparent border border-light text-light">Frenesis: <%=character.frenesis%></li>
 
                 </ul>
-                <a href="<%=character_path(character)%>" class="btn btn-danger my-4">Ver mas...</a>
+                <ul>
+                    <a href="<%=character_path(character)%>" class="btn btn-danger mt-4">Combate</a>
+                </ul>
+                <ul>
+                    <a href="<%=character_path(character)%>" class="btn btn-danger my-1">Tecnicas</a>
+                </ul>
+                <ul>
+                    <a href="<%=character_path(character)%>" class="btn btn-danger my-1">Tinieblas</a>
+                </ul>
                 
             </div>
         </div>
