@@ -1,13 +1,63 @@
 <%= form_for @character do |f| %>
   Nombre: <%= f.text_field :name %> <br>
-  Distrito: 
-  <%= f.select :distrito_id,[['Kaiser', 1],['Drake',2],['Ignea Mortis', 3],['Tenjou',4],['Samsara',5],['Stahl',6],['Khronos',7],['Woohan',8]]%><br>
-  Raza : <%= f.select :raza_id, [['Humano', 1],['Gimpisto',2],['Destello', 3],['Chechenia',4],['Gag',5],['Fanderei',6],['Andorak',7],['Winvhel',8],['Chadack',9],['Ritulillo',10]]%><br>
-  Potencialidad: <%= f.number_field :potencialidad, min:0, max:45 %><br>
-  Frenesis: <%= f.number_field :frenesis, min:0, max:45 %><br>
-  Imagen: <%= f.file_field :avatar%>
+  
   <div>
-      <%= f.submit %>
+    Distrito: 
+    <select name="character[distrito_id]" id="character_distrito_id">
+      <option value="1">Kaiser</option>
+      <option value="2">Drake</option>
+      <option value="3">Ignea Mortis</option>
+      <option value="4">Tenjou</option>
+      <option value="5">Samsara</option>
+      <option value="6">Stahl</option>
+      <option value="7">Khronos</option>
+      <option value="8">Woohan</option>
+    </select><br>
+  
+    <div id="liveToast" class="toast align-items-center text-white bg-dark" role="alert" aria-live="assertive" aria-atomic="true" data-bs-delay="8000">
+      <div class="d-flex">
+        <div class="toast-body">
+        </div>
+        <button type="button" class="btn-close me-2 m-auto" data-bs-dismiss="toast" aria-label="Close"></button>
+      </div>
+    </div>
+  </div>
+
+  Raza : <%= f.select :raza_id, [['Humano', 1],['Gimpisto',2],['Destello', 3],['Chechenia',4],['Gag',5],['Fanderei',6],['Andorak',7],['Winvhel',8],['Chadack',9],['Ritulillo',10]]%><br>
+  
+  Potencialidad: <%= f.number_field :potencialidad, min:0, max:45 %><br>
+  
+  Frenesis: <%= f.number_field :frenesis, min:0, max:45 %><br>
+  
+  <div>
+      <%= f.submit 'Crear Personaje', class:"btn btn-danger my-4" %>
   </div>
 
 <%end%> 
+
+
+
+
+
+<script>
+  var toastTrigger = document.getElementById('character_distrito_id');
+  var toastLiveExample = document.getElementById('liveToast');
+  var descripcionesDistritos = ["El kaizo promedio es un individuo cuya mentalidad se caracteriza por lo práctico. No es el distrito del cual nacen los mayores artistas ni filósofos del reino, pero sí es el distrito donde puedes elegir a ojos cerrados a un individuo y dar por sentado que tendrás a un excelente soldado sin atisbo de cobardía. En una frase, el kaizo se define como “un sujeto que no puede morir sin haber combatido cien veces",
+  "Saqueadores atraídos por la riqueza, el sexo y la abundancia en la mesa. Han sido temidos desde los tiempos en los que Hochland no era más que una tierra habitada por unas cuantas tribus. Son feroces amantes de los combates en los que se derraman litros de sangre. Su gloria yace en el deshonor e infortunio de los demás.", 
+  "Los igneas conforman una cultura diversa, de rasgos heredados de sus distritos anteriores, con odio y hambre como unificador, además del fuego. Al ingresar a este distrito, sea por donde sea, los individuos deben pagar un precio para borrar su historial anterior y ser nombrados igneas; esto es, la devoción al ignea, el cual consiste en entregar parte de sus cuerpos a las llamas a fin de cargar sus pecados en el cuerpo a modo de cicatriz.",
+  "Hablar sobre los tenjuins requiere pensar en cada persona como dos seres dentro de un mismo cuerpo. A uno de estos jamás lo conocerás, a no ser que decidas entrar al bosque de Tenjou sin ser detectado (suerte con aquello). Mientras que el otro será un sujeto políticamente correcto en sus decisiones, de sonrisa extraña, ojos sin expresión y carente de impulsividades.",
+  "Los samseos tienden a ser extrovertidos. Tienen una extrema fijación con cualquier tipo de secreto. Son expertos en algunas de las artes necesarias para obtener información oculta; entre las más destacadas están el psicoanálisis, el dominio de lenguas a nivel nativo, experticia en lenguaje corporal y otras. En materias de espionaje disputan el primer lugar contra la serpiente de Hochland, Tenjou.",
+  "En apariencia son, a modo general, de tez blanca: una especie de mezcla resultante entre los rusos y nórdicos de nuestro mundo. Acostumbrados al invierno eterno, los abrigos y pieles conforman parte de la indumentaria entre la mayoría de sus habitantes.",
+  "Los khaleos (gentilicio utilizado para los habitantes de Khronos) viven mostrando un aparente desinterés. Pero no te dejes engañar, no es más que una máscara para esconder una pasional y profunda personalidad, llena de secretos y deseos. Las ofensas no los afectan, se consideran los más veloces del reino, por lo tanto… ¿Cómo es posible que sientan aversión por seres que están por debajo en la jerarquía de poder? Viven su ego a través de una mirada misericordiosa hacia los demás, y no como un orgullo desbocado –a menos que quieran provocar a alguien–.",
+  "Nos conocen como los hinchabolas de Hochland, los payasos, irresponsables seres de eterna sonrisa, ¡los imbéciles! Jekjekejke. Rehuyen de nosotros por nuestra costumbre de exhibir… ehmm… sus defectos, apuntarles sus vergüenzas y reír hasta no parar. Rehuyen de nuestra mente creativa, capaz de… de… jekjekejke asaltar un asilo para organizar una carrera de sillitas de ruedas, ¿por qué no?"];
+  
+  
+  if (toastTrigger) {
+    toastTrigger.addEventListener('click', function () {
+      toastLiveExample.textContent = descripciones[toastTrigger.value -1]
+      var toast = new bootstrap.Toast(toastLiveExample)
+
+      toast.show()
+    })
+  }
+</script>
