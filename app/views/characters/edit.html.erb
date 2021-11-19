@@ -1,10 +1,11 @@
 <h1 class="text-center text-light mb-4"> Combate </h1>
 
-<div id="liveToast" class="toast align-items-center text-white bg-dark" role="alert" aria-live="assertive" aria-atomic="true" data-bs-delay="10000">
-    <div class="d-flex">
-    <div class="toast-body">
-    </div>
-    <button type="button" class="btn-close me-2 m-auto" data-bs-dismiss="toast" aria-label="Close"></button>
+<div id="toastAtributo" class="d-none align-items-center text-white bg-dark text-center" role="alert" aria-live="assertive" aria-atomic="true" data-bs-delay="10000">
+    <div class="d-flex justify-content-center">
+        <div>
+            <span class="badge bg-secondary mx-2" onclick="ocultar()">X</span>
+            <p class="d-inline" id="contentAtributo">.</p>
+        </div>
     </div>
 </div>
 
@@ -12,30 +13,31 @@
 
 <%= form_for @character do |f| %>
     <div>
-        <a href="#" class="link-secondary mx-3" style="text-decoration:none" id="Atletismo"> Atletismo: </a> 
-            <%= f.number_field :atletismo, in:0..10 %><br>
-        <a href="#" class="link-secondary mx-3" style="text-decoration:none" id= "Estabilidad"> Estabilidad: </a> 
-            <%= f.number_field :estabilidad, in:0..10 %><br>
-        <a href="#" class="link-secondary mx-3" style="text-decoration:none" id="Pelea"> Pelea: </a>
-            <%= f.number_field :pelea, in:0..10 %><br>
-        <a href="#" class="link-secondary mx-3" style="text-decoration:none" id="Destreza"> Destreza: </a> 
-            <%= f.number_field :destreza, in:0..10 %><br>
-        <a href="#" class="link-secondary mx-3" style="text-decoration:none" id="Esquivar"> Esquivar: </a>
-            <%= f.number_field :esquivar, in:0..10 %><br>
-        <a href="#" class="link-secondary mx-3" style="text-decoration:none" id="Resistencia"> Resistencia: </a> 
-            <%= f.number_field :resistencia, in:0..10 %><br>
-        <a href="#" class="link-secondary mx-3" style="text-decoration:none" id="Fuerza"> Fuerza: </a> 
-            <%= f.number_field :fuerza, in:0..10 %><br>
-        <a href="#" class="link-secondary mx-3" style="text-decoration:none" id="Finta"> Finta: </a> 
-            <%= f.number_field :finta, in:0..5 %><br>
-        <a href="#" class="link-secondary mx-3" style="text-decoration:none" id="Alerta"> Alerta: </a> 
-            <%= f.number_field :alerta, in:0..5 %><br>
-        <a href="#" class="link-secondary mx-3" style="text-decoration:none" id="Sigilo"> Sigilo: </a> 
-            <%= f.number_field :sigilo, in:0..5 %><br>
-        <a href="#" class="link-secondary mx-3" style="text-decoration:none" id="Percepcion_espacial"> Percepcion espacial: </a> 
-            <%= f.number_field :percep_espacial, in:0..5 %><br>
-        <a href="#" class="link-secondary mx-3" style="text-decoration:none" id="Medicina"> Medicina:  </a>
-            <%= f.number_field :medicina, in:0..5 %><br>
+        <p onclick="toast(event)">Atletismo:</p>
+        <%= f.number_field :atletismo, in:0..10 %>
+        <p onclick="toast(event)"> Estabilidad:</p>
+        <%= f.number_field :estabilidad, in:0..10 %>
+        <p onclick="toast(event)">Pelea:</p>
+        <%= f.number_field :pelea, in:0..10 %>
+        <p onclick="toast(event)">Destreza:</p>
+        <%= f.number_field :destreza, in:0..10 %>
+        <p onclick="toast(event)">Esquivar:</p>
+        <%= f.number_field :esquivar, in:0..10 %>
+        <p onclick="toast(event)">Resistencia:</p>
+        <%= f.number_field :resistencia, in:0..10 %>
+        <p onclick="toast(event)">Fuerza:</p>
+        <%= f.number_field :fuerza, in:0..10 %>
+        <p onclick="toast(event)">Finta:</p>
+        <%= f.number_field :finta, in:0..5 %>
+        <p onclick="toast(event)">Alerta:</p>
+        <%= f.number_field :alerta, in:0..5 %>
+        <p onclick="toast(event)">Sigilo:</p>
+        <%= f.number_field :sigilo, in:0..5 %>
+        <p onclick="toast(event)">Percepcion espacial:</p>
+        <%= f.number_field :percep_espacial, in:0..5 %>
+        <p onclick="toast(event)">Medicina:</p>
+        <%= f.number_field :medicina, in:0..5 %>
+        
     </div>
     <div>
         <%= f.submit 'Completar', class:"btn btn-danger my-4" %>
@@ -44,30 +46,54 @@
 
 
 <script>
-  var toastTrigger = document.getElementsByTagName("a");
-  var toastLiveExample = document.getElementById('liveToast');
-  var descripcionesCombate = [
-      "Este rasgo es la capacidad física que posee el personaje para ejecutar maniobras de desplazamiento no ofensivas en un radio mayor a tres metros, es decir, volteretas, saltos, correr, trotar, etc.",
-      "Este rasgo es la capacidad física para contener o resistir el impacto de un ataque mediante una postura sin desplazamiento. Considera movimientos tales como capturar un puño, endurecer un musculo, cubrirse, etc.",
-      "Este rasgo es la capacidad física para ejecutar movimientos ofensivos y/o defensivos sin uso de armas, en un radio de tres metros; entiéndase como golpes de puño, patadas, cabezazos, llaves, etc.",
-      "Es la habilidad física que posee el personaje para apuntar o ejecutar golpes con armas a una velocidad y distancia determinada de acuerdo a la naturaleza del arma.La Destreza en Armas C.C involucra la velocidad en el uso de armas que requieran asestar golpes directos para generar cortes, contenciones y/o perforaciones.La Destreza en el uso de Armas de Fuego en este tipo de armas se utiliza para apuntar a una velocidad en un tiempo determinado.",
-      "Este rasgo es la capacidad física para evadir un ataque dentro de un radio de tres metros. Esquivar considera: movimientos de hombros, flexiones de rodillas, saltos laterales o verticales, etc.",
-      "Es la capacidad física para mitigar o anular completamente un daño entrante usando la propia fortaleza corporal.",
-      "Es la potencia física que representa el daño que puede generar el personaje con una acción. Este recurso también ilustra la capacidad del personaje para mover distintas magnitudes de peso.",
-      "Es la habilidad para engañar al oponente realizando una simulación, un amague, de golpes con objeto de mermar la capacidad de reacción del oponente.",
-      "Es la capacidad para detectar cualquier tipo de reacción sorpresiva por parte del oponente, incluso detectar sus movimientos ocultos",
-      "Es la habilidad para esconder la presencia haciendo uso del espacio y/o las condiciones del ambiente, con el fin realizar un ataque sorpresa hacia el objetivo.",
-      "Es la capacidad de ser consciente del entorno a través de los sentidos con el fin de ubicar objetos, personas, aromas, texturas, huellas, sabores o cualquier tipo de rastro que le sea de ayuda para alcanzar un objetivo.",
-      "Es la capacidad que posee un personaje sobre la base de sus conocimientos para asistir médicamente, y con el material necesario, gran parte de las heridas propias y de sus compañeros."
-  ];
-    for (let i = 1; i < toastTrigger.length; i++) {
-      if (toastTrigger) {
-        toastTrigger[i].addEventListener('click', function () {
-            toastLiveExample.textContent = descripcionesCombate[i]
-            var toast = new bootstrap.Toast(toastLiveExample)
-            toast.show()
-         })
-        
+  var toastLiveExample = document.getElementById('toastAtributo');
+  var contentToast = document.getElementById('toastAtributo');
+  var contentAtributo = document.getElementById('contentAtributo');
+    function toast(e) {
+        contentToast.classList.remove('d-none');
+        var atribute = e.target.textContent;    
+        switch (atribute) {
+            case "Atletismo:":
+                contentAtributo.innerHTML = "Este rasgo es la capacidad física que posee el personaje para ejecutar maniobras de desplazamiento no ofensivas en un radio mayor a tres metros, es decir, volteretas, saltos, correr, trotar, etc.";
+            break;
+            case "Estabilidad:":
+                contentAtributo.innerHTML = "Este rasgo es la capacidad física para contener o resistir el impacto de un ataque mediante una postura sin desplazamiento. Considera movimientos tales como capturar un puño, endurecer un musculo, cubrirse, etc."
+            break;
+            case "Pelea:":
+                contentAtributo.innerHTML = "Este rasgo es la capacidad física para ejecutar movimientos ofensivos y/o defensivos sin uso de armas, en un radio de tres metros; entiéndase como golpes de puño, patadas, cabezazos, llaves, etc."
+            break;
+            case "Destreza:":
+                contentAtributo.innerHTML = "Es la habilidad física que posee el personaje para apuntar o ejecutar golpes con armas a una velocidad y distancia determinada de acuerdo a la naturaleza del arma.La Destreza en Armas C.C involucra la velocidad en el uso de armas que requieran asestar golpes directos para generar cortes, contenciones y/o perforaciones.La Destreza en el uso de Armas de Fuego en este tipo de armas se utiliza para apuntar a una velocidad en un tiempo determinado."
+            break;
+            case "Esquivar:":
+                contentAtributo.innerHTML = "Este rasgo es la capacidad física para evadir un ataque dentro de un radio de tres metros. Esquivar considera: movimientos de hombros, flexiones de rodillas, saltos laterales o verticales, etc."
+            break;
+            case "Resistencia:":
+                contentAtributo.innerHTML = "Es la capacidad física para mitigar o anular completamente un daño entrante usando la propia fortaleza corporal."
+            break;
+            case "Fuerza:":
+                contentAtributo.innerHTML = "Es la potencia física que representa el daño que puede generar el personaje con una acción. Este recurso también ilustra la capacidad del personaje para mover distintas magnitudes de peso."
+            break;
+            case "Finta:":
+                contentAtributo.innerHTML = "Es la habilidad para engañar al oponente realizando una simulación, un amague, de golpes con objeto de mermar la capacidad de reacción del oponente."
+            break;
+            case "Alerta:":
+                contentAtributo.innerHTML = "Es la capacidad para detectar cualquier tipo de reacción sorpresiva por parte del oponente, incluso detectar sus movimientos ocultos" 
+            break;
+            case "Sigilo:":
+                contentAtributo.innerHTML = "Es la habilidad para esconder la presencia haciendo uso del espacio y/o las condiciones del ambiente, con el fin realizar un ataque sorpresa hacia el objetivo."
+            break;
+            case "Percepcion Espacial:":
+                contentAtributo.innerHTML = "Es la capacidad de ser consciente del entorno a través de los sentidos con el fin de ubicar objetos, personas, aromas, texturas, huellas, sabores o cualquier tipo de rastro que le sea de ayuda para alcanzar un objetivo."
+            break;
+            case "Medicina:":
+                contentAtributo.innerHTML = "Es la capacidad que posee un personaje sobre la base de sus conocimientos para asistir médicamente, y con el material necesario, gran parte de las heridas propias y de sus compañeros."
+            break;
+        } 
     }
-  }
+
+    function ocultar() {
+        contentToast.classList.add('d-none');
+    }
+
 </script>
