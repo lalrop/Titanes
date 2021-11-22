@@ -1,6 +1,6 @@
 <h1 class="text-center text-light mb-4"> Combate </h1>
 
-<div id="toastAtributo" class="d-none align-items-center text-white bg-dark text-center" role="alert" aria-live="assertive" aria-atomic="true" data-bs-delay="10000">
+<div id="toastAtributo" class="d-none align-items-center shadow text-white bg-secondary bg-gradient text-center my-3 rounded py-3 px-3" role="alert" aria-live="assertive" aria-atomic="true" data-bs-delay="10000">
     <div class="d-flex justify-content-center">
         <div>
             <span class="badge bg-secondary mx-2" onclick="ocultar()">X</span>
@@ -13,30 +13,78 @@
 
 <%= form_for @character do |f| %>
     <div>
-        <p onclick="toast(event)">Atletismo:</p>
-        <%= f.number_field :atletismo, in:0..10 %>
-        <p onclick="toast(event)"> Estabilidad:</p>
-        <%= f.number_field :estabilidad, in:0..10 %>
-        <p onclick="toast(event)">Pelea:</p>
-        <%= f.number_field :pelea, in:0..10 %>
-        <p onclick="toast(event)">Destreza:</p>
-        <%= f.number_field :destreza, in:0..10 %>
-        <p onclick="toast(event)">Esquivar:</p>
-        <%= f.number_field :esquivar, in:0..10 %>
-        <p onclick="toast(event)">Resistencia:</p>
-        <%= f.number_field :resistencia, in:0..10 %>
-        <p onclick="toast(event)">Fuerza:</p>
-        <%= f.number_field :fuerza, in:0..10 %>
-        <p onclick="toast(event)">Finta:</p>
-        <%= f.number_field :finta, in:0..5 %>
-        <p onclick="toast(event)">Alerta:</p>
-        <%= f.number_field :alerta, in:0..5 %>
-        <p onclick="toast(event)">Sigilo:</p>
-        <%= f.number_field :sigilo, in:0..5 %>
-        <p onclick="toast(event)">Percepcion espacial:</p>
-        <%= f.number_field :percep_espacial, in:0..5 %>
-        <p onclick="toast(event)">Medicina:</p>
-        <%= f.number_field :medicina, in:0..5 %>
+        <div>
+            <span class="my-2 badge bg-danger rounded-pill text-center">
+                    <p onclick="toast(event)" class="my-2 mx-3">Atletismo:</p>
+            </span>
+            <%= f.number_field :atletismo, in:0..10, class:"bg-transparent border border-white text-white text-center rounded" %>
+        </div>
+        <div>
+            <span class="my-2 badge bg-danger rounded-pill text-center">
+                <p onclick="toast(event)" class="my-2 mx-3">Estabilidad:</p>
+            </span>
+            <%= f.number_field :estabilidad, in:0..10 ,class:"bg-transparent border border-white text-white text-center rounded"%>
+        </div>
+        <div>
+            <span class="my-2 badge bg-danger rounded-pill text-center">
+                <p onclick="toast(event)" class="my-2 mx-3">Pelea:</p>
+            </span>
+            <%= f.number_field :pelea, in:0..10 ,class:"bg-transparent border border-white text-white text-center rounded"%>
+        </div>
+        <div>
+            <span class="my-2 badge bg-danger rounded-pill text-center">
+                <p onclick="toast(event)" class="my-2 mx-3">Destreza:</p>
+            </span>
+            <%= f.number_field :destreza, in:0..10 ,class:"bg-transparent border border-white text-white text-center rounded"%>
+        </div>
+        <div>
+            <span class="my-2 badge bg-danger rounded-pill text-center">
+                <p onclick="toast(event)" class="my-2 mx-3">Esquivar:</p>
+            </span>
+            <%= f.number_field :esquivar, in:0..10 ,class:"bg-transparent border border-white text-white text-center rounded"%>
+        </div>
+        <div>
+            <span class="my-2 badge bg-danger rounded-pill text-center">
+                <p onclick="toast(event)" class="my-2 mx-3">Resistencia:</p>
+            </span>
+            <%= f.number_field :resistencia, in:0..10 ,class:"bg-transparent border border-white text-white text-center rounded"%>
+        </div>
+        <div>
+            <span class="my-2 badge bg-danger rounded-pill text-center">
+                <p onclick="toast(event)" class="my-2 mx-3">Fuerza:</p>
+            </span>
+            <%= f.number_field :fuerza, in:0..10 ,class:"bg-transparent border border-white text-white text-center rounded"%>
+        </div>
+        <div>
+            <span class="my-2 badge bg-danger rounded-pill text-center">
+                <p onclick="toast(event)" class="my-2 mx-3">Finta:</p>
+            </span>
+            <%= f.number_field :finta, in:0..5 ,class:"bg-transparent border border-white text-white text-center rounded"%>
+        </div>
+        <div>
+            <span class="my-2 badge bg-danger rounded-pill text-center">
+                <p onclick="toast(event)" class="my-2 mx-3">Alerta:</p>
+            </span>
+            <%= f.number_field :alerta, in:0..5 ,class:"bg-transparent border border-white text-white text-center rounded"%>
+        </div>
+        <div>
+            <span class="my-2 badge bg-danger rounded-pill text-center">
+                <p onclick="toast(event)" class="my-2 mx-3">Sigilo:</p>
+            </span>
+            <%= f.number_field :sigilo, in:0..5 ,class:"bg-transparent border border-white text-white text-center rounded"%>
+        </div>
+        <div>
+            <span class="my-2 badge bg-danger rounded-pill text-center">
+                <p onclick="toast(event)" class="my-2 mx-3">Percepcion espacial:</p>
+            </span>
+            <%= f.number_field :percep_espacial, in:0..5 ,class:"bg-transparent border border-white text-white text-center rounded"%>
+        </div>
+        <div>
+            <span class="my-2 badge bg-danger rounded-pill text-center">
+                <p onclick="toast(event)" class="my-2 mx-3">Medicina:</p>
+            </span>
+            <%= f.number_field :medicina, in:0..5 ,class:"bg-transparent border border-white text-white text-center rounded"%>
+        </div>
         
     </div>
     <div>

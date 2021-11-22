@@ -1,21 +1,125 @@
 <h1>Personajes</h1>
 
-<div class="d-flex flex-row">
+<div class="row">
     <% @characters.each do |character|%>
-        <div class="card my-5 bg-transparent" style="width: 18rem;">
+        <div class="card my-5 bg-transparent col-xs-12 col-md-4">
             
             <div class="card-body">
                 <h5 class="card-title">
                     <%= character.name%>
                 </h5>
-                <ul class="list-group">
-                    <li class="list-group-item bg-transparent border border-light text-light">Gloria: <%=character.gloria%></li>
-                    <li class="list-group-item bg-transparent border border-light text-light">Distrito: <%=character.distrito_id%></li>
-                    <li class="list-group-item bg-transparent border border-light text-light">Salud: <%=character.salud%></li>
-                    <li class="list-group-item bg-transparent border border-light text-light">Potencialidad: <%=character.potencialidad%></li>
-                    <li class="list-group-item bg-transparent border border-light text-light">Frenesis: <%=character.frenesis%></li>
+                <div class="accordion" id="accordionExample">
+                    <div class="accordion-item">
+                        <h6 class="accordion-header bg-dark border border-light text-light py-2">
+                            Gloria: <%=character.gloria%>
+                        </h6>
+                    </div>
+                    <div class="accordion-item">
+                        <h6 class="accordion-header bg-dark border border-light text-light py-2">
+                            Distrito: <%=Distrito.find(character.distrito_id).distrito%>
+                        </h6>
+                    </div>
+                    <div class="accordion-item">
+                        <h6 class="accordion-header bg-dark border border-light text-light py-2">
+                            Raza: <%=Raza.find(character.distrito_id).raza%>
+                        </h6>
+                    </div>
 
-                </ul>
+                        <%# Desplegable de Salud  %>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header bg-dark border border-light py-2">
+                            <button class="accordion-button bg-transparent text-light " type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">Salud: <span id="saludMax" class="mx-2"><%=character.salud%></span>
+                            </button>
+                            <div id="collapseOne" class="accordion-collapse collapse bg-transparent" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                                <div class="accordion-body container bg-dark">
+                                    <input type="number" id="danos" name="danos"
+                                        min="0" max="10000" style="width:inherit" class="bg-transparent text-center text-light">
+                                    <button class="btn btn-danger mt-3" onclick="danar()">Dañar</button>
+                                </div>
+                            </div>
+                        </h2>
+                    </div>
+
+                        <%# Desplegable de Potencialidad %>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header bg-dark border border-light text-light py-2">
+                            <button class="accordion-button bg-transparent text-light " type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">Potencialidad: <span id="potMax" class="mx-2"><%=character.potencialidad%></span>
+                            </button>
+                            <div id="collapseTwo" class="accordion-collapse collapse bg-transparent" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                                <div class="accordion-body container bg-dark">
+                                    <input type="number" id="absPot" name="absPot"
+                                        min="0" max="<%=character.potencialidad%>" style="width:inherit" class="bg-transparent text-center text-light">
+                                    <button class="btn btn-danger mt-3" onclick="absPot()">Gastar</button>
+                                </div>
+                            </div>
+                        </h2>
+                    </div>
+
+                        <%# Desplegable de Frenesis %>
+
+                    <div class="accordion-item">
+                        <h2 class="accordion-header bg-dark border border-light text-light py-2">
+                            <button class="accordion-button bg-transparent text-light " type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="true" aria-controls="collapseThree">Frenesis: <span id="frenMax" class="mx-2"><%=character.frenesis%></span>
+                            </button>
+                            <div id="collapseThree" class="accordion-collapse collapse bg-transparent" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                                <div class="accordion-body container bg-dark">
+                                    <input type="number" id="absFren" name="absFren"
+                                        min="0" max="<%=character.frenesis%>" style="width:inherit" class="bg-transparent text-center text-light">
+                                    <button class="btn btn-danger mt-3" onclick="absFren()">Gastar</button>
+                                </div>
+                            </div>
+                        </h2>
+                    </div>
+
+                        <%# Desplegable Fuerza de Volutad %>
+
+                    <div class="accordion-item">
+                        <h2 class="accordion-header bg-dark border border-light text-light py-2">
+                            <button class="accordion-button bg-transparent text-light " type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="true" aria-controls="collapseFour">Fuerza de Voluntad: <span id="fVoluntadMax" class="mx-2"><%=character.fuerza_de_voluntad%></span>
+                            </button>
+                            <div id="collapseFour" class="accordion-collapse collapse bg-transparent" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                                <div class="accordion-body container bg-dark">
+                                    <input type="number" id="absfVoluntad" name="absfVoluntad"
+                                        min="0" max="<%=character.fuerza_de_voluntad%>" style="width:inherit" class="bg-transparent text-center text-light">
+                                    <button class="btn btn-danger mt-3" onclick="absfVoluntad()">Gastar</button>
+                                </div>
+                            </div>
+                        </h2>
+                    </div>    
+
+                        <%# Desplegable Hidratacion %>
+                        
+                    <div class="accordion-item">
+                        <h2 class="accordion-header bg-dark border border-light text-light py-2">
+                            <button class="accordion-button bg-transparent text-light " type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive" aria-expanded="true" aria-controls="collapseFive">Hidratacion: <span id="hidratacionMax"><%=character.hidratacion%></span>
+                            </button>
+                            <div id="collapseFive" class="accordion-collapse collapse bg-transparent" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                                <div class="accordion-body container bg-dark">
+                                    <input type="number" id="absHidratacion" name="absHidratacion"
+                                        min="0" max="100" style="width:inherit" class="bg-transparent text-center text-light">
+                                    <button class="btn btn-danger mt-3" onclick="absHidratacion()">Gastar</button>
+                                </div>
+                            </div>
+                        </h2>                    
+                    </div>    
+
+                        <%# Desplegable Hambre %>
+                        
+                    <div class="accordion-item">
+                        <h2 class="accordion-header bg-dark border border-light text-light py-2">
+                            <button class="accordion-button bg-transparent text-light " type="button" data-bs-toggle="collapse" data-bs-target="#collapseSix" aria-expanded="true" aria-controls="collapseSix">Hambre: <span id="hambreMax"><%=character.hambre%></span>
+                            </button>
+                            <div id="collapseSix" class="accordion-collapse collapse bg-transparent" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                                <div class="accordion-body container bg-dark">
+                                    <input type="number" id="absHambre" name="absHambre"
+                                        min="0" max="100" style="width:inherit" class="bg-transparent text-center text-light">
+                                    <button class="btn btn-danger mt-3" onclick="absHambre()">Gastar</button>
+                                </div>
+                            </div>
+                        </h2>
+                    </div>
+                </div>
+
                 <ul>
                     <a href="<%=character_path(character)%>" class="btn btn-danger mt-4">Combate</a>
                 </ul>
@@ -33,3 +137,55 @@
 
 <%= button_to 'Crear Personaje', new_character_path, method: :get, class:"btn btn-secondary"%>
 <%= button_to 'Salir', destroy_user_session_path, method: :delete , class:"btn btn-light my-3"%>
+
+
+<script>
+    function danar(){
+        let saludMax = document.getElementById("saludMax");
+        let danos = parseInt(document.getElementById("danos").value);
+        saludMax.textContent = parseInt(saludMax.textContent)-danos; 
+        if (parseInt(saludMax.textContent) <= 0) {
+            alert('CAIDO... pobre sujeto...')
+        }
+    }
+
+    function absPot() {
+        let potMax = document.getElementById("potMax");
+        let absPot = parseInt(document.getElementById("absPot").value);
+        potMax.textContent = parseInt(potMax.textContent) - absPot
+        if (parseInt(potMax.textContent) <= 0) {
+            alert('...Estas Fulminado... te excediste cabron... Ahora... Quietecito a mirar el show')
+        }
+    }
+
+    function absFren() {
+        let frenMax = document.getElementById("frenMax");
+        let absFren = parseInt(document.getElementById("absFren").value);
+        frenMax.textContent = parseInt(frenMax.textContent) - absFren
+        if (parseInt(frenMax.textContent) <= 0) {
+                alert('...Eres un Letergado... ya ni para jugar a las chinitas puedes...')
+        }
+    }
+
+    function absfVoluntad(){
+        let fVoluntadMax = document.getElementById("fVoluntadMax");
+        let absfVoluntad = parseInt(document.getElementById("absfVoluntad").value);
+        fVoluntadMax.textContent = parseInt(fVoluntadMax.textContent) - absfVoluntad
+        if (parseInt(fVoluntadMax.textContent) <= 0) {
+            alert('...Esta en Penumbra... TODAS TUS VELOCIDAD SE REDUCEN AL 50%')
+        }
+    }
+
+    function absHidratacion(){
+        let hidratacionMax = document.getElementById("hidratacionMax");
+        let absHidratacion = parseInt(document.getElementById("absHidratacion").value);
+        hidratacionMax.textContent = parseInt(hidratacionMax.textContent) - absHidratacion;
+    }
+
+    function absHambre(){
+        let hambreMax = document.getElementById("hambreMax");
+        let absHambre = parseInt(document.getElementById("absHambre").value);
+        hambreMax.textContent = parseInt(hidratacionMax.textContent) - absHambre;
+    }
+
+</script>
