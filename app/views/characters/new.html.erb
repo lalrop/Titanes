@@ -1,7 +1,7 @@
 <%= form_for @character do |f| %>
   Nombre: <%= f.text_field :name %> <br>
   
-  <div>
+  <div class="my-2">
     Distrito: 
     <select name="character[distrito_id]" id="character_distrito_id">
       <option value="1">Kaiser</option>
@@ -23,7 +23,7 @@
     </div>
   </div>
 
-  <div>
+  <div class="my-2">
     Raza : <%= f.select :raza_id, [['Humano', 1],['Gimpisto',2],['Destello', 3],['Chechenia',4],['Gag',5],['Fanderei',6],['Andorak',7],['Winvhel',8],['Chadack',9],['Ritulillo',10]]%><br>
     
     <div id="liveToast2" class="toast align-items-center text-white bg-dark" role="alert" aria-live="assertive" aria-atomic="true" data-bs-delay="8000">
@@ -36,9 +36,17 @@
 
   </div>
   
-  Potencialidad: <%= f.number_field :potencialidad, min:0, max:45 %><br>
+  <div class="my-2">
+    Potencialidad: <%= f.number_field :potencialidad, min:0, max:45 %><br>
+  </div>
   
-  Frenesis: <%= f.number_field :frenesis, min:0, max:45 %><br>
+  <div class="my-2">
+    Frenesis: <%= f.number_field :frenesis, min:0, max:45 %><br>
+  </div>
+
+  <div class="my-2">
+    Imagen: <%= f.text_field :avatar, placeholder:'Pega la url de tu imagen'%>
+  </div>
   
   <div>
       <%= f.submit 'Crear Personaje', class:"btn btn-danger my-4" %>
