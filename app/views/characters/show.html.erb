@@ -1,80 +1,135 @@
-<%# Pensar la forma para que aparezca la informacion de manera colapsable.
-Quizas crear un modelo con las descripciones de cada atributo?? %>
+<h1 class="text-center text-light mb-4"> Combate </h1>
 
- <table class="text-center">
-  <tr>
-    <td>
-      <a href="#" id="atletismo"> Atletismo </a>
-    </td>
-    <td><%= @character.atletismo%></td>
-  </tr>
-  <tr>
-    <td>
-      <a href="#" id="estabilidad">Estabilidad:</a>
-    </td>  
-    <td><%= @character.estabilidad %></td>
-  </tr>
-  <tr>
-    <td>
-      <a href="#" id="pelea">Pelea</a>
-    </td>
-    <td><%= @character.pelea %></td>
-  </tr>
-  <tr>
-    <td>
-      <a href="#" id="destreza">Destreza</a>
-    </td>
-    <td><%= @character.destreza %></td>
-  </tr>
-  <tr>
-    <td>
-      <a href="#" id="esquivar">Esquivar</a>
-    </td>
-    <td><%= @character.esquivar %></td>
-  </tr>
-    <tr>
-    <td>
-      <a href="#" id="resistencia">Resistencia</a>
-    </td>
-    <td><%= @character.resistencia %></td>
-  </tr>
-    <tr>
-    <td>
-      <a href="#" id="fuerza">Fuerza</a>
-    </td>
-    <td><%= @character.fuerza %></td>
-  </tr>
-  <tr>
-    <td>
-      <a href="#" id="finta">Finta</a>
-    </td>
-    <td><%= @character.finta %></td>
-  </tr>
-  <tr>
-    <td>
-      <a href="#" id="alerta">Alerta</a>
-    </td>
-    <td><%= @character.alerta %></td>
-  </tr>
-  <tr>
-    <td>
-      <a href="#" id="sigilo">Sigilo</a>
-    </td>
-    <td><%= @character.sigilo %></td>
-  </tr>
-  <tr>
-    <td>
-      <a href="#" id="percepEscpacial">Percepcion espacial</a>
-    </td>
-    <td><%= @character.percep_espacial %></td>
-  </tr>
-  <tr>
-    <td>
-      <a href="#" id="medicina">Medicina</a>
-    </td>
-    <td><%= @character.medicina %></td>
-  </tr>
-</table>
+<div id="toastAtributo" class="d-none align-items-center shadow text-white bg-secondary bg-gradient text-center my-3 rounded py-3 px-3" role="alert" aria-live="assertive" aria-atomic="true" data-bs-delay="10000">
+    <div class="d-flex justify-content-center">
+        <div>
+            <span class="badge bg-secondary mx-2" onclick="ocultar()">X</span>
+            <p class="d-inline" id="contentAtributo">.</p>
+        </div>
+    </div>
+</div>
 
-    <%= button_to 'Editar', edit_character_path(@character.id), class:"btn btn-danger mt-3", method: :get%>
-    <%= button_to 'Salir', characters_path, method: :get, class:"btn btn-light my-3"%>
+
+
+<%= form_for @character do |f| %>
+    <div>
+        <div>
+            <span class="my-2 badge bg-danger rounded-pill text-center mx-4">
+                    <p onclick="toast(event)" class="my-2 mx-3">Atletismo:</p>
+            </span><%= @character.atletismo%>
+        </div>
+        <div>
+            <span class="my-2 badge bg-danger rounded-pill text-center mx-4">
+                <p onclick="toast(event)" class="my-2 mx-3">Estabilidad:</p>
+            </span><%= @character.estabilidad%>
+        </div>
+        <div>
+            <span class="my-2 badge bg-danger rounded-pill text-center mx-4">
+                <p onclick="toast(event)" class="my-2 mx-3">Pelea:</p>
+            </span><%= @character.pelea%>
+        </div>
+        <div>
+            <span class="my-2 badge bg-danger rounded-pill text-center mx-4">
+                <p onclick="toast(event)" class="my-2 mx-3">Destreza:</p>
+            </span><%= @character.destreza%>
+        </div>
+        <div>
+            <span class="my-2 badge bg-danger rounded-pill text-center mx-4">
+                <p onclick="toast(event)" class="my-2 mx-3">Esquivar:</p>
+            </span><%= @character.esquivar%>
+        </div>
+        <div>
+            <span class="my-2 badge bg-danger rounded-pill text-center mx-4">
+                <p onclick="toast(event)" class="my-2 mx-3">Resistencia:</p>
+            </span><%= @character.resistencia%>
+        </div>
+        <div>
+            <span class="my-2 badge bg-danger rounded-pill text-center mx-4">
+                <p onclick="toast(event)" class="my-2 mx-3">Fuerza:</p>
+            </span><%= @character.fuerza%>
+        </div>
+        <div>
+            <span class="my-2 badge bg-danger rounded-pill text-center mx-4">
+                <p onclick="toast(event)" class="my-2 mx-3">Finta:</p>
+            </span><%= @character.finta%>
+        </div>
+        <div>
+            <span class="my-2 badge bg-danger rounded-pill text-center mx-4">
+                <p onclick="toast(event)" class="my-2 mx-3">Alerta:</p>
+            </span><%= @character.alerta%>
+        </div>
+        <div>
+            <span class="my-2 badge bg-danger rounded-pill text-center mx-4">
+                <p onclick="toast(event)" class="my-2 mx-3">Sigilo:</p>
+            </span><%= @character.sigilo%>
+        </div>
+        <div>
+            <span class="my-2 badge bg-danger rounded-pill text-center mx-4">
+                <p onclick="toast(event)" class="my-2 mx-3">Percepcion espacial:</p>
+            </span><%= @character.percep_espacial%>
+        </div>
+        <div>
+            <span class="my-2 badge bg-danger rounded-pill text-center mx-4">
+                <p onclick="toast(event)" class="my-2 mx-3">Medicina:</p>
+            </span><%=@character.medicina%>
+        </div>
+        
+    </div>
+    <div class="my-5">
+        <%= link_to "Volver", characters_path, class:"btn btn-secondary" %> 
+    </div>
+<%end%>  
+
+
+<script>
+  var toastLiveExample = document.getElementById('toastAtributo');
+  var contentToast = document.getElementById('toastAtributo');
+  var contentAtributo = document.getElementById('contentAtributo');
+    function toast(e) {
+        contentToast.classList.remove('d-none');
+        var atribute = e.target.textContent;    
+        switch (atribute) {
+            case "Atletismo:":
+                contentAtributo.innerHTML = "Este rasgo es la capacidad física que posee el personaje para ejecutar maniobras de desplazamiento no ofensivas en un radio mayor a tres metros, es decir, volteretas, saltos, correr, trotar, etc.";
+            break;
+            case "Estabilidad:":
+                contentAtributo.innerHTML = "Este rasgo es la capacidad física para contener o resistir el impacto de un ataque mediante una postura sin desplazamiento. Considera movimientos tales como capturar un puño, endurecer un musculo, cubrirse, etc."
+            break;
+            case "Pelea:":
+                contentAtributo.innerHTML = "Este rasgo es la capacidad física para ejecutar movimientos ofensivos y/o defensivos sin uso de armas, en un radio de tres metros; entiéndase como golpes de puño, patadas, cabezazos, llaves, etc."
+            break;
+            case "Destreza:":
+                contentAtributo.innerHTML = "Es la habilidad física que posee el personaje para apuntar o ejecutar golpes con armas a una velocidad y distancia determinada de acuerdo a la naturaleza del arma.La Destreza en Armas C.C involucra la velocidad en el uso de armas que requieran asestar golpes directos para generar cortes, contenciones y/o perforaciones.La Destreza en el uso de Armas de Fuego en este tipo de armas se utiliza para apuntar a una velocidad en un tiempo determinado."
+            break;
+            case "Esquivar:":
+                contentAtributo.innerHTML = "Este rasgo es la capacidad física para evadir un ataque dentro de un radio de tres metros. Esquivar considera: movimientos de hombros, flexiones de rodillas, saltos laterales o verticales, etc."
+            break;
+            case "Resistencia:":
+                contentAtributo.innerHTML = "Es la capacidad física para mitigar o anular completamente un daño entrante usando la propia fortaleza corporal."
+            break;
+            case "Fuerza:":
+                contentAtributo.innerHTML = "Es la potencia física que representa el daño que puede generar el personaje con una acción. Este recurso también ilustra la capacidad del personaje para mover distintas magnitudes de peso."
+            break;
+            case "Finta:":
+                contentAtributo.innerHTML = "Es la habilidad para engañar al oponente realizando una simulación, un amague, de golpes con objeto de mermar la capacidad de reacción del oponente."
+            break;
+            case "Alerta:":
+                contentAtributo.innerHTML = "Es la capacidad para detectar cualquier tipo de reacción sorpresiva por parte del oponente, incluso detectar sus movimientos ocultos" 
+            break;
+            case "Sigilo:":
+                contentAtributo.innerHTML = "Es la habilidad para esconder la presencia haciendo uso del espacio y/o las condiciones del ambiente, con el fin realizar un ataque sorpresa hacia el objetivo."
+            break;
+            case "Percepcion Espacial:":
+                contentAtributo.innerHTML = "Es la capacidad de ser consciente del entorno a través de los sentidos con el fin de ubicar objetos, personas, aromas, texturas, huellas, sabores o cualquier tipo de rastro que le sea de ayuda para alcanzar un objetivo."
+            break;
+            case "Medicina:":
+                contentAtributo.innerHTML = "Es la capacidad que posee un personaje sobre la base de sus conocimientos para asistir médicamente, y con el material necesario, gran parte de las heridas propias y de sus compañeros."
+            break;
+        } 
+    }
+
+    function ocultar() {
+        contentToast.classList.add('d-none');
+    }
+
+</script>

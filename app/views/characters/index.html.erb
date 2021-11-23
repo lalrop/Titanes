@@ -28,7 +28,7 @@
                         <%# Desplegable de Salud  %>
                     <div class="accordion-item">
                         <h2 class="accordion-header bg-dark border border-light py-2">
-                            <button class="accordion-button bg-transparent text-light " type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">Salud: <span id="saludMax" class="mx-2"><%=character.salud%></span>
+                            <button class="accordion-button bg-transparent text-light " type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">Salud: <span id="saludMax" class="mx-2"><%=character.salud%></span>/ <span class="mx-2"><%=character.salud%></span>
                             </button>
                             <div id="collapseOne" class="accordion-collapse collapse bg-transparent" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
                                 <div class="accordion-body container bg-dark">
@@ -43,7 +43,8 @@
                         <%# Desplegable de Potencialidad %>
                     <div class="accordion-item">
                         <h2 class="accordion-header bg-dark border border-light text-light py-2">
-                            <button class="accordion-button bg-transparent text-light " type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">Potencialidad: <span id="potMax" class="mx-2"><%=character.potencialidad%></span>
+                            <button class="accordion-button bg-transparent text-light " type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">Potencialidad: <span id="potMax" class="mx-2">
+                                <%=character.potencialidad%></span><span> / <%=character.potencialidad%></span>
                             </button>
                             <div id="collapseTwo" class="accordion-collapse collapse bg-transparent" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
                                 <div class="accordion-body container bg-dark">
@@ -59,7 +60,8 @@
 
                     <div class="accordion-item">
                         <h2 class="accordion-header bg-dark border border-light text-light py-2">
-                            <button class="accordion-button bg-transparent text-light " type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="true" aria-controls="collapseThree">Frenesis: <span id="frenMax" class="mx-2"><%=character.frenesis%></span>
+                            <button class="accordion-button bg-transparent text-light " type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="true" aria-controls="collapseThree">Frenesis: <span id="frenMax" class="mx-2">
+                                <%=character.frenesis%></span> <span> / <%=character.frenesis%></span>
                             </button>
                             <div id="collapseThree" class="accordion-collapse collapse bg-transparent" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
                                 <div class="accordion-body container bg-dark">
@@ -75,7 +77,8 @@
 
                     <div class="accordion-item">
                         <h2 class="accordion-header bg-dark border border-light text-light py-2">
-                            <button class="accordion-button bg-transparent text-light " type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="true" aria-controls="collapseFour">Fuerza de Voluntad: <span id="fVoluntadMax" class="mx-2"><%=character.fuerza_de_voluntad%></span>
+                            <button class="accordion-button bg-transparent text-light " type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="true" aria-controls="collapseFour">Fuerza de Voluntad: <span id="fVoluntadMax" class="mx-2">
+                                <%=character.fuerza_de_voluntad%></span><span> / <%=character.fuerza_de_voluntad%></span>
                             </button>
                             <div id="collapseFour" class="accordion-collapse collapse bg-transparent" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
                                 <div class="accordion-body container bg-dark">
@@ -91,7 +94,8 @@
                         
                     <div class="accordion-item">
                         <h2 class="accordion-header bg-dark border border-light text-light py-2">
-                            <button class="accordion-button bg-transparent text-light " type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive" aria-expanded="true" aria-controls="collapseFive">Hidratacion: <span id="hidratacionMax"><%=character.hidratacion%></span>
+                            <button class="accordion-button bg-transparent text-light " type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive" aria-expanded="true" aria-controls="collapseFive">Hidratacion: <span id="hidratacionMax" class="mx-2">
+                                <%=character.hidratacion%></span><span> / <%=character.hidratacion%></span>
                             </button>
                             <div id="collapseFive" class="accordion-collapse collapse bg-transparent" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
                                 <div class="accordion-body container bg-dark">
@@ -107,7 +111,8 @@
                         
                     <div class="accordion-item">
                         <h2 class="accordion-header bg-dark border border-light text-light py-2">
-                            <button class="accordion-button bg-transparent text-light " type="button" data-bs-toggle="collapse" data-bs-target="#collapseSix" aria-expanded="true" aria-controls="collapseSix">Hambre: <span id="hambreMax"><%=character.hambre%></span>
+                            <button class="accordion-button bg-transparent text-light " type="button" data-bs-toggle="collapse" data-bs-target="#collapseSix" aria-expanded="true" aria-controls="collapseSix">Hambre: <span id="hambreMax" class="mx-2">
+                                <%=character.hambre%></span><span> / <%=character.hambre%></span>
                             </button>
                             <div id="collapseSix" class="accordion-collapse collapse bg-transparent" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
                                 <div class="accordion-body container bg-dark">
@@ -147,6 +152,7 @@
         if (parseInt(saludMax.textContent) <= 0) {
             alert('CAIDO... pobre sujeto...')
         }
+        document.getElementById("danos").value = "";
     }
 
     function absPot() {
@@ -156,6 +162,7 @@
         if (parseInt(potMax.textContent) <= 0) {
             alert('...Estas Fulminado... te excediste cabron... Ahora... Quietecito a mirar el show')
         }
+        document.getElementById("absPot").value = "";
     }
 
     function absFren() {
@@ -165,6 +172,7 @@
         if (parseInt(frenMax.textContent) <= 0) {
                 alert('...Eres un Letergado... ya ni para jugar a las chinitas puedes...')
         }
+        document.getElementById("absFren").value = "";
     }
 
     function absfVoluntad(){
@@ -174,18 +182,23 @@
         if (parseInt(fVoluntadMax.textContent) <= 0) {
             alert('...Esta en Penumbra... TODAS TUS VELOCIDAD SE REDUCEN AL 50%')
         }
+        document.getElementById("absfVoluntad").value = "";
     }
 
     function absHidratacion(){
         let hidratacionMax = document.getElementById("hidratacionMax");
         let absHidratacion = parseInt(document.getElementById("absHidratacion").value);
         hidratacionMax.textContent = parseInt(hidratacionMax.textContent) - absHidratacion;
+        document.getElementById("absHidratacion").value = "";
+    
     }
+
 
     function absHambre(){
         let hambreMax = document.getElementById("hambreMax");
         let absHambre = parseInt(document.getElementById("absHambre").value);
-        hambreMax.textContent = parseInt(hidratacionMax.textContent) - absHambre;
+        hambreMax.textContent = parseInt(hambreMax.textContent) - absHambre;
+        document.getElementById("absHambre").value = "";
     }
 
 </script>
