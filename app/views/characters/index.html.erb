@@ -3,12 +3,12 @@
 <div class="row">
     <% @characters.each do |character|%>
         <div class="card my-5 bg-transparent col-xs-12 col-md-4">
-            <img src="<%= character.avatar%>">
+            <img src="<%= character.avatar%>" class="opacity-70">
             <div class="card-body">
                             
-                <h5 class="card-title">
+                <h4 class="card-title fst-italic fw-bold fs-2 my-3">
                     <%= character.name%>
-                </h5>
+                </h4>
                 <div class="accordion" id="accordionExample">
                     <div class="accordion-item">
                         <h6 class="accordion-header bg-dark border border-light text-light py-2">
@@ -29,13 +29,15 @@
                         <%# Desplegable de Salud  %>
                     <div class="accordion-item">
                         <h2 class="accordion-header bg-dark border border-light py-2">
-                            <button class="accordion-button bg-transparent text-light " type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">Salud: <span id="saludMax" class="mx-2"><%=character.salud%></span>/ <span class="mx-2"><%=character.salud%></span>
+                            <button class="accordion-button bg-transparent text-light " type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">Salud: <span id="saludMax" class="mx-2"><%=character.salud%></span>/ <span id="salud" class="mx-2"><%=character.salud%></span>
                             </button>
                             <div id="collapseOne" class="accordion-collapse collapse bg-transparent" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
                                 <div class="accordion-body container bg-dark">
                                     <input type="number" id="danos" name="danos"
                                         min="0" max="10000" style="width:inherit" class="bg-transparent text-center text-light">
                                     <button class="btn btn-danger mt-3" onclick="danar()">Dañar</button>
+                                    <button class="btn btn-secondary mt-3" onclick="sanar()">Sanar</button>
+
                                 </div>
                             </div>
                         </h2>
@@ -45,13 +47,14 @@
                     <div class="accordion-item">
                         <h2 class="accordion-header bg-dark border border-light text-light py-2">
                             <button class="accordion-button bg-transparent text-light " type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">Potencialidad: <span id="potMax" class="mx-2">
-                                <%=character.potencialidad%></span><span> / <%=character.potencialidad%></span>
+                                <%=character.potencialidad%></span> / <span id="pot"><%=character.potencialidad%></span>
                             </button>
                             <div id="collapseTwo" class="accordion-collapse collapse bg-transparent" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
                                 <div class="accordion-body container bg-dark">
                                     <input type="number" id="absPot" name="absPot"
                                         min="0" max="<%=character.potencialidad%>" style="width:inherit" class="bg-transparent text-center text-light">
                                     <button class="btn btn-danger mt-3" onclick="absPot()">Gastar</button>
+                                    <button class="btn btn-secondary mt-3" onclick="recPot()">Recuperar</button>
                                 </div>
                             </div>
                         </h2>
@@ -62,13 +65,14 @@
                     <div class="accordion-item">
                         <h2 class="accordion-header bg-dark border border-light text-light py-2">
                             <button class="accordion-button bg-transparent text-light " type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="true" aria-controls="collapseThree">Frenesis: <span id="frenMax" class="mx-2">
-                                <%=character.frenesis%></span> <span> / <%=character.frenesis%></span>
+                                <%=character.frenesis%></span> / <span id="fren"><%=character.frenesis%></span>
                             </button>
                             <div id="collapseThree" class="accordion-collapse collapse bg-transparent" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
                                 <div class="accordion-body container bg-dark">
                                     <input type="number" id="absFren" name="absFren"
                                         min="0" max="<%=character.frenesis%>" style="width:inherit" class="bg-transparent text-center text-light">
                                     <button class="btn btn-danger mt-3" onclick="absFren()">Gastar</button>
+                                    <button class="btn btn-secondary mt-3" onclick="recFren()">Recuperar</button>
                                 </div>
                             </div>
                         </h2>
@@ -79,13 +83,14 @@
                     <div class="accordion-item">
                         <h2 class="accordion-header bg-dark border border-light text-light py-2">
                             <button class="accordion-button bg-transparent text-light " type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="true" aria-controls="collapseFour">Fuerza de Voluntad: <span id="fVoluntadMax" class="mx-2">
-                                <%=character.fuerza_de_voluntad%></span><span> / <%=character.fuerza_de_voluntad%></span>
+                                <%=character.fuerza_de_voluntad%></span> / <span id="fVoluntad"><%=character.fuerza_de_voluntad%></span>
                             </button>
                             <div id="collapseFour" class="accordion-collapse collapse bg-transparent" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
                                 <div class="accordion-body container bg-dark">
                                     <input type="number" id="absfVoluntad" name="absfVoluntad"
                                         min="0" max="<%=character.fuerza_de_voluntad%>" style="width:inherit" class="bg-transparent text-center text-light">
                                     <button class="btn btn-danger mt-3" onclick="absfVoluntad()">Gastar</button>
+                                    <button class="btn btn-secondary mt-3" onclick="recfVoluntad()">Recuperar</button>
                                 </div>
                             </div>
                         </h2>
@@ -96,13 +101,14 @@
                     <div class="accordion-item">
                         <h2 class="accordion-header bg-dark border border-light text-light py-2">
                             <button class="accordion-button bg-transparent text-light " type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive" aria-expanded="true" aria-controls="collapseFive">Hidratacion: <span id="hidratacionMax" class="mx-2">
-                                <%=character.hidratacion%></span><span> / <%=character.hidratacion%></span>
+                                <%=character.hidratacion%></span> / <span id="hidratacion"><%=character.hidratacion%></span>
                             </button>
                             <div id="collapseFive" class="accordion-collapse collapse bg-transparent" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
                                 <div class="accordion-body container bg-dark">
                                     <input type="number" id="absHidratacion" name="absHidratacion"
                                         min="0" max="100" style="width:inherit" class="bg-transparent text-center text-light">
                                     <button class="btn btn-danger mt-3" onclick="absHidratacion()">Gastar</button>
+                                    <button class="btn btn-secondary mt-3" onclick="recHidratacion()">Beber</button>
                                 </div>
                             </div>
                         </h2>                    
@@ -113,13 +119,14 @@
                     <div class="accordion-item">
                         <h2 class="accordion-header bg-dark border border-light text-light py-2">
                             <button class="accordion-button bg-transparent text-light " type="button" data-bs-toggle="collapse" data-bs-target="#collapseSix" aria-expanded="true" aria-controls="collapseSix">Hambre: <span id="hambreMax" class="mx-2">
-                                <%=character.hambre%></span><span> / <%=character.hambre%></span>
+                                <%=character.hambre%></span> / <span id="hambre"><%=character.hambre%></span>
                             </button>
                             <div id="collapseSix" class="accordion-collapse collapse bg-transparent" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
                                 <div class="accordion-body container bg-dark">
                                     <input type="number" id="absHambre" name="absHambre"
                                         min="0" max="100" style="width:inherit" class="bg-transparent text-center text-light">
                                     <button class="btn btn-danger mt-3" onclick="absHambre()">Gastar</button>
+                                    <button class="btn btn-secondary mt-3" onclick="recHambre()">Comer</button>
                                 </div>
                             </div>
                         </h2>
@@ -156,6 +163,18 @@
         document.getElementById("danos").value = "";
     }
 
+    function sanar() {
+        let saludMax = document.getElementById("saludMax");
+        let salud = document.getElementById("salud");
+        let danos = parseInt(document.getElementById("danos").value);
+        saludMax.textContent = parseInt(saludMax.textContent)+danos;
+        if (parseInt(saludMax.textContent) >= parseInt(salud.textContent) ) {
+            saludMax.textContent = salud.textContent;
+            alert('Ya estas al maximo Titan!! vamos por otra ronda')
+        }
+        document.getElementById("danos").value = "";
+    }
+
     function absPot() {
         let potMax = document.getElementById("potMax");
         let absPot = parseInt(document.getElementById("absPot").value);
@@ -166,12 +185,37 @@
         document.getElementById("absPot").value = "";
     }
 
+    function recPot(){
+        let potMax = document.getElementById("potMax");
+        let absPot = parseInt(document.getElementById("absPot").value);
+        let pot = document.getElementById("pot")
+        potMax.textContent = parseInt(potMax.textContent) + absPot
+        if (parseInt(potMax.textContent) >= parseInt(pot.textContent)) {
+            potMax.textContent = pot.textContent;
+            alert('Este cuerpo ya esta pidiendo otro round!')
+        }
+        document.getElementById("absPot").value = "";
+        
+    }
+
     function absFren() {
         let frenMax = document.getElementById("frenMax");
         let absFren = parseInt(document.getElementById("absFren").value);
         frenMax.textContent = parseInt(frenMax.textContent) - absFren
         if (parseInt(frenMax.textContent) <= 0) {
-                alert('...Eres un Letergado... ya ni para jugar a las chinitas puedes...')
+            alert('...Estas Letargado... ya ni para jugar a las chinitas puedes...')
+        }
+        document.getElementById("absFren").value = "";
+    }
+
+    function recFren() {
+        let frenMax = document.getElementById("frenMax");
+        let absFren = parseInt(document.getElementById("absFren").value);
+        let fren = document.getElementById("fren");
+        frenMax.textContent = parseInt(frenMax.textContent) + absFren;
+        if (parseInt(frenMax.textContent) >= parseInt(fren.textContent)) {
+            frenMax.textContent = fren.textContent
+            alert('Ese mareo ya paso, arribaaaaaa')
         }
         document.getElementById("absFren").value = "";
     }
@@ -186,6 +230,18 @@
         document.getElementById("absfVoluntad").value = "";
     }
 
+    function recfVoluntad(){
+        let fVoluntadMax = document.getElementById("fVoluntadMax");
+        let absfVoluntad = parseInt(document.getElementById("absfVoluntad").value);
+        let fVoluntad = document.getElementById("fVoluntad");
+        fVoluntadMax.textContent = parseInt(fVoluntadMax.textContent) + absfVoluntad
+        if (parseInt(fVoluntadMax.textContent) >= parseInt(fVoluntad.textContent)) {
+            alert('Arriba esa moral!!')
+            fVoluntadMax.textContent = fVoluntad.textContent
+        }
+        document.getElementById("absfVoluntad").value = "";
+    }
+
     function absHidratacion(){
         let hidratacionMax = document.getElementById("hidratacionMax");
         let absHidratacion = parseInt(document.getElementById("absHidratacion").value);
@@ -194,11 +250,33 @@
     
     }
 
+    function recHidratacion() {
+        let hidratacionMax = document.getElementById("hidratacionMax");
+        let absHidratacion = parseInt(document.getElementById("absHidratacion").value);
+        let hidratacion = document.getElementById("hidratacion");
+        hidratacionMax.textContent = parseInt(hidratacionMax.textContent) + absHidratacion;
+        if (parseInt(hidratacionMax.textContent) >= parseInt(hidratacion.textContent)) {
+            hidratacionMax.textContent = hidratacion.textContent; 
+        }
+        
+        document.getElementById("absHidratacion").value = "";    
+    }
 
     function absHambre(){
         let hambreMax = document.getElementById("hambreMax");
         let absHambre = parseInt(document.getElementById("absHambre").value);
         hambreMax.textContent = parseInt(hambreMax.textContent) - absHambre;
+        document.getElementById("absHambre").value = "";
+    }
+
+    function recHambre() {
+        let hambreMax = document.getElementById("hambreMax");
+        let absHambre = parseInt(document.getElementById("absHambre").value);
+        let hambre = document.getElementById("hambre");
+        hambreMax.textContent = parseInt(hambreMax.textContent) + absHambre;
+        if (parseInt(hambreMax.textContent) >= parseInt(hambre.textContent)) {
+            hambreMax.textContent = hambre.textContent;
+        }
         document.getElementById("absHambre").value = "";
     }
 
