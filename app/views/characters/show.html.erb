@@ -76,7 +76,8 @@
         
     </div>
     <div class="my-5">
-        <%= link_to "Volver", characters_path, class:"btn btn-secondary" %> 
+        <%= link_to "Editar", edit_character_path(@character.id), class:"btn btn-secondary" %>
+        <%= link_to "Volver", characters_path, class:"btn btn-dark" %> 
     </div>
 <%end%>  
 
