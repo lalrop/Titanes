@@ -133,15 +133,21 @@
                     </div>
                 </div>
 
-                <ul>
-                    <a href="<%=character_path(character)%>" class="btn btn-danger mt-4">Combate</a>
-                </ul>
-                <ul>
-                    <a href="<%=character_path(character)%>" class="btn btn-danger my-1">Tecnicas</a>
-                </ul>
-                <ul>
-                    <a href="<%=character_path(character)%>" class="btn btn-danger my-1">Tinieblas</a>
-                </ul>
+                <div class="row my-3">
+                    <div class="col px-0">
+                        <a href="<%=character_path(character)%>" class="btn btn-danger px-3">Combate</a>
+                    </div>
+                    <div class="col px-0">
+                        <a href="<%=character_path(character)%>" class="btn btn-danger px-3">Tecnicas</a>
+                    </div>
+                    <div class="col px-0">
+                        <a href="<%=character_path(character)%>" class="btn btn-danger px-3">Tinieblas</a>
+                    </div>
+                </div>
+                <div class="my-2">
+                    <%= button_to 'Eliminar personaje', character_path(character), method: :delete , data:{confirm:"Ya no hay vuelta atras pequeñin... Estas seguro?"}, class:"btn btn-secondary"%>
+                </div>
+
                 
             </div>
         </div>
