@@ -1,0 +1,2 @@
+class Tiniebla < ApplicationRecord
+end
