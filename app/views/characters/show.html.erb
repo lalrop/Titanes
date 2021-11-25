@@ -9,78 +9,73 @@
     </div>
 </div>
 
-
-
-<%= form_for @character do |f| %>
+<div>
     <div>
-        <div>
-            <span class="my-2 badge bg-danger rounded-pill text-center mx-4">
-                    <p onclick="toast(event)" class="my-2 mx-3">Atletismo:</p>
-            </span><%= @character.atletismo%>
-        </div>
-        <div>
-            <span class="my-2 badge bg-danger rounded-pill text-center mx-4">
-                <p onclick="toast(event)" class="my-2 mx-3">Estabilidad:</p>
-            </span><%= @character.estabilidad%>
-        </div>
-        <div>
-            <span class="my-2 badge bg-danger rounded-pill text-center mx-4">
-                <p onclick="toast(event)" class="my-2 mx-3">Pelea:</p>
-            </span><%= @character.pelea%>
-        </div>
-        <div>
-            <span class="my-2 badge bg-danger rounded-pill text-center mx-4">
-                <p onclick="toast(event)" class="my-2 mx-3">Destreza:</p>
-            </span><%= @character.destreza%>
-        </div>
-        <div>
-            <span class="my-2 badge bg-danger rounded-pill text-center mx-4">
-                <p onclick="toast(event)" class="my-2 mx-3">Esquivar:</p>
-            </span><%= @character.esquivar%>
-        </div>
-        <div>
-            <span class="my-2 badge bg-danger rounded-pill text-center mx-4">
-                <p onclick="toast(event)" class="my-2 mx-3">Resistencia:</p>
-            </span><%= @character.resistencia%>
-        </div>
-        <div>
-            <span class="my-2 badge bg-danger rounded-pill text-center mx-4">
-                <p onclick="toast(event)" class="my-2 mx-3">Fuerza:</p>
-            </span><%= @character.fuerza%>
-        </div>
-        <div>
-            <span class="my-2 badge bg-danger rounded-pill text-center mx-4">
-                <p onclick="toast(event)" class="my-2 mx-3">Finta:</p>
-            </span><%= @character.finta%>
-        </div>
-        <div>
-            <span class="my-2 badge bg-danger rounded-pill text-center mx-4">
-                <p onclick="toast(event)" class="my-2 mx-3">Alerta:</p>
-            </span><%= @character.alerta%>
-        </div>
-        <div>
-            <span class="my-2 badge bg-danger rounded-pill text-center mx-4">
-                <p onclick="toast(event)" class="my-2 mx-3">Sigilo:</p>
-            </span><%= @character.sigilo%>
-        </div>
-        <div>
-            <span class="my-2 badge bg-danger rounded-pill text-center mx-4">
-                <p onclick="toast(event)" class="my-2 mx-3">Percepcion espacial:</p>
-            </span><%= @character.percep_espacial%>
-        </div>
-        <div>
-            <span class="my-2 badge bg-danger rounded-pill text-center mx-4">
-                <p onclick="toast(event)" class="my-2 mx-3">Medicina:</p>
-            </span><%=@character.medicina%>
-        </div>
-        
+        <span class="my-2 badge bg-danger rounded-pill text-center mx-4">
+                <p onclick="toast(event)" class="my-2 mx-3">Atletismo:</p>
+        </span><%= @character.atletismo%>
     </div>
-    <div class="my-5">
-        <%= link_to "Editar", edit_character_path(@character.id), class:"btn btn-secondary" %>
-        <%= link_to "Volver", characters_path, class:"btn btn-dark" %> 
+    <div>
+        <span class="my-2 badge bg-danger rounded-pill text-center mx-4">
+            <p onclick="toast(event)" class="my-2 mx-3">Estabilidad:</p>
+        </span><%= @character.estabilidad%>
     </div>
-<%end%>  
-
+    <div>
+        <span class="my-2 badge bg-danger rounded-pill text-center mx-4">
+            <p onclick="toast(event)" class="my-2 mx-3">Pelea:</p>
+        </span><%= @character.pelea%>
+    </div>
+    <div>
+        <span class="my-2 badge bg-danger rounded-pill text-center mx-4">
+            <p onclick="toast(event)" class="my-2 mx-3">Destreza:</p>
+        </span><%= @character.destreza%>
+    </div>
+    <div>
+        <span class="my-2 badge bg-danger rounded-pill text-center mx-4">
+            <p onclick="toast(event)" class="my-2 mx-3">Esquivar:</p>
+        </span><%= @character.esquivar%>
+    </div>
+    <div>
+        <span class="my-2 badge bg-danger rounded-pill text-center mx-4">
+            <p onclick="toast(event)" class="my-2 mx-3">Resistencia:</p>
+        </span><%= @character.resistencia%>
+    </div>
+    <div>
+        <span class="my-2 badge bg-danger rounded-pill text-center mx-4">
+            <p onclick="toast(event)" class="my-2 mx-3">Fuerza:</p>
+        </span><%= @character.fuerza%>
+    </div>
+    <div>
+        <span class="my-2 badge bg-danger rounded-pill text-center mx-4">
+            <p onclick="toast(event)" class="my-2 mx-3">Finta:</p>
+        </span><%= @character.finta%>
+    </div>
+    <div>
+        <span class="my-2 badge bg-danger rounded-pill text-center mx-4">
+            <p onclick="toast(event)" class="my-2 mx-3">Alerta:</p>
+        </span><%= @character.alerta%>
+    </div>
+    <div>
+        <span class="my-2 badge bg-danger rounded-pill text-center mx-4">
+            <p onclick="toast(event)" class="my-2 mx-3">Sigilo:</p>
+        </span><%= @character.sigilo%>
+    </div>
+    <div>
+        <span class="my-2 badge bg-danger rounded-pill text-center mx-4">
+            <p onclick="toast(event)" class="my-2 mx-3">Percepcion espacial:</p>
+        </span><%= @character.percep_espacial%>
+    </div>
+    <div>
+        <span class="my-2 badge bg-danger rounded-pill text-center mx-4">
+            <p onclick="toast(event)" class="my-2 mx-3">Medicina:</p>
+        </span><%=@character.medicina%>
+    </div>
+    
+</div>
+<div class="my-5">
+    <%= link_to "Editar", edit_character_path(@character.id), class:"btn btn-secondary" %>
+    <%= link_to "Volver", characters_path, class:"btn btn-dark" %> 
+</div>
 
 <script>
   var toastLiveExample = document.getElementById('toastAtributo');

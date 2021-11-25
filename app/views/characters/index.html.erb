@@ -3,9 +3,8 @@
 <div class="row">
     <% @characters.each do |character|%>
         <div class="card my-5 bg-transparent col-xs-12 col-md-4">
-            <img src="<%= character.avatar%>" class="opacity-70">
-            <div class="card-body">
-                            
+            <img src="<%= character.avatar%>" class="opacity-70">   
+            <div class="card-body">                            
                 <h4 class="card-title fst-italic fw-bold fs-2 my-3">
                     <%= character.name%>
                 </h4>
@@ -29,7 +28,10 @@
                         <%# Desplegable de Salud  %>
                     <div class="accordion-item">
                         <h2 class="accordion-header bg-dark border border-light py-2">
-                            <button class="accordion-button bg-transparent text-light " type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">Salud: <span id="saludMax" class="mx-2"><%=character.salud%></span>/ <span id="salud" class="mx-2"><%=character.salud%></span>
+                            <button class="accordion-button bg-transparent text-light " type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                            Salud: 
+                            <progress id="saludMax" value="<%=character.salud%>" max="<%=character.salud%>" class="mx-4" class="bg-danger"></progress>
+                            <%= character.salud%> 
                             </button>
                             <div id="collapseOne" class="accordion-collapse collapse bg-transparent" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
                                 <div class="accordion-body container bg-dark">
@@ -37,7 +39,6 @@
                                         min="0" max="10000" style="width:inherit" class="bg-transparent text-center text-light">
                                     <button class="btn btn-danger mt-3" onclick="danar()">Dañar</button>
                                     <button class="btn btn-secondary mt-3" onclick="sanar()">Sanar</button>
-
                                 </div>
                             </div>
                         </h2>
@@ -162,8 +163,8 @@
     function danar(){
         let saludMax = document.getElementById("saludMax");
         let danos = parseInt(document.getElementById("danos").value);
-        saludMax.textContent = parseInt(saludMax.textContent)-danos; 
-        if (parseInt(saludMax.textContent) <= 0) {
+        saludMax.value = saludMax.value - danos; 
+        if (parseInt(saludMax.value) <= 0) {
             alert('CAIDO... pobre sujeto...')
         }
         document.getElementById("danos").value = "";
@@ -171,11 +172,10 @@
 
     function sanar() {
         let saludMax = document.getElementById("saludMax");
-        let salud = document.getElementById("salud");
         let danos = parseInt(document.getElementById("danos").value);
-        saludMax.textContent = parseInt(saludMax.textContent)+danos;
-        if (parseInt(saludMax.textContent) >= parseInt(salud.textContent) ) {
-            saludMax.textContent = salud.textContent;
+        saludMax.value = saludMax.value + danos; 
+        if (saludMax.value >= saludMax.max) {
+            saludMax.value = saludMax.max;
             alert('Ya estas al maximo Titan!! vamos por otra ronda')
         }
         document.getElementById("danos").value = "";

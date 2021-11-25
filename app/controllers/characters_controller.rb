@@ -42,7 +42,7 @@ class CharactersController < ApplicationController
     @character.destroy
     redirect_to characters_path    
   end
-  
+    
     
 
   private

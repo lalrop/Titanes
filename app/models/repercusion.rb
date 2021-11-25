@@ -1,0 +1,2 @@
+class Repercusion < ApplicationRecord
+end
