@@ -38,7 +38,7 @@
                                     <input type="number" name="danos"
                                         min="0" max="10000" style="width:inherit" class="bg-transparent text-center text-light danos" id="dano<%=character.id%>">
                                     <button class="btn btn-danger mt-3" id="<%=character.id%>" onclick='danar(this)' >Dañar</button>
-                                    <button class="btn btn-secondary mt-3" onclick='sanar()'>Sanar</button>
+                                    <button class="btn btn-secondary mt-3" id="<%=character.id%>" onclick='sanar(this)'>Sanar</button>
                                 </div>
                             </div>
                         </h2>
@@ -164,15 +164,19 @@
             dano = arrayDanos[idDano]; 
             saludActual.value -= parseInt(dano.value);
             if (saludActual.value <= 0) {
-                alert ('Has caido! a rogar porque no te rematen ¿eh?')
+                alert ('Has caido! a rogar para que no te rematen ¿eh?')
             };
             dano.value = "";
         }
 
 
-        function sanar() {
-            let barraSalud = document.getElementById("barraSalud<%=character.id%>")
-            console.log(barraSalud);
+        function sanar(element) {
+            id = "barraSalud" + element.id
+            idDano = 'dano'+element.id
+            saludActual = arraySalud[id];
+            dano = arrayDanos[idDano]; 
+            saludActual.value += parseInt(dano.value);
+            dano.value = "";
         }
 
         function absPot() {
