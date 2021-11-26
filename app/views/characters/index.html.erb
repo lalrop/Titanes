@@ -30,15 +30,15 @@
                         <h2 class="accordion-header bg-dark border border-light py-2">
                             <button class="accordion-button bg-transparent text-light " type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
                             Salud: 
-                            <progress id="saludMax" value="<%=character.salud%>" max="<%=character.salud%>" class="mx-4" class="bg-danger"></progress>
+                            <progress id='barraSalud<%=character.id%>' value="<%=character.salud%>" max="<%=character.salud%>" class="mx-4" class="bg-danger"></progress>
                             <%= character.salud%> 
                             </button>
                             <div id="collapseOne" class="accordion-collapse collapse bg-transparent" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
                                 <div class="accordion-body container bg-dark">
-                                    <input type="number" id="danos" name="danos"
-                                        min="0" max="10000" style="width:inherit" class="bg-transparent text-center text-light">
-                                    <button class="btn btn-danger mt-3" onclick="danar()">Dañar</button>
-                                    <button class="btn btn-secondary mt-3" onclick="sanar()">Sanar</button>
+                                    <input type="number" name="danos"
+                                        min="0" max="10000" style="width:inherit" class="bg-transparent text-center text-light danos" id="dano<%=character.id%>">
+                                    <button class="btn btn-danger mt-3" id="<%=character.id%>" onclick='danar(this)' >Dañar</button>
+                                    <button class="btn btn-secondary mt-3" onclick='sanar()'>Sanar</button>
                                 </div>
                             </div>
                         </h2>
@@ -152,6 +152,140 @@
                 
             </div>
         </div>
+    
+    <script>
+        arraySalud = document.getElementsByTagName('progress')
+        arrayDanos = document.getElementsByClassName('danos')
+        
+        function danar(element) {
+            id = "barraSalud" + element.id
+            idDano = 'dano'+element.id
+            saludActual = arraySalud[id];
+            dano = arrayDanos[idDano]; 
+            saludActual.value -= parseInt(dano.value);
+            if (saludActual.value <= 0) {
+                alert ('Has caido! a rogar porque no te rematen ¿eh?')
+            };
+            dano.value = "";
+        }
+
+
+        function sanar() {
+            let barraSalud = document.getElementById("barraSalud<%=character.id%>")
+            console.log(barraSalud);
+        }
+
+        function absPot() {
+            let potMax = document.getElementById("potMax");
+            let absPot = parseInt(document.getElementById("absPot").value);
+            potMax.textContent = parseInt(potMax.textContent) - absPot
+            if (parseInt(potMax.textContent) <= 0) {
+                alert('...Estas Fulminado... te excediste cabron... Ahora... Quietecito a mirar el show')
+            }
+            document.getElementById("absPot").value = "";
+        }
+
+        function recPot(){
+            let potMax = document.getElementById("potMax");
+            let absPot = parseInt(document.getElementById("absPot").value);
+            let pot = document.getElementById("pot")
+            potMax.textContent = parseInt(potMax.textContent) + absPot
+            if (parseInt(potMax.textContent) >= parseInt(pot.textContent)) {
+                potMax.textContent = pot.textContent;
+                alert('Este cuerpo ya esta pidiendo otro round!')
+            }
+            document.getElementById("absPot").value = "";
+            
+        }
+
+        function absFren() {
+            let frenMax = document.getElementById("frenMax");
+            let absFren = parseInt(document.getElementById("absFren").value);
+            frenMax.textContent = parseInt(frenMax.textContent) - absFren
+            if (parseInt(frenMax.textContent) <= 0) {
+                alert('...Estas Letargado... ya ni para jugar a las chinitas puedes...')
+            }
+            document.getElementById("absFren").value = "";
+        }
+
+        function recFren() {
+            let frenMax = document.getElementById("frenMax");
+            let absFren = parseInt(document.getElementById("absFren").value);
+            let fren = document.getElementById("fren");
+            frenMax.textContent = parseInt(frenMax.textContent) + absFren;
+            if (parseInt(frenMax.textContent) >= parseInt(fren.textContent)) {
+                frenMax.textContent = fren.textContent
+                alert('Ese mareo ya paso, arribaaaaaa')
+            }
+            document.getElementById("absFren").value = "";
+        }
+
+        function absfVoluntad(){
+            let fVoluntadMax = document.getElementById("fVoluntadMax");
+            let absfVoluntad = parseInt(document.getElementById("absfVoluntad").value);
+            fVoluntadMax.textContent = parseInt(fVoluntadMax.textContent) - absfVoluntad
+            if (parseInt(fVoluntadMax.textContent) <= 0) {
+                alert('...Esta en Penumbra... TODAS TUS VELOCIDAD SE REDUCEN AL 50%')
+            }
+            document.getElementById("absfVoluntad").value = "";
+        }
+
+        function recfVoluntad(){
+            let fVoluntadMax = document.getElementById("fVoluntadMax");
+            let absfVoluntad = parseInt(document.getElementById("absfVoluntad").value);
+            let fVoluntad = document.getElementById("fVoluntad");
+            fVoluntadMax.textContent = parseInt(fVoluntadMax.textContent) + absfVoluntad
+            if (parseInt(fVoluntadMax.textContent) >= parseInt(fVoluntad.textContent)) {
+                alert('Arriba esa moral!!')
+                fVoluntadMax.textContent = fVoluntad.textContent
+            }
+            document.getElementById("absfVoluntad").value = "";
+        }
+
+        function absHidratacion(){
+            let hidratacionMax = document.getElementById("hidratacionMax");
+            let absHidratacion = parseInt(document.getElementById("absHidratacion").value);
+            hidratacionMax.textContent = parseInt(hidratacionMax.textContent) - absHidratacion;
+            document.getElementById("absHidratacion").value = "";
+        
+        }
+
+        function recHidratacion() {
+            let hidratacionMax = document.getElementById("hidratacionMax");
+            let absHidratacion = parseInt(document.getElementById("absHidratacion").value);
+            let hidratacion = document.getElementById("hidratacion");
+            hidratacionMax.textContent = parseInt(hidratacionMax.textContent) + absHidratacion;
+            if (parseInt(hidratacionMax.textContent) >= parseInt(hidratacion.textContent)) {
+                hidratacionMax.textContent = hidratacion.textContent; 
+            }
+            
+            document.getElementById("absHidratacion").value = "";    
+        }
+
+        function absHambre(){
+            let hambreMax = document.getElementById("hambreMax");
+            let absHambre = parseInt(document.getElementById("absHambre").value);
+            hambreMax.textContent = parseInt(hambreMax.textContent) - absHambre;
+            document.getElementById("absHambre").value = "";
+        }
+
+        function recHambre() {
+            let hambreMax = document.getElementById("hambreMax");
+            let absHambre = parseInt(document.getElementById("absHambre").value);
+            let hambre = document.getElementById("hambre");
+            hambreMax.textContent = parseInt(hambreMax.textContent) + absHambre;
+            if (parseInt(hambreMax.textContent) >= parseInt(hambre.textContent)) {
+                hambreMax.textContent = hambre.textContent;
+            }
+            document.getElementById("absHambre").value = "";
+        }
+
+    </script>
+
+
+
+
+
     <%end%>
 </div>
 
@@ -159,131 +293,3 @@
 <%= button_to 'Salir', destroy_user_session_path, method: :delete , class:"btn btn-light my-3"%>
 
 
-<script>
-    function danar(){
-        let saludMax = document.getElementById("saludMax");
-        let danos = parseInt(document.getElementById("danos").value);
-        saludMax.value = saludMax.value - danos; 
-        if (parseInt(saludMax.value) <= 0) {
-            alert('CAIDO... pobre sujeto...')
-        }
-        document.getElementById("danos").value = "";
-    }
-
-    function sanar() {
-        let saludMax = document.getElementById("saludMax");
-        let danos = parseInt(document.getElementById("danos").value);
-        saludMax.value = saludMax.value + danos; 
-        if (saludMax.value >= saludMax.max) {
-            saludMax.value = saludMax.max;
-            alert('Ya estas al maximo Titan!! vamos por otra ronda')
-        }
-        document.getElementById("danos").value = "";
-    }
-
-    function absPot() {
-        let potMax = document.getElementById("potMax");
-        let absPot = parseInt(document.getElementById("absPot").value);
-        potMax.textContent = parseInt(potMax.textContent) - absPot
-        if (parseInt(potMax.textContent) <= 0) {
-            alert('...Estas Fulminado... te excediste cabron... Ahora... Quietecito a mirar el show')
-        }
-        document.getElementById("absPot").value = "";
-    }
-
-    function recPot(){
-        let potMax = document.getElementById("potMax");
-        let absPot = parseInt(document.getElementById("absPot").value);
-        let pot = document.getElementById("pot")
-        potMax.textContent = parseInt(potMax.textContent) + absPot
-        if (parseInt(potMax.textContent) >= parseInt(pot.textContent)) {
-            potMax.textContent = pot.textContent;
-            alert('Este cuerpo ya esta pidiendo otro round!')
-        }
-        document.getElementById("absPot").value = "";
-        
-    }
-
-    function absFren() {
-        let frenMax = document.getElementById("frenMax");
-        let absFren = parseInt(document.getElementById("absFren").value);
-        frenMax.textContent = parseInt(frenMax.textContent) - absFren
-        if (parseInt(frenMax.textContent) <= 0) {
-            alert('...Estas Letargado... ya ni para jugar a las chinitas puedes...')
-        }
-        document.getElementById("absFren").value = "";
-    }
-
-    function recFren() {
-        let frenMax = document.getElementById("frenMax");
-        let absFren = parseInt(document.getElementById("absFren").value);
-        let fren = document.getElementById("fren");
-        frenMax.textContent = parseInt(frenMax.textContent) + absFren;
-        if (parseInt(frenMax.textContent) >= parseInt(fren.textContent)) {
-            frenMax.textContent = fren.textContent
-            alert('Ese mareo ya paso, arribaaaaaa')
-        }
-        document.getElementById("absFren").value = "";
-    }
-
-    function absfVoluntad(){
-        let fVoluntadMax = document.getElementById("fVoluntadMax");
-        let absfVoluntad = parseInt(document.getElementById("absfVoluntad").value);
-        fVoluntadMax.textContent = parseInt(fVoluntadMax.textContent) - absfVoluntad
-        if (parseInt(fVoluntadMax.textContent) <= 0) {
-            alert('...Esta en Penumbra... TODAS TUS VELOCIDAD SE REDUCEN AL 50%')
-        }
-        document.getElementById("absfVoluntad").value = "";
-    }
-
-    function recfVoluntad(){
-        let fVoluntadMax = document.getElementById("fVoluntadMax");
-        let absfVoluntad = parseInt(document.getElementById("absfVoluntad").value);
-        let fVoluntad = document.getElementById("fVoluntad");
-        fVoluntadMax.textContent = parseInt(fVoluntadMax.textContent) + absfVoluntad
-        if (parseInt(fVoluntadMax.textContent) >= parseInt(fVoluntad.textContent)) {
-            alert('Arriba esa moral!!')
-            fVoluntadMax.textContent = fVoluntad.textContent
-        }
-        document.getElementById("absfVoluntad").value = "";
-    }
-
-    function absHidratacion(){
-        let hidratacionMax = document.getElementById("hidratacionMax");
-        let absHidratacion = parseInt(document.getElementById("absHidratacion").value);
-        hidratacionMax.textContent = parseInt(hidratacionMax.textContent) - absHidratacion;
-        document.getElementById("absHidratacion").value = "";
-    
-    }
-
-    function recHidratacion() {
-        let hidratacionMax = document.getElementById("hidratacionMax");
-        let absHidratacion = parseInt(document.getElementById("absHidratacion").value);
-        let hidratacion = document.getElementById("hidratacion");
-        hidratacionMax.textContent = parseInt(hidratacionMax.textContent) + absHidratacion;
-        if (parseInt(hidratacionMax.textContent) >= parseInt(hidratacion.textContent)) {
-            hidratacionMax.textContent = hidratacion.textContent; 
-        }
-        
-        document.getElementById("absHidratacion").value = "";    
-    }
-
-    function absHambre(){
-        let hambreMax = document.getElementById("hambreMax");
-        let absHambre = parseInt(document.getElementById("absHambre").value);
-        hambreMax.textContent = parseInt(hambreMax.textContent) - absHambre;
-        document.getElementById("absHambre").value = "";
-    }
-
-    function recHambre() {
-        let hambreMax = document.getElementById("hambreMax");
-        let absHambre = parseInt(document.getElementById("absHambre").value);
-        let hambre = document.getElementById("hambre");
-        hambreMax.textContent = parseInt(hambreMax.textContent) + absHambre;
-        if (parseInt(hambreMax.textContent) >= parseInt(hambre.textContent)) {
-            hambreMax.textContent = hambre.textContent;
-        }
-        document.getElementById("absHambre").value = "";
-    }
-
-</script>
