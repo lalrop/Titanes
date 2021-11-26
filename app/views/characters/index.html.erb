@@ -47,15 +47,15 @@
                         <%# Desplegable de Potencialidad %>
                     <div class="accordion-item">
                         <h2 class="accordion-header bg-dark border border-light text-light py-2">
-                            <button class="accordion-button bg-transparent text-light " type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">Potencialidad: <span id="potMax" class="mx-2">
-                                <%=character.potencialidad%></span> / <span id="pot"><%=character.potencialidad%></span>
+                            <button class="accordion-button bg-transparent text-light " type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
+                            Potencialidad: <span id="nivelPot<%=character.id%>" class="pot mx-2"><%=character.potencialidad%></span> / <span><%=character.potencialidad%></span>
                             </button>
                             <div id="collapseTwo" class="accordion-collapse collapse bg-transparent" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
                                 <div class="accordion-body container bg-dark">
-                                    <input type="number" id="absPot" name="absPot"
-                                        min="0" max="<%=character.potencialidad%>" style="width:inherit" class="bg-transparent text-center text-light">
-                                    <button class="btn btn-danger mt-3" onclick="absPot()">Gastar</button>
-                                    <button class="btn btn-secondary mt-3" onclick="recPot()">Recuperar</button>
+                                    <input type="number" name="absPot" id="gastoPot<%=character.id%>"
+                                        min="0" max="<%=character.potencialidad%>" style="width:inherit" class="bg-transparent text-center text-light gastoPot">
+                                    <button class="btn btn-danger mt-3" onclick="absPot(this)" id="<%=character.id%>">Gastar</button>
+                                    <button class="btn btn-secondary mt-3" onclick="recPot(this)" id="<%=character.id%>">Recuperar</button>
                                 </div>
                             </div>
                         </h2>
@@ -156,7 +156,9 @@
     <script>
         arraySalud = document.getElementsByTagName('progress')
         arrayDanos = document.getElementsByClassName('danos')
-        
+        arrayPot = document.getElementsByClassName('pot')
+        arrayGastoPot = document.getElementsByClassName('gastoPot')
+
         function danar(element) {
             id = "barraSalud" + element.id
             idDano = 'dano'+element.id
@@ -179,14 +181,13 @@
             dano.value = "";
         }
 
-        function absPot() {
-            let potMax = document.getElementById("potMax");
-            let absPot = parseInt(document.getElementById("absPot").value);
-            potMax.textContent = parseInt(potMax.textContent) - absPot
-            if (parseInt(potMax.textContent) <= 0) {
-                alert('...Estas Fulminado... te excediste cabron... Ahora... Quietecito a mirar el show')
-            }
-            document.getElementById("absPot").value = "";
+        function absPot(element) {
+            id = "nivelPot" + element.id;
+            idGastoPot = "gastoPot" + element.id;
+            potActual = arrayPot[id];
+            gastoPot = arrayGastoPot[idGastoPot];
+            potActual.textContent = parseInt(potActual.textContent)-parseInt(gastoPot.value) 
+            gastoPot.value = ""
         }
 
         function recPot(){
