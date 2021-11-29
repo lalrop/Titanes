@@ -62,18 +62,17 @@
                     </div>
 
                         <%# Desplegable de Frenesis %>
-
                     <div class="accordion-item">
                         <h2 class="accordion-header bg-dark border border-light text-light py-2">
-                            <button class="accordion-button bg-transparent text-light " type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="true" aria-controls="collapseThree">Frenesis: <span id="frenMax" class="mx-2">
-                                <%=character.frenesis%></span> / <span id="fren"><%=character.frenesis%></span>
+                            <button class="accordion-button bg-transparent text-light " type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="true" aria-controls="collapseThree">
+                            Frenesis: <span id="nivelFren<%=character.id%>" class="fren mx-2"><%=character.frenesis%></span> / <span><%=character.frenesis%></span>
                             </button>
                             <div id="collapseThree" class="accordion-collapse collapse bg-transparent" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
                                 <div class="accordion-body container bg-dark">
-                                    <input type="number" id="absFren" name="absFren"
-                                        min="0" max="<%=character.frenesis%>" style="width:inherit" class="bg-transparent text-center text-light">
-                                    <button class="btn btn-danger mt-3" onclick="absFren()">Gastar</button>
-                                    <button class="btn btn-secondary mt-3" onclick="recFren()">Recuperar</button>
+                                    <input type="number" name="absFren" id="gastoFren<%=character.id%>" 
+                                        min="0" max="<%=character.frenesis%>" style="width:inherit" class="bg-transparent text-center text-light gastoFren">
+                                    <button class="btn btn-danger mt-3" onclick="absFren(this)" id="<%=character.id%>">Gastar</button>
+                                    <button class="btn btn-secondary mt-3" onclick="recFren(this)" id="<%=character.id%>">Recuperar</button>
                                 </div>
                             </div>
                         </h2>
@@ -83,15 +82,15 @@
 
                     <div class="accordion-item">
                         <h2 class="accordion-header bg-dark border border-light text-light py-2">
-                            <button class="accordion-button bg-transparent text-light " type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="true" aria-controls="collapseFour">Fuerza de Voluntad: <span id="fVoluntadMax" class="mx-2">
-                                <%=character.fuerza_de_voluntad%></span> / <span id="fVoluntad"><%=character.fuerza_de_voluntad%></span>
+                            <button class="accordion-button bg-transparent text-light " type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="true" aria-controls="collapseFour">
+                            Fuerza de Voluntad: <span id="nivelFdV<%=character.id%>" class="fdv mx-2"><%=character.fuerza_de_voluntad%></span> / <span><%=character.fuerza_de_voluntad%></span>
                             </button>
                             <div id="collapseFour" class="accordion-collapse collapse bg-transparent" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
                                 <div class="accordion-body container bg-dark">
-                                    <input type="number" id="absfVoluntad" name="absfVoluntad"
-                                        min="0" max="<%=character.fuerza_de_voluntad%>" style="width:inherit" class="bg-transparent text-center text-light">
-                                    <button class="btn btn-danger mt-3" onclick="absfVoluntad()">Gastar</button>
-                                    <button class="btn btn-secondary mt-3" onclick="recfVoluntad()">Recuperar</button>
+                                    <input type="number" name="absFdV" id="gastoFdV<%=character.id%>" 
+                                        min="0" max="<%=character.fuerza_de_voluntad%>" style="width:inherit" class="bg-transparent text-center text-light gastoFdV">
+                                    <button class="btn btn-danger mt-3" onclick="absFdV(this)" id="<%=character.id%>">Gastar</button>
+                                    <button class="btn btn-secondary mt-3" onclick="recFdV(this)" id="<%=character.id%>">Recuperar</button>
                                 </div>
                             </div>
                         </h2>
@@ -158,7 +157,10 @@
         arrayDanos = document.getElementsByClassName('danos')
         arrayPot = document.getElementsByClassName('pot')
         arrayGastoPot = document.getElementsByClassName('gastoPot')
-
+        arrayFren = document.getElementsByClassName('fren')
+        arrayGastoFren = document.getElementsByClassName('gastoFren')
+        arrayFdV = document.getElementsByClassName('fdv')
+        arrayGastoFdV = document.getElementsByClassName('gastoFdV')
         function danar(element) {
             id = "barraSalud" + element.id
             idDano = 'dano'+element.id
@@ -170,7 +172,6 @@
             };
             dano.value = "";
         }
-
 
         function sanar(element) {
             id = "barraSalud" + element.id
@@ -188,63 +189,76 @@
             gastoPot = arrayGastoPot[idGastoPot];
             potActual.textContent = parseInt(potActual.textContent)-parseInt(gastoPot.value) 
             gastoPot.value = ""
+            if (parseInt(potActual.textContent) <= 0) {
+                potActual.textContent = 0
+                alert('Estas fulminado pequeñin, quietecito te ves mas bonito.')
+            }
         }
 
-        function recPot(){
-            let potMax = document.getElementById("potMax");
-            let absPot = parseInt(document.getElementById("absPot").value);
-            let pot = document.getElementById("pot")
-            potMax.textContent = parseInt(potMax.textContent) + absPot
-            if (parseInt(potMax.textContent) >= parseInt(pot.textContent)) {
-                potMax.textContent = pot.textContent;
-                alert('Este cuerpo ya esta pidiendo otro round!')
+        function recPot(element){
+            id = "nivelPot" + element.id;
+            idGastoPot = "gastoPot" + element.id;
+            potActual = arrayPot[id];
+            gastoPot = arrayGastoPot[idGastoPot];
+            potActual.textContent = parseInt(potActual.textContent)+parseInt(gastoPot.value) 
+            gastoPot.value = ""
+            if (parseInt(potActual.textContent) >= <%=character.potencialidad%>) {
+                alert('Listo para otro round sabandija!')
+                potActual.textContent = <%=character.potencialidad%>
             }
-            document.getElementById("absPot").value = "";
-            
         }
 
-        function absFren() {
-            let frenMax = document.getElementById("frenMax");
-            let absFren = parseInt(document.getElementById("absFren").value);
-            frenMax.textContent = parseInt(frenMax.textContent) - absFren
-            if (parseInt(frenMax.textContent) <= 0) {
-                alert('...Estas Letargado... ya ni para jugar a las chinitas puedes...')
+        function absFren(element) {
+            id = "nivelFren" + element.id;
+            idGastoFren = "gastoFren" + element.id;
+            frenActual = arrayFren[id];
+            gastoFren = arrayGastoFren[idGastoFren];
+            frenActual.textContent = parseInt(frenActual.textContent)-parseInt(gastoFren.value); 
+            gastoFren.value = "";
+            if (parseInt(frenActual.textContent) <= 0) {
+                frenActual.textContent = 0;
+                alert('Letargado!, llamen una enfermera que este crio esta babeando el suelo!')
             }
-            document.getElementById("absFren").value = "";
         }
 
-        function recFren() {
-            let frenMax = document.getElementById("frenMax");
-            let absFren = parseInt(document.getElementById("absFren").value);
-            let fren = document.getElementById("fren");
-            frenMax.textContent = parseInt(frenMax.textContent) + absFren;
-            if (parseInt(frenMax.textContent) >= parseInt(fren.textContent)) {
-                frenMax.textContent = fren.textContent
-                alert('Ese mareo ya paso, arribaaaaaa')
+        function recFren(element) {
+            id = "nivelFren" + element.id;
+            idGastoFren = "gastoFren" + element.id;
+            frenActual = arrayFren[id];
+            gastoFren = arrayGastoFren[idGastoFren];
+            frenActual.textContent = parseInt(frenActual.textContent)+parseInt(gastoFren.value) 
+            gastoFren.value = ""
+            if (parseInt(frenActual.textContent) >= <%=character.frenesis%>) {
+                alert('Suficiente descanso! los oidos ya dejaron de sangrar!')
+                frenActual.textContent = <%=character.frenesis%>
             }
-            document.getElementById("absFren").value = "";
+        }
+        
+
+        function absFdV(element){
+            id = "nivelFdV" + element.id;
+            idGastoFdV = "gastoFdV" + element.id;
+            fdvActual = arrayFdV[id];
+            gastoFdV = arrayGastoFdV[idGastoFdV];
+            fdvActual.textContent = parseInt(fdvActual.textContent)-parseInt(gastoFdV.value); 
+            gastoFdV.value = "";
+            if (parseInt(fdvActual.textContent) <= 0) {
+                fdvActual.textContent = 0;
+                alert('Desmotivado?? How Dare You!! estas en penumbra... un tanto mas lento nada mas... jjejeje')
+            }        
         }
 
-        function absfVoluntad(){
-            let fVoluntadMax = document.getElementById("fVoluntadMax");
-            let absfVoluntad = parseInt(document.getElementById("absfVoluntad").value);
-            fVoluntadMax.textContent = parseInt(fVoluntadMax.textContent) - absfVoluntad
-            if (parseInt(fVoluntadMax.textContent) <= 0) {
-                alert('...Esta en Penumbra... TODAS TUS VELOCIDAD SE REDUCEN AL 50%')
-            }
-            document.getElementById("absfVoluntad").value = "";
-        }
-
-        function recfVoluntad(){
-            let fVoluntadMax = document.getElementById("fVoluntadMax");
-            let absfVoluntad = parseInt(document.getElementById("absfVoluntad").value);
-            let fVoluntad = document.getElementById("fVoluntad");
-            fVoluntadMax.textContent = parseInt(fVoluntadMax.textContent) + absfVoluntad
-            if (parseInt(fVoluntadMax.textContent) >= parseInt(fVoluntad.textContent)) {
-                alert('Arriba esa moral!!')
-                fVoluntadMax.textContent = fVoluntad.textContent
-            }
-            document.getElementById("absfVoluntad").value = "";
+        function recFdV(element){
+            id = "nivelFdV" + element.id;
+            idGastoFdV = "gastoFdV" + element.id;
+            fdvActual = arrayFdV[id];
+            gastoFdV = arrayGastoFdV[idGastoFdV];
+            fdvActual.textContent = parseInt(fdvActual.textContent)+parseInt(gastoFdV.value); 
+            gastoFdV.value = "";
+            if (parseInt(fdvActual.textContent) >= <%=character.fuerza_de_voluntad%>) {
+                fdvActual.textContent = <%=character.fuerza_de_voluntad%>;
+                alert('Que linda sonrisa sin dientes, sigamos!')
+            }        
         }
 
         function absHidratacion(){
