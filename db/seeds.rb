@@ -6,16 +6,16 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
-# Distrito.create([
-#     {distrito: 'Kaiser', descripcion: ''},
-#     {distrito: 'Drake', descripcion: ''},
-#     {distrito: 'Ignea Mortis', descripcion: ''},
-#     {distrito: 'Tenjou', descripcion: ''},
-#     {distrito: 'Samsara', descripcion: ''},
-#     {distrito: 'Stahl', descripcion: ''},
-#     {distrito: 'Khronos', descripcion: ''},
-#     {distrito: 'Woohan', descripcion: ''}
-# ])
+Distrito.create([
+    {distrito: 'Kaiser', descripcion: '',title1:'Alpha Kaiser',efect1:'El cuerpo se niega a aceptar las heridas como impedimento para seguir en combate, permitiendo así al Titán recuperarse de forma automática 50 Puntos de Salud por cada Punto de Potencialidad gastado. Esta regeneración es inmediata, pero no milagrosa. Se limita a la curación de golpes, cortes, quemaduras y daños por envenenamiento (no elimina el veneno), dejando en el lugar de la herida la cicatriz respectiva que habría luego de una curación normal. Alpha Kaiser no puede regenerar desmembramientos, sin embargo, puede cicatrizar la zona afectada y curar los Puntos de Salud perdidos por este daño.',title2:'Respect!',efect2:'Una vez realizadas las tiradas para resistir un ataque oponente (entiéndase, lograr la velocidad necesaria con Estabilidad), el Titán agudiza su vista transformando su mirada en los ojos de Alpha Kaiser durante sólo un instante y compacta los músculos en la zona donde recibirá el golpe, aumentando su resistencia al doble del total logrado con las tiradas involucradas.',title3:'Dragon´s Law',efect3:'Bajo esta nueva organización, el kaizo es capaz de transformar cada Punto de Frènesis en 8 Puntos de Potencialidad para ser gastados a libre disposición dentro del turno. Sumado a esto, como la conciencia del kaizo ha sido relegada, este no se ve afectado por las consecuencias de gastar de forma completa todos sus puntos en Frènesis, permitiéndole seguir en combate aún cuando sus condiciones psicológicas se encuentren agotadas.',restrict1:'Un éxito en la tirada de un dado.1 Punto de Potencialidad por cada 20 Puntos de Salud a curar.',restrict2:'Un 8, 9 ó 10 en la tirada de un dado. Sólo aplicable como respuesta a un ataque físico oponente.',restrict3:'Un éxito en la tirada de un dado.'},
+    {distrito: 'Drake', descripcion: '',},
+    {distrito: 'Ignea Mortis', descripcion: '',},
+    {distrito: 'Tenjou', descripcion: '',},
+    {distrito: 'Samsara', descripcion: '',},
+    {distrito: 'Stahl', descripcion: '',},
+    {distrito: 'Khronos', descripcion: '',},
+    {distrito: 'Woohan', descripcion: '',}
+])
 
 # Raza.create([
 #     {raza:'Humano' , descripcion: ''},

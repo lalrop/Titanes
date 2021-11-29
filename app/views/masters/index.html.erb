@@ -1,0 +1,26 @@
+<h1>Welcome, Master</h1>
+
+<div class="dropdown">
+  <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+    Distritos
+  </button>
+  <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+    <% @distritos.each do |distrito|%>
+        <li><a class="dropdown-item" href="#<%=distrito.distrito%>" name="<%=distrito.distrito%>" onclick="show(this)"><%=distrito.distrito%></li>
+    <% end %>
+  </ul>
+</div>
+
+<div class=" text-secondary " id="distritoInfo">
+    <div id="Kaiser" class="d-none text-white" ><h1>KAISERRRRRRS</h1></div>
+    <div id="Drake" class="d-none text-white" ><h1>Drakeeeesss</h1></div>
+    <div id="Samsara" class="d-none text-white" ><h1>Samsesoooo</h1></div>
+</div>
+
+<script>
+    function show(element) {
+        let distritoId = document.getElementById(element.name)
+        distritoId.classList.remove("d-none")
+    }
+
+</script>

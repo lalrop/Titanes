@@ -96,8 +96,7 @@
                         </h2>
                     </div>    
 
-                        <%# Desplegable Hidratacion %>
-                        
+                        <%# Desplegable Hidratacion %>         
                     <div class="accordion-item">
                         <h2 class="accordion-header bg-dark border border-light text-light py-2">
                             <button class="accordion-button bg-transparent text-light " type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive" aria-expanded="true" aria-controls="collapseFive">Hidratacion: <span id="hidratacionMax" class="mx-2">
@@ -133,6 +132,7 @@
                     </div>
                 </div>
 
+                <%# Botones secciones Combate, Tecnicas y Tinieblas %>
                 <div class="row my-3">
                     <div class="col px-0">
                         <a href="<%=character_path(character)%>" class="btn btn-danger px-3">Combate</a>
@@ -161,6 +161,8 @@
         arrayGastoFren = document.getElementsByClassName('gastoFren')
         arrayFdV = document.getElementsByClassName('fdv')
         arrayGastoFdV = document.getElementsByClassName('gastoFdV')
+       
+    //    Botones Salud
         function danar(element) {
             id = "barraSalud" + element.id
             idDano = 'dano'+element.id
@@ -182,6 +184,7 @@
             dano.value = "";
         }
 
+        // Botones Potencialidad
         function absPot(element) {
             id = "nivelPot" + element.id;
             idGastoPot = "gastoPot" + element.id;
@@ -208,6 +211,7 @@
             }
         }
 
+        // Botones Frenesis
         function absFren(element) {
             id = "nivelFren" + element.id;
             idGastoFren = "gastoFren" + element.id;
@@ -234,7 +238,7 @@
             }
         }
         
-
+        // Botones Fuerza de Voluntad
         function absFdV(element){
             id = "nivelFdV" + element.id;
             idGastoFdV = "gastoFdV" + element.id;
@@ -261,53 +265,33 @@
             }        
         }
 
+        // Botones Hidratacion
         function absHidratacion(){
-            let hidratacionMax = document.getElementById("hidratacionMax");
-            let absHidratacion = parseInt(document.getElementById("absHidratacion").value);
-            hidratacionMax.textContent = parseInt(hidratacionMax.textContent) - absHidratacion;
-            document.getElementById("absHidratacion").value = "";
-        
+            alert('en desarrollo');
         }
 
+        // Botones Hambre
         function recHidratacion() {
-            let hidratacionMax = document.getElementById("hidratacionMax");
-            let absHidratacion = parseInt(document.getElementById("absHidratacion").value);
-            let hidratacion = document.getElementById("hidratacion");
-            hidratacionMax.textContent = parseInt(hidratacionMax.textContent) + absHidratacion;
-            if (parseInt(hidratacionMax.textContent) >= parseInt(hidratacion.textContent)) {
-                hidratacionMax.textContent = hidratacion.textContent; 
-            }
-            
-            document.getElementById("absHidratacion").value = "";    
+            alert('en desarrollo');      
         }
 
         function absHambre(){
-            let hambreMax = document.getElementById("hambreMax");
-            let absHambre = parseInt(document.getElementById("absHambre").value);
-            hambreMax.textContent = parseInt(hambreMax.textContent) - absHambre;
-            document.getElementById("absHambre").value = "";
+            alert('en desarrollo');
         }
 
         function recHambre() {
-            let hambreMax = document.getElementById("hambreMax");
-            let absHambre = parseInt(document.getElementById("absHambre").value);
-            let hambre = document.getElementById("hambre");
-            hambreMax.textContent = parseInt(hambreMax.textContent) + absHambre;
-            if (parseInt(hambreMax.textContent) >= parseInt(hambre.textContent)) {
-                hambreMax.textContent = hambre.textContent;
-            }
-            document.getElementById("absHambre").value = "";
+            alert('en desarrollo');
         }
 
     </script>
 
-
-
-
-
     <%end%>
 </div>
 
+<% if current_user.rol == true %>
+    <%= button_to 'Seccion Master', masters_path, method: :get, class:"btn btn-danger my-4"%>
+    
+<% end %>
 <%= button_to 'Crear Personaje', new_character_path, method: :get, class:"btn btn-secondary"%>
 <%= button_to 'Salir', destroy_user_session_path, method: :delete , class:"btn btn-light my-3"%>
 
