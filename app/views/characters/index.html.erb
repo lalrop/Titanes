@@ -202,9 +202,9 @@
             gastoPot = arrayGastoPot[idGastoPot];
             potActual.textContent = parseInt(potActual.textContent)+parseInt(gastoPot.value) 
             gastoPot.value = ""
-            if (parseInt(potActual.textContent) >= <%=character.potencialidad%>) {
+            if (parseInt(potActual.textContent) >= parseInt(potActual.nextElementSibling.textContent)) {
                 alert('Listo para otro round sabandija!')
-                potActual.textContent = <%=character.potencialidad%>
+                potActual.textContent = potActual.nextElementSibling.textContent
             }
         }
 
@@ -228,9 +228,9 @@
             gastoFren = arrayGastoFren[idGastoFren];
             frenActual.textContent = parseInt(frenActual.textContent)+parseInt(gastoFren.value) 
             gastoFren.value = ""
-            if (parseInt(frenActual.textContent) >= <%=character.frenesis%>) {
+            if (parseInt(frenActual.textContent) >= parseInt(frenActual.nextElementSibling.textContent)) {
                 alert('Suficiente descanso! los oidos ya dejaron de sangrar!')
-                frenActual.textContent = <%=character.frenesis%>
+                frenActual.textContent = frenActual.nextElementSibling.textContent
             }
         }
         
@@ -255,8 +255,8 @@
             gastoFdV = arrayGastoFdV[idGastoFdV];
             fdvActual.textContent = parseInt(fdvActual.textContent)+parseInt(gastoFdV.value); 
             gastoFdV.value = "";
-            if (parseInt(fdvActual.textContent) >= <%=character.fuerza_de_voluntad%>) {
-                fdvActual.textContent = <%=character.fuerza_de_voluntad%>;
+            if (parseInt(fdvActual.textContent) >= parseInt(fdvActual.nextElementSibling.textContent)) {
+                fdvActual.textContent = fdvActual.nextElementSibling.textContent;
                 alert('Que linda sonrisa sin dientes, sigamos!')
             }        
         }
