@@ -6,7 +6,7 @@
   </button>
   <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
     <% @distritos.each do |distrito|%>
-        <li><a class="dropdown-item" href="#<%=distrito.distrito%>" name="<%=distrito.distrito%>" onclick="show(this)"><%=distrito.distrito%></li>
+        <li><a class="dropdown-item" href="#<%=this.distrito%>" name="<%=distrito.distrito%>" onclick="show(this)"><%=distrito.distrito%></li>
     <% end %>
   </ul>
 </div>
