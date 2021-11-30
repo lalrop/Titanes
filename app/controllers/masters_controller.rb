@@ -1,10 +1,26 @@
-class MastersController < ApplicationController
-    def index
+class MastersController < ApplicationController   
+    def distritos
         @distritos = Distrito.all
         @razas = Raza.all
-        @tinieblas = Tiniebla.all
-        @repercusiones = Repercusion.all
-        @user = User.all
     end
     
+    def tecnicas
+        
+    end
+    
+    def estados
+
+    end
+    
+    def armas
+
+    end
+    
+    def tinieblas
+        @tinieblas = Tiniebla.all
+    end
+
+    def repercusiones
+        @repercusiones = Repercusion.all
+    end
 end

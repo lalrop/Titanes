@@ -1,8 +1,6 @@
-<h1>Personajes</h1>
-
 <div class="row">
     <% @characters.each do |character|%>
-        <div class="card my-5 bg-transparent col-xs-12 col-md-4">
+        <div class="card mb-5 bg-transparent col-xs-12 col-md-4">
             <img src="<%= character.avatar%>" class="opacity-70">   
             <div class="card-body">                            
                 <h4 class="card-title fst-italic fw-bold fs-2 my-3">
@@ -288,10 +286,7 @@
     <%end%>
 </div>
 
-<% if current_user.rol == true %>
-    <%= button_to 'Seccion Master', masters_path, method: :get, class:"btn btn-danger my-4"%>
-    
-<% end %>
+
 <%= button_to 'Crear Personaje', new_character_path, method: :get, class:"btn btn-secondary"%>
 <%= button_to 'Salir', destroy_user_session_path, method: :delete , class:"btn btn-light my-3"%>
 
