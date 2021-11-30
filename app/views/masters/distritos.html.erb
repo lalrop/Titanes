@@ -1,0 +1,58 @@
+<script>
+    var sections = document.getElementsByTagName('a');
+    sections.addEventListener('click',function show(){
+        console.log('hi')     
+    })
+</script>
+
+<div class="d-flex bd-highlight">
+    <div class=" flex-shrink-1 bd-highlight">
+        <ul class="nav flex-column" id="distritos">
+            <li class="nav-item">
+                <a class="nav-link text-start" href="#" name="kaiserSection">Kaiser</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link text-start" href="#">Drake</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link text-start" href="#">Ignea Mortis</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link text-start" href="#">Tenjou</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link text-start" href="#">Samsara</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link text-start" href="#">Stahl</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link text-start" href="#">Khronos</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link text-start">Woohan</a>
+            </li>
+        </ul>
+    </div>
+    <div class="p-2 w-100 bd-highlight">
+        <div id="kaiserSection" class="d-none">
+            <h3><%=@distritos.find(1).distrito%></h3>
+            <div>
+                <h4><%=@distritos.find(1).title1%></h4>
+                <p class="text-start overflow-auto"><%=@distritos.find(1).efect1%></p>
+                <p><%=@distritos.find(1).restrict1%></p>
+            </div>
+            <div>
+                <h4><%=@distritos.find(1).title2%></h4>
+                <p class="text-start overflow-auto"><%=@distritos.find(1).efect2%></p>
+                <p><%=@distritos.find(1).restrict2%></p>
+            </div>
+            <div>
+                <h4><%=@distritos.find(1).title3%></h4>
+                <p class="text-start overflow-auto"><%=@distritos.find(1).efect3%></p>
+                <p><%=@distritos.find(1).restrict3%></p>
+            </div>
+        </div>
+    </div>
+</div>
+

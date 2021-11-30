@@ -1,9 +1,13 @@
 class MastersController < ApplicationController   
     def distritos
         @distritos = Distrito.all
+    end
+    
+    def razas
         @razas = Raza.all
     end
     
+
     def tecnicas
         
     end
