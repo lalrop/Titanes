@@ -1,58 +1,57 @@
-<script>
-    var sections = document.getElementsByTagName('a');
-    sections.addEventListener('click',function show(){
-        console.log('hi')     
-    })
-</script>
+<%# Tabs %>
+<ul class="nav nav-tabs" id="myTab" role="tablist">
+    <li class="nav-item" role="presentation">
+        <button class="nav-link active" id="Kaiser-tab" data-bs-toggle="tab" data-bs-target="#Kaiser" type="button" role="tab" aria-controls="Kaiser" aria-selected="true">Kaiser</button>
+    </li>
+    <li class="nav-item" role="presentation">
+        <button class="nav-link" id="Drake-tab" data-bs-toggle="tab" data-bs-target="#Drake" type="button" role="tab" aria-controls="Drake" aria-selected="false">Drake</button>
+    </li>
+    <li class="nav-item" role="presentation">
+        <button class="nav-link" id="IgneaMortis-tab" data-bs-toggle="tab" data-bs-target="#IgneaMortis" type="button" role="tab" aria-controls="IgneaMortis" aria-selected="false">Ignea Mortis</button>
+    </li>
+    <li class="nav-item" role="presentation">
+        <button class="nav-link" id="Tenjou-tab" data-bs-toggle="tab" data-bs-target="#Tenjou" type="button" role="tab" aria-controls="Tenjou" aria-selected="false">Tenjou</button>
+    </li>
+    <li class="nav-item" role="presentation">
+        <button class="nav-link" id="Samsara-tab" data-bs-toggle="tab" data-bs-target="#Samsara" type="button" role="tab" aria-controls="Samsara" aria-selected="false">Samsara</button>
+    </li>
+    <li class="nav-item" role="presentation">
+        <button class="nav-link" id="Stahl-tab" data-bs-toggle="tab" data-bs-target="#Stahl" type="button" role="tab" aria-controls="Stahl" aria-selected="false">Stahl</button>
+    </li>
+    <li class="nav-item" role="presentation">
+        <button class="nav-link" id="Khronos-tab" data-bs-toggle="tab" data-bs-target="#Khronos" type="button" role="tab" aria-controls="Khronos" aria-selected="false">Khronos</button>
+    </li>
+    <li class="nav-item" role="presentation">
+        <button class="nav-link" id="Woohan-tab" data-bs-toggle="tab" data-bs-target="#Woohan" type="button" role="tab" aria-controls="Woohan" aria-selected="false">Woohan</button>
+    </li>
+</ul>
 
-<div class="d-flex bd-highlight">
-    <div class=" flex-shrink-1 bd-highlight">
-        <ul class="nav flex-column" id="distritos">
-            <li class="nav-item">
-                <a class="nav-link text-start" href="#" name="kaiserSection">Kaiser</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link text-start" href="#">Drake</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link text-start" href="#">Ignea Mortis</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link text-start" href="#">Tenjou</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link text-start" href="#">Samsara</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link text-start" href="#">Stahl</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link text-start" href="#">Khronos</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link text-start">Woohan</a>
-            </li>
-        </ul>
-    </div>
-    <div class="p-2 w-100 bd-highlight">
-        <div id="kaiserSection" class="d-none">
-            <h3><%=@distritos.find(1).distrito%></h3>
-            <div>
-                <h4><%=@distritos.find(1).title1%></h4>
-                <p class="text-start overflow-auto"><%=@distritos.find(1).efect1%></p>
-                <p><%=@distritos.find(1).restrict1%></p>
-            </div>
-            <div>
-                <h4><%=@distritos.find(1).title2%></h4>
-                <p class="text-start overflow-auto"><%=@distritos.find(1).efect2%></p>
-                <p><%=@distritos.find(1).restrict2%></p>
-            </div>
-            <div>
-                <h4><%=@distritos.find(1).title3%></h4>
-                <p class="text-start overflow-auto"><%=@distritos.find(1).efect3%></p>
-                <p><%=@distritos.find(1).restrict3%></p>
-            </div>
+
+<%# Info tabs %>
+
+<div class="tab-content" id="myTabContent">    
+    <% @distritos.each do |distrito| %>
+        <div class="tab-pane fade" id="<%=distrito.distrito%>" role="tabpanel" aria-labelledby="<%=distrito.distrito%>-tab">
+            <h1 class="my-4"><%=distrito.distrito%></h1>
+            <h3><%=distrito.title1%></h3>
+            <p class="text-start"><%=distrito.efect1%></p>
+            <p class="border border-secondary p-2"><span><strong>Restriccion: </strong></span><%=distrito.restrict1%></p>
+            <h3 class="my-4"><%=distrito.title2%></h3>
+            <p class="text-start"><%=distrito.efect2%></p>
+            <p class="border border-secondary p-2"><span><strong>Restriccion: </strong></span><%=distrito.restrict2%></p>
+            <h3 class="my-4"><%=distrito.title3%></h3>
+            <p class="text-start"><%=distrito.efect3%></p>   
+            <p class="border border-secondary p-2"><span><strong>Restriccion: </strong></span><%=distrito.restrict3%></p>     
         </div>
-    </div>
+        
+        <% if distrito.id == 3 %>
+            <div class="tab-pane fade" id="IgneaMortis" role="tabpanel" aria-labelledby="IgneaMortis-tab">
+                <h1><%=distrito.distrito%></h1>
+                <h3><%=distrito.title1%></h3>
+                <p class="text-start"><%=distrito.efect1%></p>
+                <p class="border border-secondary p-2"><span><strong>Restriccion: </strong></span><%=distrito.restrict1%></p>         
+            </div>
+        <% end %>
+            
+    <% end %>
 </div>
-
