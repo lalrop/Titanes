@@ -246,80 +246,125 @@
 
 # //Actualizando contenido de las tinieblas
 
-oidoAgudo = Tiniebla.find(1)
-oidoAgudo.update(level1:'El personaje es capaz de detectar el idioma en el que una cantidad de sujetos está hablando, a una distancia de 20 metros.',level2:'El personaje es capaz de discernir la cantidad de sujetos involucrados en el diálogo, a una distancia de 50 metros.',level3:'El personaje es capaz de identificar el tono de la conversación.',level4:'La distancia aumenta a 100 metros.',level5:'El personaje es capaz de identificar en un 100% los movimientos del usuario objetivo (habilidad no utilizable en combate)',)
+# oidoAgudo = Tiniebla.find(1)
+# oidoAgudo.update(level1:'El personaje es capaz de detectar el idioma en el que una cantidad de sujetos está hablando, a una distancia de 20 metros.',level2:'El personaje es capaz de discernir la cantidad de sujetos involucrados en el diálogo, a una distancia de 50 metros.',level3:'El personaje es capaz de identificar el tono de la conversación.',level4:'La distancia aumenta a 100 metros.',level5:'El personaje es capaz de identificar en un 100% los movimientos del usuario objetivo (habilidad no utilizable en combate)',)
 
-susurroSiniestro =	Tiniebla.find(2)
-susurroSiniestro.update(level1:'El personaje es capaz de forzar la mirada de una persona que está a 20 metros en dirección hacia él por un breve periodo de tiempo (hasta 5 segundos).',level2:'El personaje es capaz de causar una leve sensación de desagrado hacia una persona, la distancia aumenta a 50 metros (la sensación de desagrado es similar a un mal presentimiento).',level3:'El personaje causa una leve parálisis en el objetivo, haciendo que este se obsesione con mirar en dirección al usuario (hasta 20 segundos).',level4:'La parálisis en el objetivo puede durar hasta 40 segundos, a una distancia de 70 metros.',level5:'El personaje puede causar que su objetivo escuche un leve susurro con algún mensaje en especial. La duración de la parálisis puede durar hasta 60 segundos, y el entorno puede notar a la víctima sudando frío.')
+# susurroSiniestro =	Tiniebla.find(2)
+# susurroSiniestro.update(level1:'El personaje es capaz de forzar la mirada de una persona que está a 20 metros en dirección hacia él por un breve periodo de tiempo (hasta 5 segundos).',level2:'El personaje es capaz de causar una leve sensación de desagrado hacia una persona, la distancia aumenta a 50 metros (la sensación de desagrado es similar a un mal presentimiento).',level3:'El personaje causa una leve parálisis en el objetivo, haciendo que este se obsesione con mirar en dirección al usuario (hasta 20 segundos).',level4:'La parálisis en el objetivo puede durar hasta 40 segundos, a una distancia de 70 metros.',level5:'El personaje puede causar que su objetivo escuche un leve susurro con algún mensaje en especial. La duración de la parálisis puede durar hasta 60 segundos, y el entorno puede notar a la víctima sudando frío.')
 
-extorsionar = Tiniebla.find(3)
-extorsionar.update(level1:'La víctima cuenta lo que se puede ver en el entorno, además de posibles movimientos básicos dentro del espacio físico en el cual se encuentran (como, por ejemplo, el horario de cambio de guardia, ubicación de cámaras, etc).',level2:'La víctima entrega información completa sobre sí mismo y sobre sus compañeros.',level3:'La víctima entrega información completa respecto a sus superiores.',level4:'La víctima es capaz de improvisar un rol o papel, engañando a quien sea, sólo con el fin de obtener información. Nada que comprometa su vida (como atacar a alguien, por ejemplo).',level5:'')
+# extorsionar = Tiniebla.find(3)
+# extorsionar.update(level1:'La víctima cuenta lo que se puede ver en el entorno, además de posibles movimientos básicos dentro del espacio físico en el cual se encuentran (como, por ejemplo, el horario de cambio de guardia, ubicación de cámaras, etc).',level2:'La víctima entrega información completa sobre sí mismo y sobre sus compañeros.',level3:'La víctima entrega información completa respecto a sus superiores.',level4:'La víctima es capaz de improvisar un rol o papel, engañando a quien sea, sólo con el fin de obtener información. Nada que comprometa su vida (como atacar a alguien, por ejemplo).',level5:'')
 
-instSupervivencia = Tiniebla.find(4)
-instSupervivencia.update(level1:'El personaje es capaz de distinguir la presencia de algún otro Titán aparte de los que ya tiene en consideración, en un radio de 20 metros.',level2:'El personaje es capaz de discernir con exactitud cuántos Titanes más hay, en un radio de 50 metros.',level3:'El personaje es capaz de discernir el nivel de cada Titán.',level4:'La distancia aumenta a 100 metros.',level5:'La distancia aumenta a 500 metros.')
+# instSupervivencia = Tiniebla.find(4)
+# instSupervivencia.update(level1:'El personaje es capaz de distinguir la presencia de algún otro Titán aparte de los que ya tiene en consideración, en un radio de 20 metros.',level2:'El personaje es capaz de discernir con exactitud cuántos Titanes más hay, en un radio de 50 metros.',level3:'El personaje es capaz de discernir el nivel de cada Titán.',level4:'La distancia aumenta a 100 metros.',level5:'La distancia aumenta a 500 metros.')
 
-encubrirse = Tiniebla.find(5)
-encubrirse.update(level1:'El personaje es capaz de ocultar su presencia a algún otro Titán, aparte de los que ya saben que está en el lugar, en un radio de 20 metros.',level2:'El personaje es capaz de percibir que otro Titán intenta oler su rastro. El radio aumenta a 50 metros.',level3:'El personaje es capaz de discernir el nivel de cada Titán que lo esté buscando.',level4:'La distancia aumenta a 100 metros.',level5:'La distancia aumenta a 500 metros.')
+# encubrirse = Tiniebla.find(5)
+# encubrirse.update(level1:'El personaje es capaz de ocultar su presencia a algún otro Titán, aparte de los que ya saben que está en el lugar, en un radio de 20 metros.',level2:'El personaje es capaz de percibir que otro Titán intenta oler su rastro. El radio aumenta a 50 metros.',level3:'El personaje es capaz de discernir el nivel de cada Titán que lo esté buscando.',level4:'La distancia aumenta a 100 metros.',level5:'La distancia aumenta a 500 metros.')
 
-ladron = Tiniebla.find(6)
-ladron.update(level1:'Luego de 15 segundos de proximidad de un metro con el objetivo, el Titán puede extraer un objeto o registrar la zona del cuerpo objetivo que desee sin ser detectado.',level2:'El personaje es capaz de robar objetos de alguna estantería, incluso si está siendo observado.',level3:'El tiempo necesario de proximidad disminuye a 3 segundos.',level4:'El personaje roba tan rápido que es indetectable para las cámaras de seguridad.',level5:'El personaje no necesita más que un segundo para robar o registrar a su objetivo.')
+# ladron = Tiniebla.find(6)
+# ladron.update(level1:'Luego de 15 segundos de proximidad de un metro con el objetivo, el Titán puede extraer un objeto o registrar la zona del cuerpo objetivo que desee sin ser detectado.',level2:'El personaje es capaz de robar objetos de alguna estantería, incluso si está siendo observado.',level3:'El tiempo necesario de proximidad disminuye a 3 segundos.',level4:'El personaje roba tan rápido que es indetectable para las cámaras de seguridad.',level5:'El personaje no necesita más que un segundo para robar o registrar a su objetivo.')
 
-artista = Tiniebla.find(7)
-artista.update(level1:'El personaje no es ignorado del todo al interpretar una canción, tocar un instrumento o pintar un cuadro en público.',level2:'El personaje tiene una audiencia mínima de 5 personas.',level3:'El personaje inspira donaciones a su favor y tiene una audiencia mínima de 100 personas.',level4:'El personaje es capaz de encantar a su público e inspira gran cantidad de donaciones, llama la atención de la mayoría.',level5:'El arte del personaje es tan perfecto que es capaz de cautivar a todos los presentes, convertirse en una estrella y surgir recibiendo grandes ofertas de empresarios interesados.')
+# artista = Tiniebla.find(7)
+# artista.update(level1:'El personaje no es ignorado del todo al interpretar una canción, tocar un instrumento o pintar un cuadro en público.',level2:'El personaje tiene una audiencia mínima de 5 personas.',level3:'El personaje inspira donaciones a su favor y tiene una audiencia mínima de 100 personas.',level4:'El personaje es capaz de encantar a su público e inspira gran cantidad de donaciones, llama la atención de la mayoría.',level5:'El arte del personaje es tan perfecto que es capaz de cautivar a todos los presentes, convertirse en una estrella y surgir recibiendo grandes ofertas de empresarios interesados.')
 
-romantico = Tiniebla.find(8)
-romantico.update(level1:'La voz y gesticulaciones del personaje llaman la atención de todas las personas del sexo objetivo, causándoles curiosidad y posibles intenciones de acercarse a él.',level2:'El personaje sólo necesita un mes de relación para conquistar a quien sea.',level3:'El personaje es tan atractivo que genera el interés de cualquier persona que lo vea, volviéndolo capaz de enamorar a una persona en tan sólo una cita o una noche (mínimo 2 horas).',level4:'El personaje es irresistible. Sus gestos, ojos, miradas, voz y carisma lo vuelven una necesidad para el sexo objetivo. No necesita más que un par de minutos para enamorar a una persona.',level5:'')
+# romantico = Tiniebla.find(8)
+# romantico.update(level1:'La voz y gesticulaciones del personaje llaman la atención de todas las personas del sexo objetivo, causándoles curiosidad y posibles intenciones de acercarse a él.',level2:'El personaje sólo necesita un mes de relación para conquistar a quien sea.',level3:'El personaje es tan atractivo que genera el interés de cualquier persona que lo vea, volviéndolo capaz de enamorar a una persona en tan sólo una cita o una noche (mínimo 2 horas).',level4:'El personaje es irresistible. Sus gestos, ojos, miradas, voz y carisma lo vuelven una necesidad para el sexo objetivo. No necesita más que un par de minutos para enamorar a una persona.',level5:'')
 
-regateador = Tiniebla.find(9)
-regateador.update(level1:'El personaje disminuye en un 5% el costo del artículo que desea.',level2:'El personaje disminuye en un 10% el costo del artículo que desea.',level3:'El personaje disminuye en un 20% el costo del artículo que desea.',level4:'El personaje disminuye en un 25% el costo del artículo que desea.',level5:'El personaje disminuye en un 35% el costo del artículo que desea.')
+# regateador = Tiniebla.find(9)
+# regateador.update(level1:'El personaje disminuye en un 5% el costo del artículo que desea.',level2:'El personaje disminuye en un 10% el costo del artículo que desea.',level3:'El personaje disminuye en un 20% el costo del artículo que desea.',level4:'El personaje disminuye en un 25% el costo del artículo que desea.',level5:'El personaje disminuye en un 35% el costo del artículo que desea.')
 
-visionLejana = Tiniebla.find(10)
-visionLejana.update(level1:'200 mts.',level2:'400 mts.',level3:'600 mts.',level4:'800 mts.',level5:'1000 mts')
+# visionLejana = Tiniebla.find(10)
+# visionLejana.update(level1:'200 mts.',level2:'400 mts.',level3:'600 mts.',level4:'800 mts.',level5:'1000 mts')
 
-olfatoCazador = Tiniebla.find(11)
-olfatoCazador.update(level1:'200 mts',level2:'400 mts',level3:'600 mts',level4:'800 mts',level5:'1000 mts')
+# olfatoCazador = Tiniebla.find(11)
+# olfatoCazador.update(level1:'200 mts',level2:'400 mts',level3:'600 mts',level4:'800 mts',level5:'1000 mts')
 
-estomagopequeño = Tiniebla.find(12)
-estomagopequeño.update(level1:'0,05',level2:'0,1',level3:'0,15',level4:'0,2',level5:'0,25')
+# estomagopequeño = Tiniebla.find(12)
+# estomagopequeño.update(level1:'0,05',level2:'0,1',level3:'0,15',level4:'0,2',level5:'0,25')
 
-rastreadordeagua = Tiniebla.find(13)
-rastreadordeagua.update(level1:'10 mts',level2:'15 mts',level3:'20 mts',level4:'25 mts',level5:'30 mts')
+# rastreadordeagua = Tiniebla.find(13)
+# rastreadordeagua.update(level1:'10 mts',level2:'15 mts',level3:'20 mts',level4:'25 mts',level5:'30 mts')
 
-suerte = Tiniebla.find(14)
-suerte.update(level1:'Suerte de 10%',level2:'Suerte de 20%',level3:'Suerte de 30%',level4:'Suerte de 40%',level5:'Suerte de 50%')
+# suerte = Tiniebla.find(14)
+# suerte.update(level1:'Suerte de 10%',level2:'Suerte de 20%',level3:'Suerte de 30%',level4:'Suerte de 40%',level5:'Suerte de 50%')
 
-corpulento = Tiniebla.find(15)
-corpulento.update(level1:'1',level2:'2',level3:'3',level4:'4',level5:'5')
+# corpulento = Tiniebla.find(15)
+# corpulento.update(level1:'1',level2:'2',level3:'3',level4:'4',level5:'5')
 
-meditacionpasiva = Tiniebla.find(16)
-meditacionpasiva.update(level1:'+1 de Frènesis cada dos horas',level2:'+1 de Frènesis por hora',level3:'',level4:'',level5:'')
+# meditacionpasiva = Tiniebla.find(16)
+# meditacionpasiva.update(level1:'+1 de Frènesis cada dos horas',level2:'+1 de Frènesis por hora',level3:'',level4:'',level5:'')
 
-descansoariendasuelta = Tiniebla.find(17)
-descansoariendasuelta.update(level1:'+1 de Potencialidad cada dos horas',level2:'+2 de Potencialidad por hora',level3:'',level4:'',level5:'')
+# descansoariendasuelta = Tiniebla.find(17)
+# descansoariendasuelta.update(level1:'+1 de Potencialidad cada dos horas',level2:'+2 de Potencialidad por hora',level3:'',level4:'',level5:'')
 
-siestareponedora = Tiniebla.find(18)
-siestareponedora.update(level1:'+1 de Fuerza de Voluntad cada dos horas',level2:'',level3:'',level4:'',level5:'')
+# siestareponedora = Tiniebla.find(18)
+# siestareponedora.update(level1:'+1 de Fuerza de Voluntad cada dos horas',level2:'',level3:'',level4:'',level5:'')
 
-vamosporunpaseo = Tiniebla.find(19)
-vamosporunpaseo.update(level1:'El personaje restaura el 1% de su Salud total por hora',level2:'El personaje restaura el 2% de su Salud total por hora',level3:'El personaje restaura el 4% de su Salud total por hora',level4:'El personaje restaura el 6% de su Salud total por hora',level5:'El personaje restaura el 10% de su Salud total por hora')
+# vamosporunpaseo = Tiniebla.find(19)
+# vamosporunpaseo.update(level1:'El personaje restaura el 1% de su Salud total por hora',level2:'El personaje restaura el 2% de su Salud total por hora',level3:'El personaje restaura el 4% de su Salud total por hora',level4:'El personaje restaura el 6% de su Salud total por hora',level5:'El personaje restaura el 10% de su Salud total por hora')
 
-felino = Tiniebla.find(20)
-felino.update(level1:'El personaje empieza a sufrir daños desde la segunda columna de altura en “daño por caída”',level2:'',level3:'',level4:'',level5:'')
+# felino = Tiniebla.find(20)
+# felino.update(level1:'El personaje empieza a sufrir daños desde la segunda columna de altura en “daño por caída”',level2:'',level3:'',level4:'',level5:'')
 
-experienciaporasistencia = Tiniebla.find(21)
-experienciaporasistencia.update(level1:'0,02',level2:'0,04',level3:'0,1',level4:'0,15',level5:'0,3')
+# experienciaporasistencia = Tiniebla.find(21)
+# experienciaporasistencia.update(level1:'0,02',level2:'0,04',level3:'0,1',level4:'0,15',level5:'0,3')
 
-ultimoAliento = Tiniebla.find(22)
-ultimoAliento.update(level1:'El personaje dispone de una maniobra principal en estado Caído',level2:'',level3:'',level4:'',level5:'')
+# ultimoAliento = Tiniebla.find(22)
+# ultimoAliento.update(level1:'El personaje dispone de una maniobra principal en estado Caído',level2:'',level3:'',level4:'',level5:'')
 
-liderazgo = Tiniebla.find(23)
-liderazgo.update(level1:'La voz del personaje sobresale en una multitud.+1 dado para una tirada en una maniobra Combate o Soporte, dependiendo del motivo del mensaje',level2:'El mensaje del personaje capta la atención los oyentes.+2 dado para una tirada en una maniobra de Combate o Soporte, dependiendo del motivo del mensaje',level3:'El personaje inspira a las multitudes con su mensaje.+3 dado para una tirada en una maniobra de Combate o Soporte, dependiendo del motivo del mensaje',level4:'',level5:'')
+# liderazgo = Tiniebla.find(23)
+# liderazgo.update(level1:'La voz del personaje sobresale en una multitud.+1 dado para una tirada en una maniobra Combate o Soporte, dependiendo del motivo del mensaje',level2:'El mensaje del personaje capta la atención los oyentes.+2 dado para una tirada en una maniobra de Combate o Soporte, dependiendo del motivo del mensaje',level3:'El personaje inspira a las multitudes con su mensaje.+3 dado para una tirada en una maniobra de Combate o Soporte, dependiendo del motivo del mensaje',level4:'',level5:'')
 
-subterfugio = Tiniebla.find(24)
-subterfugio.update(level1:'El personaje esconde su mirada al comunicarse.',level2:'El personaje se apoya con gestos para apoyar sus argumentos.',level3:'El personaje inventa información creíble para su oyente a fin de apoyar sus argumentos.',level4:'',level5:'')
+# subterfugio = Tiniebla.find(24)
+# subterfugio.update(level1:'El personaje esconde su mirada al comunicarse.',level2:'El personaje se apoya con gestos para apoyar sus argumentos.',level3:'El personaje inventa información creíble para su oyente a fin de apoyar sus argumentos.',level4:'',level5:'')
 
-sentidoComun = Tiniebla.find(25)
-sentidoComun.update(level1:'El personaje detecta cierta irregularidad en la situación.',level2:'El personaje detecta atisbos de nerviosismo, dudas, incoherencias en el actuar del otro.',level3:'El personaje descubre la falsedad en la otra parte.',level4:'',level5:'')
+# sentidoComun = Tiniebla.find(25)
+# sentidoComun.update(level1:'El personaje detecta cierta irregularidad en la situación.',level2:'El personaje detecta atisbos de nerviosismo, dudas, incoherencias en el actuar del otro.',level3:'El personaje descubre la falsedad en la otra parte.',level4:'',level5:'')
 
-juegodemanos = Tiniebla.find(26)
-juegodemanos.update(level1:'El personaje es capaz de ocultar una moneda sin límite de tiempo.',level2:'El personaje puede ocultar un sinnúmero de cartas o cualquier objeto que se asemeje en tamaño a una carta, durante 5 minutos.',level3:'El personaje es capaz de ocultar un jarrón, plato o cualquier cristalería, durante 5 minutos.',level4:'El personaje es capaz de ocultar cualquier objeto que no supere su tamaño, sin límite de tiempo.',level5:'El personaje puede ocultar a una persona, durante 5 minutos.')
+# juegodemanos = Tiniebla.find(26)
+# juegodemanos.update(level1:'El personaje es capaz de ocultar una moneda sin límite de tiempo.',level2:'El personaje puede ocultar un sinnúmero de cartas o cualquier objeto que se asemeje en tamaño a una carta, durante 5 minutos.',level3:'El personaje es capaz de ocultar un jarrón, plato o cualquier cristalería, durante 5 minutos.',level4:'El personaje es capaz de ocultar cualquier objeto que no supere su tamaño, sin límite de tiempo.',level5:'El personaje puede ocultar a una persona, durante 5 minutos.')
+
+# Actualizando tabla de Repercusiones
+
+Repercusion.find(1).update(level1:'El daño en los oídos es leve pero impide poder distinguir sonidos a más de 15 metros.',level2:'El daño es mas pronunciado e impide que el personaje pueda distinguir sonidos a más de 5 metros.',level3:'El personaje es absolutamente sordo, no es capaz de distinguir ninguna clase de sonido.',level4:'',level5:'Los personajes con “Sordera” no pueden poseer la Tiniebla “Oído agudo” hasta que el personaje elimine completamente esta Repercusión.')
+
+Repercusion.find(2).update(level1:'El personaje ha perdido completamente su capacidad de equilibrio, estar de pie es igual que estar en un bote en medio del mar en plena tormenta.
+El personaje necesita la ayuda de un bastón para poder caminar, no puede correr, y el mero hecho de saltar implica una inevitable caída de bruces.',level2:'',level3:'',level4:'',level5:'Los personajes con “Daño en el oído medio” no pueden poseer la Tiniebla “Felino” hasta que el personaje elimine completamente esta Repercusión.')
+
+Repercusion.find(3).update(level1:'',level2:'',level3:'',level4:'',level5:'Los personajes con “Paranoia” no pueden poseer la Tiniebla “Experiencia por asistencia” hasta que el personaje elimine completamente esta Repercusión.')
+
+Repercusion.find(4).update(level1:'',level2:'',level3:'',level4:'',level5:'Los personajes “Cañahueca” no pueden poseer la Tiniebla “Subterfugio” hasta que el personaje elimine completamente esta Repercusión.')
+
+Repercusion.find(5).update(level1:'',level2:'',level3:'',level4:'',level5:'Los personajes “Mimado en cuna de oro” no pueden poseer la Tiniebla “Estómago pequeño”, “Rastreador de Agua”, ni el conocimiento en “Supervivencia” hasta que el personaje elimine completamente esta Repercusión.')
+
+Repercusion.find(6).update(level1:'',level2:'',level3:'',level4:'',level5:'Los personajes “Centro de atención” no pueden poseer la Tiniebla “Encubrirse” hasta que el personaje elimine completamente esta Repercusión.')
+
+Repercusion.find(7).update(level1:'',level2:'',level3:'',level4:'',level5:'Los personajes con la Repercusión “Cleptómano incompetente” no pueden poseer la Tiniebla “Ladrón” hasta que el personaje elimine completamente esta Repercusión.')
+
+Repercusion.find(8).update(level1:'',level2:'',level3:'',level4:'',level5:'Los personajes con la Repercusión “Artista sin talento” no pueden poseer la Tiniebla “Artista” hasta que el personaje elimine completamente esta Repercusión.')
+
+Repercusion.find(9).update(level1:'',level2:'',level3:'',level4:'',level5:'Los personajes con “Repulsivo” no pueden poseer la Tiniebla “Romántico” hasta que el personaje elimine completamente esta Repercusión.')
+
+Repercusion.find(10).update(level1:'',level2:'',level3:'',level4:'',level5:'Los personajes con “Despilfarrador” no pueden poseer la Tiniebla “Regateador” ni aplicar conocimientos en “Negocios” hasta que el personaje elimine completamente esta Repercusión.')
+
+Repercusion.find(11).update(level1:'',level2:'',level3:'',level4:'',level5:'Los personajes con “Insaciable” no pueden poseer la Tiniebla “Estómago pequeño” hasta que el personaje elimine completamente esta Repercusión.')
+
+Repercusion.find(12).update(level1:'',level2:'',level3:'',level4:'',level5:'El cuerpo está permanentemente seco, demandándole el doble de agua de lo normal en cuanto empieza a surgir la sed.')
+
+Repercusion.find(13).update(level1:'El daño ocular es leve. El personaje tiene visión completa hasta 50 mts.',level2:'Los ojos se encuentran un poco más comprometidos. El personaje sólo tiene una visión de 25 mts., más allá de eso ve una densa neblina con sombras y mezcla de colores.',level3:'La visión está severamente afectada, sólo pudiendo distinguir el entorno más cercano a 10 mts.',level4:'El personaje ha perdido de forma completa la visión.',level5:'Los personajes con “Ceguera” no pueden poseer la Tiniebla “Visión lejana” hasta que el personaje elimine completamente esta Repercusión.')
+
+Repercusion.find(14).update(level1:'',level2:'',level3:'',level4:'',level5:'Los personajes con “Infortunio” no pueden poseer la Tiniebla “Suerte” hasta que el personaje elimine completamente esta Repercusión.')
+
+Repercusion.find(15).update(level1:'',level2:'',level3:'',level4:'',level5:'Los personajes con “Enclenque” no pueden poseer la Tiniebla “Corpulento” hasta que el personaje elimine completamente esta Repercusión.')
+
+Repercusion.find(16).update(level1:'',level2:'',level3:'',level4:'',level5:'Los personajes con “Insomnio” no pueden poseer la Tiniebla “Meditación pasiva”, “Descanso a rienda suelta” y “Siesta reponedora” hasta que el personaje elimine completamente esta Repercusión.')
+
+Repercusion.find(17).update(level1:'',level2:'',level3:'',level4:'',level5:'Los personajes con “Heridas profundas” no pueden poseer la Tiniebla “Vamos por un paseo” hasta que el personaje elimine completamente esta Repercusión.')
+
+Repercusion.find(18).update(level1:'',level2:'',level3:'',level4:'',level5:'Los personajes con “Lobo solitario” no pueden poseer la Tiniebla “Experiencia por asistencia” hasta que el personaje elimine completamente esta Repercusión.')
+
+Repercusion.find(19).update(level1:'',level2:'',level3:'',level4:'',level5:'Los personajes con “Rebelde” no pueden poseer la Tiniebla “Liderazgo” hasta que el personaje elimine completamente esta Repercusión.')
+
+Repercusion.find(20).update(level1:'',level2:'',level3:'',level4:'',level5:'Los personajes con “Esquizofrenia” no pueden poseer la Tiniebla “Susurro siniestro” hasta que el personaje elimine completamente esta Repercusión.')
+
+Repercusion.find(21).update(level1:'',level2:'',level3:'',level4:'',level5:'Los personajes con “Disgrafía fina y gruesa” no pueden poseer la Tiniebla “Juego de manos” hasta que el personaje elimine completamente esta Repercusión.')

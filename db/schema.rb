@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_12_02_124917) do
+ActiveRecord::Schema.define(version: 2021_12_02_151209) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -95,6 +95,11 @@ ActiveRecord::Schema.define(version: 2021_12_02_124917) do
     t.text "description"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.text "level1"
+    t.text "level2"
+    t.text "level3"
+    t.text "level4"
+    t.text "level5"
   end
 
   create_table "tinieblas", force: :cascade do |t|
