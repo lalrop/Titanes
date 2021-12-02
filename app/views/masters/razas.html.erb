@@ -1,0 +1,89 @@
+<h1 class="my-3"> Razas </h1>
+<div class="table-responsive">
+    <table class="table table-sm table-dark table-striped">
+        <thead>
+            <tr>
+                <th scope="col">#</th>
+                <th scope="col">Humanos</th>
+                <th scope="col">Gimpistos</th>
+                <th scope="col">Andoraks</th>
+                <th scope="col">Ritulillos</th>
+                <th scope="col">Gags</th>
+                <th scope="col">Destellos</th>
+                <th scope="col">Chechenias</th>
+                <th scope="col">Chadacks</th>
+                <th scope="col">Fanderei</th>
+                <th scope="col">Winvhel</th>   
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <th scope="row">Combate (incluye daño y soporte)</th>
+                <td>12</td>
+                <td>11</td>
+                <td>12</td>
+                <td>6</td>
+                <td>12</td>
+                <td>13</td>
+                <td>12</td>
+                <td>10</td>
+                <td>12</td>
+                <td>11</td>
+        
+            </tr>
+            <tr>
+                <th scope="row">Psicología y conocimientos</th>
+                <td>14</td>
+                <td>12</td>
+                <td>11</td>
+                <td>17</td>
+                <td>11</td>
+                <td>12</td>
+                <td>11</td>
+                <td>14</td>
+                <td>12</td>
+                <td>14</td>
+            </tr>
+            <tr>
+                <th scope="row">Fuerza de voluntad</th>
+                <td colspan="9">5</td>
+                <td>7</td>
+            </tr>
+            <tr>
+                <th scope="row">Potencialidad y Frènesis</th>
+                <td colspan="10">45 (a repartir entre ambos)</td>
+            </tr>
+            <tr>
+                <th scope="row">Salud</th>
+                <td colspan="10">12 * Puntos de Potencialidad</td>
+            </tr>
+            <tr>
+                <th scope="row">Tinieblas y Repercusiones</th>
+                <td colspan="10">Según descripción de cada raza</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+<nav>
+  <div class="nav nav-tabs" id="nav-tab" role="tablist">
+    <% @razas.each do |raza| %>
+        <button class="nav-link" id="nav-<%=raza.id%>-tab" data-bs-toggle="tab" data-bs-target="#nav-<%=raza.id%>" type="button" role="tab" aria-controls="nav-<%=raza.id%>" aria-selected="true"><%=raza.raza%></button>    
+    <% end %>
+  </div>
+</nav>
+<div class="tab-content" id="nav-tabContent">
+    <% @razas.each do |raza| %>   
+      <div class="tab-pane fade  my-3" id="nav-<%=raza.id%>" role="tabpanel" aria-labelledby="nav-<%=raza.id%>-tab"><%=raza.descripcion%></div>
+    <% end %>
+
+
+<%= button_to 'Salir', characters_path, method: 'get', class:"my-4 btn btn-danger"%>
+</div>
+ 
+
+
+
+
+
+
+

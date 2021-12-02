@@ -323,73 +323,210 @@
 # ])
 
 # Actualizando contenido de Razas
-Raza.find(1).update(descripcion:'La raza predominante en este mundo, o al menos en Hochland, es el ser humano tal y como lo entiende el lector, con sus distintos rasgos faciales, de color y tamaño. El humano no es la raza con mayor población, es posible que existan bestias con un número mayor, por ejemplo los Raurus o los Mirmidones. Sin embargo, dada la inteligencia y el grado de organización que esta especie fue acumulando a lo largo de los años, sus falencias físicas fueron superadas por sus habilidades intelectuales, permitiéndole llegar a la cumbre de todas las especies, o al menos compartirla.
-El humano normal en Historias de Titanes es un ser como tú, lector, con todas las debilidades y fortalezas que conlleva pertenecer a esta especie. Pero los humanos Titanes se escapan completamente de las capacidades conocidas.
-El ser humano Titán puede entenderse como un humano que trasciende sus propias habilidades naturales. Es capaz de usar el Frènesis y la Potencialidad por voluntad propia, además poseer la capacidad de discernimiento, la cual lo faculta para controlar sus impulsos. Una capacidad que muy pocas especies tienen.
-El humano es la única especie con un lenguaje estructurado en más de una forma, pudiendo así comunicarse tanto oral como de forma escrita con sus pares, y en siete idiomas distintos, marcando la una diferencia escencial con el resto de las especies hostiles.')
+# Raza.find(1).update(descripcion:'La raza predominante en este mundo, o al menos en Hochland, es el ser humano tal y como lo entiende el lector, con sus distintos rasgos faciales, de color y tamaño. El humano no es la raza con mayor población, es posible que existan bestias con un número mayor, por ejemplo los Raurus o los Mirmidones. Sin embargo, dada la inteligencia y el grado de organización que esta especie fue acumulando a lo largo de los años, sus falencias físicas fueron superadas por sus habilidades intelectuales, permitiéndole llegar a la cumbre de todas las especies, o al menos compartirla.
+# El humano normal en Historias de Titanes es un ser como tú, lector, con todas las debilidades y fortalezas que conlleva pertenecer a esta especie. Pero los humanos Titanes se escapan completamente de las capacidades conocidas.
+# El ser humano Titán puede entenderse como un humano que trasciende sus propias habilidades naturales. Es capaz de usar el Frènesis y la Potencialidad por voluntad propia, además poseer la capacidad de discernimiento, la cual lo faculta para controlar sus impulsos. Una capacidad que muy pocas especies tienen.
+# El humano es la única especie con un lenguaje estructurado en más de una forma, pudiendo así comunicarse tanto oral como de forma escrita con sus pares, y en siete idiomas distintos, marcando la una diferencia escencial con el resto de las especies hostiles.')
 
-Raza.find(2).update(descripcion:'Nativos del territorio compuesto por el distrito de Woohan, especialmente en el sector de las montañas. Su apariencia es similar a la de un mono, poseen pelo en todo el cuerpo, una extensa cola y en su rostro mantienen los mismos rasgos que los primates. Un símil a esta especie es el rey mono Sun Wukong de la mitología china. 
-Su tamaño cambia bastante dependiendo del entrenamiento y la zona en la cual haya nacido el Gimpisto, variando en altura desde los 1.5 mts a los 3 mts.
-Un rasgo que distingue a los Gimpistos de los monos es que caminan con la espalda recta y se comunican mediante el lenguaje de los humanos. De acuerdo a estudios científicos, los Gimpistos pertenecen al mismo árbol genealógico que el homo sapiens, pero en una rama evolutiva paralela. En consecuencia, los Gimpistos, al igual que los humanos, ven a los monos, chimpancés, orangutanes y otros simios, como una subraza de sí mismos, parte de su historia evolutiva.
-Los Gimpistos conviven con el ser humano en el día a día, hablando el mismo idioma y teniendo las mismas costumbres y conductas, sobre todo en los distritos de Woohan y Stahl, y también se ha visto un gran crecimiento de su presencia en la región del Capitolio.
-Esta raza se divide en tres grupos étnicos, cuyas diferencias recaen en su tamaño, color de pelaje y vinculación con el resto de la sociedad: 
-Los primeros son los “Gimpistos Rubrum”, que poseen un pelaje rojizo, su altura varía entre los 1.5 y 2 metros, son de naturaleza sociable, jovial e incluso irritante, en su mayoría pertenecen al distrito de Woohan, donde se les puede encontrar en las ciudades o en los campos, con sus espaldas teñidas con el símbolo de la máscara del distrito. 
-La segunda etnia es la de los “Gran Gimpistos”, de pelaje negro con rasgos mucho más cercanos al chimpancé. Su altura parte de los 2 metros y llega a un máximo de 3 metros. Son cautelosos y reservados sin llegar a marginarse de la sociedad, y prefieren los ambientes de mayor silencio. La mayoría de estos se encuentran custodiando las entradas de los grandes templos, y una gran parte se puede encontrar en las ciudades de Stahl de menor tamaño. 
-La tercera etnia es la de los “Álbum Gimpistos”, de pelaje blanco y tamaño entre los 1.7 y 2.5 metros, suelen interactuar sólo con los de su misma etnia y miran con recelo al resto de las razas. La mayoría son wootences y una gran parte son ancianos. Algunos son los grandes maestros de los templos de Woohan en las montañas, mientras que otros forman parte permanente del Consejo de Ancianos. Son hábiles, astutos y calculadores, no participan de carnavales ni fiestas, sus ritos los mantienen exclusivamente en la cumbre de las montañas en silencio.
-En general, los Gimpistos son ágiles por naturaleza, incluso si poseen una vida sedentaria. Desde el inicio de la aventura un personaje de raza Gimpisto comienza con el nivel 1 en la Tiniebla “Descanso a rienda suelta” o “Siesta reponedora”, además del nivel 2 en la Tiniebla “Ladrón”. Sumado a lo anterior, cabe destacar que todo Gimpisto porta siempre un bo, una gran vara de madera cuya altura está directamente relacionada con la contextura del usuario, que usan como principal arma de defensa y como apoyo acrobático en sus distintas maniobras.')
+# Raza.find(2).update(descripcion:'Nativos del territorio compuesto por el distrito de Woohan, especialmente en el sector de las montañas. Su apariencia es similar a la de un mono, poseen pelo en todo el cuerpo, una extensa cola y en su rostro mantienen los mismos rasgos que los primates. Un símil a esta especie es el rey mono Sun Wukong de la mitología china. 
+# Su tamaño cambia bastante dependiendo del entrenamiento y la zona en la cual haya nacido el Gimpisto, variando en altura desde los 1.5 mts a los 3 mts.
+# Un rasgo que distingue a los Gimpistos de los monos es que caminan con la espalda recta y se comunican mediante el lenguaje de los humanos. De acuerdo a estudios científicos, los Gimpistos pertenecen al mismo árbol genealógico que el homo sapiens, pero en una rama evolutiva paralela. En consecuencia, los Gimpistos, al igual que los humanos, ven a los monos, chimpancés, orangutanes y otros simios, como una subraza de sí mismos, parte de su historia evolutiva.
+# Los Gimpistos conviven con el ser humano en el día a día, hablando el mismo idioma y teniendo las mismas costumbres y conductas, sobre todo en los distritos de Woohan y Stahl, y también se ha visto un gran crecimiento de su presencia en la región del Capitolio.
+# Esta raza se divide en tres grupos étnicos, cuyas diferencias recaen en su tamaño, color de pelaje y vinculación con el resto de la sociedad: 
+# Los primeros son los “Gimpistos Rubrum”, que poseen un pelaje rojizo, su altura varía entre los 1.5 y 2 metros, son de naturaleza sociable, jovial e incluso irritante, en su mayoría pertenecen al distrito de Woohan, donde se les puede encontrar en las ciudades o en los campos, con sus espaldas teñidas con el símbolo de la máscara del distrito. 
+# La segunda etnia es la de los “Gran Gimpistos”, de pelaje negro con rasgos mucho más cercanos al chimpancé. Su altura parte de los 2 metros y llega a un máximo de 3 metros. Son cautelosos y reservados sin llegar a marginarse de la sociedad, y prefieren los ambientes de mayor silencio. La mayoría de estos se encuentran custodiando las entradas de los grandes templos, y una gran parte se puede encontrar en las ciudades de Stahl de menor tamaño. 
+# La tercera etnia es la de los “Álbum Gimpistos”, de pelaje blanco y tamaño entre los 1.7 y 2.5 metros, suelen interactuar sólo con los de su misma etnia y miran con recelo al resto de las razas. La mayoría son wootences y una gran parte son ancianos. Algunos son los grandes maestros de los templos de Woohan en las montañas, mientras que otros forman parte permanente del Consejo de Ancianos. Son hábiles, astutos y calculadores, no participan de carnavales ni fiestas, sus ritos los mantienen exclusivamente en la cumbre de las montañas en silencio.
+# En general, los Gimpistos son ágiles por naturaleza, incluso si poseen una vida sedentaria. Desde el inicio de la aventura un personaje de raza Gimpisto comienza con el nivel 1 en la Tiniebla “Descanso a rienda suelta” o “Siesta reponedora”, además del nivel 2 en la Tiniebla “Ladrón”. Sumado a lo anterior, cabe destacar que todo Gimpisto porta siempre un bo, una gran vara de madera cuya altura está directamente relacionada con la contextura del usuario, que usan como principal arma de defensa y como apoyo acrobático en sus distintas maniobras.')
 
-Raza.find(3).update(descripcion:'Marginados desde sus inicios, los Destellos son una raza de seres humanos con una particularidad especial en la piel que les permite absorber la luz del día y reflejarla a modo de incandescencia por las noches.
-Esta condición es involuntaria, tal como lo es el latido cardíaco o el parpadear, y debido a esta excesiva notoriedad, los Destellos siempre han sido aislados del resto de la sociedad, sobre todo en tiempos de guerra.
-Morfológicamente los Destellos son igual que los humanos, con algunas diferencias más marcadas, como la piel lechosa y el pelo blanco por completo. El lector puede asemejar a esta raza con las personas que padecen albinismo, con la salvedad de que los Destellos absorben con satisfacción la luz.
-Se encuentran distribuidos de forma homogénea por todo Hochland, pero en distritos más bélicos como Kaiser o Ignea Mortis su población es menor. En el resto de los distritos se les puede encontrar con facilidad en las ciudades, sobre todo de noche.
-Durante el último tiempo se han realizado múltiples estudios para solucionar la “condición” de incandescencia, pero ninguno ha logrado obtener resultados favorables. Se han hecho experimentos, privándolos de luz durante extensos periodos de tiempo, semanas, meses, incluso años. Sin embargo, la incandescencia vuelve a aparecer al caer la noche, de forma más tenue pero igual de llamativa, como si dentro de ellos mantuvieran reservas de luminosidad.
-De acuerdo a un estudio realizado en el Capitolio, se concluyó que el problema de su luminosidad recae en la gran potencia que posee la energía solar en el mundo. “De acuerdo a nuestras investigaciones, la piel de los Destellos es quinientas veces más eficiente en la captación solar que el más avanzado de los paneles solares que existen en la actualidad. Si un panel artificial es capaz de iluminar todas las luces de una casa durante una semana con la energía de un día… ¡imaginen la cantidad de energía que tienen almacenada cada uno de los Destellos en sus pieles!”, declararon los científicos especialistas en energía.
-En la actualidad aún no se encuentra una forma de transformar la luminosidad de los Destellos en energía eléctrica. No obstante, en cuanto esto suceda diversos debates éticos y morales circundarán sobre cómo tratar a estas personas.
-Dada su nula capacidad de poder infiltrarse en cualquier lugar durante la noche, los Destellos inician con la Repercusión “Paranoia”, además de no poder hacer uso de Sigilo durante las noches. Esta desgraciada condición se ve recompensada por una fortuna inesperada, otorgándoles así las Tinieblas “Suerte” “Estómago pequeño” y “Último aliento” en el nivel 1 desde el inicio del juego.')
+# Raza.find(3).update(descripcion:'Marginados desde sus inicios, los Destellos son una raza de seres humanos con una particularidad especial en la piel que les permite absorber la luz del día y reflejarla a modo de incandescencia por las noches.
+# Esta condición es involuntaria, tal como lo es el latido cardíaco o el parpadear, y debido a esta excesiva notoriedad, los Destellos siempre han sido aislados del resto de la sociedad, sobre todo en tiempos de guerra.
+# Morfológicamente los Destellos son igual que los humanos, con algunas diferencias más marcadas, como la piel lechosa y el pelo blanco por completo. El lector puede asemejar a esta raza con las personas que padecen albinismo, con la salvedad de que los Destellos absorben con satisfacción la luz.
+# Se encuentran distribuidos de forma homogénea por todo Hochland, pero en distritos más bélicos como Kaiser o Ignea Mortis su población es menor. En el resto de los distritos se les puede encontrar con facilidad en las ciudades, sobre todo de noche.
+# Durante el último tiempo se han realizado múltiples estudios para solucionar la “condición” de incandescencia, pero ninguno ha logrado obtener resultados favorables. Se han hecho experimentos, privándolos de luz durante extensos periodos de tiempo, semanas, meses, incluso años. Sin embargo, la incandescencia vuelve a aparecer al caer la noche, de forma más tenue pero igual de llamativa, como si dentro de ellos mantuvieran reservas de luminosidad.
+# De acuerdo a un estudio realizado en el Capitolio, se concluyó que el problema de su luminosidad recae en la gran potencia que posee la energía solar en el mundo. “De acuerdo a nuestras investigaciones, la piel de los Destellos es quinientas veces más eficiente en la captación solar que el más avanzado de los paneles solares que existen en la actualidad. Si un panel artificial es capaz de iluminar todas las luces de una casa durante una semana con la energía de un día… ¡imaginen la cantidad de energía que tienen almacenada cada uno de los Destellos en sus pieles!”, declararon los científicos especialistas en energía.
+# En la actualidad aún no se encuentra una forma de transformar la luminosidad de los Destellos en energía eléctrica. No obstante, en cuanto esto suceda diversos debates éticos y morales circundarán sobre cómo tratar a estas personas.
+# Dada su nula capacidad de poder infiltrarse en cualquier lugar durante la noche, los Destellos inician con la Repercusión “Paranoia”, además de no poder hacer uso de Sigilo durante las noches. Esta desgraciada condición se ve recompensada por una fortuna inesperada, otorgándoles así las Tinieblas “Suerte” “Estómago pequeño” y “Último aliento” en el nivel 1 desde el inicio del juego.')
 
-Raza.find(4).update(descripcion:'Con una proporción levemente más larga en el tamaño de sus piernas en relación al cuerpo, los Chechenias son una raza que comparten la morfología de los seres humanos con algunos rasgos propios de los felinos. Orejas un poco puntiagudas, dedos alargados con uñas retráctiles y ojos algo más grandes, con una fina pupila vertical que en momentos de excitación los diferencian de forma más notoria con la especie humana.
-Esta raza posee una curiosidad permanente por todo lo que desconocen. En su mayoría suelen ser personas extremadamente cultas, lo cual no los aleja en absoluto del mundo carnal. Son individuos con una percepción bastante aguda, tanto en el sentido de la vista como del olfato y oído. Aman por sobre todo las cosas bellas o que, según las normas y costumbres de la sociedad del momento, se podrían considerar “bellas”. Durante un siglo era común ver Chechenias obesos, con exquisitos trajes a la medida acompañados de accesorios de piedras preciosas; aquello era el canon de belleza del momento, y ellos eran los más envidiados y alabados por sobre el resto.
-Los sentimientos de amor y odio hacia los Chechenias los han acompañado durante toda su historia. Y no es de extrañar, dado el desdén con el que tratan a las personas (incluso a los de su misma raza) que muestren inferioridad en algún campo que ellos dominen. Son una raza cruel en lo que respecta a códigos de justicia, y salvajes al momento de marcar los límites de lo que les es propio, caracterizándose así como egoístas, ególatras y narcisistas.
-Dentro de Hochland, los Chechenias se pueden encontrar en la mayoría de los distritos, con menor cantidad en Woohan, distrito en el que no existe el concepto de propiedad privada, ni en Ignea Mortis, distrito en el que las condiciones de vida son incompatibles con los estándares a los que apuntan la mayoría de los Chechenias. Por otra parte, distritos como Drake y Khronos acogen una gran población de Chechenias que aman con todo su ser sus costumbres locales. Pero es en Samsara donde los Chechenias se deleitan aún más, con la mezcla de misterios y el gran valor que este distrito tiene respecto al sigilo de sus Titanes.
-Las características físicas, sensoriales, intelectuales y psicológicas de esta raza les permite poseer desde el inicio del juego las Tinieblas “Felino”, “Siesta reponedora” y “Romántico” en nivel 1.')
+# Raza.find(4).update(descripcion:'Con una proporción levemente más larga en el tamaño de sus piernas en relación al cuerpo, los Chechenias son una raza que comparten la morfología de los seres humanos con algunos rasgos propios de los felinos. Orejas un poco puntiagudas, dedos alargados con uñas retráctiles y ojos algo más grandes, con una fina pupila vertical que en momentos de excitación los diferencian de forma más notoria con la especie humana.
+# Esta raza posee una curiosidad permanente por todo lo que desconocen. En su mayoría suelen ser personas extremadamente cultas, lo cual no los aleja en absoluto del mundo carnal. Son individuos con una percepción bastante aguda, tanto en el sentido de la vista como del olfato y oído. Aman por sobre todo las cosas bellas o que, según las normas y costumbres de la sociedad del momento, se podrían considerar “bellas”. Durante un siglo era común ver Chechenias obesos, con exquisitos trajes a la medida acompañados de accesorios de piedras preciosas; aquello era el canon de belleza del momento, y ellos eran los más envidiados y alabados por sobre el resto.
+# Los sentimientos de amor y odio hacia los Chechenias los han acompañado durante toda su historia. Y no es de extrañar, dado el desdén con el que tratan a las personas (incluso a los de su misma raza) que muestren inferioridad en algún campo que ellos dominen. Son una raza cruel en lo que respecta a códigos de justicia, y salvajes al momento de marcar los límites de lo que les es propio, caracterizándose así como egoístas, ególatras y narcisistas.
+# Dentro de Hochland, los Chechenias se pueden encontrar en la mayoría de los distritos, con menor cantidad en Woohan, distrito en el que no existe el concepto de propiedad privada, ni en Ignea Mortis, distrito en el que las condiciones de vida son incompatibles con los estándares a los que apuntan la mayoría de los Chechenias. Por otra parte, distritos como Drake y Khronos acogen una gran población de Chechenias que aman con todo su ser sus costumbres locales. Pero es en Samsara donde los Chechenias se deleitan aún más, con la mezcla de misterios y el gran valor que este distrito tiene respecto al sigilo de sus Titanes.
+# Las características físicas, sensoriales, intelectuales y psicológicas de esta raza les permite poseer desde el inicio del juego las Tinieblas “Felino”, “Siesta reponedora” y “Romántico” en nivel 1.')
 
-Raza.find(5).update(descripcion:'Como una rama hermana de la especie humana, los Gags poseen una altura promedio de 5 metros con grandes manos, pies, abundante vello en la espalda y pecho (independiente del género), y una voz tremendamente ronca. Entre todas las especies con características humanoides, esta es la más alta, corpulenta y lenta. A causa de su gran tamaño, las conexiones involucradas en transmitir la percepción del entorno al cerebro, es decir, las señales producidas por los sentidos, son lentas. Tienen una personalidad más pausada, con una capacidad de razonamiento más lánguida, lo cual les ha valido ser considerados como “tontos”.
-No obstante, esta infravaloración abunda en la boca de niños, civiles e ingenuos. Los Titanes de larga experiencia, en cambio, entienden que los Gags son una raza peligrosamente perseverante, terca, resistente e implacable.
-“Podrás golpearlo con facilidad, una vez, dos veces, tres veces… Pero a la cuarta, cuando tu cuerpo esté agitado y el del Gag ileso, en ese momento te confiarás, querrás terminarlo todo de inmediato y aprovecharás tu velocidad para asestar un golpe mortal. Allí, allí está el problema de esta raza de la que te burlas. Nunca tendrás la certeza de si tu golpe realmente será mortal. En cambio él, ese gigante ‘estúpido’, sí sabe que sus golpes son mortales. No seas iluso.”
-Son una raza acostumbrada a recibir daños, tienen una defensa admirada por todo el resto. Saben desde temprana edad que su ofensiva es lenta y predecible, por lo que apelan al cansancio del rival, a observar de forma fría y pausada el momento en que este cometerá un error, y en ese momento lo fulminan con un ataque demoledor.
-Es posible encontrarlos en todo Hochland, excepto en Ignea Mortis. Son una raza obediente y fiel al lugar donde nace, rara vez un Gag comete crímenes que ameriten el exilio de su distrito. En Kaiser son muy queridos por sus atributos físicos, llegando incluso a tener una división militar compuesta exclusivamente por Gags, enfocadas al rompimiento de filas enemigas, conocidos como “los Arietes”. Durante los primeros años de civilización, en el norte se les confundía de vez en cuando con Kralentz, lo cual les llevó a algunas escaramuzas con los primeros ancestros de Stahl. En esos años se llegó a creer que los Gags eran una mezcla de Kralentz con humanos; sin embargo, años más tarde, conflictos entre Kralentz y Gags derrumbaron los prejuicios de los stahlios respecto al origen de esta raza de gigantes.
-Debido al tamaño y ralentización de sus movimientos, los Gags son incapaces de hacer uso de Sigilo. Por otra parte, en la Tiniebla “Corpulento”, todos los personajes Gags inician con un nivel 3.')
+# Raza.find(5).update(descripcion:'Como una rama hermana de la especie humana, los Gags poseen una altura promedio de 5 metros con grandes manos, pies, abundante vello en la espalda y pecho (independiente del género), y una voz tremendamente ronca. Entre todas las especies con características humanoides, esta es la más alta, corpulenta y lenta. A causa de su gran tamaño, las conexiones involucradas en transmitir la percepción del entorno al cerebro, es decir, las señales producidas por los sentidos, son lentas. Tienen una personalidad más pausada, con una capacidad de razonamiento más lánguida, lo cual les ha valido ser considerados como “tontos”.
+# No obstante, esta infravaloración abunda en la boca de niños, civiles e ingenuos. Los Titanes de larga experiencia, en cambio, entienden que los Gags son una raza peligrosamente perseverante, terca, resistente e implacable.
+# “Podrás golpearlo con facilidad, una vez, dos veces, tres veces… Pero a la cuarta, cuando tu cuerpo esté agitado y el del Gag ileso, en ese momento te confiarás, querrás terminarlo todo de inmediato y aprovecharás tu velocidad para asestar un golpe mortal. Allí, allí está el problema de esta raza de la que te burlas. Nunca tendrás la certeza de si tu golpe realmente será mortal. En cambio él, ese gigante ‘estúpido’, sí sabe que sus golpes son mortales. No seas iluso.”
+# Son una raza acostumbrada a recibir daños, tienen una defensa admirada por todo el resto. Saben desde temprana edad que su ofensiva es lenta y predecible, por lo que apelan al cansancio del rival, a observar de forma fría y pausada el momento en que este cometerá un error, y en ese momento lo fulminan con un ataque demoledor.
+# Es posible encontrarlos en todo Hochland, excepto en Ignea Mortis. Son una raza obediente y fiel al lugar donde nace, rara vez un Gag comete crímenes que ameriten el exilio de su distrito. En Kaiser son muy queridos por sus atributos físicos, llegando incluso a tener una división militar compuesta exclusivamente por Gags, enfocadas al rompimiento de filas enemigas, conocidos como “los Arietes”. Durante los primeros años de civilización, en el norte se les confundía de vez en cuando con Kralentz, lo cual les llevó a algunas escaramuzas con los primeros ancestros de Stahl. En esos años se llegó a creer que los Gags eran una mezcla de Kralentz con humanos; sin embargo, años más tarde, conflictos entre Kralentz y Gags derrumbaron los prejuicios de los stahlios respecto al origen de esta raza de gigantes.
+# Debido al tamaño y ralentización de sus movimientos, los Gags son incapaces de hacer uso de Sigilo. Por otra parte, en la Tiniebla “Corpulento”, todos los personajes Gags inician con un nivel 3.')
 
-Raza.find(6).update(descripcion:'Los Fanderei son humanoides de piel entre azuleja y celeste. Por lo general, son de facciones finas, contextura esbelta y miden entre 1.8 a 2 metros de altura. 
-Al momento de nacer, los Fanderei sufren una especie de trance, en el cual se reproduce la escena de separación entre Gianna, la Diosa de la Luna, y Gabandur, el Señor del Inframundo. En aquel trance el Fanderei sufre convulsiones debido a una lucha interna entre esas dos energías. La energía que predomine será la que defina el humor y características especiales en el Fanderei. 
-Si predomina la energía de Gianna, el bebé nace con el don de una hermosa voz sin igual y expertiz natural para tocar cualquier instrumento, siendo capaz de conquistar a cualquier audiencia. En el otro caso, el bebé vive propenso a experimentar sensaciones de nostalgia sin razón aparente. A pesar de existir en todo Hochland, la mayoría se encuentra en Stahl.
-Por su bello aspecto y eminentes dotes en el canto, gozan de las Tinieblas “Romántico” a nivel 1 y “Artista” a nivel 2. Pero no cantes victoria antes de tiempo. Al momento de la creación de un personaje Fanderei, el jugador debe lanzar un dado, si el resultado es un éxito, el Fanderei gozará de sus puntos de Tinieblas iniciales tal como se menciona; de lo contrario, este nacerá sin poder utilizar la Tiniebla “Artista” jamás.')
+# Raza.find(6).update(descripcion:'Los Fanderei son humanoides de piel entre azuleja y celeste. Por lo general, son de facciones finas, contextura esbelta y miden entre 1.8 a 2 metros de altura. 
+# Al momento de nacer, los Fanderei sufren una especie de trance, en el cual se reproduce la escena de separación entre Gianna, la Diosa de la Luna, y Gabandur, el Señor del Inframundo. En aquel trance el Fanderei sufre convulsiones debido a una lucha interna entre esas dos energías. La energía que predomine será la que defina el humor y características especiales en el Fanderei. 
+# Si predomina la energía de Gianna, el bebé nace con el don de una hermosa voz sin igual y expertiz natural para tocar cualquier instrumento, siendo capaz de conquistar a cualquier audiencia. En el otro caso, el bebé vive propenso a experimentar sensaciones de nostalgia sin razón aparente. A pesar de existir en todo Hochland, la mayoría se encuentra en Stahl.
+# Por su bello aspecto y eminentes dotes en el canto, gozan de las Tinieblas “Romántico” a nivel 1 y “Artista” a nivel 2. Pero no cantes victoria antes de tiempo. Al momento de la creación de un personaje Fanderei, el jugador debe lanzar un dado, si el resultado es un éxito, el Fanderei gozará de sus puntos de Tinieblas iniciales tal como se menciona; de lo contrario, este nacerá sin poder utilizar la Tiniebla “Artista” jamás.')
 
-Raza.find(7).update(descripcion:'Son de origen desconocido. Su aspecto de tonalidades verdes y piel escamosa tiende a intimidar a quien no está acostumbrado a verlos. La mayoría suele vivir aislado de la raza humana, temiendo a ser discriminados por su extravagante apariencia.
-Tienen un cuerpo humanoide, de contextura delgada y esbelta. Poseen un rostro con características humanas, a excepción de una frente de sutiles escamas, al igual que sus mejillas por sobre los costados de la mandíbula. Sus ojos están marcados por ojeras negras que rodean unos 0.3 centímetros la cuenca ocular.
-Suelen ser de personalidad retraída, introspectiva, escondiendo sus sentimientos y emociones en todo momento.
-A pesar de vivir una fecundación sexual similar a la de los humanos, se diferencian en el proceso de gestación, ya que luego de haber fecundado la semilla, se desarrolla un pequeño huevo en el vientre de la madre, permaneciendo ahí por un periodo nutritivo de tres meses.
-Para los casos de parejas mestizas donde se involucre un Andorak, el proceso de gestación predominante obedece a la naturaleza de la madre. Los mestizos heredan el aspecto, pero no las características especiales de los Andoraks.
-Los Andorak poseen ventosas en la planta de los pies, permitiéndoles adherirse o caminar por cualquier superficie independiente de su ángulo; habilidad que los posiciona como asesinos por excelencia.
-Para finalizar, debido a la naturaleza de caza y supervivencia inherente a su esencia, los Andoraks inician con la Tiniebla “Encubrirse” en nivel 2 y “Visión lejana” en nivel 1.')
+# Raza.find(7).update(descripcion:'Son de origen desconocido. Su aspecto de tonalidades verdes y piel escamosa tiende a intimidar a quien no está acostumbrado a verlos. La mayoría suele vivir aislado de la raza humana, temiendo a ser discriminados por su extravagante apariencia.
+# Tienen un cuerpo humanoide, de contextura delgada y esbelta. Poseen un rostro con características humanas, a excepción de una frente de sutiles escamas, al igual que sus mejillas por sobre los costados de la mandíbula. Sus ojos están marcados por ojeras negras que rodean unos 0.3 centímetros la cuenca ocular.
+# Suelen ser de personalidad retraída, introspectiva, escondiendo sus sentimientos y emociones en todo momento.
+# A pesar de vivir una fecundación sexual similar a la de los humanos, se diferencian en el proceso de gestación, ya que luego de haber fecundado la semilla, se desarrolla un pequeño huevo en el vientre de la madre, permaneciendo ahí por un periodo nutritivo de tres meses.
+# Para los casos de parejas mestizas donde se involucre un Andorak, el proceso de gestación predominante obedece a la naturaleza de la madre. Los mestizos heredan el aspecto, pero no las características especiales de los Andoraks.
+# Los Andorak poseen ventosas en la planta de los pies, permitiéndoles adherirse o caminar por cualquier superficie independiente de su ángulo; habilidad que los posiciona como asesinos por excelencia.
+# Para finalizar, debido a la naturaleza de caza y supervivencia inherente a su esencia, los Andoraks inician con la Tiniebla “Encubrirse” en nivel 2 y “Visión lejana” en nivel 1.')
 
-Raza.find(8).update(descripcion:'Según algunos especuladores, los Winvhel son humanos enfermos o malditos desde su nacimiento. Las familias que han tenido la “mala” suerte de criar un Winvhel han declarado que estos bebés son demonios, herramientas de las consecuencias de todos los pecados cometidos en esta vida. 
-Pero, a decir verdad, los Winvhel tienen un origen desconocido. No existen historias que den explicación a su génesis. En cuanto a su nacimiento respecta, este es totalmente al azar, es decir, cualquier mujer podría parir un Winvhel sin razón alguna. 
-Son humanoides de piel grisácea, extremadamente delgados, sus huesos se marcan bajo la piel debido a la carencia de musculatura. Sus rostros tienen la particularidad de estar marcados con una horrible fisura que une los extremos derecho e izquierdo de los labios con cada ojo respectivo. Nacen ciegos y con las cuerdas vocales casi totalmente destruidas, su tono de voz es similar al de los fumadores que la han perdido casi por completo.
-No obstante, a pesar de ser ciegos, enclenques, poseer un aspecto horripilante, tener la voz carrasposa e inaudible, y un aliento insoportable, poseen una audición extraordinaria, al punto de poder visualizar los cuerpos de su entorno a través de las vibraciones sonoras. Pueden identificar cualquier estructura, persona o entorno mejor que alguien que utilice la visión, con la excepción de que no pueden distinguir colores. También tienen facultades para aprender y practicar todo tipo de artes esotéricas y oscuras. 
-Son sujetos optimistas, de buen humor, pero muy morbosos. 
-Suelen vivir en zonas aisladas y, por lo general, con ausencia de luz.
-Debido a su oscura naturaleza, estos comienzan con la Tiniebla “Susurro siniestro” en nivel 2. Por otra parte, sufren de las Repercusiones “Ceguera severa”, “Daño al oído medio” y “Enclenque”.')
+# Raza.find(8).update(descripcion:'Según algunos especuladores, los Winvhel son humanos enfermos o malditos desde su nacimiento. Las familias que han tenido la “mala” suerte de criar un Winvhel han declarado que estos bebés son demonios, herramientas de las consecuencias de todos los pecados cometidos en esta vida. 
+# Pero, a decir verdad, los Winvhel tienen un origen desconocido. No existen historias que den explicación a su génesis. En cuanto a su nacimiento respecta, este es totalmente al azar, es decir, cualquier mujer podría parir un Winvhel sin razón alguna. 
+# Son humanoides de piel grisácea, extremadamente delgados, sus huesos se marcan bajo la piel debido a la carencia de musculatura. Sus rostros tienen la particularidad de estar marcados con una horrible fisura que une los extremos derecho e izquierdo de los labios con cada ojo respectivo. Nacen ciegos y con las cuerdas vocales casi totalmente destruidas, su tono de voz es similar al de los fumadores que la han perdido casi por completo.
+# No obstante, a pesar de ser ciegos, enclenques, poseer un aspecto horripilante, tener la voz carrasposa e inaudible, y un aliento insoportable, poseen una audición extraordinaria, al punto de poder visualizar los cuerpos de su entorno a través de las vibraciones sonoras. Pueden identificar cualquier estructura, persona o entorno mejor que alguien que utilice la visión, con la excepción de que no pueden distinguir colores. También tienen facultades para aprender y practicar todo tipo de artes esotéricas y oscuras. 
+# Son sujetos optimistas, de buen humor, pero muy morbosos. 
+# Suelen vivir en zonas aisladas y, por lo general, con ausencia de luz.
+# Debido a su oscura naturaleza, estos comienzan con la Tiniebla “Susurro siniestro” en nivel 2. Por otra parte, sufren de las Repercusiones “Ceguera severa”, “Daño al oído medio” y “Enclenque”.')
 
-Raza.find(9).update(descripcion:'Los Chadacks son humanoides corpulentos, pero sobre la base de grasa, cuya distinción de los humanos, además de la grotesca complexión, yace en que poseen cola y cabeza de cerdo. 
-Miden entre 1.7 a 2.4 metros. Existen variaciones rosadas, cafés y amarillas en cuanto a su color de piel. Carecen de cabello y de la mayoría de los vellos. No obstante, a los Chadacks que nacen con la nariz más humana les tiende a crecer un pequeño bigote. 
-Su hambre voraz los domina a lo largo del día. Carecen de paciencia, y muestran conductas arrebatadas al momento de sufrir alguna frustración. 
-Suelen ser repudiados como compañeros en actividades físicas, debido a su nauseabundo hedor al momento de sudar. 
-Nacen con la condición de que uno de los padres sea Chadack, predominando en un cien por ciento por sobre la otra raza.
-Suelen estar distribuidos por todo Hochland, con mayores concentraciones en Kaiser y Drake. ')
+# Raza.find(9).update(descripcion:'Los Chadacks son humanoides corpulentos, pero sobre la base de grasa, cuya distinción de los humanos, además de la grotesca complexión, yace en que poseen cola y cabeza de cerdo. 
+# Miden entre 1.7 a 2.4 metros. Existen variaciones rosadas, cafés y amarillas en cuanto a su color de piel. Carecen de cabello y de la mayoría de los vellos. No obstante, a los Chadacks que nacen con la nariz más humana les tiende a crecer un pequeño bigote. 
+# Su hambre voraz los domina a lo largo del día. Carecen de paciencia, y muestran conductas arrebatadas al momento de sufrir alguna frustración. 
+# Suelen ser repudiados como compañeros en actividades físicas, debido a su nauseabundo hedor al momento de sudar. 
+# Nacen con la condición de que uno de los padres sea Chadack, predominando en un cien por ciento por sobre la otra raza.
+# Suelen estar distribuidos por todo Hochland, con mayores concentraciones en Kaiser y Drake. ')
 
-Raza.find(10).update(descripcion:'Los Ritulillos son humanoides con características físicas similares a las de una rata. Gruesas paletas y largos bigotes delatan su roedora apariencia. Suelen medir entre 1.48 a 1.58 mts.
-La codicia y avaricia de los Ritulillos es desmesurada. Se desenvuelven con excelencia a la hora de realizar cualquier tipo de negocios.
-Si una pareja mestiza involucra un Ritulillo, la nueva criatura posee un cincuenta por ciento de probabilidades de pertenecer a una de las dos razas de forma pura.
-Abundan equitativamente en todo Hochland. 
-Los Ritulillos se desenvuelven a la perfección en los suburbios y agrupaciones clandestinas, debido a su excelente capacidad para captar información y realizar estafas o engaños a través de su agilidad utilizando las manos. Por ende, los Ritulillos comienzan con la Tiniebla “Juego de manos” en nivel 2 y “Oído agudo” en nivel 1.')
+# Raza.find(10).update(descripcion:'Los Ritulillos son humanoides con características físicas similares a las de una rata. Gruesas paletas y largos bigotes delatan su roedora apariencia. Suelen medir entre 1.48 a 1.58 mts.
+# La codicia y avaricia de los Ritulillos es desmesurada. Se desenvuelven con excelencia a la hora de realizar cualquier tipo de negocios.
+# Si una pareja mestiza involucra un Ritulillo, la nueva criatura posee un cincuenta por ciento de probabilidades de pertenecer a una de las dos razas de forma pura.
+# Abundan equitativamente en todo Hochland. 
+# Los Ritulillos se desenvuelven a la perfección en los suburbios y agrupaciones clandestinas, debido a su excelente capacidad para captar información y realizar estafas o engaños a través de su agilidad utilizando las manos. Por ende, los Ritulillos comienzan con la Tiniebla “Juego de manos” en nivel 2 y “Oído agudo” en nivel 1.')
+
+# Creando la tabla de armas
+weapons = Arma.create([
+    {nombre:'Daga',dano:'Fue+20',velocidad:'+1',distanciaRango:'10',atributo:'C',tipo:'Sencilla',cadencia:''},
+    {nombre:'Guantelete',dano:'Fue+20',velocidad:'',distanciaRango:'',atributo:'-',tipo:'Sencilla',cadencia:''},
+    {nombre:'Hoz',dano:'Fue+30',velocidad:'',distanciaRango:'10',atributo:'C',tipo:'Sencilla',cadencia:''},
+    {nombre:'Maza ligera',dano:'Fue+30',velocidad:'',distanciaRango:'',atributo:'A',tipo:'Sencilla',cadencia:''},
+    {nombre:'Clava',dano:'Fue+40',velocidad:'-1',distanciaRango:'',atributo:'A',tipo:'Sencilla',cadencia:''},
+    {nombre:'Maza de armas',dano:'Fue+45',velocidad:'-1',distanciaRango:'',atributo:'A',tipo:'Sencilla',cadencia:''},
+    {nombre:'Maza pesada',dano:'Fue+45',velocidad:'-1',distanciaRango:'',atributo:'A',tipo:'Sencilla',cadencia:''},
+    {nombre:'Lanza corta',dano:'Fue+30',velocidad:'+1',distanciaRango:'20',atributo:'P',tipo:'Sencilla',cadencia:''},
+    {nombre:'Bastón',dano:'Fue+20',velocidad:'+1',distanciaRango:'',atributo:'C',tipo:'Sencilla',cadencia:''},
+    {nombre:'Lanza',dano:'Fue+40',velocidad:'',distanciaRango:'20',atributo:'P',tipo:'Sencilla',cadencia:''},
+    {nombre:'Lanza larga',dano:'Fue+50',velocidad:'-1',distanciaRango:'50',atributo:'P',tipo:'Sencilla',cadencia:''},
+    {nombre:'Ballesta ligera',dano:'Fue+20',velocidad:'',distanciaRango:'50',atributo:'-',tipo:'Sencilla',cadencia:''},
+    {nombre:'Ballesta pesada',dano:'Fue+50',velocidad:'',distanciaRango:'120',atributo:'P',tipo:'Sencilla',cadencia:''},
+    {nombre:'Dardo',dano:'Fue+20',velocidad:'+2',distanciaRango:'20',atributo:'',tipo:'Sencilla',cadencia:''},
+    {nombre:'Honda',dano:'Fue+5',velocidad:'+2',distanciaRango:'50',atributo:'A',tipo:'Sencilla',cadencia:''},
+    {nombre:'Jabalina',dano:'Fue+50',velocidad:'-1',distanciaRango:'100',atributo:'',tipo:'Sencilla',cadencia:''},
+    {nombre:'Porra',dano:'Fue+20',velocidad:'',distanciaRango:'',atributo:'A',tipo:'Marcial',cadencia:''},
+    {nombre:'Escudo ligero',dano:'Res+201 / Fue +152',velocidad:'+1',distanciaRango:'10',atributo:'C',tipo:'Marcial',cadencia:''},
+    {nombre:'Escudo con púas, ligero',dano:'Res+203 / Fue +254',velocidad:'+1',distanciaRango:'6',atributo:'P',tipo:'Marcial',cadencia:''},
+    {nombre:'Espada corta',dano:'Fue+30',velocidad:'',distanciaRango:'6',atributo:'C',tipo:'Marcial',cadencia:''},
+    {nombre:'Hacha arrojadiza',dano:'Fue+35',velocidad:'+2',distanciaRango:'15',atributo:'C',tipo:'Marcial',cadencia:''},
+    {nombre:'Hacha de mano',dano:'Fue+40',velocidad:'',distanciaRango:'',atributo:'C',tipo:'Marcial',cadencia:''},
+    {nombre:'Kukri',dano:'Fue+30',velocidad:'+3',distanciaRango:'20',atributo:'C',tipo:'Marcial',cadencia:''},
+    {nombre:'Martillo ligero',dano:'Fue+35',velocidad:'',distanciaRango:'',atributo:'A',tipo:'Marcial',cadencia:''},
+    {nombre:'Pico ligero',dano:'Fue+30',velocidad:'',distanciaRango:'',atributo:'P',tipo:'Marcial',cadencia:''},
+    {nombre:'Cimitarra',dano:'Fue+40',velocidad:'+4',distanciaRango:'',atributo:'C',tipo:'Marcial',cadencia:''},
+    {nombre:'Espada larga',dano:'Fue+45',velocidad:'',distanciaRango:'',atributo:'C',tipo:'Marcial',cadencia:''},
+    {nombre:'Florete',dano:'Fue+35',velocidad:'+4',distanciaRango:'',atributo:'P',tipo:'Marcial',cadencia:''},
+    {nombre:'Hacha de batalla',dano:'Fue+45',velocidad:'',distanciaRango:'',atributo:'C',tipo:'Marcial',cadencia:''},
+    {nombre:'Maza pesada doble',dano:'Fue+50',velocidad:'',distanciaRango:'',atributo:'A/P',tipo:'Marcial',cadencia:''},
+    {nombre:'Martillo de guerra',dano:'Fue+40',velocidad:'',distanciaRango:'',atributo:'A',tipo:'Marcial',cadencia:''},
+    {nombre:'Tridente simple',dano:'Fue+35',velocidad:'+2',distanciaRango:'',atributo:'C/P',tipo:'Marcial',cadencia:''},
+    {nombre:'Alabarda',dano:'Fue+65',velocidad:'+2',distanciaRango:'',atributo:'C+20% /P',tipo:'Marcial',cadencia:''},
+    {nombre:'Alabarda oriental',dano:'Fue+50',velocidad:'+5',distanciaRango:'',atributo:'C+30%',tipo:'Marcial',cadencia:''},
+    {nombre:'Bisarma',dano:'Fue+60',velocidad:'+3',distanciaRango:'',atributo:'P',tipo:'Marcial',cadencia:''},
+    {nombre:'Espadón',dano:'Fue+75',velocidad:'-2',distanciaRango:'',atributo:'C+20%',tipo:'Marcial',cadencia:''},
+    {nombre:'Gran clava',dano:'Fue+85',velocidad:'-3',distanciaRango:'',atributo:'P/A+20%',tipo:'Marcial',cadencia:''},
+    {nombre:'Gran hacha',dano:'Fue+80',velocidad:'-3',distanciaRango:'',atributo:'C+30%',tipo:'Marcial',cadencia:''},
+    {nombre:'Guadaña',dano:'Fue+70',velocidad:'+2',distanciaRango:'',atributo:'C+10%',tipo:'Marcial',cadencia:''},
+    {nombre:'Guja',dano:'Fue+60',velocidad:'+2',distanciaRango:'',atributo:'C+20%',tipo:'Marcial',cadencia:''},
+    {nombre:'Lanza de caballería',dano:'Fue+90',velocidad:'-5',distanciaRango:'',atributo:'P',tipo:'Marcial',cadencia:''},
+    {nombre:'Arco corto',dano:'30',velocidad:'+3',distanciaRango:'100´',atributo:'P',tipo:'Marcial',cadencia:''},
+    {nombre:'Arco corto compuesto',dano:'40',velocidad:'',distanciaRango:'150´',atributo:'P',tipo:'Marcial',cadencia:''},
+    {nombre:'Arco largo',dano:'45',velocidad:'-5',distanciaRango:'200´',atributo:'P',tipo:'Marcial',cadencia:''},
+    {nombre:'Arco largo compuesto',dano:'50',velocidad:'-4',distanciaRango:'300´',atributo:'P',tipo:'Marcial',cadencia:''},
+    {nombre:'Bota con cuchilla',dano:'Fue+20',velocidad:'',distanciaRango:'',atributo:'P',tipo:'Exotica',cadencia:''},
+    {nombre:'Brazal de garra',dano:'Fue+25',velocidad:'+2',distanciaRango:'',atributo:'-',tipo:'Exotica',cadencia:''},
+    {nombre:'Kama',dano:'Fue+30',velocidad:'+1',distanciaRango:'',atributo:'C',tipo:'Exotica',cadencia:''},
+    {nombre:'Nunchaku',dano:'Fue+30',velocidad:'+5',distanciaRango:'',atributo:'',tipo:'Exotica',cadencia:''},
+    {nombre:'Sai',dano:'Fue+30',velocidad:'',distanciaRango:'',atributo:'P',tipo:'Exotica',cadencia:''},
+    {nombre:'Siangham',dano:'Fue+35',velocidad:'+2',distanciaRango:'',atributo:'C',tipo:'Exotica',cadencia:''},
+    {nombre:'Espada bastarda',dano:'Fue+35',velocidad:'',distanciaRango:'',atributo:'C',tipo:'Exotica',cadencia:''},
+    {nombre:'Flagelo',dano:'Fue+10',velocidad:'+3',distanciaRango:'',atributo:'',tipo:'Exotica',cadencia:''},
+    {nombre:'Hacha de guerra enana',dano:'Fue+45',velocidad:'-1',distanciaRango:'',atributo:'A',tipo:'Exotica',cadencia:''},
+    {nombre:'Katana',dano:'Fue+60',velocidad:'+2',distanciaRango:'',atributo:'C',tipo:'Exotica',cadencia:''},
+    {nombre:'Khopesh',dano:'Fue+50',velocidad:'+1',distanciaRango:'',atributo:'C',tipo:'Exotica',cadencia:''},
+    {nombre:'Látigo',dano:'Fue+10',velocidad:'+7',distanciaRango:'7´',atributo:'',tipo:'Exotica',cadencia:''},
+    {nombre:'Atarraga',dano:'Fue+90',velocidad:'+1',distanciaRango:'',atributo:'C+30%',tipo:'Exotica',cadencia:''},
+    {nombre:'Espada de dos hojas',dano:'Fue+70',velocidad:'+2',distanciaRango:'',atributo:'C+20%',tipo:'Exotica',cadencia:''},
+    {nombre:'Ultra Espadón',dano:'Fue+100',velocidad:'-4',distanciaRango:'',atributo:'C+50%',tipo:'Exotica',cadencia:''},
+    {nombre:'Matagigantes (Gran Hacha especial)',dano:'Fue+100',velocidad:'-5',distanciaRango:'',atributo:'C+50%',tipo:'Exotica',cadencia:''},
+    {nombre:'Martillo ganchudo gnomo',dano:'Fue+901/ Fue+802',velocidad:'-3',distanciaRango:'',atributo:'P/A+40%',tipo:'Exotica',cadencia:''},
+    {nombre:'Montante',dano:'Fue+90',velocidad:'',distanciaRango:'',atributo:'C+40%',tipo:'Exotica',cadencia:''},
+    {nombre:'Urgrosh enano',dano:'Fue+903/ Fue+804/ Fue+505',velocidad:'-4',distanciaRango:'',atributo:'C+40%/A+40%/P',tipo:'Exotica',cadencia:''},
+    {nombre:'Ballesta de mano',dano:'20',velocidad:'',distanciaRango:'80´',atributo:'P',tipo:'Exotica',cadencia:''},
+    {nombre:'Ballesta de repetición6, ligera',dano:'20',velocidad:'',distanciaRango:'100´',atributo:'P',tipo:'Exotica',cadencia:''},
+    {nombre:'Ballesta de repetición7, pesada',dano:'20',velocidad:'-2',distanciaRango:'120´',atributo:'P',tipo:'Exotica',cadencia:''},
+    {nombre:'Bolas',dano:'-10',velocidad:'+2',distanciaRango:'10´',atributo:'-',tipo:'Exotica',cadencia:''},
+    {nombre:'Chakram',dano:'Fue+60',velocidad:'+4',distanciaRango:'20´',atributo:'C',tipo:'Exotica',cadencia:''},
+    {nombre:'Fukumi-bari',dano:'Fue',velocidad:'+7',distanciaRango:'30´',atributo:'-',tipo:'Exotica',cadencia:''},
+    {nombre:'Red',dano:'-8',velocidad:'+3',distanciaRango:'10´',atributo:'',tipo:'Exotica',cadencia:''},
+    {nombre:'Shuriken',dano:'Fue+10',velocidad:'+6',distanciaRango:'10´',atributo:'P',tipo:'Exotica',cadencia:''},
+    {nombre:'.30',dano:'20',velocidad:'',distanciaRango:'40',atributo:'',tipo:'Pistola',cadencia:'2'},
+    {nombre:'9mm',dano:'15',velocidad:'',distanciaRango:'20',atributo:'',tipo:'Pistola',cadencia:'4'},
+    {nombre:'7.62T',dano:'10',velocidad:'',distanciaRango:'30',atributo:'',tipo:'Pistola',cadencia:'4'},
+    {nombre:'.45',dano:'20',velocidad:'',distanciaRango:'25',atributo:'',tipo:'Pistola',cadencia:'3'},
+    {nombre:'10mm',dano:'20',velocidad:'',distanciaRango:'25',atributo:'',tipo:'Pistola',cadencia:'3'},
+    {nombre:'.50',dano:'15',velocidad:'',distanciaRango:'20',atributo:'',tipo:'Pistola',cadencia:'3'},
+    {nombre:'.45',dano:'20',velocidad:'',distanciaRango:'25',atributo:'',tipo:'Pistola',cadencia:'3'},
+    {nombre:'.40',dano:'15',velocidad:'',distanciaRango:'20',atributo:'',tipo:'Pistola',cadencia:'4'},
+    {nombre:'.22',dano:'15',velocidad:'',distanciaRango:'30',atributo:'',tipo:'Pistola',cadencia:'5'},
+    {nombre:'.40',dano:'20',velocidad:'',distanciaRango:'20',atributo:'',tipo:'Pistola',cadencia:'4'},
+    {nombre:'380',dano:'15',velocidad:'',distanciaRango:'15',atributo:'',tipo:'Pistola',cadencia:'3'},
+    {nombre:'44',dano:'20',velocidad:'',distanciaRango:'35',atributo:'',tipo:'Revolver',cadencia:'2'},
+    {nombre:'357',dano:'20',velocidad:'',distanciaRango:'30',atributo:'',tipo:'Revolver',cadencia:'2'},
+    {nombre:'454',dano:'25',velocidad:'',distanciaRango:'40',atributo:'',tipo:'Revolver',cadencia:'1'},
+    {nombre:'221',dano:'20',velocidad:'',distanciaRango:'50',atributo:'',tipo:'Revolver',cadencia:'1'},
+    {nombre:'.38spl',dano:'15',velocidad:'',distanciaRango:'12',atributo:'',tipo:'Revolver',cadencia:'3'},
+    {nombre:'.22 M',dano:'15',velocidad:'',distanciaRango:'20',atributo:'',tipo:'Revolver',cadencia:'3'},
+    {nombre:'7.62 S',dano:'30',velocidad:'',distanciaRango:'50',atributo:'',tipo:'Subfusil',cadencia:'17'},
+    {nombre:'5.45',dano:'25',velocidad:'',distanciaRango:'50',atributo:'',tipo:'Subfusil',cadencia:'17'},
+    {nombre:'9mm',dano:'15',velocidad:'',distanciaRango:'20',atributo:'',tipo:'Subfusil',cadencia:'15'},
+    {nombre:'9mm',dano:'15',velocidad:'',distanciaRango:'40',atributo:'',tipo:'Ametralladora ligera',cadencia:'21'},
+    {nombre:'.32',dano:'10',velocidad:'',distanciaRango:'20',atributo:'',tipo:'Ametralladora ligera',cadencia:'15'},
+    {nombre:'5.56',dano:'25',velocidad:'',distanciaRango:'65',atributo:'',tipo:'Ametralladora ligera',cadencia:'20'},
+    {nombre:'.22',dano:'10',velocidad:'',distanciaRango:'20',atributo:'',tipo:'Ametralladora ligera',cadencia:'4'},
+    {nombre:'.40',dano:'20',velocidad:'',distanciaRango:'40',atributo:'',tipo:'Ametralladora ligera',cadencia:'19'},
+    {nombre:'10mm',dano:'20',velocidad:'',distanciaRango:'40',atributo:'',tipo:'Ametralladora ligera',cadencia:'18'},
+    {nombre:'.45',dano:'20',velocidad:'',distanciaRango:'25',atributo:'',tipo:'Ametralladora ligera',cadencia:'32'},
+    {nombre:'380',dano:'15',velocidad:'',distanciaRango:'20',atributo:'',tipo:'Ametralladora ligera',cadencia:'22'},
+    {nombre:'7.62',dano:'100',velocidad:'-2',distanciaRango:'300',atributo:'',tipo:'Rifle',cadencia:'1'},
+    {nombre:'.50',dano:'254',velocidad:'-5',distanciaRango:'1500',atributo:'',tipo:'Rifle',cadencia:'1'},
+    {nombre:'600',dano:'184',velocidad:'-1',distanciaRango:'275',atributo:'',tipo:'Rifle',cadencia:'1'},
+    {nombre:'.30',dano:'64',velocidad:'-',distanciaRango:'100',atributo:'',tipo:'Rifle',cadencia:'4'},
+    {nombre:'300',dano:'134',velocidad:'-3',distanciaRango:'500',atributo:'',tipo:'Rifle',cadencia:'1'},
+    {nombre:'.30-06',dano:'170',velocidad:'-2',distanciaRango:'300',atributo:'',tipo:'Rifle',cadencia:'1'},
+    {nombre:'223',dano:'114',velocidad:'-1',distanciaRango:'275',atributo:'',tipo:'Rifle',cadencia:'3'},
+    {nombre:'.22',dano:'90',velocidad:'-',distanciaRango:'100',atributo:'',tipo:'Rifle',cadencia:'4'},
+    {nombre:'15mm',dano:'192',velocidad:'-4',distanciaRango:'550',atributo:'',tipo:'Rifle',cadencia:'1'},
+    {nombre:'460',dano:'116',velocidad:'-2',distanciaRango:'300',atributo:'',tipo:'Rifle',cadencia:'1'},
+    {nombre:'5mm',dano:'25',velocidad:'-2',distanciaRango:'200',atributo:'',tipo:'Fusil de Asalto',cadencia:'18'},
+    {nombre:'7.62',dano:'30',velocidad:'-2',distanciaRango:'250',atributo:'',tipo:'Fusil de Asalto',cadencia:'10'},
+    {nombre:'5.45',dano:'25',velocidad:'-1',distanciaRango:'120',atributo:'',tipo:'Fusil de Asalto',cadencia:'20'},
+    {nombre:'5.56',dano:'25',velocidad:'-1',distanciaRango:'150',atributo:'',tipo:'Fusil de Asalto',cadencia:'21'},
+    {nombre:'4.7mm',dano:'20',velocidad:'-3',distanciaRango:'300',atributo:'',tipo:'Fusil de Asalto',cadencia:'20'},
+    {nombre:'12ga',dano:'30',velocidad:'-1',distanciaRango:'25',atributo:'',tipo:'Escopeta',cadencia:'6'},
+    {nombre:'10ga',dano:'40',velocidad:'-1',distanciaRango:'20',atributo:'',tipo:'Escopeta',cadencia:'2'},
+    {nombre:'Misil',dano:'1200',velocidad:'-9',distanciaRango:'500',atributo:'',tipo:'Arma pesada',cadencia:''},
+    {nombre:'.50in',dano:'254',velocidad:'-5',distanciaRango:'1800',atributo:'',tipo:'Arma pesada',cadencia:''},
+    {nombre:'7.62',dano:'100',velocidad:'-10',distanciaRango:'350',atributo:'',tipo:'Arma pesada',cadencia:''},
+    {nombre:'5.56',dano:'25',velocidad:'-7',distanciaRango:'300',atributo:'',tipo:'Arma pesada',cadencia:''},
+    {nombre:'Antitanque',dano:'320',velocidad:'-5',distanciaRango:'200',atributo:'',tipo:'Arma pesada',cadencia:''},
+    {nombre:'.50',dano:'254',velocidad:'-15',distanciaRango:'600',atributo:'',tipo:'Arma pesada',cadencia:''},
+    {nombre:'58.3',dano:'2194',velocidad:'-12',distanciaRango:'300',atributo:'',tipo:'Arma pesada',cadencia:''},
+    {nombre:'Misil',dano:'1200',velocidad:'-9',distanciaRango:'5000',atributo:'',tipo:'Arma pesada',cadencia:''},
+    {nombre:'Lanzallamas',dano:'100 (por segundo)',velocidad:'-5',distanciaRango:'10',atributo:'',tipo:'Arma pesada',cadencia:''},
+    {nombre:'Cuero endurecido',dano:'50',velocidad:'',distanciaRango:'',atributo:'C-10%',tipo:'Armadura',cadencia:''},
+    {nombre:'Cota de mallas',dano:'70',velocidad:'-1',distanciaRango:'',atributo:'P-10%',tipo:'Armadura',cadencia:''},
+    {nombre:'Armadura Lamelar',dano:'80',velocidad:'-2',distanciaRango:'',atributo:'C-10%',tipo:'Armadura',cadencia:''},
+    {nombre:'Armadura de escamas',dano:'90',velocidad:'-2',distanciaRango:'',atributo:'C-10%',tipo:'Armadura',cadencia:''},
+    {nombre:'Armadura Samurái',dano:'120',velocidad:'-3',distanciaRango:'',atributo:'C-20%/A-20%',tipo:'Armadura',cadencia:''},
+    {nombre:'Placas de acero',dano:'150',velocidad:'-4',distanciaRango:'',atributo:'C-30%/A-30%',tipo:'Armadura',cadencia:''},
+    {nombre:'Kevlar militar',dano:'180',velocidad:'-1',distanciaRango:'',atributo:'C-40%/A-40%',tipo:'Armadura',cadencia:''},
+])
