@@ -1,0 +1,56 @@
+<div class="d-flex align-items-start">
+  <div class="nav flex-column nav-pills me-3" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+    <% @repercusiones.each do |repercusion| %>
+        <button class="nav-link text-start" id="v-pills-<%=repercusion.id%>-tab" data-bs-toggle="pill" data-bs-target="#v-pills-<%=repercusion.id%>" type="button" role="tab" aria-controls="v-pills-<%=repercusion.id%>" aria-selected="true">
+            <%=repercusion.name%>
+        </button>    
+    <% end %>
+  </div>
+  
+  <div class="tab-content" id="v-pills-tabContent">
+    <% @repercusiones.each do |repercusion| %>
+        <div class="tab-pane fade" id="v-pills-<%=repercusion.id%>" role="tabpanel" aria-labelledby="v-pills-<%=repercusion.id%>-tab">      
+           <div class="mt-5"><%=repercusion.description%></div>
+           
+           <% if repercusion.id == 13 or repercusion.id == 1 or repercusion.id == 2 %>
+            <table class="table table-dark table-striped">
+                    <thead>
+                        <tr>
+                            <th scope="col">Nivel</th>
+                            <th scope="col">Descripcion</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th>1</th>
+                            <td><%=repercusion.level1%></td>                
+                        </tr>
+                        <tr>
+                            <th>2</th>
+                            <td><%=repercusion.level2%></td>
+                        </tr>
+                        <tr>
+                            <th>3</th>
+                            <td><%=repercusion.level3%></td>
+                        </tr>
+                        <tr>
+                            <th>4</th>
+                            <td><%=repercusion.level4%></td>
+                        </tr>
+                        <tr>
+                            <td colspan="2"><strong>Advertencia:</strong><%=repercusion.level5%></th>
+                        </tr>
+                    </tbody>
+                </table>
+            <%else%>
+                <div class="border border-secondary my-4">
+                    <strong>Advertencia: </strong><%=repercusion.level5%>
+                </div>
+
+           <% end %>
+           
+
+        </div>
+    <% end %>
+  </div>
+</div>

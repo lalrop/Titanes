@@ -24,7 +24,7 @@ class MastersController < ApplicationController
         @tinieblas = Tiniebla.all
     end
 
-    def repercusiones
+    def repercusions
         @repercusiones = Repercusion.all
     end
 end

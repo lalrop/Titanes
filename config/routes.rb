@@ -8,7 +8,7 @@ Rails.application.routes.draw do
   get '/masters/estados', to: 'masters#estados'
   get '/masters/armas', to: 'masters#armas'
   get '/masters/tinieblas', to: 'masters#tinieblas'
-  get '/masters/repercusiones', to: 'masters#repercusiones'
+  get '/masters/repercusions', to: 'masters#repercusions'
   get '/masters/experiencia', to: 'masters#experiencia'
 
   root to: 'characters#index'
