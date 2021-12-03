@@ -1,0 +1,312 @@
+<h1>Armas</h1>
+.... in process...
+
+<nav>
+  <div class="nav nav-tabs" id="nav-tab" role="tablist">
+    <button class="nav-link active" id="nav-armasCC-tab" data-bs-toggle="tab" data-bs-target="#nav-armasCC" type="button" role="tab" aria-controls="nav-armasCC" aria-selected="true">Armas C.C y Larga Distancia</button>
+    <button class="nav-link" id="nav-armasFuego-tab" data-bs-toggle="tab" data-bs-target="#nav-armasFuego" type="button" role="tab" aria-controls="nav-armasFuego" aria-selected="false">Armas de fuego</button>
+    <button class="nav-link" id="nav-armaduras-tab" data-bs-toggle="tab" data-bs-target="#nav-armaduras" type="button" role="tab" aria-controls="nav-armaduras" aria-selected="false">Armaduras</button>
+  </div>
+</nav>
+<div class="tab-content" id="nav-tabContent">
+  <div class="tab-pane fade show active" id="nav-armasCC" role="tabpanel" aria-labelledby="nav-armasCC-tab">
+    <div class="d-flex align-items-start">
+        <div class="nav flex-column nav-pills me-3" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+            <button class="nav-link active" id="v-pills-sencillas-tab" data-bs-toggle="pill" data-bs-target="#v-pills-sencillas" type="button" role="tab" aria-controls="v-pills-sencillas" aria-selected="true">Sencillas</button>
+            <button class="nav-link" id="v-pills-marciales-tab" data-bs-toggle="pill" data-bs-target="#v-pills-marciales" type="button" role="tab" aria-controls="v-pills-marciales" aria-selected="false">Marciales</button>
+            <button class="nav-link" id="v-pills-subfusiles-tab" data-bs-toggle="pill" data-bs-target="#v-pills-exoticas" type="button" role="tab" aria-controls="v-pills-exoticas" aria-selected="false">Subfusiles</button>
+        </div>
+        <div class="tab-content table" id="v-pills-tabContent">
+            <div class="tab-pane fade show active" id="v-pills-sencillas" role="tabpanel" aria-labelledby="v-pills-sencillas-tab">
+                <table class="table table-dark table-striped">
+                    <thead>
+                        <tr>
+                        <th scope="col">Nombre</th>
+                        <th scope="col">Daño</th>
+                        <th scope="col">Velocidad</th>
+                        <th scope="col">Distancia</th>
+                        <th scope="col">Atributo</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <% @sencillas.each do |sencilla| %>
+                        <tr>
+                            <th scope="row"><%=sencilla.nombre%></th>
+                            <td><%=sencilla.dano%></td>
+                            <td><%=sencilla.velocidad%></td>
+                            <td><%=sencilla.distanciaRango%></td>
+                            <td><%=sencilla.atributo%></td>
+                        </tr>
+                        <% end %>
+                    </tbody>
+                </table>
+            </div>
+            <div class="tab-pane fade" id="v-pills-marciales" role="tabpanel" aria-labelledby="v-pills-marciales-tab">
+                <table class="table table-dark table-striped">
+                    <thead>
+                        <tr>
+                        <th scope="col">Nombre</th>
+                        <th scope="col">Daño</th>
+                        <th scope="col">Velocidad</th>
+                        <th scope="col">Distancia</th>
+                        <th scope="col">Atributo</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <% @marciales.each do |marcial| %>
+                        <tr>
+                            <th scope="row"><%=marcial.nombre%></th>
+                            <td><%=marcial.dano%></td>
+                            <td><%=marcial.velocidad%></td>
+                            <td><%=marcial.distanciaRango%></td>
+                            <td><%=marcial.atributo%></td>
+                        </tr>
+                        <% end %>
+                    </tbody>
+                </table>
+            </div>
+            <div class="tab-pane fade" id="v-pills-exoticas" role="tabpanel" aria-labelledby="v-pills-exoticas-tab">
+                <table class="table table-dark table-striped">
+                    <thead>
+                        <tr>
+                        <th scope="col">Nombre</th>
+                        <th scope="col">Daño</th>
+                        <th scope="col">Velocidad</th>
+                        <th scope="col">Distancia</th>
+                        <th scope="col">Atributo</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <% @exoticas.each do |exotica| %>
+                        <tr>
+                            <th scope="row"><%=exotica.nombre%></th>
+                            <td><%=exotica.dano%></td>
+                            <td><%=exotica.velocidad%></td>
+                            <td><%=exotica.distanciaRango%></td>
+                            <td><%=exotica.atributo%></td>
+                        </tr>
+                        <% end %>
+                    </tbody>
+                </table>                
+            </div>
+        </div>
+    </div>
+  </div>
+  <div class="tab-pane fade" id="nav-armasFuego" role="tabpanel" aria-labelledby="nav-armasFuego-tab">
+    <div class="d-flex align-items-start">
+            <div class="nav flex-column nav-pills me-3" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+                <button class="nav-link active" id="v-pills-pistolas-tab" data-bs-toggle="pill" data-bs-target="#v-pills-pistolas" type="button" role="tab" aria-controls="v-pills-pistolas" aria-selected="true">Pistolas</button>
+                <button class="nav-link" id="v-pills-revolveres-tab" data-bs-toggle="pill" data-bs-target="#v-pills-revolveres" type="button" role="tab" aria-controls="v-pills-revolveres" aria-selected="false">Revolveres</button>
+                <button class="nav-link" id="v-pills-subfusiles-tab" data-bs-toggle="pill" data-bs-target="#v-pills-subfusiles" type="button" role="tab" aria-controls="v-pills-subfusiles" aria-selected="false">Subfusiles</button>
+                <button class="nav-link" id="v-pills-ametralladorasLigeras-tab" data-bs-toggle="pill" data-bs-target="#v-pills-ametralladorasLigeras" type="button" role="tab" aria-controls="v-pills-ametralladorasLigeras" aria-selected="false">Ametralladoras Ligeras</button>
+                <button class="nav-link" id="v-pills-rifles-tab" data-bs-toggle="pill" data-bs-target="#v-pills-rifles" type="button" role="tab" aria-controls="v-pills-rifles" aria-selected="false">Rifles</button>
+                <button class="nav-link" id="v-pills-fusilAsalto-tab" data-bs-toggle="pill" data-bs-target="#v-pills-fusilAsalto" type="button" role="tab" aria-controls="v-pills-fusilAsalto" aria-selected="false">Fusil de Asalto</button>
+                <button class="nav-link" id="v-pills-escopetas-tab" data-bs-toggle="pill" data-bs-target="#v-pills-escopetas" type="button" role="tab" aria-controls="v-pills-escopetas" aria-selected="false">Escopeta</button>
+                <button class="nav-link" id="v-pills-armaPesadas-tab" data-bs-toggle="pill" data-bs-target="#v-pills-armaPesadas" type="button" role="tab" aria-controls="v-pills-armaPesadas" aria-selected="false">Armas Pesadas</button>
+
+            </div>
+            <div class="tab-content table" id="v-pills-tabContent">
+                <div class="tab-pane fade show active" id="v-pills-pistolas" role="tabpanel" aria-labelledby="v-pills-pistolas-tab">
+                    <table class="table table-dark table-striped">
+                        <thead>
+                            <tr>
+                            <th scope="col">Nombre</th>
+                            <th scope="col">Daño</th>
+                            <th scope="col">Velocidad</th>
+                            <th scope="col">Distancia</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <% @pistolas.each do |pistola| %>
+                            <tr>
+                                <th scope="row"><%=pistola.nombre%></th>
+                                <td><%=pistola.dano%></td>
+                                <td><%=pistola.velocidad%></td>
+                                <td><%=pistola.distanciaRango%></td>
+                            </tr>
+                            <% end %>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="tab-pane fade" id="v-pills-revolveres" role="tabpanel" aria-labelledby="v-pills-revolveres-tab">
+                    <table class="table table-dark table-striped">
+                        <thead>
+                            <tr>
+                            <th scope="col">Nombre</th>
+                            <th scope="col">Daño</th>
+                            <th scope="col">Velocidad</th>
+                            <th scope="col">Distancia</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <% @revolveres.each do |revolver| %>
+                            <tr>
+                                <th scope="row"><%=revolver.nombre%></th>
+                                <td><%=revolver.dano%></td>
+                                <td><%=revolver.velocidad%></td>
+                                <td><%=revolver.distanciaRango%></td>
+                            </tr>
+                            <% end %>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="tab-pane fade" id="v-pills-subfusiles" role="tabpanel" aria-labelledby="v-pills-subfusiles-tab">
+                    <table class="table table-dark table-striped">
+                        <thead>
+                            <tr>
+                            <th scope="col">Nombre</th>
+                            <th scope="col">Daño</th>
+                            <th scope="col">Velocidad</th>
+                            <th scope="col">Distancia</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <% @subfusiles.each do |subfusil| %>
+                            <tr>
+                                <th scope="row"><%=subfusil.nombre%></th>
+                                <td><%=subfusil.dano%></td>
+                                <td><%=subfusil.velocidad%></td>
+                                <td><%=subfusil.distanciaRango%></td>
+                            </tr>
+                            <% end %>
+                        </tbody>
+                    </table>                
+                </div>
+                <div class="tab-pane fade" id="v-pills-ametralladorasLigeras" role="tabpanel" aria-labelledby="v-pills-ametralladorasLigeras-tab">
+                    <table class="table table-dark table-striped">
+                        <thead>
+                            <tr>
+                            <th scope="col">Nombre</th>
+                            <th scope="col">Daño</th>
+                            <th scope="col">Velocidad</th>
+                            <th scope="col">Distancia</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <% @ametralladorasLigeras.each do |ametralladoraLigera| %>
+                            <tr>
+                                <th scope="row"><%=ametralladoraLigera.nombre%></th>
+                                <td><%=ametralladoraLigera.dano%></td>
+                                <td><%=ametralladoraLigera.velocidad%></td>
+                                <td><%=ametralladoraLigera.distanciaRango%></td>
+                            </tr>
+                            <% end %>
+                        </tbody>
+                    </table>                
+                </div>
+                <div class="tab-pane fade" id="v-pills-rifles" role="tabpanel" aria-labelledby="v-pills-rifles-tab">
+                    <table class="table table-dark table-striped">
+                        <thead>
+                            <tr>
+                            <th scope="col">Nombre</th>
+                            <th scope="col">Daño</th>
+                            <th scope="col">Velocidad</th>
+                            <th scope="col">Distancia</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <% @rifles.each do |rifle| %>
+                            <tr>
+                                <th scope="row"><%=rifle.nombre%></th>
+                                <td><%=rifle.dano%></td>
+                                <td><%=rifle.velocidad%></td>
+                                <td><%=rifle.distanciaRango%></td>
+                            </tr>
+                            <% end %>
+                        </tbody>
+                    </table>                
+                </div>
+                <div class="tab-pane fade" id="v-pills-fusilAsalto" role="tabpanel" aria-labelledby="v-pills-fusilAsalto-tab">
+                    <table class="table table-dark table-striped">
+                        <thead>
+                            <tr>
+                            <th scope="col">Nombre</th>
+                            <th scope="col">Daño</th>
+                            <th scope="col">Velocidad</th>
+                            <th scope="col">Distancia</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <% @fusilesAsalto.each do |fusilAsalto| %>
+                            <tr>
+                                <th scope="row"><%=fusilAsalto.nombre%></th>
+                                <td><%=fusilAsalto.dano%></td>
+                                <td><%=fusilAsalto.velocidad%></td>
+                                <td><%=fusilAsalto.distanciaRango%></td>
+                            </tr>
+                            <% end %>
+                        </tbody>
+                    </table>                
+                </div>
+                <div class="tab-pane fade" id="v-pills-escopetas" role="tabpanel" aria-labelledby="v-pills-escopetas-tab">
+                    <table class="table table-dark table-striped">
+                        <thead>
+                            <tr>
+                            <th scope="col">Nombre</th>
+                            <th scope="col">Daño</th>
+                            <th scope="col">Velocidad</th>
+                            <th scope="col">Distancia</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <% @escopetas.each do |escopeta| %>
+                            <tr>
+                                <th scope="row"><%=escopeta.nombre%></th>
+                                <td><%=escopeta.dano%></td>
+                                <td><%=escopeta.velocidad%></td>
+                                <td><%=escopeta.distanciaRango%></td>
+                            </tr>
+                            <% end %>
+                        </tbody>
+                    </table>                
+                </div>
+                <div class="tab-pane fade" id="v-pills-armaPesadas" role="tabpanel" aria-labelledby="v-pills-armaPesadas-tab">
+                    <table class="table table-dark table-striped">
+                        <thead>
+                            <tr>
+                            <th scope="col">Nombre</th>
+                            <th scope="col">Daño</th>
+                            <th scope="col">Velocidad</th>
+                            <th scope="col">Distancia</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <% @armasPesadas.each do |armaPesada| %>
+                            <tr>
+                                <th scope="row"><%=armaPesada.nombre%></th>
+                                <td><%=armaPesada.dano%></td>
+                                <td><%=armaPesada.velocidad%></td>
+                                <td><%=armaPesada.distanciaRango%></td>
+                                <td><%=armaPesada.atributo%></td>
+                            </tr>
+                            <% end %>
+                        </tbody>
+                    </table>                
+                </div>
+            </div>
+    </div>
+</div>
+  <div class="tab-pane fade" id="nav-armaduras" role="tabpanel" aria-labelledby="nav-armaduras-tab">
+    <table class="table table-dark table-striped">
+        <thead>
+            <tr>
+                <th scope="col">Nombre</th>
+                <th scope="col">Daño</th>
+                <th scope="col">Velocidad</th>
+                <th scope="col">Distancia</th>
+                <th scope="col">Atributo</th>
+            </tr>
+        </thead>
+        <tbody>
+            <% @armaduras.each do |armadura| %>
+            <tr>
+                <th scope="row"><%=armadura.nombre%></th>
+                <td><%=armadura.dano%></td>
+                <td><%=armadura.velocidad%></td>
+                <td><%=armadura.distanciaRango%></td>
+                <td><%=armadura.atributo%></td>
+            </tr>
+            <% end %>
+        </tbody>
+    </table>
+  </div>
