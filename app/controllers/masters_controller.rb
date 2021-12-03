@@ -9,7 +9,6 @@ class MastersController < ApplicationController
     
 
     def tecnicas
-        
     end
     
     def estados
@@ -30,7 +29,6 @@ class MastersController < ApplicationController
         @escopetas = @armas.select{|arma| arma.tipo == 'Escopeta'}
         @armasPesadas = @armas.select{|arma| arma.tipo == 'Arma pesada'}
         @armaduras = @armas.select{|arma| arma.tipo == 'Armadura'}
-
     end
     
     def tinieblas

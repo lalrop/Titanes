@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_12_02_165816) do
+ActiveRecord::Schema.define(version: 2021_12_03_125142) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -112,6 +112,18 @@ ActiveRecord::Schema.define(version: 2021_12_02_165816) do
     t.text "level3"
     t.text "level4"
     t.text "level5"
+  end
+
+  create_table "tecnicas", force: :cascade do |t|
+    t.string "name"
+    t.text "description"
+    t.string "type"
+    t.string "cost"
+    t.string "dif"
+    t.string "damage"
+    t.string "velocidad"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
   end
 
   create_table "tinieblas", force: :cascade do |t|
