@@ -1,0 +1,434 @@
+<h1 class="mt-3">Tecnicas</h1>
+
+<div class="d-flex align-items-start">
+  <div class="nav flex-column nav-pills me-3" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+    <button class="nav-link" id="v-pills-Stahl-tab" data-bs-toggle="pill" data-bs-target="#v-pills-Stahl" type="button" role="tab" aria-controls="v-pills-Stahl" aria-selected="true">Stahl</button>
+    <button class="nav-link" id="v-pills-Tenjou-tab" data-bs-toggle="pill" data-bs-target="#v-pills-Tenjou" type="button" role="tab" aria-controls="v-pills-Tenjou" aria-selected="true">Tenjou</button>
+    <button class="nav-link" id="v-pills-Drake-tab" data-bs-toggle="pill" data-bs-target="#v-pills-Drake" type="button" role="tab" aria-controls="v-pills-Drake" aria-selected="true">Drake</button>
+    <button class="nav-link" id="v-pills-Woohan-tab" data-bs-toggle="pill" data-bs-target="#v-pills-Woohan" type="button" role="tab" aria-controls="v-pills-Woohan" aria-selected="true">Woohan</button>
+    <button class="nav-link" id="v-pills-Samsara-tab" data-bs-toggle="pill" data-bs-target="#v-pills-Samsara" type="button" role="tab" aria-controls="v-pills-Samsara" aria-selected="true">Samsara</button>
+    <button class="nav-link" id="v-pills-TangSooDo-tab" data-bs-toggle="pill" data-bs-target="#v-pills-TangSooDo" type="button" role="tab" aria-controls="v-pills-TangSooDo" aria-selected="true">Tang Soo Do</button>
+    <button class="nav-link" id="v-pills-IgneaMortis-tab" data-bs-toggle="pill" data-bs-target="#v-pills-IgneaMortis" type="button" role="tab" aria-controls="v-pills-IgneaMortis" aria-selected="true">Ignea Mortis</button>
+    <button class="nav-link" id="v-pills-Kaiser-tab" data-bs-toggle="pill" data-bs-target="#v-pills-Kaiser" type="button" role="tab" aria-controls="v-pills-Kaiser" aria-selected="true">Kaiser</button>
+    <button class="nav-link" id="v-pills-IronBreaker-tab" data-bs-toggle="pill" data-bs-target="#v-pills-IronBreaker" type="button" role="tab" aria-controls="v-pills-IronBreaker" aria-selected="true">Iron Breaker</button> 
+    <button class="nav-link" id="v-pills-DarkHunter-tab" data-bs-toggle="pill" data-bs-target="#v-pills-DarkHunter" type="button" role="tab" aria-controls="v-pills-DarkHunter" aria-selected="true">Dark Hunter</button>
+    <button class="nav-link" id="v-pills-MuayThai-tab" data-bs-toggle="pill" data-bs-target="#v-pills-MuayThai" type="button" role="tab" aria-controls="v-pills-MuayThai" aria-selected="true">Muay Thai</button>
+    <button class="nav-link" id="v-pills-ErbeGabandur-tab" data-bs-toggle="pill" data-bs-target="#v-pills-ErbeGabandur" type="button" role="tab" aria-controls="v-pills-ErbeGabandur" aria-selected="true">Erbe Gabandur</button>
+    <button class="nav-link" id="v-pills-Cieloeinfiernorojo-tab" data-bs-toggle="pill" data-bs-target="#v-pills-Cieloeinfiernorojo" type="button" role="tab" aria-controls="v-pills-Cieloeinfiernorojo" aria-selected="true">Cielo e Infierno Rojo</button>
+    <button class="nav-link" id="v-pills-Brotherhood-tab" data-bs-toggle="pill" data-bs-target="#v-pills-Brotherhood" type="button" role="tab" aria-controls="v-pills-Brotherhood" aria-selected="true">Brotherhood</button>
+    <button class="nav-link" id="v-pills-Khronos-tab" data-bs-toggle="pill" data-bs-target="#v-pills-Khronos" type="button" role="tab" aria-controls="v-pills-Khronos" aria-selected="true">Khronos</button>
+    <button class="nav-link" id="v-pills-FarWestern-tab" data-bs-toggle="pill" data-bs-target="#v-pills-FarWestern" type="button" role="tab" aria-controls="v-pills-FarWestern" aria-selected="true">Far Western</button>
+    <button class="nav-link" id="v-pills-Trama-tab" data-bs-toggle="pill" data-bs-target="#v-pills-Trama" type="button" role="tab" aria-controls="v-pills-Trama" aria-selected="true">Trama</button>    
+  </div>
+
+  <div class="tab-content" id="v-pills-tabContent">
+    <div class="tab-pane fade" id="v-pills-Trama" role="tabpanel" aria-labelledby="v-pills-Trama-tab">
+        <div class="card text-white bg-dark text-start ">
+            <%@Trama.each do |tecnica|%>
+                <div class="card-body border border-secondary mb-3">
+                    <h5 class="card-title">
+                        <%=tecnica.name%>
+                    </h5>
+                    <p class="card-text">
+                        <span><strong>Tipo: </strong></span><%=tecnica.tipo%>
+                    </p>
+                    <p class="card-text">
+                        <%=tecnica.description%>
+                    </p>
+                    <p class="card-text">
+                        <span><strong>Costo: </strong></span><%=tecnica.cost%><span><strong>  Dificultad: </strong></span><%=tecnica.dif%>
+                    </p>
+                    <p class="card-text">
+                        <span><strong>Daño/Efecto: </strong></span><%=tecnica.damage%><span><strong> Velocidad: </strong></span><%=tecnica.velocidad%>
+                    </p>
+                </div>
+            <% end %>
+        </div>
+    </div>
+
+    <div class="tab-pane fade" id="v-pills-FarWestern" role="tabpanel" aria-labelledby="v-pills-FarWestern-tab">
+        <div class="card text-white bg-dark text-start ">
+            <%@FarWestern.each do |tecnica|%>
+                <div class="card-body border border-secondary mb-3">
+                    <h5 class="card-title">
+                        <%=tecnica.name%>
+                    </h5>
+                    <p class="card-text">
+                        <span><strong>Tipo: </strong></span><%=tecnica.tipo%>
+                    </p>
+                    <p class="card-text">
+                        <%=tecnica.description%>
+                    </p>
+                    <p class="card-text">
+                        <span><strong>Costo: </strong></span><%=tecnica.cost%><span><strong>  Dificultad: </strong></span><%=tecnica.dif%>
+                    </p>
+                    <p class="card-text">
+                        <span><strong>Daño/Efecto: </strong></span><%=tecnica.damage%><span><strong> Velocidad: </strong></span><%=tecnica.velocidad%>
+                    </p>
+                </div>
+            <% end %>
+        </div>
+    </div>
+
+    <div class="tab-pane fade" id="v-pills-Khronos" role="tabpanel" aria-labelledby="v-pills-Khronos-tab">
+        <div class="card text-white bg-dark text-start ">
+            <%@Khronos.each do |tecnica|%>
+                <div class="card-body border border-secondary mb-3">
+                    <h5 class="card-title">
+                        <%=tecnica.name%>
+                    </h5>
+                    <p class="card-text">
+                        <span><strong>Tipo: </strong></span><%=tecnica.tipo%>
+                    </p>
+                    <p class="card-text">
+                        <%=tecnica.description%>
+                    </p>
+                    <p class="card-text">
+                        <span><strong>Costo: </strong></span><%=tecnica.cost%><span><strong>  Dificultad: </strong></span><%=tecnica.dif%>
+                    </p>
+                    <p class="card-text">
+                        <span><strong>Daño/Efecto: </strong></span><%=tecnica.damage%><span><strong> Velocidad: </strong></span><%=tecnica.velocidad%>
+                    </p>
+                </div>
+            <% end %>
+        </div>
+    </div>
+
+    <div class="tab-pane fade" id="v-pills-Brotherhood" role="tabpanel" aria-labelledby="v-pills-Brotherhood-tab">
+        <div class="card text-white bg-dark text-start ">
+            <%@Brotherhood.each do |tecnica|%>
+                <div class="card-body border border-secondary mb-3">
+                    <h5 class="card-title">
+                        <%=tecnica.name%>
+                    </h5>
+                    <p class="card-text">
+                        <span><strong>Tipo: </strong></span><%=tecnica.tipo%>
+                    </p>
+                    <p class="card-text">
+                        <%=tecnica.description%>
+                    </p>
+                    <p class="card-text">
+                        <span><strong>Costo: </strong></span><%=tecnica.cost%><span><strong>  Dificultad: </strong></span><%=tecnica.dif%>
+                    </p>
+                    <p class="card-text">
+                        <span><strong>Daño/Efecto: </strong></span><%=tecnica.damage%><span><strong> Velocidad: </strong></span><%=tecnica.velocidad%>
+                    </p>
+                </div>
+            <% end %>
+        </div>
+    </div>
+
+    <div class="tab-pane fade" id="v-pills-Cieloeinfiernorojo" role="tabpanel" aria-labelledby="v-pills-Cieloeinfiernorojo-tab">
+        <div class="card text-white bg-dark text-start ">
+            <%@Cieloeinfiernorojo.each do |tecnica|%>
+                <div class="card-body border border-secondary mb-3">
+                    <h5 class="card-title">
+                        <%=tecnica.name%>
+                    </h5>
+                    <p class="card-text">
+                        <span><strong>Tipo: </strong></span><%=tecnica.tipo%>
+                    </p>
+                    <p class="card-text">
+                        <%=tecnica.description%>
+                    </p>
+                    <p class="card-text">
+                        <span><strong>Costo: </strong></span><%=tecnica.cost%><span><strong>  Dificultad: </strong></span><%=tecnica.dif%>
+                    </p>
+                    <p class="card-text">
+                        <span><strong>Daño/Efecto: </strong></span><%=tecnica.damage%><span><strong> Velocidad: </strong></span><%=tecnica.velocidad%>
+                    </p>
+                </div>
+            <% end %>
+        </div>    
+    </div>
+
+    <div class="tab-pane fade" id="v-pills-ErbeGabandur" role="tabpanel" aria-labelledby="v-pills-ErbeGabandur-tab">
+        <div class="card text-white bg-dark text-start ">
+            <%@ErbeGabandur.each do |tecnica|%>
+                <div class="card-body border border-secondary mb-3">
+                    <h5 class="card-title">
+                        <%=tecnica.name%>
+                    </h5>
+                    <p class="card-text">
+                        <span><strong>Tipo: </strong></span><%=tecnica.tipo%>
+                    </p>
+                    <p class="card-text">
+                        <%=tecnica.description%>
+                    </p>
+                    <p class="card-text">
+                        <span><strong>Costo: </strong></span><%=tecnica.cost%><span><strong>  Dificultad: </strong></span><%=tecnica.dif%>
+                    </p>
+                    <p class="card-text">
+                        <span><strong>Daño/Efecto: </strong></span><%=tecnica.damage%><span><strong> Velocidad: </strong></span><%=tecnica.velocidad%>
+                    </p>
+                </div>
+            <% end %>
+        </div>
+    </div>
+
+    <div class="tab-pane fade" id="v-pills-MuayThai" role="tabpanel" aria-labelledby="v-pills-MuayThai-tab">
+        <div class="card text-white bg-dark text-start ">
+            <%@MuayThai.each do |tecnica|%>
+                <div class="card-body border border-secondary mb-3">
+                    <h5 class="card-title">
+                        <%=tecnica.name%>
+                    </h5>
+                    <p class="card-text">
+                        <span><strong>Tipo: </strong></span><%=tecnica.tipo%>
+                    </p>
+                    <p class="card-text">
+                        <%=tecnica.description%>
+                    </p>
+                    <p class="card-text">
+                        <span><strong>Costo: </strong></span><%=tecnica.cost%><span><strong>  Dificultad: </strong></span><%=tecnica.dif%>
+                    </p>
+                    <p class="card-text">
+                        <span><strong>Daño/Efecto: </strong></span><%=tecnica.damage%><span><strong> Velocidad: </strong></span><%=tecnica.velocidad%>
+                    </p>
+                </div>
+            <% end %>
+        </div>
+    </div>
+
+    <div class="tab-pane fade" id="v-pills-DarkHunter" role="tabpanel" aria-labelledby="v-pills-DarkHunter-tab">
+        <div class="card text-white bg-dark text-start ">
+            <%@DarkHunter.each do |tecnica|%>
+                <div class="card-body border border-secondary mb-3">
+                    <h5 class="card-title">
+                        <%=tecnica.name%>
+                    </h5>
+                    <p class="card-text">
+                        <span><strong>Tipo: </strong></span><%=tecnica.tipo%>
+                    </p>
+                    <p class="card-text">
+                        <%=tecnica.description%>
+                    </p>
+                    <p class="card-text">
+                        <span><strong>Costo: </strong></span><%=tecnica.cost%><span><strong>  Dificultad: </strong></span><%=tecnica.dif%>
+                    </p>
+                    <p class="card-text">
+                        <span><strong>Daño/Efecto: </strong></span><%=tecnica.damage%><span><strong> Velocidad: </strong></span><%=tecnica.velocidad%>
+                    </p>
+                </div>
+            <% end %>
+        </div>
+    </div>
+
+    <div class="tab-pane fade" id="v-pills-IronBreaker" role="tabpanel" aria-labelledby="v-pills-IronBreaker-tab">
+        <div class="card text-white bg-dark text-start ">
+            <%@IronBreaker.each do |tecnica|%>
+                <div class="card-body border border-secondary mb-3">
+                    <h5 class="card-title">
+                        <%=tecnica.name%>
+                    </h5>
+                    <p class="card-text">
+                        <span><strong>Tipo: </strong></span><%=tecnica.tipo%>
+                    </p>
+                    <p class="card-text">
+                        <%=tecnica.description%>
+                    </p>
+                    <p class="card-text">
+                        <span><strong>Costo: </strong></span><%=tecnica.cost%><span><strong>  Dificultad: </strong></span><%=tecnica.dif%>
+                    </p>
+                    <p class="card-text">
+                        <span><strong>Daño/Efecto: </strong></span><%=tecnica.damage%><span><strong> Velocidad: </strong></span><%=tecnica.velocidad%>
+                    </p>
+                </div>
+            <% end %>
+        </div>
+    </div>
+
+    <div class="tab-pane fade" id="v-pills-Kaiser" role="tabpanel" aria-labelledby="v-pills-Kaiser-tab">
+        <div class="card text-white bg-dark text-start ">
+            <%@Kaiser.each do |tecnica|%>
+                <div class="card-body border border-secondary mb-3">
+                    <h5 class="card-title">
+                        <%=tecnica.name%>
+                    </h5>
+                    <p class="card-text">
+                        <span><strong>Tipo: </strong></span><%=tecnica.tipo%>
+                    </p>
+                    <p class="card-text">
+                        <%=tecnica.description%>
+                    </p>
+                    <p class="card-text">
+                        <span><strong>Costo: </strong></span><%=tecnica.cost%><span><strong>  Dificultad: </strong></span><%=tecnica.dif%>
+                    </p>
+                    <p class="card-text">
+                        <span><strong>Daño/Efecto: </strong></span><%=tecnica.damage%><span><strong> Velocidad: </strong></span><%=tecnica.velocidad%>
+                    </p>
+                </div>
+            <% end %>
+        </div>
+    </div>
+
+    <div class="tab-pane fade" id="v-pills-IgneaMortis" role="tabpanel" aria-labelledby="v-pills-IgneaMortis-tab">
+        <div class="card text-white bg-dark text-start ">
+            <%@IgneaMortis.each do |tecnica|%>
+                <div class="card-body border border-secondary mb-3">
+                    <h5 class="card-title">
+                        <%=tecnica.name%>
+                    </h5>
+                    <p class="card-text">
+                        <span><strong>Tipo: </strong></span><%=tecnica.tipo%>
+                    </p>
+                    <p class="card-text">
+                        <%=tecnica.description%>
+                    </p>
+                    <p class="card-text">
+                        <span><strong>Costo: </strong></span><%=tecnica.cost%><span><strong>  Dificultad: </strong></span><%=tecnica.dif%>
+                    </p>
+                    <p class="card-text">
+                        <span><strong>Daño/Efecto: </strong></span><%=tecnica.damage%><span><strong> Velocidad: </strong></span><%=tecnica.velocidad%>
+                    </p>
+                </div>
+            <% end %>
+        </div>
+    </div>
+
+    <div class="tab-pane fade" id="v-pills-TangSooDo" role="tabpanel" aria-labelledby="v-pills-TangSooDo-tab">
+        <div class="card text-white bg-dark text-start ">
+            <%@TangSooDo.each do |tecnica|%>
+                <div class="card-body border border-secondary mb-3">
+                    <h5 class="card-title">
+                        <%=tecnica.name%>
+                    </h5>
+                    <p class="card-text">
+                        <span><strong>Tipo: </strong></span><%=tecnica.tipo%>
+                    </p>
+                    <p class="card-text">
+                        <%=tecnica.description%>
+                    </p>
+                    <p class="card-text">
+                        <span><strong>Costo: </strong></span><%=tecnica.cost%><span><strong>  Dificultad: </strong></span><%=tecnica.dif%>
+                    </p>
+                    <p class="card-text">
+                        <span><strong>Daño/Efecto: </strong></span><%=tecnica.damage%><span><strong> Velocidad: </strong></span><%=tecnica.velocidad%>
+                    </p>
+                </div>
+            <% end %>
+        </div>
+    </div>
+
+    <div class="tab-pane fade" id="v-pills-Samsara" role="tabpanel" aria-labelledby="v-pills-Samsara-tab">
+        <div class="card text-white bg-dark text-start ">
+            <%@Samsara.each do |tecnica|%>
+                <div class="card-body border border-secondary mb-3">
+                    <h5 class="card-title">
+                        <%=tecnica.name%>
+                    </h5>
+                    <p class="card-text">
+                        <span><strong>Tipo: </strong></span><%=tecnica.tipo%>
+                    </p>
+                    <p class="card-text">
+                        <%=tecnica.description%>
+                    </p>
+                    <p class="card-text">
+                        <span><strong>Costo: </strong></span><%=tecnica.cost%><span><strong>  Dificultad: </strong></span><%=tecnica.dif%>
+                    </p>
+                    <p class="card-text">
+                        <span><strong>Daño/Efecto: </strong></span><%=tecnica.damage%><span><strong> Velocidad: </strong></span><%=tecnica.velocidad%>
+                    </p>
+                </div>
+            <% end %>
+        </div>
+    </div>
+
+    <div class="tab-pane fade" id="v-pills-Woohan" role="tabpanel" aria-labelledby="v-pills-Woohan-tab">
+        <div class="card text-white bg-dark text-start ">
+            <%@Woohan.each do |tecnica|%>
+                <div class="card-body border border-secondary mb-3">
+                    <h5 class="card-title">
+                        <%=tecnica.name%>
+                    </h5>
+                    <p class="card-text">
+                        <span><strong>Tipo: </strong></span><%=tecnica.tipo%>
+                    </p>
+                    <p class="card-text">
+                        <%=tecnica.description%>
+                    </p>
+                    <p class="card-text">
+                        <span><strong>Costo: </strong></span><%=tecnica.cost%><span><strong>  Dificultad: </strong></span><%=tecnica.dif%>
+                    </p>
+                    <p class="card-text">
+                        <span><strong>Daño/Efecto: </strong></span><%=tecnica.damage%><span><strong> Velocidad: </strong></span><%=tecnica.velocidad%>
+                    </p>
+                </div>
+            <% end %>
+        </div>
+    </div>
+
+    <div class="tab-pane fade" id="v-pills-Drake" role="tabpanel" aria-labelledby="v-pills-Drake-tab">
+        <div class="card text-white bg-dark text-start ">
+            <%@Drake.each do |tecnica|%>
+                <div class="card-body border border-secondary mb-3">
+                    <h5 class="card-title">
+                        <%=tecnica.name%>
+                    </h5>
+                    <p class="card-text">
+                        <span><strong>Tipo: </strong></span><%=tecnica.tipo%>
+                    </p>
+                    <p class="card-text">
+                        <%=tecnica.description%>
+                    </p>
+                    <p class="card-text">
+                        <span><strong>Costo: </strong></span><%=tecnica.cost%><span><strong>  Dificultad: </strong></span><%=tecnica.dif%>
+                    </p>
+                    <p class="card-text">
+                        <span><strong>Daño/Efecto: </strong></span><%=tecnica.damage%><span><strong> Velocidad: </strong></span><%=tecnica.velocidad%>
+                    </p>
+                </div>
+            <% end %>
+        </div>
+    </div>
+
+    <div class="tab-pane fade active" id="v-pills-Stahl" role="tabpanel" aria-labelledby="v-pills-Stahl-tab">
+        <div class="card text-white bg-dark text-start ">
+            <%@Stahl.each do |tecnica|%>
+                <div class="card-body border border-secondary mb-3">
+                    <h5 class="card-title">
+                        <%=tecnica.name%>
+                    </h5>
+                    <p class="card-text">
+                        <span><strong>Tipo: </strong></span><%=tecnica.tipo%>
+                    </p>
+                    <p class="card-text">
+                        <%=tecnica.description%>
+                    </p>
+                    <p class="card-text">
+                        <span><strong>Costo: </strong></span><%=tecnica.cost%><span><strong>  Dificultad: </strong></span><%=tecnica.dif%>
+                    </p>
+                    <p class="card-text">
+                        <span><strong>Daño/Efecto: </strong></span><%=tecnica.damage%><span><strong> Velocidad: </strong></span><%=tecnica.velocidad%>
+                    </p>
+                </div>
+            <% end %>
+        </div>
+    </div>
+
+    <div class="tab-pane fade" id="v-pills-Tenjou" role="tabpanel" aria-labelledby="v-pills-Tenjou-tab">
+         <div class="card text-white bg-dark text-start ">
+            <%@Tenjou.each do |tecnica|%>
+                <div class="card-body border border-secondary mb-3">
+                    <h5 class="card-title">
+                        <%=tecnica.name%>
+                    </h5>
+                    <p class="card-text">
+                        <span><strong>Tipo: </strong></span><%=tecnica.tipo%>
+                    </p>
+                    <p class="card-text">
+                        <%=tecnica.description%>
+                    </p>
+                    <p class="card-text">
+                        <span><strong>Costo: </strong></span><%=tecnica.cost%><span><strong>  Dificultad: </strong></span><%=tecnica.dif%>
+                    </p>
+                    <p class="card-text">
+                        <span><strong>Daño/Efecto: </strong></span><%=tecnica.damage%><span><strong> Velocidad: </strong></span><%=tecnica.velocidad%>
+                    </p>
+                </div>
+            <% end %>
+        </div>
+    </div>
+  </div>
+</div>
+    <%= button_to 'Salir', characters_path, method: 'get', class:"my-4 btn btn-danger"%>

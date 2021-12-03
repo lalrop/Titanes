@@ -9,6 +9,25 @@ class MastersController < ApplicationController
     
 
     def tecnicas
+        @tecnicas = Tecnica.all
+        @Woohan = Tecnica.where(section:"Woohan")
+        @Stahl = Tecnica.where(section:"Stahl")                
+        @Tenjou = Tecnica.where(section:"Tenjou")                
+        @Drake = Tecnica.where(section:"Drake")                               
+        @Samsara = Tecnica.where(section:"Samsara")               
+        @TangSooDo = Tecnica.where(section:"Tang Soo Do")           
+        @IgneaMortis = Tecnica.where(section:"Ignea Mortis")          
+        @Kaiser = Tecnica.where(section:"Kaiser")                
+        @IronBreaker = Tecnica.where(section:"Iron Breaker")          
+        @DarkHunter = Tecnica.where(section:"Dark Hunter")           
+        @MuayThai = Tecnica.where(section:"Muay Thai")             
+        @ErbeGabandur = Tecnica.where(section:"Erbe Gabandur")         
+        @Cieloeinfiernorojo = Tecnica.where(section:"Cielo e infierno rojo") 
+        @Brotherhood = Tecnica.where(section:"Brotherhood")           
+        @Khronos = Tecnica.where(section:"Khronos")               
+        @FarWestern = Tecnica.where(section:"Far Western")           
+        @Trama = Tecnica.where(section:"Trama")                 
+        @Beasthunter = Tecnica.where(section:"Beast hunter")      
     end
     
     def estados

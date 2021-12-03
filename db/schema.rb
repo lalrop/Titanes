@@ -117,11 +117,12 @@ ActiveRecord::Schema.define(version: 2021_12_03_125142) do
   create_table "tecnicas", force: :cascade do |t|
     t.string "name"
     t.text "description"
-    t.string "type"
+    t.string "tipo"
     t.string "cost"
     t.string "dif"
     t.string "damage"
     t.string "velocidad"
+    t.string "section"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
