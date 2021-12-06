@@ -126,7 +126,48 @@
                             </div>
                         </h2>
                     </div>
+
+                    <%# Desplegable Combate %>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header bg-dark border border-light text-light py-2">
+                            <button class="accordion-button bg-transparent text-light" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSeven" aria-expanded="true" aria-controls="collapseSeven">
+                                <h5 class="text-center">Combate</h5>
+                            </button>
+                        </h2>
+                        <div id="collapseSeven" class="accordion-collapse collapse bg-transparent" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                            <div class="accordion-body bg-dark">
+                                <dl class="row text-start">
+                                    <dt class="col-8">Atletismo</dt>
+                                    <dd class="col-4"><%=character.atletismo%>/ 10</dd>
+                                    <dt class="col-8">Estabilidad</dt>
+                                    <dd class="col-4"><%=character.estabilidad%>/ 10</dd>
+                                    <dt class="col-8">Pelea</dt>
+                                    <dd class="col-4"><%=character.pelea%>/ 10</dd>
+                                    <dt class="col-8">Destreza</dt>
+                                    <dd class="col-4"><%=character.destreza%>/ 10</dd>
+                                    <dt class="col-8">Esquivar</dt>
+                                    <dd class="col-4"><%=character.esquivar%>/ 10</dd>
+                                    <dt class="col-8">Resistencia</dt>
+                                    <dd class="col-4"><%=character.resistencia%>/ 10</dd>
+                                    <dt class="col-8">Fuerza</dt>
+                                    <dd class="col-4"><%=character.fuerza%>/ 10</dd>
+                                    <dt class="col-8">Finta</dt>
+                                    <dd class="col-4"><%=character.finta%>/ 5</dd>
+                                    <dt class="col-8">Alerta</dt>
+                                    <dd class="col-4"><%=character.alerta%>/ 5</dd>
+                                    <dt class="col-8">Sigilo</dt>
+                                    <dd class="col-4"><%=character.sigilo%>/ 5</dd>
+                                    <dt class="col-8">Percepcion espacial</dt>
+                                    <dd class="col-4"><%=character.percep_espacial%>/ 5</dd>
+                                    <dt class="col-8">Medicina</dt>
+                                    <dd class="col-4"><%=character.medicina%>/ 5</dd>
+                                </dl>
+                            </div>
+                        </div>
+                    </div>  
                 </div>
+
+                
 
                 <%# Botones secciones Combate, Tecnicas y Tinieblas %>
                 <div class="row my-3">

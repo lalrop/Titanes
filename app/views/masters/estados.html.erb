@@ -10,6 +10,12 @@
   <li class="nav-item" role="presentation">
     <button class="nav-link" id="venenos-tab" data-bs-toggle="tab" data-bs-target="#venenos" type="button" role="tab" aria-controls="venenos" aria-selected="false">Venenos</button>
   </li>
+  <li class="nav-item" role="presentation">
+    <button class="nav-link" id="recuperaciones-tab" data-bs-toggle="tab" data-bs-target="#recuperaciones" type="button" role="tab" aria-controls="recuperaciones" aria-selected="false">Recuperaciones</button>
+  </li>
+  <li class="nav-item" role="presentation">
+    <button class="nav-link" id="danoCaida-tab" data-bs-toggle="tab" data-bs-target="#danoCaida" type="button" role="tab" aria-controls="danoCaida" aria-selected="false">Daño por caida</button>
+  </li>
 </ul>
 <div class="tab-content" id="myTabContent">
   <div class="tab-pane fade" id="desangramiento" role="tabpanel" aria-labelledby="desangramiento-tab">
@@ -21,32 +27,38 @@
     <h3>Movilidad</h3><br>
     <p>Cada vez que un personaje ejecute un corte o técnica con cercenamiento debe lanzar un dado de diez caras. El resultado indicará cuánto porcentaje de movilidad le quita a su objetivo para todas sus tiradas de movimiento en esa extremidad*.</p><br>
 
-    <table class="table table-dark table-striped">
-        <thead>
-          <tr>
-            <th scope="col">Movilidad</th>
-            <th scope="col">0% - 30%</th>
-            <th scope="col">31% - 60%</th>
-            <th scope="col">61%- 90%</th>
-            <th scope="col">91%-100%</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <th scope="row">Daño por cercenamiento o quemadura.</th>
-            <td>25</td>
-            <td>50</td>
-            <td>75</td>
-            <td>100</td>
-          </tr>
-          <tr>
-            <td colspan="5">*El tronco no se considera como extremidad, sólo recibe daño por desangramiento o quemadura.</td>
-          </tr>
-        </tbody>
-      </table>
+    <div class="row">
+      <div class="col-md-2"></div>
+      <div class="col-xs-12 col-md-8">
+        <table class="table table-dark table-striped">
+            <thead>
+              <tr>
+                <th scope="col">Movilidad</th>
+                <th scope="col">0% - 30%</th>
+                <th scope="col">31% - 60%</th>
+                <th scope="col">61%- 90%</th>
+                <th scope="col">91%-100%</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row">Daño por cercenamiento o quemadura.</th>
+                <td>25</td>
+                <td>50</td>
+                <td>75</td>
+                <td>100</td>
+              </tr>
+              <tr>
+                <td colspan="5">*El tronco no se considera como extremidad, sólo recibe daño por desangramiento o quemadura.</td>
+              </tr>
+            </tbody>
+          </table>
+      </div>
+      <div class="col-md-2"></div>
+    </div>
 
-      <h2>Daño perforante</h2>
-      <p>Este daño está intrínsecamente relacionado con el anterior, ya que hace referencia al daño producido por Acumulaciones de sangre. Sin embargo, a diferencia de este, los daños causados por la perforación no tienen la capacidad de cercenar una extremidad por completo, pero sí de reducir su movilidad en un máximo de 90%, provocando un daño de 100 por Acumulaciones de sangre.</p>
+    <h2>Daño perforante</h2>
+    <p>Este daño está intrínsecamente relacionado con el anterior, ya que hace referencia al daño producido por Acumulaciones de sangre. Sin embargo, a diferencia de este, los daños causados por la perforación no tienen la capacidad de cercenar una extremidad por completo, pero sí de reducir su movilidad en un máximo de 90%, provocando un daño de 100 por Acumulaciones de sangre.</p>
 </div>
 
   </div>
@@ -58,43 +70,111 @@
           <li>Golpes con armas contundentes dirigidos a la cabeza o al riñón.</li>
           <li>Cualquier tipo de técnica que en su descripción señale capacidad aturdidora.</li>
       </ul>
-      <table class="table table-dark table-striped">
-        <thead>
-          <tr>
-            <th scope="col">Aturdimiento</th>
-            <th scope="col">0% - 30%</th>
-            <th scope="col">31% - 60%</th>
-            <th scope="col">61%- 90%</th>
-            <th scope="col">91%-100%</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <th scope="row">Movilidad</th>
-            <td>-6 mt/seg</td>
-            <td>-12 mt/seg</td>
-            <td>-18 mt/seg</td>
-            <td>Inconsciencia</td>
-          </tr>
-          <tr>
-            <td colspan="5">*El tronco no se considera como extremidad, sólo recibe daño por desangramiento o quemadura.</td>
-          </tr>
-        </tbody>
-      </table>
+      <div class="row">
+        <div class="col-md-2"></div>
+        <div class="col-md-8 col-xs-12">
+          <table class="table table-dark table-striped">
+            <thead>
+              <tr>
+                <th scope="col">Aturdimiento</th>
+                <th scope="col">0% - 30%</th>
+                <th scope="col">31% - 60%</th>
+                <th scope="col">61%- 90%</th>
+                <th scope="col">91%-100%</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row">Movilidad</th>
+                <td>-6 mt/seg</td>
+                <td>-12 mt/seg</td>
+                <td>-18 mt/seg</td>
+                <td>Inconsciencia</td>
+              </tr>
+              <tr>
+                <td colspan="5">*El tronco no se considera como extremidad, sólo recibe daño por desangramiento o quemadura.</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="col-md-2"></div>
+      </div>
     </div>
      
 
   </div>
-  <div class="tab-pane fade" id="venenos" role="tabpanel" aria-labelledby="venenos-tab">
+  <div class="tab-pane fade text" id="venenos" role="tabpanel" aria-labelledby="venenos-tab">
     <div class="my-3">
-        <p>Al igual que el sangrado, el envenenamiento también es un factor de daño producido en el tiempo, este funciona aplicando un total de daño dividido en una cantidad de turnos.
+        <p class="text-start" >Al igual que el sangrado, el envenenamiento también es un factor de daño producido en el tiempo, este funciona aplicando un total de daño dividido en una cantidad de turnos.
         El daño de envenenamiento por turno va a variar según el tipo de veneno y el grado de letalidad de este, donde el de menor grado es el menos letal, y el de mayor grado, el más letal.
         Las clasificaciones de venenos se definen en cuatro grupos: corrosivos o irritantes, toxinas, narcóticos y neuronales. Los venenos del tipo corrosivo o irritante son todos aquellos tipos de sustancias que tienen como objeto afectar directamente a la Salud del objetivo dañando en cada turno una cantidad fija como se expresa en la siguiente tabla de acuerdo a cada grado de letalidad:
         </p>
         <h3>Venenos corrosivos</h3>
-        <div class="table-responsive">
+        <div class="row">
+          <div class="col-md-2"></div>
+          <div class="col-xs-12 col-md-8">
+          
+              <table class="table table-dark table-striped table-sm">
+                  <thead>
+                  <tr>
+                      <th scope="col" >Grado</th>
+                      <th scope="col">Daño</th>
+                      <th scope="col">Turnos de afectación</th>
+                  </tr>
+                  </thead>
+                  <tbody>
+                  <tr>
+                      <td>1</td>
+                      <td>10</td>
+                      <td>10</td>
+                  </tr>
+                  <tr>
+                      <td>2</td>
+                      <td>25</td>
+                      <td>6</td>
+                  </tr>
+                  <tr>
+                      <td>3</td>
+                      <td>15</td>
+                      <td>15</td>
+                  </tr>
+                  <tr>
+                      <td>4</td>
+                      <td>2</td>
+                      <td>18</td>
+                  </tr>
+                  <tr>
+                      <td>5</td>
+                      <td>90</td>
+                      <td>10</td>
+                  </tr>
+                  <tr>
+                      <td>6</td>
+                      <td>100</td>
+                      <td>18</td>
+                  </tr>
+                  <tr>
+                      <td>7</td>
+                      <td>180</td>
+                      <td>20</td>
+                  </tr>
+                  <tr>
+                      <td colspan="3">*El descuento de Salud por veneno comienza un turno después de que el veneno haya sido depositado en el torrente sanguíneo del usuario.</td>
+                  </tr>
+                  </tbody>
+              </table>
+          
+          </div>
+          <div class="col-md-2"></div>
+        </div>
+
+        <h3>Toxinas</h3>
+        <p class="text-start">Las toxinas, por otra parte, son sustancias traspasables por múltiples vías, que tienen como objetivo afectar directamente la capacidad motora del individuo, causando como consecuencia la ralentización de las acciones principales. Mientras mayor sea el grado del tóxico, más potente será la afectación y más fuerte será la incapacidad de movimiento de este.</p>
         
-            <table class="table table-dark table-striped table-sm">
+        <div class="row">
+          <div class="col-md-2"></div>
+          <div class="col-xs-12 col-md-8">
+            <table class="table table-dark table-striped">
                 <thead>
                 <tr>
                     <th scope="col" >Grado</th>
@@ -105,192 +185,266 @@
                 <tbody>
                 <tr>
                     <td>1</td>
-                    <td>10</td>
-                    <td>10</td>
+                    <td>2 m/s</td>
+                    <td>10</td>  
                 </tr>
                 <tr>
                     <td>2</td>
-                    <td>25</td>
-                    <td>6</td>
+                    <td>3 m/s</td>
+                    <td>5</td>
                 </tr>
                 <tr>
                     <td>3</td>
+                    <td>5 m/s</td>
+                    <td>6</td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td>6 m/s</td>
+                    <td>10</td>
+                </tr>
+                <tr>
+                    <td>5</td>
+                    <td>12 m/s</td>
+                    <td>10</td>
+                </tr>
+                <tr>
+                    <td>6</td>
+                    <td>24 m/s</td>
+                    <td>10</td>
+                </tr>
+                <tr>
+                    <td>7</td>
+                    <td>48 m/s</td>
+                    <td>10</td>
+                </tr>
+                </tbody>
+            </table>
+          </div>
+          <div class="col-md-2"></div>
+        </div>
+
+        <h3>Narcóticos</h3>
+        <p class="text-start">Los narcóticos también realizan un daño a través de químicos elaborados a partir de la mezcla de varios agentes nocivos para el cuerpo humano, como el amianto, arsénico, dioxinas, y muchos otros pertenecientes a este gigantesco mundo. Estos químicos tienen como objetivo principal y exclusivo degenerar o disminuir los puntos de Potencialidad o Frènesis por turno, dependiendo de la naturaleza del químico.</p>
+        
+        <div class="row">
+          <div class="col-md-2"></div>
+          <div class="col-xs-12 col-md-8">
+            <table class="table table-dark table-striped">
+                <thead>
+                <tr>
+                    <th scope="col" >Grado</th>
+                    <th scope="col">Daño (puntos de Frènesis o Potencialidad)</th>
+                    <th scope="col">Turnos de afectación</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td>1</td>
+                    <td>1</td>
+                    <td>5</td>  
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>2</td>
+                    <td>8</td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>3</td>
+                    <td>7</td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td>4</td>
+                    <td>8</td>
+                </tr>
+                <tr>
+                    <td>5</td>
+                    <td>6</td>
+                    <td>11</td>
+                </tr>
+                <tr>
+                    <td>6</td>
                     <td>15</td>
-                    <td>15</td>
+                    <td>8</td>
+                </tr>
+                <tr>
+                    <td>7</td>
+                    <td>20</td>
+                    <td>12</td>
+                </tr>
+                </tbody>
+            </table>
+          </div>
+          <div class="col-md-2"></div>
+        </div>
+        
+
+        <h3>Neuronales</h3>
+        <p class="text-start">Son sustancias como el ácido hidroxibulítico y algunos otros que tienen por objeto disminuir las comunicaciones entre neuronas, provocando que la víctima se sienta en un estado de adormecimiento, disminución en la fuerza de su cuerpo, aletargamiento o cualquier tipo de deterioro en su capacidad de reacción.Todos estos estados buscan disminuir los Puntos de Fuerza de  Voluntad del objetivo por turno, y mientras mayor sea el grado, mayor será la afectación.</p>
+
+        <div class="row">
+          <div class="col-md-3"></div>
+          <div class="col-xs-12 col-md-6">
+            <table class="table table-dark table-striped">
+                <thead>
+                <tr>
+                    <th scope="col" >Grado</th>
+                    <th scope="col">Daño</th>
+                    <th scope="col">Turnos de afectación</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td>1</td>
+                    <td>1</td>
+                    <td>2</td>  
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>2</td>
+                    <td>2</td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>1</td>
+                    <td>5</td>
                 </tr>
                 <tr>
                     <td>4</td>
                     <td>2</td>
-                    <td>18</td>
+                    <td>4</td>
                 </tr>
                 <tr>
                     <td>5</td>
-                    <td>90</td>
-                    <td>10</td>
+                    <td>4</td>
+                    <td>2</td>
                 </tr>
                 <tr>
                     <td>6</td>
-                    <td>100</td>
-                    <td>18</td>
+                    <td>2</td>
+                    <td>5</td>
                 </tr>
                 <tr>
                     <td>7</td>
-                    <td>180</td>
-                    <td>20</td>
-                </tr>
-                <tr>
-                    <td colspan="3">*El descuento de Salud por veneno comienza un turno después de que el veneno haya sido depositado en el torrente sanguíneo del usuario.</td>
+                    <td>5</td>
+                    <td>2</td>
                 </tr>
                 </tbody>
             </table>
+          </div>
+          <div class="col-md-3"></div>
         </div>
+    </div>
+  </div>
+  <div class="tab-pane fade text-start" id="recuperaciones" role="tabpanel" aria-labelledby="recuperaciones-tab">
+    <dl>
+      <dt class="mt-4"><h2>Fuerza de Voluntad</h2></dt>
+      <dd>Este proceso implica una recuperación de <strong> Punto por cada 2 horas fuera de combate.</strong> </dd>
+    </dl >    
+    <dl>
+      <dt><h2>Regeneracion Natural</h2> </dt>
+      <dd>Es la capacidad natural que posee el cuerpo del personaje para regenerar sus heridas de forma natural hasta cierto punto.
+      Esta regeneración tiene como <strong>límite el 10% de la Salud total del personaje e implica que este se cura 5 Puntos de Salud por hora.</strong> </dd>
+    </dl>
+    <dl>
+      <dt class="mt-4"><h2>Frènesis y Potencialidad</h2></dt>
+      <dd>Existen dos formas de restaurar el Frènesis de forma natural, sin la ayuda de ningún tipo de técnicas o habilidades especiales. Estas son: <strong> combatir y dormir.</strong>
+      No combatir implica que el personaje no está sometido a situaciones de estrés, esfuerzo u otra acción que amerite atención o concentración excesiva. En este estado el personaje se <strong> recupera 1 Punto de Frènesis por hora.</strong>
+      Por otra parte, dormir, implica la acción de descansar completamente, lo que significa una recuperación progresiva </dd>
+    </dl> 
+    <div class="row">
+      <div class="col-md-2"></div>
+      <div class="col-md-8 col-xs-12">
+        <table class="table table-dark table-striped table-sm">
+          <thead>
+            <tr>
+              <th scope="col">Horas de sueño</th>
+              <th scope="col">Recuperacion por cada hora</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th>Primeras 3 horas</th>
+              <td>1 punto de Frènesis y Potencialidad </td>
+            </tr>
+            <tr>
+              <th>4ta y 5ta hora</th>
+              <td>3 puntos de Frènesis y Potencialidad </td>
+            </tr>
+            <tr>
+              <th>6ta y 7ma*</th>
+              <td>8 puntos de Frènesis y Potencialidad </td>
+            </tr>
+            <tr>
+              <th>8va y 9na</th>
+              <td>3 puntos de Frènesis y Potencialidad </td>
+            </tr>
+            <tr>
+              <th>10ma en adelante</th>
+              <td>1 punto de Frènesis y Potencialidad </td>
+            </tr>
+            <tr>
+              <td colspan="2" style="font-size: smaller;">
+                  *En este tramo el personaje se encuentra totalmente vulnerable e incapaz de reaccionar a cualquier ataque o situación de riesgo.
+              </td>
+            </tr>
 
-        <h3>Toxinas</h3>
-        <p>Las toxinas, por otra parte, son sustancias traspasables por múltiples vías, que tienen como objetivo afectar directamente la capacidad motora del individuo, causando como consecuencia la ralentización de las acciones principales. Mientras mayor sea el grado del tóxico, más potente será la afectación y más fuerte será la incapacidad de movimiento de este.</p>
-        <table class="table table-dark table-striped">
-            <thead>
-            <tr>
-                <th scope="col" >Grado</th>
-                <th scope="col">Daño</th>
-                <th scope="col">Turnos de afectación</th>
-            </tr>
-            </thead>
-            <tbody>
-            <tr>
-                <td>1</td>
-                <td>2 m/s</td>
-                <td>10</td>  
-            </tr>
-            <tr>
-                <td>2</td>
-                <td>3 m/s</td>
-                <td>5</td>
-            </tr>
-            <tr>
-                <td>3</td>
-                <td>5 m/s</td>
-                <td>6</td>
-            </tr>
-            <tr>
-                <td>4</td>
-                <td>6 m/s</td>
-                <td>10</td>
-            </tr>
-            <tr>
-                <td>5</td>
-                <td>12 m/s</td>
-                <td>10</td>
-            </tr>
-            <tr>
-                <td>6</td>
-                <td>24 m/s</td>
-                <td>10</td>
-            </tr>
-            <tr>
-                <td>7</td>
-                <td>48 m/s</td>
-                <td>10</td>
-            </tr>
-            </tbody>
+          </tbody>
         </table>
-
-        <h3>Narcóticos</h3>
-        <p>Los narcóticos también realizan un daño a través de químicos elaborados a partir de la mezcla de varios agentes nocivos para el cuerpo humano, como el amianto, arsénico, dioxinas, y muchos otros pertenecientes a este gigantesco mundo. Estos químicos tienen como objetivo principal y exclusivo degenerar o disminuir los puntos de Potencialidad o Frènesis por turno, dependiendo de la naturaleza del químico.</p>
-        <table class="table table-dark table-striped">
-            <thead>
+      </div>
+      <div class="col-md-2"></div>
+    </div> 
+    
+  </div>
+  <div class="tab-pane fade text-start text-white" id="danoCaida" role="tabpanel" aria-labelledby="danoCaida-tab">
+    <h2>Daño por caida</h2>
+    <p>Si bien los personajes poseen capacidades sobrehumanas, también pueden ser recibir daños por caer desde cierta altura. Esto es:</p>
+    <div class="row">
+      <div class="col-md-3"></div>
+      
+      <div class="col-md-6 col-xs-12">
+        <table class="table table-dark table-striped table-sm">
+          <thead>
             <tr>
-                <th scope="col" >Grado</th>
-                <th scope="col">Daño (puntos de Frènesis o Potencialidad)</th>
-                <th scope="col">Turnos de afectación</th>
+              <th scope="col">Metro de Altura</th>
+              <th scope="col">Daño</th>
             </tr>
-            </thead>
-            <tbody>
+          </thead>
+          <tbody>
             <tr>
-                <td>1</td>
-                <td>1</td>
-                <td>5</td>  
+              <td>16 - 20</td>
+              <td>50</td>
             </tr>
+  
             <tr>
-                <td>2</td>
-                <td>2</td>
-                <td>8</td>
-            </tr>
-            <tr>
-                <td>3</td>
-                <td>3</td>
-                <td>7</td>
-            </tr>
-            <tr>
-                <td>4</td>
-                <td>4</td>
-                <td>8</td>
+              <td>21 - 30</td>
+              <td>100</td>
             </tr>
             <tr>
-                <td>5</td>
-                <td>6</td>
-                <td>11</td>
+              <td>31 - 40</td>
+              <td>200</td>
             </tr>
             <tr>
-                <td>6</td>
-                <td>15</td>
-                <td>8</td>
+              <td>41 - 50</td>
+              <td>300</td>
             </tr>
             <tr>
-                <td>7</td>
-                <td>20</td>
-                <td>12</td>
+              <td>51 - 60</td>
+              <td>500</td>
             </tr>
-            </tbody>
+            <tr>
+              <td>61 - + </td>
+              <td>800</td>
+            </tr>
+          </tbody>
         </table>
-
-        <h3>Neuronales</h3>
-        <p>Son sustancias como el ácido hidroxibulítico y algunos otros que tienen por objeto disminuir las comunicaciones entre neuronas, provocando que la víctima se sienta en un estado de adormecimiento, disminución en la fuerza de su cuerpo, aletargamiento o cualquier tipo de deterioro en su capacidad de reacción.Todos estos estados buscan disminuir los Puntos de Fuerza de  Voluntad del objetivo por turno, y mientras mayor sea el grado, mayor será la afectación.</p>
-        <table class="table table-dark table-striped">
-            <thead>
-            <tr>
-                <th scope="col" >Grado</th>
-                <th scope="col">Daño</th>
-                <th scope="col">Turnos de afectación</th>
-            </tr>
-            </thead>
-            <tbody>
-            <tr>
-                <td>1</td>
-                <td>1</td>
-                <td>2</td>  
-            </tr>
-            <tr>
-                <td>2</td>
-                <td>2</td>
-                <td>2</td>
-            </tr>
-            <tr>
-                <td>3</td>
-                <td>1</td>
-                <td>5</td>
-            </tr>
-            <tr>
-                <td>4</td>
-                <td>2</td>
-                <td>4</td>
-            </tr>
-            <tr>
-                <td>5</td>
-                <td>4</td>
-                <td>2</td>
-            </tr>
-            <tr>
-                <td>6</td>
-                <td>2</td>
-                <td>5</td>
-            </tr>
-            <tr>
-                <td>7</td>
-                <td>5</td>
-                <td>2</td>
-            </tr>
-            </tbody>
-        </table>
+      </div>
+      <div class="col-md-3"></div>
+      <div class="border border-white text-white">
+        <p><strong>Nota:</strong>  luego de una caída, el jugador debe lanzar un dado cuyo resultado indicará el porcentaje de aturdimiento a nivel general.</p>
+      </div>
     </div>
   </div>
 </div>
