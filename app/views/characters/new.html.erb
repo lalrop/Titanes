@@ -1,17 +1,4 @@
-<div class="mb-2 text-center text-white">
-  <h1 class="display-1 mb-4"><strong><em>Titanes</em></strong></h1>
-</div>
-
 <div class="my-3">
-
-</div>
-<div id="info" class="d-none align-items-center shadow text-white bg-secondary bg-gradient text-center my-3 rounded py-3 px-3" role="alert" aria-live="assertive" aria-atomic="true" data-bs-delay="10000">
-    <div class="d-flex justify-content-center">
-        <div>
-            <span class="badge bg-secondary mx-2" onclick="ocultar()">X</span>
-            <p class="d-inline" id="contentAtributo">.</p>
-        </div>
-    </div>
 </div>
 
 <%= form_for @character do |f| %>
@@ -21,34 +8,34 @@
   <div class="my-3">
     Distrito: 
     <select name="character[distrito_id]" id="character_distrito_id">
-      <option value="1" onclick="infoDistrito(element)">Kaiser</option>
-      <option value="2" onclick="infoDistrito(element)">Drake</option>
-      <option value="3" onclick="infoDistrito(element)">Ignea Mortis</option>
-      <option value="4" onclick="infoDistrito(element)">Tenjou</option>
-      <option value="5" onclick="infoDistrito(element)">Samsara</option>
-      <option value="6" onclick="infoDistrito(element)">Stahl</option>
-      <option value="7" onclick="infoDistrito(element)">Khronos</option>
-      <option value="8" onclick="infoDistrito(element)">Woohan</option>
+      <option value="1">Kaiser</option>
+      <option value="2">Drake</option>
+      <option value="3">Ignea Mortis</option>
+      <option value="4">Tenjou</option>
+      <option value="5">Samsara</option>
+      <option value="6">Stahl</option>
+      <option value="7">Khronos</option>
+      <option value="8">Woohan</option>
     </select><br>
   
   <div class="my-3">
     Raza : 
     <select name="character[raza_id]" id="character_raza_id">
-      <option value="1" onclick="infoRaza(element)">Humano</option>
-      <option value="2" onclick="infoRaza(element)">Gimpisto</option>
-      <option value="3" onclick="infoRaza(element)">Destello</option>
-      <option value="4" onclick="infoRaza(element)">Chechenia</option>
-      <option value="5" onclick="infoRaza(element)">Gag</option>
-      <option value="6" onclick="infoRaza(element)">Fanderei</option>
-      <option value="7" onclick="infoRaza(element)">Andorak</option>
-      <option value="8" onclick="infoRaza(element)">Winvhel</option>
-      <option value="9" onclick="infoRaza(element)">Chadack</option>
-      <option value="10" onclick="infoRaza(element)">Ritulillo</option>
+      <option value="1">Humano</option>
+      <option value="2">Gimpisto</option>
+      <option value="3">Destello</option>
+      <option value="4">Chechenia</option>
+      <option value="5">Gag</option>
+      <option value="6">Fanderei</option>
+      <option value="7">Andorak</option>
+      <option value="8">Winvhel</option>
+      <option value="9">Chadack</option>
+      <option value="10">Ritulillo</option>
     </select><br>
   </div>
   
   <div class="my-3">
-    <strong>Potencialidad:</strong> <%= f.number_field :potencialidad, min:0, max:45, class:"w-25 bg-dark text-white text-center border-none"%><br>
+    <strong>Potencialidad:</strong> <%= f.number_field :potencialidad, min:0, max:45, required: true,class:"w-25 bg-dark text-white text-center border-none"%><br>
   </div>
   
   <div class="my-3">
@@ -63,86 +50,5 @@
       <%= f.submit 'Crear Personaje', class:"btn btn-danger my-4" %>
   </div>
 <%end%> 
+
 <%= button_to 'Salir', characters_path, method: :get, class:"btn btn-light"%>
-
-
-
-<script>
-   var info = document.getElementById('info');
-   var contentAtributo = document.getElementById('contentAtributo')
-  function infoDistrito(e) {
-    info.classList.remove('d-none');
-    var atribute = e.target.textContent;
-    switch (atribute) {
-      case "Kaiser":
-        contentAtributo.innerHTML = "El kaizo promedio es un individuo cuya mentalidad se caracteriza por lo práctico. No es el distrito del cual nacen los mayores artistas ni filósofos del reino, pero sí es el distrito donde puedes elegir a ojos cerrados a un individuo y dar por sentado que tendrás a un excelente soldado sin atisbo de cobardía. En una frase, el kaizo se define como “un sujeto que no puede morir sin haber combatido cien veces";
-        break;
-      case "Drake": 
-        contentAtributo.innerHTML = "Saqueadores atraídos por la riqueza, el sexo y la abundancia en la mesa. Han sido temidos desde los tiempos en los que Hochland no era más que una tierra habitada por unas cuantas tribus. Son feroces amantes de los combates en los que se derraman litros de sangre. Su gloria yace en el deshonor e infortunio de los demás.";
-      break;
-      case "Ignea Mortis":
-        contentAtributo.innerHTML = "Los igneas conforman una cultura diversa, de rasgos heredados de sus distritos anteriores, con odio y hambre como unificador, además del fuego. Al ingresar a este distrito, sea por donde sea, los individuos deben pagar un precio para borrar su historial anterior y ser nombrados igneas; esto es, la devoción al ignea, el cual consiste en entregar parte de sus cuerpos a las llamas a fin de cargar sus pecados en el cuerpo a modo de cicatriz.";
-      break;
-      case "Tenjou":
-        contentAtributo.innerHTML = "Hablar sobre los tenjuins requiere pensar en cada persona como dos seres dentro de un mismo cuerpo. A uno de estos jamás lo conocerás, a no ser que decidas entrar al bosque de Tenjou sin ser detectado (suerte con aquello). Mientras que el otro será un sujeto políticamente correcto en sus decisiones, de sonrisa extraña, ojos sin expresión y carente de impulsividades.";
-      break;
-      case "Samsara":
-        contentAtributo.innerHTML = "Los samseos tienden a ser extrovertidos. Tienen una extrema fijación con cualquier tipo de secreto. Son expertos en algunas de las artes necesarias para obtener información oculta; entre las más destacadas están el psicoanálisis, el dominio de lenguas a nivel nativo, experticia en lenguaje corporal y otras. En materias de espionaje disputan el primer lugar contra la serpiente de Hochland, Tenjou.";
-      break;
-      case "Stahl":
-        contentAtributo.innerHTML = "En apariencia son, a modo general, de tez blanca: una especie de mezcla resultante entre los rusos y nórdicos de nuestro mundo. Acostumbrados al invierno eterno, los abrigos y pieles conforman parte de la indumentaria entre la mayoría de sus habitantes.";
-      break;
-      case "Khronos":
-        contentAtributo.innerHTML ="Los khaleos (gentilicio utilizado para los habitantes de Khronos) viven mostrando un aparente desinterés. Pero no te dejes engañar, no es más que una máscara para esconder una pasional y profunda personalidad, llena de secretos y deseos. Las ofensas no los afectan, se consideran los más veloces del reino, por lo tanto… ¿Cómo es posible que sientan aversión por seres que están por debajo en la jerarquía de poder? Viven su ego a través de una mirada misericordiosa hacia los demás, y no como un orgullo desbocado –a menos que quieran provocar a alguien–.";
-      break;
-      case "Woohan":
-        contentAtributo.innerHTML = "Nos conocen como los hinchabolas de Hochland, los payasos, irresponsables seres de eterna sonrisa, ¡los imbéciles! Jekjekejke. Rehuyen de nosotros por nuestra costumbre de exhibir… ehmm… sus defectos, apuntarles sus vergüenzas y reír hasta no parar. Rehuyen de nuestra mente creativa, capaz de… de… jekjekejke asaltar un asilo para organizar una carrera de sillitas de ruedas, ¿por qué no?";
-      break;
-      default:
-        break;
-    }
-  }
-
-  function infoRaza(e) {
-    info.classList.remove('d-none');
-    var atribute = e.target.textContent;
-    switch (atribute) {
-      case 'Humano':
-        contentAtributo.innerHTML ="El ser humano Titán puede entenderse como un humano que trasciende sus propias habilidades naturales. Es capaz de usar el Frènesis y la Potencialidad por voluntad propia, además poseer la capacidad de discernimiento, la cual lo faculta para controlar sus impulsos. Una capacidad que muy pocas especies tienen.";
-      break;
-      case 'Gimpisto':
-        contentAtributo.innerHTML = "Nativos del territorio compuesto por el distrito de Woohan, especialmente en el sector de las montañas. Su apariencia es similar a la de un mono, poseen pelo en todo el cuerpo, una extensa cola y en su rostro mantienen los mismos rasgos que los primates. Un símil a esta especie es el rey mono Sun Wukong de la mitología china. " ;
-      break;
-      case 'Destello':
-        contentAtributo.innerHTML = "Marginados desde sus inicios, los Destellos son una raza de seres humanos con una particularidad especial en la piel que les permite absorber la luz del día y reflejarla a modo de incandescencia por las noches.Morfológicamente los Destellos son igual que los humanos, con algunas diferencias más marcadas, como la piel lechosa y el pelo blanco por completo. El lector puede asemejar a esta raza con las personas que padecen albinismo, con la salvedad de que los Destellos absorben con satisfacción la luz.";  
-      break;
-      case 'Chechenia':
-        contentAtributo.innerHTML = "Con una proporción levemente más larga en el tamaño de sus piernas en relación al cuerpo, los Chechenias son una raza que comparten la morfología de los seres humanos con algunos rasgos propios de los felinos. Orejas un poco puntiagudas, dedos alargados con uñas retráctiles y ojos algo más grandes, con una fina pupila vertical que en momentos de excitación los diferencian de forma más notoria con la especie humana.";  
-      break;
-      case 'Gag':
-        contentAtributo.innerHTML = "Como una rama hermana de la especie humana, los Gags poseen una altura promedio de 5 metros con grandes manos, pies, abundante vello en la espalda y pecho (independiente del género), y una voz tremendamente ronca. Entre todas las especies con características humanoides, esta es la más alta, corpulenta y lenta. A causa de su gran tamaño, las conexiones involucradas en transmitir la percepción del entorno al cerebro, es decir, las señales producidas por los sentidos, son lentas. Tienen una personalidad más pausada, con una capacidad de razonamiento más lánguida, lo cual les ha valido ser considerados como 'tontos'." ;  
-      break;
-      case 'Fanderei':
-        contentAtributo.innerHTML = "Los Fanderei son humanoides de piel entre azuleja y celeste. Por lo general, son de facciones finas, contextura esbelta y miden entre 1.8 a 2 metros de altura. Al momento de nacer, los Fanderei sufren una especie de trance, en el cual se reproduce la escena de separación entre Gianna, la Diosa de la Luna, y Gabandur, el Señor del Inframundo. En aquel trance el Fanderei sufre convulsiones debido a una lucha interna entre esas dos energías. La energía que predomine será la que defina el humor y características especiales en el Fanderei.";  
-      break;
-      case 'Andorak':
-        contentAtributo.innerHTML = "Tienen un cuerpo humanoide, de contextura delgada y esbelta. Poseen un rostro con características humanas, a excepción de una frente de sutiles escamas, al igual que sus mejillas por sobre los costados de la mandíbula. Sus ojos están marcados por ojeras negras que rodean unos 0.3 centímetros la cuenca ocular.Suelen ser de personalidad retraída, introspectiva, escondiendo sus sentimientos y emociones en todo momento.";  
-      break;
-      case 'Winvhel':
-        contentAtributo.innerHTML = "Son humanoides de piel grisácea, extremadamente delgados, sus huesos se marcan bajo la piel debido a la carencia de musculatura. Sus rostros tienen la particularidad de estar marcados con una horrible fisura que une los extremos derecho e izquierdo de los labios con cada ojo respectivo. Nacen ciegos y con las cuerdas vocales casi totalmente destruidas, su tono de voz es similar al de los fumadores que la han perdido casi por completo.";  
-      break;
-      case 'Chadack':
-        contentAtributo.innerHTML ="Los Chadacks son humanoides corpulentos, pero sobre la base de grasa, cuya distinción de los humanos, además de la grotesca complexión, yace en que poseen cola y cabeza de cerdo. Miden entre 1.7 a 2.4 metros. Existen variaciones rosadas, cafés y amarillas en cuanto a su color de piel. Carecen de cabello y de la mayoría de los vellos. No obstante, a los Chadacks que nacen con la nariz más humana les tiende a crecer un pequeño bigote. " ;  
-      break;
-      case 'Ritulillo':
-        contentAtributo.innerHTML = "Los Ritulillos son humanoides con características físicas similares a las de una rata. Gruesas paletas y largos bigotes delatan su roedora apariencia. Suelen medir entre 1.48 a 1.58 mts. La codicia y avaricia de los Ritulillos es desmesurada. Se desenvuelven con excelencia a la hora de realizar cualquier tipo de negocios.";
-      break;
-      default:
-      break;
-    }
-  }
-    function ocultar() {
-        info.classList.add('d-none');
-    }
-  
-</script>
