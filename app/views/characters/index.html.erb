@@ -1,4 +1,4 @@
-<div class="row">
+<div class="row d-flex justify-content-center">
     <% @characters.each do |character|%>
         <div class="card mb-5 bg-transparent col-xs-12 col-md-4">
             <img src="<%= character.avatar%>" class="opacity-70">   
@@ -27,9 +27,7 @@
                     <div class="accordion-item">
                         <h2 class="accordion-header bg-dark border border-light py-2">
                             <button class="accordion-button bg-transparent text-light " type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                            Salud: 
-                            <progress id='barraSalud<%=character.id%>' value="<%=character.salud%>" max="<%=character.salud%>" class="mx-4" class="bg-danger"></progress>
-                            <%= character.salud%> 
+                            Salud:<span id="nivelSalud<%=character.id%>" class="salud mx-2"><%=character.salud%></span> / <span><%=character.salud%></span> 
                             </button>
                             <div id="collapseOne" class="accordion-collapse collapse bg-transparent" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
                                 <div class="accordion-body container bg-dark">
@@ -135,12 +133,6 @@
                     <div class="col px-0">
                         <a href="<%=character_path(character)%>" class="btn btn-danger px-3">Combate</a>
                     </div>
-                    <div class="col px-0">
-                        <a href="<%=character_path(character)%>" class="btn btn-danger px-3">Tecnicas</a>
-                    </div>
-                    <div class="col px-0">
-                        <a href="<%=character_path(character)%>" class="btn btn-danger px-3">Tinieblas</a>
-                    </div>
                 </div>
                 <div class="my-2">
                     <%= button_to 'Eliminar personaje', character_path(character), method: :delete , data:{confirm:"Ya no hay vuelta atras pequeñin... Estas seguro?"}, class:"btn btn-secondary"%>
@@ -151,7 +143,7 @@
         </div>
     
     <script>
-        arraySalud = document.getElementsByTagName('progress')
+        arraySalud = document.getElementsByClassName('salud')
         arrayDanos = document.getElementsByClassName('danos')
         arrayPot = document.getElementsByClassName('pot')
         arrayGastoPot = document.getElementsByClassName('gastoPot')
@@ -162,24 +154,29 @@
        
     //    Botones Salud
         function danar(element) {
-            id = "barraSalud" + element.id
+            id = "nivelSalud" + element.id
             idDano = 'dano'+element.id
             saludActual = arraySalud[id];
             dano = arrayDanos[idDano]; 
-            saludActual.value -= parseInt(dano.value);
-            if (saludActual.value <= 0) {
+            saludActual.textContent = parseInt(saludActual.textContent) - parseInt(dano.value);
+            if (parseInt(saludActual.textContent) <= 0) {
                 alert ('Has caido! a rogar para que no te rematen ¿eh?')
+                saludActual.textContent = 0
             };
             dano.value = "";
         }
 
         function sanar(element) {
-            id = "barraSalud" + element.id
+            id = "nivelSalud" + element.id
             idDano = 'dano'+element.id
             saludActual = arraySalud[id];
             dano = arrayDanos[idDano]; 
-            saludActual.value += parseInt(dano.value);
+            saludActual.textContent = parseInt(saludActual.textContent) + parseInt(dano.value);
             dano.value = "";
+            if (parseInt(saludActual.textContent) >= parseInt(saludActual.nextElementSibling.textContent)) {
+                alert ('que mas quieres sanar sabandija, acaso quieres empezar a brillar??')
+                saludActual.textContent = parseInt(saludActual.nextElementSibling.textContent)
+            };
         }
 
         // Botones Potencialidad
