@@ -172,11 +172,12 @@
                 <%# Botones secciones Combate, Tecnicas y Tinieblas %>
                 <div class="row my-3">
                     <div class="col px-0">
-                        <a href="<%=character_path(character)%>" class="btn btn-danger px-3">Combate</a>
+                        <%= link_to 'Editar', edit_character_path(character), method: :get, class:"btn btn-danger d-inline" %>
+                        <%= link_to 'Eliminar', character_path(character), method: :delete , data:{confirm:"Ya no hay vuelta atras pequeñin... Estas seguro?"}, class:"btn btn-secondary d-inline"%>
+
                     </div>
                 </div>
                 <div class="my-2">
-                    <%= button_to 'Eliminar personaje', character_path(character), method: :delete , data:{confirm:"Ya no hay vuelta atras pequeñin... Estas seguro?"}, class:"btn btn-secondary"%>
                 </div>
 
                 

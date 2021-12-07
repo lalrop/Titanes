@@ -1,12 +1,26 @@
 <div class="my-3">
+  <figure>
+    <blockquote class="blockquote">
+      <p><em> No confies en el master camaron...</em></p>
+      <p id="razaCita" class="d-none"></p>
+    </blockquote>
+    <figcaption class="blockquote-footer">
+      Consejos de un camaron muerto</cite>
+    </figcaption>
+  </figure>
 </div>
 
 <%= form_for @character do |f| %>
   <div class="mt-4">
     Nombre: <%= f.text_field :name %> <br>
   </div>
+
   <div class="my-3">
-    Distrito: 
+    <strong>Imagen (opcional):</strong> <%= f.text_field :avatar, placeholder:'Pega la url de tu imagen', class:"bg-dark text-white"%>
+  </div>
+
+  <div class="my-3">
+    Distrito:   
     <select name="character[distrito_id]" id="character_distrito_id">
       <option value="1">Kaiser</option>
       <option value="2">Drake</option>
@@ -33,7 +47,6 @@
       <option value="10">Ritulillo</option>
     </select><br>
   </div>
-  
   <div class="my-3">
     <strong>Potencialidad:</strong> <%= f.number_field :potencialidad, min:0, max:45, required: true,class:"w-25 bg-dark text-white text-center border-none"%><br>
   </div>
@@ -42,13 +55,22 @@
     <strong>Frenesis:</strong> <%= f.number_field :frenesis, min:0, max:45, class:"w-25 bg-dark text-white text-center border-none" %><br>
   </div>
 
-  <div class="my-3">
-    <strong>Imagen:</strong> <%= f.text_field :avatar, placeholder:'Pega la url de tu imagen', class:"bg-dark text-white"%>
-  </div>
-  
   <div>
       <%= f.submit 'Crear Personaje', class:"btn btn-danger my-4" %>
   </div>
 <%end%> 
 
 <%= button_to 'Salir', characters_path, method: :get, class:"btn btn-light"%>
+
+<script>
+  let raza = document.getElementById('character_raza_id');
+  let razaCita = document.getElementById('razaCita');
+  const arrayRazas =['Humano','Gimpisto','Destello','Chechenia','Gag','Fanderei','Andorak','Winvhel','Chadack','Ritulillo'];
+  raza.addEventListener('change', function () {
+    let razaName = raza.value-1;
+    razaCita.classList.remove('d-none');
+    razaCita.innerHTML = "<em> Por ser un "+ arrayRazas[razaName] + "</em>"
+
+  })
+
+</script>
