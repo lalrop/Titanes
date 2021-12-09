@@ -60,32 +60,87 @@
   </div>
 
   <div class="my-3 text-center"> <h2>Combate</h2> </div>
-  <div class="my-3" id="ptosCombate">
+  <div class="my-3 d-none" id="ptosCombate">
+    <p id="textoPtosCombate"></p>
+    <div>
+      <div>
+        <p class="my-2 mx-3">Atletismo:
+        <%= f.number_field :atletismo, in:0..10, class:"bg-transparent border border-white text-white text-center rounded" %>
+      </div>
+      <div>
+        <p class="my-2 mx-3">Estabilidad:
+        <%= f.number_field :estabilidad, in:0..10 ,class:"bg-transparent border border-white text-white text-center rounded"%></p>
+      </div>
+      <div>
+        <p class="my-2 mx-3">Pelea:
+        <%= f.number_field :pelea, in:0..10 ,class:"bg-transparent border border-white text-white text-center rounded"%></p>
+      </div>
+      <div>
+        <p class="my-2 mx-3">Destreza:
+        <%= f.number_field :destreza, in:0..10 ,class:"bg-transparent border border-white text-white text-center rounded"%></p>
+      </div>
+      <div>
+        <p class="my-2 mx-3">Esquivar:
+        <%= f.number_field :esquivar, in:0..10 ,class:"bg-transparent border border-white text-white text-center rounded"%></p>
+      </div>
+      <div>
+        <p class="my-2 mx-3">Resistencia:
+        <%= f.number_field :resistencia, in:0..10 ,class:"bg-transparent border border-white text-white text-center rounded"%></p>
+      </div>
+      <div>
+        <p class="my-2 mx-3">Fuerza:
+        <%= f.number_field :fuerza, in:0..10 ,class:"bg-transparent border border-white text-white text-center rounded"%></p>
+      </div>
+      <div>
+        <p class="my-2 mx-3">Finta:
+        <%= f.number_field :finta, in:0..5 ,class:"bg-transparent border border-white text-white text-center rounded"%></p>
+      </div>
+      <div>
+        <p class="my-2 mx-3">Alerta:
+        <%= f.number_field :alerta, in:0..5 ,class:"bg-transparent border border-white text-white text-center rounded"%></p>
+      </div>
+      <div>
+        <p class="my-2 mx-3">Sigilo:
+        <%= f.number_field :sigilo, in:0..5 ,class:"bg-transparent border border-white text-white text-center rounded"%></p>
+      </div>
+      <div>
+        <p class="my-2 mx-3">Percepcion espacial:
+        <%= f.number_field :percep_espacial, in:0..5 ,class:"bg-transparent border border-white text-white text-center rounded"%></p>
+      </div>
+      <div>
+        <p class="my-2 mx-3">Medicina:
+        <%= f.number_field :medicina, in:0..5 ,class:"bg-transparent border border-white text-white text-center rounded"%></p>
+      </div>
   </div>
-  <div id=Combate class="d-none">
-      <h1>wuaaaaaaa</h1>
-  </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
   <div>
       <%= f.submit 'Crear Personaje', class:"btn btn-danger my-4", id:"btnCrearPj" %>
   </div>
 <%end%> 
 
 <%= button_to 'Salir', characters_path, method: :get, class:"btn btn-light"%>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 <script>
   const name = document.getElementById('character_name');
@@ -100,7 +155,7 @@
   const arrayDistritos = ['Kaiser','Drake','Ignea Mortis','Tenjou','Samsara','Stahl','Khronos','Woohan'] 
 
   let ptosCombate = 0;
-
+  let totalPtos = 0
 
 
   name.addEventListener('keyup',function () {
@@ -119,46 +174,46 @@
     let razaName = raza.value-1;
     citaRaza.classList.remove('d-none');
     citaRaza.innerHTML = "<em> Nacido como un "+ arrayRazas[razaName] + "<br>...<br> Te desamos suerte</em>";
-    document.getElementById("ptosPotFren").innerHTML = "Teneis 45 puntos a repartir entre Potencialidad y Frenesis";
+    document.getElementById("ptosPotFren").innerHTML = "Teneis 45 puntos a repartir entre Potencialidad y Frenesis";    
+    let totalPtos = parseInt(ptosPot.value) + parseInt(ptosFren.value);
     switch (raza.value) {
-    case "1":
-    case "4":
-    case "5":
-    case "6":
-    case "7":
-      console.log("tienes 12");
+      case "1":
+      case "4":
+      case "5":
+      case "6":
+      case "7":
+        ptosCombate = 12;
+        break;
+      case "2":
+      case "8":
+        ptosCombate = 11;
+        break
+      case "3":
+        ptosCombate = 13;
+        break
+      case "9":
+        ptosCombate = 10;
+        break
+      case "10":
+        ptosCombate = 6;
+        break
+
+      default:
       break;
-    case "2":
-    case "8":
-      console.log("tienes 11");
-      break
-    case "3":
-      console.log("tienes 13");
-      break
-    case "9":
-      console.log("tienes 10");
-      break
-    case "10":
-      console.log("tienes 6");
-      break
-
-    default:
-    break;
-  }
-
-
+    };
+    document.getElementById('textoPtosCombate').innerHTML = "Reparte <strong>" + ptosCombate + "</strong> en los siguientes atributos"
   })
 
   let ptosPot = document.getElementById("character_potencialidad");
   let ptosFren = document.getElementById("character_frenesis");
  
-  ptosFren.addEventListener('keyup', function () {
-    let totalPtos = parseInt(ptosPot.value) + parseInt(ptosFren.value);  
+  ptosFren.addEventListener('change', function () {  
     if (totalPtos > 45) {
       alert('No te quieras pasar de listo zapatito roto, son solo 45!')
       document.getElementById('btnCrearPj').classList.toggle('disabled')
     }else{
-      document.getElementById('Combate').classList.remove("d-none")
+      document.getElementById('btnCrearPj').classList.remove('disabled')
+      document.getElementById('ptosCombate').classList.remove("d-none")
     }
   })
 
