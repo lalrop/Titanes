@@ -1,11 +1,12 @@
 <div class="my-3">
   <figure>
     <blockquote class="blockquote">
-      <p><em> No confies en el master camaron...</em></p>
-      <p id="razaCita" class="d-none"></p>
+      <span id="citaNombre" class="d-none text-center"></span><br>
+      <span id="citaDistrito" class="d-none"></span><br>
+      <span id="citaRaza" class="d-none"></span>
     </blockquote>
     <figcaption class="blockquote-footer">
-      Consejos de un camaron muerto</cite>
+      Alquimides y concilio</cite>
     </figcaption>
   </figure>
 </div>
@@ -47,6 +48,9 @@
       <option value="10">Ritulillo</option>
     </select><br>
   </div>
+
+  <div class="my-3" id="ptosPotFren">
+  </div>
   <div class="my-3">
     <strong>Potencialidad:</strong> <%= f.number_field :potencialidad, min:0, max:45, required: true,class:"w-25 bg-dark text-white text-center border-none"%><br>
   </div>
@@ -55,22 +59,115 @@
     <strong>Frenesis:</strong> <%= f.number_field :frenesis, min:0, max:45, class:"w-25 bg-dark text-white text-center border-none" %><br>
   </div>
 
+  <div class="my-3 text-center"> <h2>Combate</h2> </div>
+  <div class="my-3" id="ptosCombate">
+  </div>
+  <div id=Combate class="d-none">
+      <h1>wuaaaaaaa</h1>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
   <div>
-      <%= f.submit 'Crear Personaje', class:"btn btn-danger my-4" %>
+      <%= f.submit 'Crear Personaje', class:"btn btn-danger my-4", id:"btnCrearPj" %>
   </div>
 <%end%> 
 
 <%= button_to 'Salir', characters_path, method: :get, class:"btn btn-light"%>
 
 <script>
-  let raza = document.getElementById('character_raza_id');
-  let razaCita = document.getElementById('razaCita');
+  const name = document.getElementById('character_name');
+  const distrito = document.getElementById('character_distrito_id');
+  const raza = document.getElementById('character_raza_id');
+
+  const citaNombre = document.getElementById('citaNombre')
+  const citaDistrito = document.getElementById('citaDistrito')
+  const citaRaza = document.getElementById('citaRaza');
+
   const arrayRazas =['Humano','Gimpisto','Destello','Chechenia','Gag','Fanderei','Andorak','Winvhel','Chadack','Ritulillo'];
+  const arrayDistritos = ['Kaiser','Drake','Ignea Mortis','Tenjou','Samsara','Stahl','Khronos','Woohan'] 
+
+  let ptosCombate = 0;
+
+
+
+  name.addEventListener('keyup',function () {
+    let nombre = name.value;
+    citaNombre.classList.remove('d-none');
+    citaNombre.innerHTML = "<em>" + nombre + "</em>";
+  })
+
+  distrito.addEventListener('change',function () {
+    let distritoName = distrito.value - 1;
+    citaDistrito.classList.remove('d-none');
+    citaDistrito.innerHTML = "<em>Proveniente de " + arrayDistritos[distritoName] + "</em>";
+  })
+
   raza.addEventListener('change', function () {
     let razaName = raza.value-1;
-    razaCita.classList.remove('d-none');
-    razaCita.innerHTML = "<em> Por ser un "+ arrayRazas[razaName] + "</em>"
+    citaRaza.classList.remove('d-none');
+    citaRaza.innerHTML = "<em> Nacido como un "+ arrayRazas[razaName] + "<br>...<br> Te desamos suerte</em>";
+    document.getElementById("ptosPotFren").innerHTML = "Teneis 45 puntos a repartir entre Potencialidad y Frenesis";
+    switch (raza.value) {
+    case "1":
+    case "4":
+    case "5":
+    case "6":
+    case "7":
+      console.log("tienes 12");
+      break;
+    case "2":
+    case "8":
+      console.log("tienes 11");
+      break
+    case "3":
+      console.log("tienes 13");
+      break
+    case "9":
+      console.log("tienes 10");
+      break
+    case "10":
+      console.log("tienes 6");
+      break
+
+    default:
+    break;
+  }
+
 
   })
+
+  let ptosPot = document.getElementById("character_potencialidad");
+  let ptosFren = document.getElementById("character_frenesis");
+ 
+  ptosFren.addEventListener('keyup', function () {
+    let totalPtos = parseInt(ptosPot.value) + parseInt(ptosFren.value);  
+    if (totalPtos > 45) {
+      alert('No te quieras pasar de listo zapatito roto, son solo 45!')
+      document.getElementById('btnCrearPj').classList.toggle('disabled')
+    }else{
+      document.getElementById('Combate').classList.remove("d-none")
+    }
+  })
+
+
+
+
+
+
+
+
 
 </script>
