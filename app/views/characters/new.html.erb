@@ -59,6 +59,7 @@
     <strong>Frenesis:</strong> <%= f.number_field :frenesis, min:0, max:45, class:"w-25 bg-dark text-white text-center border-none" %><br>
   </div>
 
+  <%# Acordeon Combate %>
   <div class="my-3 text-center"> <h2>Combate</h2> </div>
   <div class="my-3 d-none" id="ptosCombate">
     <p id="textoPtosCombate"></p>
@@ -112,33 +113,18 @@
         <%= f.number_field :medicina, in:0..5 ,class:"bg-transparent border border-white text-white text-center rounded"%></p>
       </div>
   </div>
+
+  <%# Selector de armas %>
+  <div class="my-3 text-center"><h2>Arma</h2></div>
+  <div>
+  </div>
+
   <div>
       <%= f.submit 'Crear Personaje', class:"btn btn-danger my-4", id:"btnCrearPj" %>
   </div>
 <%end%> 
 
 <%= button_to 'Salir', characters_path, method: :get, class:"btn btn-light"%>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 

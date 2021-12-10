@@ -3,6 +3,8 @@
         <div class="card mb-5 bg-transparent col-xs-12 col-md-4">
             <img src="<%= character.avatar%>" class="opacity-70">   
             <div class="card-body">                            
+
+                <%# Nombre, gloria, distrito, raza %>
                 <h4 class="card-title fst-italic fw-bold fs-2 my-3">
                     <%= character.name%>
                 </h4>
@@ -110,7 +112,6 @@
                     </div>    
 
                         <%# Desplegable Hambre %>
-                        
                     <div class="accordion-item">
                         <h2 class="accordion-header bg-dark border border-light text-light py-2">
                             <button class="accordion-button bg-transparent text-light " type="button" data-bs-toggle="collapse" data-bs-target="#collapseSix" aria-expanded="true" aria-controls="collapseSix">Hambre: <span id="hambreMax" class="mx-2">
@@ -169,7 +170,7 @@
 
                 
 
-                <%# Botones secciones Combate, Tecnicas y Tinieblas %>
+                <%# Botones Editar y Eliminar %>
                 <div class="row my-3">
                     <div class="col px-0">
                         <%= link_to 'Editar', edit_character_path(character), method: :get, class:"btn btn-danger d-inline" %>
@@ -183,144 +184,144 @@
                 
             </div>
         </div>
+
+<script>
+    arraySalud = document.getElementsByClassName('salud')
+    arrayDanos = document.getElementsByClassName('danos')
+    arrayPot = document.getElementsByClassName('pot')
+    arrayGastoPot = document.getElementsByClassName('gastoPot')
+    arrayFren = document.getElementsByClassName('fren')
+    arrayGastoFren = document.getElementsByClassName('gastoFren')
+    arrayFdV = document.getElementsByClassName('fdv')
+    arrayGastoFdV = document.getElementsByClassName('gastoFdV')
     
-    <script>
-        arraySalud = document.getElementsByClassName('salud')
-        arrayDanos = document.getElementsByClassName('danos')
-        arrayPot = document.getElementsByClassName('pot')
-        arrayGastoPot = document.getElementsByClassName('gastoPot')
-        arrayFren = document.getElementsByClassName('fren')
-        arrayGastoFren = document.getElementsByClassName('gastoFren')
-        arrayFdV = document.getElementsByClassName('fdv')
-        arrayGastoFdV = document.getElementsByClassName('gastoFdV')
-       
-    //    Botones Salud
-        function danar(element) {
-            id = "nivelSalud" + element.id
-            idDano = 'dano'+element.id
-            saludActual = arraySalud[id];
-            dano = arrayDanos[idDano]; 
-            saludActual.textContent = parseInt(saludActual.textContent) - parseInt(dano.value);
-            if (parseInt(saludActual.textContent) <= 0) {
-                alert ('Has caido! a rogar para que no te rematen ¿eh?')
-                saludActual.textContent = 0
-            };
-            dano.value = "";
-        }
+//    Botones Salud
+    function danar(element) {
+        id = "nivelSalud" + element.id
+        idDano = 'dano'+element.id
+        saludActual = arraySalud[id];
+        dano = arrayDanos[idDano]; 
+        saludActual.textContent = parseInt(saludActual.textContent) - parseInt(dano.value);
+        if (parseInt(saludActual.textContent) <= 0) {
+            alert ('Has caido! a rogar para que no te rematen ¿eh?')
+            saludActual.textContent = 0
+        };
+        dano.value = "";
+    }
 
-        function sanar(element) {
-            id = "nivelSalud" + element.id
-            idDano = 'dano'+element.id
-            saludActual = arraySalud[id];
-            dano = arrayDanos[idDano]; 
-            saludActual.textContent = parseInt(saludActual.textContent) + parseInt(dano.value);
-            dano.value = "";
-            if (parseInt(saludActual.textContent) >= parseInt(saludActual.nextElementSibling.textContent)) {
-                alert ('que mas quieres sanar sabandija, acaso quieres empezar a brillar??')
-                saludActual.textContent = parseInt(saludActual.nextElementSibling.textContent)
-            };
-        }
+    function sanar(element) {
+        id = "nivelSalud" + element.id
+        idDano = 'dano'+element.id
+        saludActual = arraySalud[id];
+        dano = arrayDanos[idDano]; 
+        saludActual.textContent = parseInt(saludActual.textContent) + parseInt(dano.value);
+        dano.value = "";
+        if (parseInt(saludActual.textContent) >= parseInt(saludActual.nextElementSibling.textContent)) {
+            alert ('que mas quieres sanar sabandija, acaso quieres empezar a brillar??')
+            saludActual.textContent = parseInt(saludActual.nextElementSibling.textContent)
+        };
+    }
 
-        // Botones Potencialidad
-        function absPot(element) {
-            id = "nivelPot" + element.id;
-            idGastoPot = "gastoPot" + element.id;
-            potActual = arrayPot[id];
-            gastoPot = arrayGastoPot[idGastoPot];
-            potActual.textContent = parseInt(potActual.textContent)-parseInt(gastoPot.value) 
-            gastoPot.value = ""
-            if (parseInt(potActual.textContent) <= 0) {
-                potActual.textContent = 0
-                alert('Estas fulminado pequeñin, quietecito te ves mas bonito.')
-            }
+    // Botones Potencialidad
+    function absPot(element) {
+        id = "nivelPot" + element.id;
+        idGastoPot = "gastoPot" + element.id;
+        potActual = arrayPot[id];
+        gastoPot = arrayGastoPot[idGastoPot];
+        potActual.textContent = parseInt(potActual.textContent)-parseInt(gastoPot.value) 
+        gastoPot.value = ""
+        if (parseInt(potActual.textContent) <= 0) {
+            potActual.textContent = 0
+            alert('Estas fulminado pequeñin, quietecito te ves mas bonito.')
         }
+    }
 
-        function recPot(element){
-            id = "nivelPot" + element.id;
-            idGastoPot = "gastoPot" + element.id;
-            potActual = arrayPot[id];
-            gastoPot = arrayGastoPot[idGastoPot];
-            potActual.textContent = parseInt(potActual.textContent)+parseInt(gastoPot.value) 
-            gastoPot.value = ""
-            if (parseInt(potActual.textContent) >= parseInt(potActual.nextElementSibling.textContent)) {
-                alert('Listo para otro round sabandija!')
-                potActual.textContent = potActual.nextElementSibling.textContent
-            }
+    function recPot(element){
+        id = "nivelPot" + element.id;
+        idGastoPot = "gastoPot" + element.id;
+        potActual = arrayPot[id];
+        gastoPot = arrayGastoPot[idGastoPot];
+        potActual.textContent = parseInt(potActual.textContent)+parseInt(gastoPot.value) 
+        gastoPot.value = ""
+        if (parseInt(potActual.textContent) >= parseInt(potActual.nextElementSibling.textContent)) {
+            alert('Listo para otro round sabandija!')
+            potActual.textContent = potActual.nextElementSibling.textContent
         }
+    }
 
-        // Botones Frenesis
-        function absFren(element) {
-            id = "nivelFren" + element.id;
-            idGastoFren = "gastoFren" + element.id;
-            frenActual = arrayFren[id];
-            gastoFren = arrayGastoFren[idGastoFren];
-            frenActual.textContent = parseInt(frenActual.textContent)-parseInt(gastoFren.value); 
-            gastoFren.value = "";
-            if (parseInt(frenActual.textContent) <= 0) {
-                frenActual.textContent = 0;
-                alert('Letargado!, llamen una enfermera que este crio esta babeando el suelo!')
-            }
+    // Botones Frenesis
+    function absFren(element) {
+        id = "nivelFren" + element.id;
+        idGastoFren = "gastoFren" + element.id;
+        frenActual = arrayFren[id];
+        gastoFren = arrayGastoFren[idGastoFren];
+        frenActual.textContent = parseInt(frenActual.textContent)-parseInt(gastoFren.value); 
+        gastoFren.value = "";
+        if (parseInt(frenActual.textContent) <= 0) {
+            frenActual.textContent = 0;
+            alert('Letargado!, llamen una enfermera que este crio esta babeando el suelo!')
         }
+    }
 
-        function recFren(element) {
-            id = "nivelFren" + element.id;
-            idGastoFren = "gastoFren" + element.id;
-            frenActual = arrayFren[id];
-            gastoFren = arrayGastoFren[idGastoFren];
-            frenActual.textContent = parseInt(frenActual.textContent)+parseInt(gastoFren.value) 
-            gastoFren.value = ""
-            if (parseInt(frenActual.textContent) >= parseInt(frenActual.nextElementSibling.textContent)) {
-                alert('Suficiente descanso! los oidos ya dejaron de sangrar!')
-                frenActual.textContent = frenActual.nextElementSibling.textContent
-            }
+    function recFren(element) {
+        id = "nivelFren" + element.id;
+        idGastoFren = "gastoFren" + element.id;
+        frenActual = arrayFren[id];
+        gastoFren = arrayGastoFren[idGastoFren];
+        frenActual.textContent = parseInt(frenActual.textContent)+parseInt(gastoFren.value) 
+        gastoFren.value = ""
+        if (parseInt(frenActual.textContent) >= parseInt(frenActual.nextElementSibling.textContent)) {
+            alert('Suficiente descanso! los oidos ya dejaron de sangrar!')
+            frenActual.textContent = frenActual.nextElementSibling.textContent
         }
-        
-        // Botones Fuerza de Voluntad
-        function absFdV(element){
-            id = "nivelFdV" + element.id;
-            idGastoFdV = "gastoFdV" + element.id;
-            fdvActual = arrayFdV[id];
-            gastoFdV = arrayGastoFdV[idGastoFdV];
-            fdvActual.textContent = parseInt(fdvActual.textContent)-parseInt(gastoFdV.value); 
-            gastoFdV.value = "";
-            if (parseInt(fdvActual.textContent) <= 0) {
-                fdvActual.textContent = 0;
-                alert('Desmotivado?? How Dare You!! estas en penumbra... un tanto mas lento nada mas... jjejeje')
-            }        
-        }
+    }
+    
+    // Botones Fuerza de Voluntad
+    function absFdV(element){
+        id = "nivelFdV" + element.id;
+        idGastoFdV = "gastoFdV" + element.id;
+        fdvActual = arrayFdV[id];
+        gastoFdV = arrayGastoFdV[idGastoFdV];
+        fdvActual.textContent = parseInt(fdvActual.textContent)-parseInt(gastoFdV.value); 
+        gastoFdV.value = "";
+        if (parseInt(fdvActual.textContent) <= 0) {
+            fdvActual.textContent = 0;
+            alert('Desmotivado?? How Dare You!! estas en penumbra... un tanto mas lento nada mas... jjejeje')
+        }        
+    }
 
-        function recFdV(element){
-            id = "nivelFdV" + element.id;
-            idGastoFdV = "gastoFdV" + element.id;
-            fdvActual = arrayFdV[id];
-            gastoFdV = arrayGastoFdV[idGastoFdV];
-            fdvActual.textContent = parseInt(fdvActual.textContent)+parseInt(gastoFdV.value); 
-            gastoFdV.value = "";
-            if (parseInt(fdvActual.textContent) >= parseInt(fdvActual.nextElementSibling.textContent)) {
-                fdvActual.textContent = fdvActual.nextElementSibling.textContent;
-                alert('Que linda sonrisa sin dientes, sigamos!')
-            }        
-        }
+    function recFdV(element){
+        id = "nivelFdV" + element.id;
+        idGastoFdV = "gastoFdV" + element.id;
+        fdvActual = arrayFdV[id];
+        gastoFdV = arrayGastoFdV[idGastoFdV];
+        fdvActual.textContent = parseInt(fdvActual.textContent)+parseInt(gastoFdV.value); 
+        gastoFdV.value = "";
+        if (parseInt(fdvActual.textContent) >= parseInt(fdvActual.nextElementSibling.textContent)) {
+            fdvActual.textContent = fdvActual.nextElementSibling.textContent;
+            alert('Que linda sonrisa sin dientes, sigamos!')
+        }        
+    }
 
-        // Botones Hidratacion
-        function absHidratacion(){
-            alert('en desarrollo');
-        }
+    // Botones Hidratacion
+    function absHidratacion(){
+        alert('en desarrollo');
+    }
 
-        // Botones Hambre
-        function recHidratacion() {
-            alert('en desarrollo');      
-        }
+    // Botones Hambre
+    function recHidratacion() {
+        alert('en desarrollo');      
+    }
 
-        function absHambre(){
-            alert('en desarrollo');
-        }
+    function absHambre(){
+        alert('en desarrollo');
+    }
 
-        function recHambre() {
-            alert('en desarrollo');
-        }
+    function recHambre() {
+        alert('en desarrollo');
+    }
 
-    </script>
+</script>
 
     <%end%>
 </div>

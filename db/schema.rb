@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_12_03_125142) do
+ActiveRecord::Schema.define(version: 2021_12_10_153720) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -93,6 +93,15 @@ ActiveRecord::Schema.define(version: 2021_12_03_125142) do
     t.text "restrict1"
     t.text "restrict2"
     t.text "restrict3"
+  end
+
+  create_table "kit_armas", force: :cascade do |t|
+    t.bigint "character_id"
+    t.bigint "arma_id"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["arma_id"], name: "index_kit_armas_on_arma_id"
+    t.index ["character_id"], name: "index_kit_armas_on_character_id"
   end
 
   create_table "razas", force: :cascade do |t|
