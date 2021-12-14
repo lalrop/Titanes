@@ -81,72 +81,71 @@
     <div class="row">
       <h2 class="my-3">Combate</h2>
     
-      <div id="ptosCombate">
-        <p id="textoPtosCombate"></p>  
+      <div id="ptosCombate" class="d-none">
+        <p id="textoPtosCombate"></p>
+        <p></p>  
         <div class="row">
           <div class="col">
             <div class="row align-items-baseline">
               <p class="col-md-5 form-label text-start">Atletismo:</p>
-              <%= f.number_field :atletismo, in:0..10, class:"bg-transparent border border-secondary text-white text-center rounded col-md-4 form-control-sm mx-4" %>
+              <%= f.number_field :atletismo, in:0..10, class:"bg-transparent border border-secondary text-white text-center rounded col-md-4 form-control-sm mx-4 ptoCombate", value:"0" %>
             </div>
             <div class="row align-items-baseline">
               <p class="col-md-5 form-label text-start">Estabilidad:</p>
-              <%= f.number_field :estabilidad, in:0..10 ,class:"bg-transparent border border-secondary text-white text-center rounded col-md-4 form-control-sm mx-4"%>
+              <%= f.number_field :estabilidad, in:0..10 ,class:"bg-transparent border border-secondary text-white text-center rounded col-md-4 form-control-sm mx-4 ptoCombate", value:"0"%>
             </div>
             <div class="row align-items-baseline">
               <p class="col-md-5 form-label text-start">Pelea:</p>
-              <%= f.number_field :pelea, in:0..10 ,class:"bg-transparent border border-secondary text-white text-center rounded col-md-4 form-control-sm mx-4"%>
+              <%= f.number_field :pelea, in:0..10 ,class:"bg-transparent border border-secondary text-white text-center rounded col-md-4 form-control-sm mx-4 ptoCombate", value:"0"%>
             </div>
             <div class="row align-items-baseline">
               <p class="col-md-5 form-label text-start">Destreza:</p>
-              <%= f.number_field :destreza, in:0..10 ,class:"bg-transparent border border-secondary text-white text-center rounded col-md-4 form-control-sm mx-4"%>
+              <%= f.number_field :destreza, in:0..10 ,class:"bg-transparent border border-secondary text-white text-center rounded col-md-4 form-control-sm mx-4 ptoCombate", value:"0"%>
             </div>
             <div class="row align-items-baseline">
               <p class="col-md-5 form-label text-start">Esquivar:</p>
-              <%= f.number_field :esquivar, in:0..10 ,class:"bg-transparent border border-secondary text-white text-center rounded col-md-4 form-control-sm mx-4"%>
+              <%= f.number_field :esquivar, in:0..10 ,class:"bg-transparent border border-secondary text-white text-center rounded col-md-4 form-control-sm mx-4 ptoCombate", value:"0"%>
             </div>
             <div class="row align-items-baseline">
               <p class="col-md-5 form-label text-start">Resistencia:</p>
-              <%= f.number_field :resistencia, in:0..10 ,class:"bg-transparent border border-secondary text-white text-center rounded col-md-4 form-control-sm mx-4"%>
+              <%= f.number_field :resistencia, in:0..10 ,class:"bg-transparent border border-secondary text-white text-center rounded col-md-4 form-control-sm mx-4 ptoCombate", value:"0"%>
             </div>
             <div class="row align-items-baseline">
               <p class="col-md-5 form-label text-start">Fuerza:</p>
-              <%= f.number_field :fuerza, in:0..10 ,class:"bg-transparent border border-secondary text-white text-center rounded col-md-4 form-control-sm mx-4"%>
+              <%= f.number_field :fuerza, in:0..10 ,class:"bg-transparent border border-secondary text-white text-center rounded col-md-4 form-control-sm mx-4 ptoCombate", value:"0"%>
             </div>
           </div>
 
           <div class="col">
             <div class="row align-items-baseline">
               <p class="col-md-5 form-label text-start">Finta:</p>
-              <%= f.number_field :finta, in:0..5 ,class:"bg-transparent border border-secondary text-white text-center rounded col-md-4 form-control-sm mx-4"%>
+              <%= f.number_field :finta, in:0..5 ,class:"bg-transparent border border-secondary text-white text-center rounded col-md-4 form-control-sm mx-4 ptoCombate", value:"0"%>
             </div>
             <div class="row align-items-baseline">
               <p class="col-md-5 form-label text-start">Alerta:</p>
-              <%= f.number_field :alerta, in:0..5 ,class:"bg-transparent border border-secondary text-white text-center rounded col-md-4 form-control-sm mx-4"%>
+              <%= f.number_field :alerta, in:0..5 ,class:"bg-transparent border border-secondary text-white text-center rounded col-md-4 form-control-sm mx-4 ptoCombate", value:"0"%>
             </div>
             <div class="row align-items-baseline">
               <p class="col-md-5 form-label text-start">Sigilo:</p>
-              <%= f.number_field :sigilo, in:0..5 ,class:"bg-transparent border border-secondary text-white text-center rounded col-md-4 form-control-sm mx-4"%>
+              <%= f.number_field :sigilo, in:0..5 ,class:"bg-transparent border border-secondary text-white text-center rounded col-md-4 form-control-sm mx-4 ptoCombate", value:"0"%>
             </div>
             <div class="row align-items-baseline">
               <p class="col-md-5 form-label text-start">Percepcion espacial:</p>
-              <%= f.number_field :percep_espacial, in:0..5 ,class:"bg-transparent border border-secondary text-white text-center rounded col-md-4 form-control-sm mx-4"%>
+              <%= f.number_field :percep_espacial, in:0..5 ,class:"bg-transparent border border-secondary text-white text-center rounded col-md-4 form-control-sm mx-4 ptoCombate", value:"0"%>
             </div>
             <div class="row align-items-baseline">
               <p class="col-md-5 form-label text-start">Medicina:</p>
-              <%= f.number_field :medicina, in:0..5 ,class:"bg-transparent border border-secondary text-white text-center rounded col-md-4 form-control-sm mx-4"%>
+              <%= f.number_field :medicina, in:0..5 ,class:"bg-transparent border border-secondary text-white text-center rounded col-md-4 form-control-sm mx-4 ptoCombate", value:"0"%>
             </div>
           </div>
-      
-        
       </div>
       
     </div>
     
     <%# Seccion Psicologia y Conocimientos %>
     <div class="my-3 text-center"> <h2>Psicologia y Conocimientos</h2> </div>
-    <div class="my-3" id="ptosPsicologia">
-      <p id="textoPtosCombate"></p>
+    <div class="my-3 d-none" id="ptosPsicologia">
+      <p id="textoPsicologia"></p>
       <div>
         <div>
           <p class="my-2 mx-3">Armas C.C:
@@ -277,7 +276,9 @@
   const arrayDistritos = ['Kaiser','Drake','Ignea Mortis','Tenjou','Samsara','Stahl','Khronos','Woohan'] 
 
   let ptosCombate = 0;
-  let totalPtos = 0
+  let totalPtos = 0;
+
+  let ptosPsicologia = 0;
 
 
   name.addEventListener('keyup',function () {
@@ -301,30 +302,45 @@
     
     switch (raza.value) {
       case "1":
+        ptosCombate = 12;
+        ptosPsicologia = 14;
+      break
       case "4":
       case "5":
-      case "6":
       case "7":
         ptosCombate = 12;
-        break;
+        ptosPsicologia = 11;
+      break
+      case "6":
+        ptosCombate = 12;
+        ptosPsicologia = 12;
+      break
       case "2":
+        ptosCombate = 11;
+        ptosPsicologia = 12;
+        break
       case "8":
         ptosCombate = 11;
+        ptosPsicologia = 14;
         break
       case "3":
         ptosCombate = 13;
+        ptosPsicologia = 12;
         break
       case "9":
         ptosCombate = 10;
+        ptosPsicologia = 14;
         break
       case "10":
         ptosCombate = 6;
+        ptosPsicologia = 17;
         break
 
       default:
       break;
-    };
-    document.getElementById('textoPtosCombate').innerHTML = "Reparte <strong>" + ptosCombate + "</strong> en los siguientes atributos"
+    }
+    document.getElementById('textoPtosCombate').innerHTML = "Reparte <strong>" + ptosCombate + "</strong> en los siguientes atributos";
+    document.getElementById('textoPsicologia').innerHTML = "Reparte <strong>" + ptosPsicologia + "</strong> en los siguientes atributos"
   })
 
   let ptosPot = document.getElementById("character_potencialidad");
@@ -332,14 +348,29 @@
   
   ptosFren.addEventListener('change', function () {  
     let totalPtos = parseInt(ptosPot.value) + parseInt(ptosFren.value);
-    if (totalPtos > 45) {
-      alert('No te quieras pasar de listo zapatito roto, son solo 45!')
-      document.getElementById('btnCrearPj').classList.toggle('disabled')
-      ptosFren.value = 0;
-    }else{
-      document.getElementById('btnCrearPj').classList.remove('disabled')
-      document.getElementById('ptosCombate').classList.remove("d-none")
+    if (totalPtos == 45) {
+      alert('Bien hecho chamaco');
+      document.getElementById('btnCrearPj').classList.toggle('disabled');
+      document.getElementById('ptosCombate').classList.remove('d-none');
+      document.getElementById('ptosPsicologia').classList.remove('d-none');
     }
   })
+
+  // sumando los ptos en combate
+  let ptoCombate = document.getElementsByClassName("ptoCombate");
+  ptoCombate = Object.values(ptoCombate);
+  ptoCombate.forEach(pto => {
+    pto.addEventListener('change',function () {
+      valores = ptoCombate.map(p => parseInt(p.value))
+      let reducer = (previousValue, currentValue) => previousValue + currentValue;
+      let total = valores.reduce(reducer);
+      if (ptosCombate == total) {
+        alert('Suficiente! ya alcanzaste el computo hijo de la chingada')
+        document.getElementById('btnCrearPj').classList.remove('disabled')
+      }
+    })
+  });
+
+
 
 </script>
