@@ -79,173 +79,176 @@
 
     <%# Seccion Combate %>
     <div class="row">
-      <h2 class="my-3">Combate</h2>
-    
-      <div id="ptosCombate" class="d-none">
-        <p id="textoPtosCombate"></p>
-        <p></p>  
+      <div class="my-3 d-none" id="ptosCombate" >
+        <h2>Combate</h2>
+        <p class="border-top border-bottom border-white py-2" id="textoPtosCombate"></p>
         <div class="row">
           <div class="col">
             <div class="row align-items-baseline">
-              <p class="col-md-5 form-label text-start">Atletismo:</p>
-              <%= f.number_field :atletismo, in:0..10, class:"bg-transparent border border-secondary text-white text-center rounded col-md-4 form-control-sm mx-4 ptoCombate", value:"0" %>
+              <p class="col-8 form-label text-start">Atletismo:</p>
+              <%= f.number_field :atletismo, in:0..10, class:"bg-transparent border border-secondary text-white text-center rounded col-4 form-control-sm ptoCombate", value:"0" %>
             </div>
             <div class="row align-items-baseline">
-              <p class="col-md-5 form-label text-start">Estabilidad:</p>
-              <%= f.number_field :estabilidad, in:0..10 ,class:"bg-transparent border border-secondary text-white text-center rounded col-md-4 form-control-sm mx-4 ptoCombate", value:"0"%>
+              <p class="col-8 form-label text-start">Estabilidad:</p>
+              <%= f.number_field :estabilidad, in:0..10 ,class:"bg-transparent border border-secondary text-white text-center rounded col-4 form-control-sm ptoCombate", value:"0"%>
             </div>
             <div class="row align-items-baseline">
-              <p class="col-md-5 form-label text-start">Pelea:</p>
-              <%= f.number_field :pelea, in:0..10 ,class:"bg-transparent border border-secondary text-white text-center rounded col-md-4 form-control-sm mx-4 ptoCombate", value:"0"%>
+              <p class="col-8 form-label text-start">Pelea:</p>
+              <%= f.number_field :pelea, in:0..10 ,class:"bg-transparent border border-secondary text-white text-center rounded col-4 form-control-sm ptoCombate", value:"0"%>
             </div>
             <div class="row align-items-baseline">
-              <p class="col-md-5 form-label text-start">Destreza:</p>
-              <%= f.number_field :destreza, in:0..10 ,class:"bg-transparent border border-secondary text-white text-center rounded col-md-4 form-control-sm mx-4 ptoCombate", value:"0"%>
+              <p class="col-8 form-label text-start">Destreza:</p>
+              <%= f.number_field :destreza, in:0..10 ,class:"bg-transparent border border-secondary text-white text-center rounded col-4 form-control-sm ptoCombate", value:"0"%>
             </div>
             <div class="row align-items-baseline">
-              <p class="col-md-5 form-label text-start">Esquivar:</p>
-              <%= f.number_field :esquivar, in:0..10 ,class:"bg-transparent border border-secondary text-white text-center rounded col-md-4 form-control-sm mx-4 ptoCombate", value:"0"%>
+              <p class="col-8 form-label text-start">Esquivar:</p>
+              <%= f.number_field :esquivar, in:0..10 ,class:"bg-transparent border border-secondary text-white text-center rounded col-4 form-control-sm ptoCombate", value:"0"%>
             </div>
             <div class="row align-items-baseline">
-              <p class="col-md-5 form-label text-start">Resistencia:</p>
-              <%= f.number_field :resistencia, in:0..10 ,class:"bg-transparent border border-secondary text-white text-center rounded col-md-4 form-control-sm mx-4 ptoCombate", value:"0"%>
+              <p class="col-8 form-label text-start">Resistencia:</p>
+              <%= f.number_field :resistencia, in:0..10 ,class:"bg-transparent border border-secondary text-white text-center rounded col-4 form-control-sm ptoCombate", value:"0"%>
             </div>
             <div class="row align-items-baseline">
-              <p class="col-md-5 form-label text-start">Fuerza:</p>
-              <%= f.number_field :fuerza, in:0..10 ,class:"bg-transparent border border-secondary text-white text-center rounded col-md-4 form-control-sm mx-4 ptoCombate", value:"0"%>
+              <p class="col-8 form-label text-start">Fuerza:</p>
+              <%= f.number_field :fuerza, in:0..10 ,class:"bg-transparent border border-secondary text-white text-center rounded col-4 form-control-sm ptoCombate", value:"0"%>
             </div>
           </div>
 
           <div class="col">
             <div class="row align-items-baseline">
-              <p class="col-md-5 form-label text-start">Finta:</p>
-              <%= f.number_field :finta, in:0..5 ,class:"bg-transparent border border-secondary text-white text-center rounded col-md-4 form-control-sm mx-4 ptoCombate", value:"0"%>
+              <p class="col-8 form-label text-start">Finta:</p>
+              <%= f.number_field :finta, in:0..5 ,class:"bg-transparent border border-secondary text-white text-center rounded col-4 form-control-sm ptoCombate", value:"0"%>
             </div>
             <div class="row align-items-baseline">
-              <p class="col-md-5 form-label text-start">Alerta:</p>
-              <%= f.number_field :alerta, in:0..5 ,class:"bg-transparent border border-secondary text-white text-center rounded col-md-4 form-control-sm mx-4 ptoCombate", value:"0"%>
+              <p class="col-8 form-label text-start">Alerta:</p>
+              <%= f.number_field :alerta, in:0..5 ,class:"bg-transparent border border-secondary text-white text-center rounded col-4 form-control-sm ptoCombate", value:"0"%>
             </div>
             <div class="row align-items-baseline">
-              <p class="col-md-5 form-label text-start">Sigilo:</p>
-              <%= f.number_field :sigilo, in:0..5 ,class:"bg-transparent border border-secondary text-white text-center rounded col-md-4 form-control-sm mx-4 ptoCombate", value:"0"%>
+              <p class="col-8 form-label text-start">Sigilo:</p>
+              <%= f.number_field :sigilo, in:0..5 ,class:"bg-transparent border border-secondary text-white text-center rounded col-4 form-control-sm ptoCombate", value:"0"%>
             </div>
             <div class="row align-items-baseline">
-              <p class="col-md-5 form-label text-start">Percepcion espacial:</p>
-              <%= f.number_field :percep_espacial, in:0..5 ,class:"bg-transparent border border-secondary text-white text-center rounded col-md-4 form-control-sm mx-4 ptoCombate", value:"0"%>
+              <p class="col-8 form-label text-start">Percepcion espacial:</p>
+              <%= f.number_field :percep_espacial, in:0..5 ,class:"bg-transparent border border-secondary text-white text-center rounded col-4 form-control-sm ptoCombate", value:"0"%>
             </div>
             <div class="row align-items-baseline">
-              <p class="col-md-5 form-label text-start">Medicina:</p>
-              <%= f.number_field :medicina, in:0..5 ,class:"bg-transparent border border-secondary text-white text-center rounded col-md-4 form-control-sm mx-4 ptoCombate", value:"0"%>
+              <p class="col-8 form-label text-start">Medicina:</p>
+              <%= f.number_field :medicina, in:0..5 ,class:"bg-transparent border border-secondary text-white text-center rounded col-4 form-control-sm ptoCombate", value:"0"%>
             </div>
           </div>
+        </div>
       </div>
-      
-    </div>
     
-    <%# Seccion Psicologia y Conocimientos %>
-    <div class="my-3 text-center"> <h2>Psicologia y Conocimientos</h2> </div>
+     <%# Seccion Psicologia y Conocimientos %>
     <div class="my-3 d-none" id="ptosPsicologia">
-      <p id="textoPsicologia"></p>
-      <div>
-        <div>
-          <p class="my-2 mx-3">Armas C.C:
-            <%= f.number_field :armas_cc, in:0..6, class:"bg-transparent border border-white text-white text-center rounded" %>
-          </div>
-          <div>
-            <p class="my-2 mx-3">Armas de fuego:
-              <%= f.number_field :armas_de_fuego, in:0..7, class:"bg-transparent border border-white text-white text-center rounded" %>
+      <h2 class="my-3 text-center" >Psicologia y Conocimientos</h2>
+      <p class="border-top border-bottom border-white py-2" id="textoPsicologia"></p>
+      <div class="row">
+        <div class="col">
+          <div class="row align-items-baseline">
+            <p class="col-7 form-label text-start">Armas C.C:
             </p>
+            <%= f.number_field :armas_cc, in:0..6, class:"bg-transparent border border-secondary text-white text-center rounded col-4 form-control-sm" %>
           </div>
-          <div>
-            <p class="my-2 mx-3"> Armas de Larga Distancia:
-              <%= f.number_field :armas_larga_distancia, in:0..4, class:"bg-transparent border border-white text-white text-center rounded" %>
+          <div class="row align-items-baseline">
+            <p class="col-7 form-label text-start">Armas de fuego:
             </p>
+            <%= f.number_field :armas_de_fuego, in:0..7, class:"bg-transparent border border-secondary text-white text-center rounded col-4 form-control-sm" %>
           </div>
-          <div>
-            <p class="my-2 mx-3">Etiqueta:
-          <%= f.number_field :etiqueta, in:0..3, class:"bg-transparent border border-white text-white text-center rounded" %>
-        </p>
-      </div>
-      <div>
-        <p class="my-2 mx-3"> Fisica: 
-          <%= f.number_field :fisica, in:0..4, class:"bg-transparent border border-white text-white text-center rounded" %>
-        </p>
-      </div>
-      <div>
-        <p class="my-2 mx-3"> Informatica:  
-          <%= f.number_field :informatica, in:0..4, class:"bg-transparent border border-white text-white text-center rounded" %>
-        </p>
-      </div>
-      <div>
-        <p class="my-2 mx-3"> Arqueologia:  
-          <%= f.number_field :arqueologia, in:0..4, class:"bg-transparent border border-white text-white text-center rounded" %>
-        </p>
-      </div>
-      <div>
-        <p class="my-2 mx-3"> Conducir:  
-          <%= f.number_field :conducir, in:0..6, class:"bg-transparent border border-white text-white text-center rounded" %>
-        </p>
-      </div>
-      <div>
-        <p class="my-2 mx-3"> Criminalistica:  
-          <%= f.number_field :criminalistica, in:0..4, class:"bg-transparent border border-white text-white text-center rounded" %>
-        </p>
-      </div>
-      <div>
-        <p class="my-2 mx-3"> Linguistica:   
-          <%= f.number_field :linguistica, in:0..10, class:"bg-transparent border border-white text-white text-center rounded" %>
-        </p>
-      </div>
-      <div>
-        <p class="my-2 mx-3"> Negocios:   
-          <%= f.number_field :negocios, in:0..4, class:"bg-transparent border border-white text-white text-center rounded" %>
-        </p>
-      </div>
-      <div>
-        <p class="my-2 mx-3"> Ocultismo:   
-          <%= f.number_field :ocultismo, in:0..7, class:"bg-transparent border border-white text-white text-center rounded" %>
-        </p>
-      </div>
-      <div>
-        <p class="my-2 mx-3"> Quimica:    
-          <%= f.number_field :quimica, in:0..4, class:"bg-transparent border border-white text-white text-center rounded" %>
-        </p>
-      </div>
-      <div>
-        <p class="my-2 mx-3"> Simpatia:    
-          <%= f.number_field :simpatia, in:0..4, class:"bg-transparent border border-white text-white text-center rounded" %>
-        </p>
-      </div>
-      <div>
-        <p class="my-2 mx-3"> Persuasion:     
-          <%= f.number_field :persuasion, in:0..5, class:"bg-transparent border border-white text-white text-center rounded" %>
-        </p>
-      </div>
-        <div>
-          <p class="my-2 mx-3"> Pilotear/Navegar:     
-            <%= f.number_field :pilotear_navegar, in:0..5, class:"bg-transparent border border-white text-white text-center rounded" %>
+          <div class="row align-items-baseline">
+            <p class="col-7 form-label text-start"> Armas de Larga Distancia:
+            </p>
+            <%= f.number_field :armas_larga_distancia, in:0..4, class:"bg-transparent border border-secondary text-white text-center rounded col-4 form-control-sm" %>
+          </div>
+          <div class="row align-items-baseline">
+            <p class="col-7 form-label text-start">Etiqueta:
+            </p>
+            <%= f.number_field :etiqueta, in:0..3, class:"bg-transparent border border-secondary text-white text-center rounded col-4 form-control-sm" %>
+          </div>
+          <div class="row align-items-baseline">
+            <p class="col-7 form-label text-start"> Fisica: 
+            </p>
+            <%= f.number_field :fisica, in:0..4, class:"bg-transparent border border-secondary text-white text-center rounded col-4 form-control-sm" %>
+          </div>
+          <div class="row align-items-baseline">
+          <p class="col-7 form-label text-start"> Informatica:  
           </p>
+          <%= f.number_field :informatica, in:0..4, class:"bg-transparent border border-secondary text-white text-center rounded col-4 form-control-sm" %>
+          </div>
+          <div class="row align-items-baseline">
+            <p class="col-7 form-label text-start"> Arqueologia:  
+            </p>
+            <%= f.number_field :arqueologia, in:0..4, class:"bg-transparent border border-secondary text-white text-center rounded col-4 form-control-sm" %>
+          </div>
+          <div class="row align-items-baseline">
+            <p class="col-7 form-label text-start"> Conducir:  
+            </p>
+            <%= f.number_field :conducir, in:0..6, class:"bg-transparent border border-secondary text-white text-center rounded col-4 form-control-sm" %>
+          </div>
+          <div class="row align-items-baseline">
+            <p class="col-7 form-label text-start"> Criminalistica:  
+            </p>
+            <%= f.number_field :criminalistica, in:0..4, class:"bg-transparent border border-secondary text-white text-center rounded col-4 form-control-sm" %>
+          </div>
+          <div class="row align-items-baseline">
+            <p class="col-7 form-label text-start"> Linguistica:   
+            </p>
+            <%= f.number_field :linguistica, in:0..10, class:"bg-transparent border border-secondary text-white text-center rounded col-4 form-control-sm" %>
+          </div>
         </div>
-        <div>
-          <p class="my-2 mx-3"> Autocontrol:     
-            <%= f.number_field :autocontrol, in:0..5, class:"bg-transparent border border-white text-white text-center rounded" %>
-          </p>
+        <div class="col">
+          <div class="row align-items-baseline">
+            <p class="col-7 form-label text-start"> Negocios:   
+            </p>
+            <%= f.number_field :negocios, in:0..4, class:"bg-transparent border border-secondary text-white text-center rounded col-4 form-control-sm" %>
+          </div>
+          <div class="row align-items-baseline">
+            <p class="col-7 form-label text-start"> Ocultismo:   
+            </p>
+            <%= f.number_field :ocultismo, in:0..7, class:"bg-transparent border border-secondary text-white text-center rounded col-4 form-control-sm" %>
+          </div>
+          <div class="row align-items-baseline">
+            <p class="col-7 form-label text-start"> Quimica:    
+            </p>
+            <%= f.number_field :quimica, in:0..4, class:"bg-transparent border border-secondary text-white text-center rounded col-4 form-control-sm" %>
+          </div>
+          <div class="row align-items-baseline">
+            <p class="col-7 form-label text-start"> Simpatia:    
+            </p>
+            <%= f.number_field :simpatia, in:0..4, class:"bg-transparent border border-secondary text-white text-center rounded col-4 form-control-sm" %>
+          </div>
+          <div class="row align-items-baseline">
+            <p class="col-7 form-label text-start"> Persuasion:     
+            </p>
+            <%= f.number_field :persuasion, in:0..5, class:"bg-transparent border border-secondary text-white text-center rounded col-4 form-control-sm" %>
+          </div>
+          <div class="row align-items-baseline">
+            <p class="col-7 form-label text-start">Pilotear / Navegar:     
+            </p>
+            <%= f.number_field :pilotear_navegar, in:0..5, class:"bg-transparent border border-secondary text-white text-center rounded col-4 form-control-sm" %>
+          </div>
+          <div class="row align-items-baseline">
+            <p class="col-7 form-label text-start"> Autocontrol:     
+            </p>
+            <%= f.number_field :autocontrol, in:0..5, class:"bg-transparent border border-secondary text-white text-center rounded col-4 form-control-sm" %>
+          </div>
+          <div class="row align-items-baseline">
+            <p class="col-7 form-label text-start"> Trato con animales:      
+            </p>
+            <%= f.number_field :trato_con_animales, in:0..7, class:"bg-transparent border border-secondary text-white text-center rounded col-4 form-control-sm" %>
+          </div>
+          <div class="row align-items-baseline">
+            <p class="col-7 form-label text-start"> Topografia geologia:      
+            </p>
+            <%= f.number_field :topografia_geologia, in:0..4, class:"bg-transparent border border-secondary text-white text-center rounded col-4 form-control-sm" %>
+          </div>
+          <div class="row align-items-baseline">
+            <p class="col-7 form-label text-start"> Supervivencia:      
+            </p>
+            <%= f.number_field :supervivencia, in:0..7, class:"bg-transparent border border-secondary text-white text-center rounded col-4 form-control-sm" %>
+          </div>
         </div>
-        <div>
-          <p class="my-2 mx-3"> Trato con animales:      
-            <%= f.number_field :trato_con_animales, in:0..7, class:"bg-transparent border border-white text-white text-center rounded" %>
-          </p>
-        </div>
-        <div>
-          <p class="my-2 mx-3"> Topografia geologia:      
-            <%= f.number_field :topografia_geologia, in:0..4, class:"bg-transparent border border-white text-white text-center rounded" %>
-          </p>
-        </div>
-        <div>
-          <p class="my-2 mx-3"> Supervivencia:      
-            <%= f.number_field :supervivencia, in:0..7, class:"bg-transparent border border-white text-white text-center rounded" %>
-          </p>
-        </div>
+
       </div>
     </div>
     
