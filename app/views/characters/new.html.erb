@@ -379,11 +379,18 @@
       valores = ptoCombate.map(p => parseInt(p.value))
       let reducer = (previousValue, currentValue) => previousValue + currentValue;
       totalCombate = valores.reduce(reducer);
-      document.getElementById("totalPtosCombate").innerHTML = "Te quedan..." + "<br>" + (ptosCombate - totalCombate) + "<br>" + " Solo tienes un intento camaron"
-      if (totalCombate >= ptosCombate ) {
+      let resta = (ptosCombate - totalCombate)
+      document.getElementById("totalPtosCombate").innerHTML = "Te quedan..." + "<br>" + resta  + "<br>" + " Solo tienes un intento camaron"
+      if (totalCombate == ptosCombate ) {
         alert('Suficiente! ya alcanzaste el computo hijo de la chingada');
         ptoCombate.map(p => p.disabled = true)
       }
+      if (totalCombate > ptosCombate ) {
+       alert('Querias pasarte de listo eh? Todo denuevo marionetita sin cuerda!')
+       ptoCombate.map(p => p.value = 0)
+      }
+
+
     })
   });
 
@@ -395,7 +402,17 @@
       valores = ptoPsicologia.map(p => parseInt(p.value));
       let reducer = (previousValue, currentValue) => previousValue + currentValue;
       totalPsicologia = valores.reduce(reducer);
-      document.getElementById("totalPtosPsicologia").innerHTML = "Te quedan..." + "<br>" + (ptosPsicologia+totalPsicologia) + "<br>" + " Solo un intento camaron. Solo uno!"
+      let resta = (ptosPsicologia-totalPsicologia)
+      document.getElementById("totalPtosPsicologia").innerHTML = "Te quedan..." + "<br>" + resta + "<br>" + " Solo un intento camaron. Solo uno!"
+      if (totalPsicologia == ptosPsicologia ) {
+        alert('Suficiente! ya alcanzaste el limite Rupertita');
+        ptoPsicologia.map(p => p.disabled = true)
+      }
+      if (totalPsicologia > ptosPsicologia ) {
+       alert('Querias pasarte de listo eh? Todo denuevo marionetita sin cuerda!')
+       ptoPsicologia.map(p => p.value = 0)       
+      }
+    
     })
   })
 
