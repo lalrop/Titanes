@@ -70,18 +70,19 @@
       </div> 
       <div class="col">
         <label class="form-label">Frenesis</label>
-        <%= f.number_field :frenesis, min:0, max:45, class:"bg-transparent border border-secondary text-white text-center rounded col-md-4 form-control-sm " %><br>
+        <%= f.number_field :frenesis, min:0, max:45, required: true, class:"bg-transparent border border-secondary text-white text-center rounded col-md-4 form-control-sm " %><br>
       </div>
     </div>    
     
-    <div class="my-3">
-    </div>
-
+    
     <%# Seccion Combate %>
     <div class="row">
       <div class="my-3 d-none" id="ptosCombate" >
         <h2>Combate</h2>
-        <p class="border-top border-bottom border-white py-2" id="textoPtosCombate"></p>
+        <div class="border-top border-bottom border-white my-3">
+          <p id="textoPtosCombate"></p>
+          <p id="totalPtosCombate"></p>
+        </div>
         <div class="row">
           <div class="col">
             <div class="row align-items-baseline">
@@ -138,122 +139,127 @@
           </div>
         </div>
       </div>
+    </div>
     
      <%# Seccion Psicologia y Conocimientos %>
-    <div class="my-3 d-none" id="ptosPsicologia">
-      <h2 class="my-3 text-center" >Psicologia y Conocimientos</h2>
-      <p class="border-top border-bottom border-white py-2" id="textoPsicologia"></p>
-      <div class="row">
-        <div class="col">
-          <div class="row align-items-baseline">
-            <p class="col-7 form-label text-start">Armas C.C:
-            </p>
-            <%= f.number_field :armas_cc, in:0..6, class:"bg-transparent border border-secondary text-white text-center rounded col-4 form-control-sm" %>
-          </div>
-          <div class="row align-items-baseline">
-            <p class="col-7 form-label text-start">Armas de fuego:
-            </p>
-            <%= f.number_field :armas_de_fuego, in:0..7, class:"bg-transparent border border-secondary text-white text-center rounded col-4 form-control-sm" %>
-          </div>
-          <div class="row align-items-baseline">
-            <p class="col-7 form-label text-start"> Armas de Larga Distancia:
-            </p>
-            <%= f.number_field :armas_larga_distancia, in:0..4, class:"bg-transparent border border-secondary text-white text-center rounded col-4 form-control-sm" %>
-          </div>
-          <div class="row align-items-baseline">
-            <p class="col-7 form-label text-start">Etiqueta:
-            </p>
-            <%= f.number_field :etiqueta, in:0..3, class:"bg-transparent border border-secondary text-white text-center rounded col-4 form-control-sm" %>
-          </div>
-          <div class="row align-items-baseline">
-            <p class="col-7 form-label text-start"> Fisica: 
-            </p>
-            <%= f.number_field :fisica, in:0..4, class:"bg-transparent border border-secondary text-white text-center rounded col-4 form-control-sm" %>
-          </div>
-          <div class="row align-items-baseline">
-          <p class="col-7 form-label text-start"> Informatica:  
-          </p>
-          <%= f.number_field :informatica, in:0..4, class:"bg-transparent border border-secondary text-white text-center rounded col-4 form-control-sm" %>
-          </div>
-          <div class="row align-items-baseline">
-            <p class="col-7 form-label text-start"> Arqueologia:  
-            </p>
-            <%= f.number_field :arqueologia, in:0..4, class:"bg-transparent border border-secondary text-white text-center rounded col-4 form-control-sm" %>
-          </div>
-          <div class="row align-items-baseline">
-            <p class="col-7 form-label text-start"> Conducir:  
-            </p>
-            <%= f.number_field :conducir, in:0..6, class:"bg-transparent border border-secondary text-white text-center rounded col-4 form-control-sm" %>
-          </div>
-          <div class="row align-items-baseline">
-            <p class="col-7 form-label text-start"> Criminalistica:  
-            </p>
-            <%= f.number_field :criminalistica, in:0..4, class:"bg-transparent border border-secondary text-white text-center rounded col-4 form-control-sm" %>
-          </div>
-          <div class="row align-items-baseline">
-            <p class="col-7 form-label text-start"> Linguistica:   
-            </p>
-            <%= f.number_field :linguistica, in:0..10, class:"bg-transparent border border-secondary text-white text-center rounded col-4 form-control-sm" %>
-          </div>
+    <div class="row">
+      <div class="my-3 d-none" id="ptosPsicologia">
+        <h2 class="my-3 text-center" >Psicologia y Conocimientos</h2>
+        <div class="border-top border-bottom border-white my-3">
+          <p id="textoPtosPsicologia"></p>
+          <p id="totalPtosPsicologia"></p>
         </div>
-        <div class="col">
-          <div class="row align-items-baseline">
-            <p class="col-7 form-label text-start"> Negocios:   
-            </p>
-            <%= f.number_field :negocios, in:0..4, class:"bg-transparent border border-secondary text-white text-center rounded col-4 form-control-sm" %>
-          </div>
-          <div class="row align-items-baseline">
-            <p class="col-7 form-label text-start"> Ocultismo:   
-            </p>
-            <%= f.number_field :ocultismo, in:0..7, class:"bg-transparent border border-secondary text-white text-center rounded col-4 form-control-sm" %>
-          </div>
-          <div class="row align-items-baseline">
-            <p class="col-7 form-label text-start"> Quimica:    
-            </p>
-            <%= f.number_field :quimica, in:0..4, class:"bg-transparent border border-secondary text-white text-center rounded col-4 form-control-sm" %>
-          </div>
-          <div class="row align-items-baseline">
-            <p class="col-7 form-label text-start"> Simpatia:    
-            </p>
-            <%= f.number_field :simpatia, in:0..4, class:"bg-transparent border border-secondary text-white text-center rounded col-4 form-control-sm" %>
-          </div>
-          <div class="row align-items-baseline">
-            <p class="col-7 form-label text-start"> Persuasion:     
-            </p>
-            <%= f.number_field :persuasion, in:0..5, class:"bg-transparent border border-secondary text-white text-center rounded col-4 form-control-sm" %>
-          </div>
-          <div class="row align-items-baseline">
-            <p class="col-7 form-label text-start">Pilotear / Navegar:     
-            </p>
-            <%= f.number_field :pilotear_navegar, in:0..5, class:"bg-transparent border border-secondary text-white text-center rounded col-4 form-control-sm" %>
-          </div>
-          <div class="row align-items-baseline">
-            <p class="col-7 form-label text-start"> Autocontrol:     
-            </p>
-            <%= f.number_field :autocontrol, in:0..5, class:"bg-transparent border border-secondary text-white text-center rounded col-4 form-control-sm" %>
-          </div>
-          <div class="row align-items-baseline">
-            <p class="col-7 form-label text-start"> Trato con animales:      
-            </p>
-            <%= f.number_field :trato_con_animales, in:0..7, class:"bg-transparent border border-secondary text-white text-center rounded col-4 form-control-sm" %>
-          </div>
-          <div class="row align-items-baseline">
-            <p class="col-7 form-label text-start"> Topografia geologia:      
-            </p>
-            <%= f.number_field :topografia_geologia, in:0..4, class:"bg-transparent border border-secondary text-white text-center rounded col-4 form-control-sm" %>
-          </div>
-          <div class="row align-items-baseline">
-            <p class="col-7 form-label text-start"> Supervivencia:      
-            </p>
-            <%= f.number_field :supervivencia, in:0..7, class:"bg-transparent border border-secondary text-white text-center rounded col-4 form-control-sm" %>
-          </div>
+        <div class="row">
+           <div class="col">
+             <div class="row align-items-baseline">
+               <p class="col-7 form-label text-start">Armas C.C:
+               </p>
+               <%= f.number_field :armas_cc, in:0..6, class:"bg-transparent border border-secondary text-white text-center rounded col-4 form-control-sm ptoPsicologia", value:"0" %>
+             </div>
+             <div class="row align-items-baseline">
+               <p class="col-7 form-label text-start">Armas de fuego:
+               </p>
+               <%= f.number_field :armas_de_fuego, in:0..7, class:"bg-transparent border border-secondary text-white text-center rounded col-4 form-control-sm ptoPsicologia", value:"0" %>
+             </div>
+             <div class="row align-items-baseline">
+               <p class="col-7 form-label text-start"> Armas de Larga Distancia:
+               </p>
+               <%= f.number_field :armas_larga_distancia, in:0..4, class:"bg-transparent border border-secondary text-white text-center rounded col-4 form-control-sm ptoPsicologia", value:"0" %>
+             </div>
+             <div class="row align-items-baseline">
+               <p class="col-7 form-label text-start">Etiqueta:
+               </p>
+               <%= f.number_field :etiqueta, in:0..3, class:"bg-transparent border border-secondary text-white text-center rounded col-4 form-control-sm ptoPsicologia", value:"0" %>
+             </div>
+             <div class="row align-items-baseline">
+               <p class="col-7 form-label text-start"> Fisica: 
+               </p>
+               <%= f.number_field :fisica, in:0..4, class:"bg-transparent border border-secondary text-white text-center rounded col-4 form-control-sm ptoPsicologia", value:"0" %>
+             </div>
+             <div class="row align-items-baseline">
+             <p class="col-7 form-label text-start"> Informatica:  
+             </p>
+             <%= f.number_field :informatica, in:0..4, class:"bg-transparent border border-secondary text-white text-center rounded col-4 form-control-sm ptoPsicologia", value:"0" %>
+             </div>
+             <div class="row align-items-baseline">
+               <p class="col-7 form-label text-start"> Arqueologia:  
+               </p>
+               <%= f.number_field :arqueologia, in:0..4, class:"bg-transparent border border-secondary text-white text-center rounded col-4 form-control-sm ptoPsicologia", value:"0" %>
+             </div>
+             <div class="row align-items-baseline">
+               <p class="col-7 form-label text-start"> Conducir:  
+               </p>
+               <%= f.number_field :conducir, in:0..6, class:"bg-transparent border border-secondary text-white text-center rounded col-4 form-control-sm ptoPsicologia", value:"0" %>
+             </div>
+             <div class="row align-items-baseline">
+               <p class="col-7 form-label text-start"> Criminalistica:  
+               </p>
+               <%= f.number_field :criminalistica, in:0..4, class:"bg-transparent border border-secondary text-white text-center rounded col-4 form-control-sm ptoPsicologia", value:"0" %>
+             </div>
+             <div class="row align-items-baseline">
+               <p class="col-7 form-label text-start"> Linguistica:   
+               </p>
+               <%= f.number_field :linguistica, in:0..10, class:"bg-transparent border border-secondary text-white text-center rounded col-4 form-control-sm ptoPsicologia", value:"0" %>
+             </div>
+           </div>
+           <div class="col">
+             <div class="row align-items-baseline">
+               <p class="col-7 form-label text-start"> Negocios:   
+               </p>
+               <%= f.number_field :negocios, in:0..4, class:"bg-transparent border border-secondary text-white text-center rounded col-4 form-control-sm ptoPsicologia", value:"0" %>
+             </div>
+             <div class="row align-items-baseline">
+               <p class="col-7 form-label text-start"> Ocultismo:   
+               </p>
+               <%= f.number_field :ocultismo, in:0..7, class:"bg-transparent border border-secondary text-white text-center rounded col-4 form-control-sm ptoPsicologia", value:"0" %>
+             </div>
+             <div class="row align-items-baseline">
+               <p class="col-7 form-label text-start"> Quimica:    
+               </p>
+               <%= f.number_field :quimica, in:0..4, class:"bg-transparent border border-secondary text-white text-center rounded col-4 form-control-sm ptoPsicologia", value:"0" %>
+             </div>
+             <div class="row align-items-baseline">
+               <p class="col-7 form-label text-start"> Simpatia:    
+               </p>
+               <%= f.number_field :simpatia, in:0..4, class:"bg-transparent border border-secondary text-white text-center rounded col-4 form-control-sm ptoPsicologia", value:"0" %>
+             </div>
+             <div class="row align-items-baseline">
+               <p class="col-7 form-label text-start"> Persuasion:     
+               </p>
+               <%= f.number_field :persuasion, in:0..5, class:"bg-transparent border border-secondary text-white text-center rounded col-4 form-control-sm ptoPsicologia", value:"0" %>
+             </div>
+             <div class="row align-items-baseline">
+               <p class="col-7 form-label text-start">Pilotear / Navegar:     
+               </p>
+               <%= f.number_field :pilotear_navegar, in:0..5, class:"bg-transparent border border-secondary text-white text-center rounded col-4 form-control-sm ptoPsicologia", value:"0" %>
+             </div>
+             <div class="row align-items-baseline">
+               <p class="col-7 form-label text-start"> Autocontrol:     
+               </p>
+               <%= f.number_field :autocontrol, in:0..5, class:"bg-transparent border border-secondary text-white text-center rounded col-4 form-control-sm ptoPsicologia", value:"0" %>
+             </div>
+             <div class="row align-items-baseline">
+               <p class="col-7 form-label text-start"> Trato con animales:      
+               </p>
+               <%= f.number_field :trato_con_animales, in:0..7, class:"bg-transparent border border-secondary text-white text-center rounded col-4 form-control-sm ptoPsicologia", value:"0" %>
+             </div>
+             <div class="row align-items-baseline">
+               <p class="col-7 form-label text-start"> Topografia geologia:      
+               </p>
+               <%= f.number_field :topografia_geologia, in:0..4, class:"bg-transparent border border-secondary text-white text-center rounded col-4 form-control-sm ptoPsicologia", value:"0" %>
+             </div>
+             <div class="row align-items-baseline">
+               <p class="col-7 form-label text-start"> Supervivencia:      
+               </p>
+               <%= f.number_field :supervivencia, in:0..7, class:"bg-transparent border border-secondary text-white text-center rounded col-4 form-control-sm ptoPsicologia", value:"0" %>
+             </div>
+           </div>
         </div>
-
-      </div>
+       </div>
     </div>
     
     <div>
-      <%= f.submit 'Crear Personaje', class:"btn btn-danger my-4", id:"btnCrearPj" %>
+      <%= f.submit 'Crear Personaje', class:"btn btn-danger my-4 disabled", id:"btnCrearPj" %>
     </div>
     <%end%> 
     </div>
@@ -280,6 +286,8 @@
 
   let ptosCombate = 0;
   let totalPtos = 0;
+  let totalCombate = 0;
+  let totalPsicologia = 0;
 
   let ptosPsicologia = 0;
 
@@ -342,8 +350,8 @@
       default:
       break;
     }
-    document.getElementById('textoPtosCombate').innerHTML = "Reparte <strong>" + ptosCombate + "</strong> en los siguientes atributos";
-    document.getElementById('textoPsicologia').innerHTML = "Reparte <strong>" + ptosPsicologia + "</strong> en los siguientes atributos"
+    document.getElementById('textoPtosCombate').innerHTML = "Reparte <strong>" + ptosCombate + "</strong> en los siguientes atributos:"
+    document.getElementById('textoPtosPsicologia').innerHTML = "Reparte <strong>" + ptosPsicologia + "</strong> en los siguientes atributos"
   })
 
   let ptosPot = document.getElementById("character_potencialidad");
@@ -353,9 +361,13 @@
     let totalPtos = parseInt(ptosPot.value) + parseInt(ptosFren.value);
     if (totalPtos == 45) {
       alert('Bien hecho chamaco');
-      document.getElementById('btnCrearPj').classList.toggle('disabled');
       document.getElementById('ptosCombate').classList.remove('d-none');
       document.getElementById('ptosPsicologia').classList.remove('d-none');
+    }
+    if (totalPtos > 45) {
+      alert('Pero que estas haciendo garbanzo! Solo 45! ');
+      ptosPot.value = ''
+      ptosFren.value = ''
     }
   })
 
@@ -366,14 +378,26 @@
     pto.addEventListener('change',function () {
       valores = ptoCombate.map(p => parseInt(p.value))
       let reducer = (previousValue, currentValue) => previousValue + currentValue;
-      let total = valores.reduce(reducer);
-      if (ptosCombate == total) {
-        alert('Suficiente! ya alcanzaste el computo hijo de la chingada')
-        document.getElementById('btnCrearPj').classList.remove('disabled')
+      totalCombate = valores.reduce(reducer);
+      document.getElementById("totalPtosCombate").innerHTML = "Te quedan..." + "<br>" + (ptosCombate - totalCombate) + "<br>" + " Solo tienes un intento camaron"
+      if (totalCombate >= ptosCombate ) {
+        alert('Suficiente! ya alcanzaste el computo hijo de la chingada');
+        ptoCombate.map(p => p.disabled = true)
       }
     })
   });
 
+  // sumando ptos psicologia
+  let ptoPsicologia = document.getElementsByClassName("ptoPsicologia");
+  ptoPsicologia = Object.values(ptoPsicologia);
+  ptoPsicologia.forEach(pto => {
+    pto.addEventListener('change',function () {
+      valores = ptoPsicologia.map(p => parseInt(p.value));
+      let reducer = (previousValue, currentValue) => previousValue + currentValue;
+      totalPsicologia = valores.reduce(reducer);
+      document.getElementById("totalPtosPsicologia").innerHTML = "Te quedan..." + "<br>" + (ptosPsicologia+totalPsicologia) + "<br>" + " Solo un intento camaron. Solo uno!"
+    })
+  })
 
 
 </script>
