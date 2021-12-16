@@ -16,7 +16,7 @@
   <div class="col-md-4 col-xs-12 my-3">
   <%= form_for @character do |f| %>
     
-  <div class="my-3">
+    <div class="my-3">
       <strong>Imagen (opcional):</strong> <%= f.text_field :avatar, placeholder:'Pega la url de tu imagen', class:"bg-dark text-white"%>
     </div>
 
@@ -86,55 +86,55 @@
         <div class="row">
           <div class="col">
             <div class="row align-items-baseline">
-              <p class="col-8 form-label text-start">Atletismo:</p>
-              <%= f.number_field :atletismo, in:0..10, class:"bg-transparent border border-secondary text-white text-center rounded col-4 form-control-sm ptoCombate", value:"0" %>
+              <label class="col-8 form-label text-start">Atletismo:</label>
+              <%= f.number_field :atletismo, in:0..10, class:"bg-transparent border border-secondary text-white text-center rounded col-4 form-control-sm ptoCombate" %>
             </div>
             <div class="row align-items-baseline">
               <p class="col-8 form-label text-start">Estabilidad:</p>
-              <%= f.number_field :estabilidad, in:0..10 ,class:"bg-transparent border border-secondary text-white text-center rounded col-4 form-control-sm ptoCombate", value:"0"%>
+              <%= f.number_field :estabilidad, in:0..10 ,class:"bg-transparent border border-secondary text-white text-center rounded col-4 form-control-sm ptoCombate"%>
             </div>
             <div class="row align-items-baseline">
               <p class="col-8 form-label text-start">Pelea:</p>
-              <%= f.number_field :pelea, in:0..10 ,class:"bg-transparent border border-secondary text-white text-center rounded col-4 form-control-sm ptoCombate", value:"0"%>
+              <%= f.number_field :pelea, in:0..10 ,class:"bg-transparent border border-secondary text-white text-center rounded col-4 form-control-sm ptoCombate"%>
             </div>
             <div class="row align-items-baseline">
               <p class="col-8 form-label text-start">Destreza:</p>
-              <%= f.number_field :destreza, in:0..10 ,class:"bg-transparent border border-secondary text-white text-center rounded col-4 form-control-sm ptoCombate", value:"0"%>
+              <%= f.number_field :destreza, in:0..10 ,class:"bg-transparent border border-secondary text-white text-center rounded col-4 form-control-sm ptoCombate"%>
             </div>
             <div class="row align-items-baseline">
               <p class="col-8 form-label text-start">Esquivar:</p>
-              <%= f.number_field :esquivar, in:0..10 ,class:"bg-transparent border border-secondary text-white text-center rounded col-4 form-control-sm ptoCombate", value:"0"%>
+              <%= f.number_field :esquivar, in:0..10 ,class:"bg-transparent border border-secondary text-white text-center rounded col-4 form-control-sm ptoCombate"%>
             </div>
             <div class="row align-items-baseline">
               <p class="col-8 form-label text-start">Resistencia:</p>
-              <%= f.number_field :resistencia, in:0..10 ,class:"bg-transparent border border-secondary text-white text-center rounded col-4 form-control-sm ptoCombate", value:"0"%>
+              <%= f.number_field :resistencia, in:0..10 ,class:"bg-transparent border border-secondary text-white text-center rounded col-4 form-control-sm ptoCombate"%>
             </div>
             <div class="row align-items-baseline">
               <p class="col-8 form-label text-start">Fuerza:</p>
-              <%= f.number_field :fuerza, in:0..10 ,class:"bg-transparent border border-secondary text-white text-center rounded col-4 form-control-sm ptoCombate", value:"0"%>
+              <%= f.number_field :fuerza, in:0..10 ,class:"bg-transparent border border-secondary text-white text-center rounded col-4 form-control-sm ptoCombate"%>
             </div>
           </div>
 
           <div class="col">
             <div class="row align-items-baseline">
               <p class="col-8 form-label text-start">Finta:</p>
-              <%= f.number_field :finta, in:0..5 ,class:"bg-transparent border border-secondary text-white text-center rounded col-4 form-control-sm ptoCombate", value:"0"%>
+              <%= f.number_field :finta, in:0..5 ,class:"bg-transparent border border-secondary text-white text-center rounded col-4 form-control-sm ptoCombate"%>
             </div>
             <div class="row align-items-baseline">
               <p class="col-8 form-label text-start">Alerta:</p>
-              <%= f.number_field :alerta, in:0..5 ,class:"bg-transparent border border-secondary text-white text-center rounded col-4 form-control-sm ptoCombate", value:"0"%>
+              <%= f.number_field :alerta, in:0..5 ,class:"bg-transparent border border-secondary text-white text-center rounded col-4 form-control-sm ptoCombate"%>
             </div>
             <div class="row align-items-baseline">
               <p class="col-8 form-label text-start">Sigilo:</p>
-              <%= f.number_field :sigilo, in:0..5 ,class:"bg-transparent border border-secondary text-white text-center rounded col-4 form-control-sm ptoCombate", value:"0"%>
+              <%= f.number_field :sigilo, in:0..5 ,class:"bg-transparent border border-secondary text-white text-center rounded col-4 form-control-sm ptoCombate"%>
             </div>
             <div class="row align-items-baseline">
               <p class="col-8 form-label text-start">Percepcion espacial:</p>
-              <%= f.number_field :percep_espacial, in:0..5 ,class:"bg-transparent border border-secondary text-white text-center rounded col-4 form-control-sm ptoCombate", value:"0"%>
+              <%= f.number_field :percep_espacial, in:0..5 ,class:"bg-transparent border border-secondary text-white text-center rounded col-4 form-control-sm ptoCombate"%>
             </div>
             <div class="row align-items-baseline">
               <p class="col-8 form-label text-start">Medicina:</p>
-              <%= f.number_field :medicina, in:0..5 ,class:"bg-transparent border border-secondary text-white text-center rounded col-4 form-control-sm ptoCombate", value:"0"%>
+              <%= f.number_field :medicina, in:0..5 ,class:"bg-transparent border border-secondary text-white text-center rounded col-4 form-control-sm ptoCombate"%>
             </div>
           </div>
         </div>
@@ -154,104 +154,104 @@
              <div class="row align-items-baseline">
                <p class="col-7 form-label text-start">Armas C.C:
                </p>
-               <%= f.number_field :armas_cc, in:0..6, class:"bg-transparent border border-secondary text-white text-center rounded col-4 form-control-sm ptoPsicologia", value:"0" %>
+               <%= f.number_field :armas_cc, in:0..6, class:"bg-transparent border border-secondary text-white text-center rounded col-4 form-control-sm ptoPsicologia" %>
              </div>
              <div class="row align-items-baseline">
                <p class="col-7 form-label text-start">Armas de fuego:
                </p>
-               <%= f.number_field :armas_de_fuego, in:0..7, class:"bg-transparent border border-secondary text-white text-center rounded col-4 form-control-sm ptoPsicologia", value:"0" %>
+               <%= f.number_field :armas_de_fuego, in:0..7, class:"bg-transparent border border-secondary text-white text-center rounded col-4 form-control-sm ptoPsicologia" %>
              </div>
              <div class="row align-items-baseline">
                <p class="col-7 form-label text-start"> Armas de Larga Distancia:
                </p>
-               <%= f.number_field :armas_larga_distancia, in:0..4, class:"bg-transparent border border-secondary text-white text-center rounded col-4 form-control-sm ptoPsicologia", value:"0" %>
+               <%= f.number_field :armas_larga_distancia, in:0..4, class:"bg-transparent border border-secondary text-white text-center rounded col-4 form-control-sm ptoPsicologia" %>
              </div>
              <div class="row align-items-baseline">
                <p class="col-7 form-label text-start">Etiqueta:
                </p>
-               <%= f.number_field :etiqueta, in:0..3, class:"bg-transparent border border-secondary text-white text-center rounded col-4 form-control-sm ptoPsicologia", value:"0" %>
+               <%= f.number_field :etiqueta, in:0..3, class:"bg-transparent border border-secondary text-white text-center rounded col-4 form-control-sm ptoPsicologia" %>
              </div>
              <div class="row align-items-baseline">
                <p class="col-7 form-label text-start"> Fisica: 
                </p>
-               <%= f.number_field :fisica, in:0..4, class:"bg-transparent border border-secondary text-white text-center rounded col-4 form-control-sm ptoPsicologia", value:"0" %>
+               <%= f.number_field :fisica, in:0..4, class:"bg-transparent border border-secondary text-white text-center rounded col-4 form-control-sm ptoPsicologia" %>
              </div>
              <div class="row align-items-baseline">
              <p class="col-7 form-label text-start"> Informatica:  
              </p>
-             <%= f.number_field :informatica, in:0..4, class:"bg-transparent border border-secondary text-white text-center rounded col-4 form-control-sm ptoPsicologia", value:"0" %>
+             <%= f.number_field :informatica, in:0..4, class:"bg-transparent border border-secondary text-white text-center rounded col-4 form-control-sm ptoPsicologia" %>
              </div>
              <div class="row align-items-baseline">
                <p class="col-7 form-label text-start"> Arqueologia:  
                </p>
-               <%= f.number_field :arqueologia, in:0..4, class:"bg-transparent border border-secondary text-white text-center rounded col-4 form-control-sm ptoPsicologia", value:"0" %>
+               <%= f.number_field :arqueologia, in:0..4, class:"bg-transparent border border-secondary text-white text-center rounded col-4 form-control-sm ptoPsicologia" %>
              </div>
              <div class="row align-items-baseline">
                <p class="col-7 form-label text-start"> Conducir:  
                </p>
-               <%= f.number_field :conducir, in:0..6, class:"bg-transparent border border-secondary text-white text-center rounded col-4 form-control-sm ptoPsicologia", value:"0" %>
+               <%= f.number_field :conducir, in:0..6, class:"bg-transparent border border-secondary text-white text-center rounded col-4 form-control-sm ptoPsicologia" %>
              </div>
              <div class="row align-items-baseline">
                <p class="col-7 form-label text-start"> Criminalistica:  
                </p>
-               <%= f.number_field :criminalistica, in:0..4, class:"bg-transparent border border-secondary text-white text-center rounded col-4 form-control-sm ptoPsicologia", value:"0" %>
+               <%= f.number_field :criminalistica, in:0..4, class:"bg-transparent border border-secondary text-white text-center rounded col-4 form-control-sm ptoPsicologia" %>
              </div>
              <div class="row align-items-baseline">
                <p class="col-7 form-label text-start"> Linguistica:   
                </p>
-               <%= f.number_field :linguistica, in:0..10, class:"bg-transparent border border-secondary text-white text-center rounded col-4 form-control-sm ptoPsicologia", value:"0" %>
+               <%= f.number_field :linguistica, in:0..10, class:"bg-transparent border border-secondary text-white text-center rounded col-4 form-control-sm ptoPsicologia" %>
              </div>
            </div>
            <div class="col">
              <div class="row align-items-baseline">
                <p class="col-7 form-label text-start"> Negocios:   
                </p>
-               <%= f.number_field :negocios, in:0..4, class:"bg-transparent border border-secondary text-white text-center rounded col-4 form-control-sm ptoPsicologia", value:"0" %>
+               <%= f.number_field :negocios, in:0..4, class:"bg-transparent border border-secondary text-white text-center rounded col-4 form-control-sm ptoPsicologia" %>
              </div>
              <div class="row align-items-baseline">
                <p class="col-7 form-label text-start"> Ocultismo:   
                </p>
-               <%= f.number_field :ocultismo, in:0..7, class:"bg-transparent border border-secondary text-white text-center rounded col-4 form-control-sm ptoPsicologia", value:"0" %>
+               <%= f.number_field :ocultismo, in:0..7, class:"bg-transparent border border-secondary text-white text-center rounded col-4 form-control-sm ptoPsicologia" %>
              </div>
              <div class="row align-items-baseline">
                <p class="col-7 form-label text-start"> Quimica:    
                </p>
-               <%= f.number_field :quimica, in:0..4, class:"bg-transparent border border-secondary text-white text-center rounded col-4 form-control-sm ptoPsicologia", value:"0" %>
+               <%= f.number_field :quimica, in:0..4, class:"bg-transparent border border-secondary text-white text-center rounded col-4 form-control-sm ptoPsicologia" %>
              </div>
              <div class="row align-items-baseline">
                <p class="col-7 form-label text-start"> Simpatia:    
                </p>
-               <%= f.number_field :simpatia, in:0..4, class:"bg-transparent border border-secondary text-white text-center rounded col-4 form-control-sm ptoPsicologia", value:"0" %>
+               <%= f.number_field :simpatia, in:0..4, class:"bg-transparent border border-secondary text-white text-center rounded col-4 form-control-sm ptoPsicologia" %>
              </div>
              <div class="row align-items-baseline">
                <p class="col-7 form-label text-start"> Persuasion:     
                </p>
-               <%= f.number_field :persuasion, in:0..5, class:"bg-transparent border border-secondary text-white text-center rounded col-4 form-control-sm ptoPsicologia", value:"0" %>
+               <%= f.number_field :persuasion, in:0..5, class:"bg-transparent border border-secondary text-white text-center rounded col-4 form-control-sm ptoPsicologia" %>
              </div>
              <div class="row align-items-baseline">
                <p class="col-7 form-label text-start">Pilotear / Navegar:     
                </p>
-               <%= f.number_field :pilotear_navegar, in:0..5, class:"bg-transparent border border-secondary text-white text-center rounded col-4 form-control-sm ptoPsicologia", value:"0" %>
+               <%= f.number_field :pilotear_navegar, in:0..5, class:"bg-transparent border border-secondary text-white text-center rounded col-4 form-control-sm ptoPsicologia" %>
              </div>
              <div class="row align-items-baseline">
                <p class="col-7 form-label text-start"> Autocontrol:     
                </p>
-               <%= f.number_field :autocontrol, in:0..5, class:"bg-transparent border border-secondary text-white text-center rounded col-4 form-control-sm ptoPsicologia", value:"0" %>
+               <%= f.number_field :autocontrol, in:0..5, class:"bg-transparent border border-secondary text-white text-center rounded col-4 form-control-sm ptoPsicologia" %>
              </div>
              <div class="row align-items-baseline">
                <p class="col-7 form-label text-start"> Trato con animales:      
                </p>
-               <%= f.number_field :trato_con_animales, in:0..7, class:"bg-transparent border border-secondary text-white text-center rounded col-4 form-control-sm ptoPsicologia", value:"0" %>
+               <%= f.number_field :trato_con_animales, in:0..7, class:"bg-transparent border border-secondary text-white text-center rounded col-4 form-control-sm ptoPsicologia" %>
              </div>
              <div class="row align-items-baseline">
                <p class="col-7 form-label text-start"> Topografia geologia:      
                </p>
-               <%= f.number_field :topografia_geologia, in:0..4, class:"bg-transparent border border-secondary text-white text-center rounded col-4 form-control-sm ptoPsicologia", value:"0" %>
+               <%= f.number_field :topografia_geologia, in:0..4, class:"bg-transparent border border-secondary text-white text-center rounded col-4 form-control-sm ptoPsicologia" %>
              </div>
              <div class="row align-items-baseline">
                <p class="col-7 form-label text-start"> Supervivencia:      
                </p>
-               <%= f.number_field :supervivencia, in:0..7, class:"bg-transparent border border-secondary text-white text-center rounded col-4 form-control-sm ptoPsicologia", value:"0" %>
+               <%= f.number_field :supervivencia, in:0..7, class:"bg-transparent border border-secondary text-white text-center rounded col-4 form-control-sm ptoPsicologia" %>
              </div>
            </div>
         </div>
@@ -259,7 +259,7 @@
     </div>
     
     <div>
-      <%= f.submit 'Crear Personaje', class:"btn btn-danger my-4 disabled", id:"btnCrearPj" %>
+      <%= f.submit 'Crear Personaje', class:"btn btn-danger my-4"%>
     </div>
     <%end%> 
     </div>
@@ -270,8 +270,7 @@
   <%= button_to 'Salir', characters_path, method: :get, class:"btn btn-light"%>
 </div>
     
-    
-    
+
 <script>
   const name = document.getElementById('character_name');
   const distrito = document.getElementById('character_distrito_id');
@@ -360,7 +359,6 @@
   ptosFren.addEventListener('change', function () {  
     let totalPtos = parseInt(ptosPot.value) + parseInt(ptosFren.value);
     if (totalPtos == 45) {
-      alert('Bien hecho chamaco');
       document.getElementById('ptosCombate').classList.remove('d-none');
       document.getElementById('ptosPsicologia').classList.remove('d-none');
     }
@@ -368,6 +366,9 @@
       alert('Pero que estas haciendo garbanzo! Solo 45! ');
       ptosPot.value = ''
       ptosFren.value = ''
+    }
+    if (totalPtos < 45) {
+      alert('Aun te sobran puntos cigueña!');
     }
   })
 
@@ -377,13 +378,13 @@
   ptoCombate.forEach(pto => {
     pto.addEventListener('change',function () {
       valores = ptoCombate.map(p => parseInt(p.value))
+      valores = valores.filter(p => p >= 0);
       let reducer = (previousValue, currentValue) => previousValue + currentValue;
       totalCombate = valores.reduce(reducer);
-      let resta = (ptosCombate - totalCombate)
+      let resta = (ptosCombate - totalCombate);
       document.getElementById("totalPtosCombate").innerHTML = "Te quedan..." + "<br>" + resta  + "<br>" + " Solo tienes un intento camaron"
       if (totalCombate == ptosCombate ) {
         alert('Suficiente! ya alcanzaste el computo hijo de la chingada');
-        ptoCombate.map(p => p.disabled = true)
       }
       if (totalCombate > ptosCombate ) {
        alert('Querias pasarte de listo eh? Todo denuevo marionetita sin cuerda!')
@@ -400,21 +401,18 @@
   ptoPsicologia.forEach(pto => {
     pto.addEventListener('change',function () {
       valores = ptoPsicologia.map(p => parseInt(p.value));
+      valores = valores.filter(p => p >= 0);
       let reducer = (previousValue, currentValue) => previousValue + currentValue;
       totalPsicologia = valores.reduce(reducer);
-      let resta = (ptosPsicologia-totalPsicologia)
+      let resta = (ptosPsicologia-totalPsicologia);
       document.getElementById("totalPtosPsicologia").innerHTML = "Te quedan..." + "<br>" + resta + "<br>" + " Solo un intento camaron. Solo uno!"
       if (totalPsicologia == ptosPsicologia ) {
         alert('Suficiente! ya alcanzaste el limite Rupertita');
-        ptoPsicologia.map(p => p.disabled = true)
       }
       if (totalPsicologia > ptosPsicologia ) {
        alert('Querias pasarte de listo eh? Todo denuevo marionetita sin cuerda!')
        ptoPsicologia.map(p => p.value = 0)       
       }
-    
     })
   })
-
-
 </script>
