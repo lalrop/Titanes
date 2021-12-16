@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
   devise_for :users
   resources :characters
+  resources :kitarmas
 
   get '/masters/distritos', to: 'masters#distritos'
   get '/masters/razas', to: 'masters#razas'

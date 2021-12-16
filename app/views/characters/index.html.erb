@@ -128,10 +128,6 @@
                         </h2>
                     </div>
 
-                    <%# Desplegable Armas %>
-                    <div class="accordion-item">
-                    </div>
-
                     <%# Desplegable Combate %>
                     <div class="accordion-item">
                         <h2 class="accordion-header bg-dark border border-light text-light py-2">
@@ -227,7 +223,13 @@
                     </div>
                 </div>
 
-                
+                <%# Asignar armas %>
+                        <%= form_with(model: @kitarma, url: kitarmas_path) do |form| %>
+                            <%= form.number_field :character_id %>
+                            <%= form.number_field :arma_id %>
+                            <%= form.submit%>
+                        <% end %>               
+            
 
                 <%# Botones Editar y Eliminar %>
                 <div class="row my-3">

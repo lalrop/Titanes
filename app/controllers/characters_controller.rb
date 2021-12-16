@@ -5,6 +5,7 @@ class CharactersController < ApplicationController
       @characters = Character.all
     else
       @characters = Character.where(user_id:current_user.id)    
+      @kitarma = Kitarma.new
     end
   end
 
