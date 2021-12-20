@@ -11,6 +11,7 @@ class CharactersController < ApplicationController
 
   def new
     @character = Character.new
+    @weapon = Weapon.new
   end
 
   def create
@@ -22,6 +23,7 @@ class CharactersController < ApplicationController
     @character.hambre = 100
     @character.hidratacion = 100
     @character.save
+    @weapon = Weapon.create(character_id:@character[:id])
     redirect_to characters_path
   end
 
@@ -36,6 +38,7 @@ class CharactersController < ApplicationController
 
   def show
     @character = Character.find(params[:id])
+    @armas = Arma.all
   end
 
   def destroy

@@ -1,8 +1,8 @@
 Rails.application.routes.draw do
   devise_for :users
-  resources :characters
-  resources :kitarmas
-
+  resources :characters do
+    resources :weapons
+  end
   get '/masters/distritos', to: 'masters#distritos'
   get '/masters/razas', to: 'masters#razas'
   get '/masters/tecnicas', to: 'masters#tecnicas'

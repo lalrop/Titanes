@@ -221,6 +221,20 @@
                             </div>
                         </div>
                     </div>
+                    
+                    <%# Seccion Armas %>
+                    <div class="accordion-item">
+                        <button class="accordion-button bg-dark text-light" type="button" data-bs-toggle="collapse" data-bs-target="#collapseNine" aria-expanded="true" aria-controls="collapseNine">
+                            <h3 class="accordion-header bg-dark text-light py-2 text-center">Armas</h2>
+                        </button>
+                        <div id="collapseNine" class="accordion-collapse collapse bg-transparent" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                            <div class="accordion-body bg-dark">
+                                <%=link_to 'Arsenal', character_path(character), class:"btn btn-warning" %>
+                            </div>
+                        </div>
+
+                    </div>
+
                 </div>
 
                 <%# Asignar armas %>
