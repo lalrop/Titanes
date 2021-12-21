@@ -1,47 +1,124 @@
 <div class="row">
-    <div class="col-md-2 col-xs-12"></div>
-    <div class="col-md-8 col-xs-12">
+    <div class="col-md-1 col-xs-12"></div>
+    <div class="col-md-10 col-xs-12">
         <div class="row">
             <h2 class="text-center">Arsenal</h2>
+            <p> Selecciona tus armas en base a su tipo. Recuerda camaron, para poder usarlas necesitas el conocimiento necesario (Armas C.C, Armas de Fuego y Armas Larga Distancia)</p>
             <%= form_with(model: [ @character, @character.weapons.build ], url: character_weapon_path(@character), method: "patch") do |form| %>
-            <div clas="row">
-                <div class="col-md-5 col-xs-12">
-                    <%# Arma 1 %>
-                    <div class="text-start d-flex">
-                        <div class="col-md-6">
-                            <p>Selecciona un arma:</p>
+           
+            <%# Seccion Arma 1 %>
+            <div class="row border-top border-bottom py-3">
+                <%# Seccion de seleccion %>
+                <div class="col-md-4 col-xs-12">
+                    <div class="row text-start d-flex">
+                        <div class="col-6">
+                            <input type="radio" class="btn-check" name="options" id="option1" autocomplete="off">
+                            <label class="btn btn-secondary" for="option1">Armas CC</label>
+
+                            <input type="radio" class="btn-check" name="options" id="option2" autocomplete="off">
+                            <label class="btn btn-secondary" for="option2">Armas de Fuego</label>
+
+                            <input type="radio" class="btn-check" name="options" id="option3" autocomplete="off">
+                            <label class="btn btn-secondary" for="option3">Armaduras</label>
                         </div>
-                        <div class="col-md-8">
-                            <%= form.collection_select :id_arma1, Arma.all.order(:nombre), :id, :nombre, options = {:prompt => 'Selecciona un arma'}, html_options = {class: "form-select form-select-sm col-md-4"}%>                    
+                        <div class="col-6">
+                            <div>
+                                <%= form.collection_select :id_arma1, Arma.where(tipo:["Sencilla","Marcial","Exotica"]), :id, :nombre, options = {:prompt => 'Selecciona un arma'}, html_options = {class: "form-select form-select-sm col-md-4"}%>
+                            </div>
+                            <div>
+                                <%= form.collection_select :id_arma1, Arma.where(tipo:["Rifle","Subfusil","Revolver","Pistola","Fusil de Asalto","Arma pesada","Escopeta","Ametralladora ligera"]), :id, :nombre, options = {:prompt => 'Selecciona un arma'}, html_options = {class: "form-select form-select-sm col-md-4 disabled"}%>
+                            </div>
+                            <div>
+                                <%= form.collection_select :id_arma1, Arma.where(tipo:["Armadura"]), :id, :nombre, options = {:prompt => 'Selecciona un arma'}, html_options = {class: "form-select form-select-sm col-md-4 disabled"}%>
+                            </div> 
                         </div>
-                    </div>
-                    <%# Buscar arma %>
-                    <div>
-                        <%= form.submit 'Agregar Arma 1', class:'btn btn-danger'%>
                     </div>
                 </div>
+                <%# Seccion detalle del arma actual %>
                 <div class="col-md-8 col-xs-12">
-
+                    <dl>
+                        <div class="row"> 
+                            <div class="row text-start">
+                                <dt class="col-6">Nombre :</dt>
+                                <dd class="col-6 text-start"><%=@id_arma1[:nombre]%><dd>
+                            </div>
+                            <div class="col-6 text-start">
+                                <div class="row">
+                                    <dt class="col-3">Tipo: </dt>
+                                    <dd class="col-5"><%=@id_arma1[:tipo]%>
+                                    </dd>
+                                </div>
+                            </div>
+                            <div class="col-6 text-start">
+                                <div class="row">
+                                    <dt class="col-3">Atributo: </dt>
+                                    <dd class="col-5"><%=@id_arma1[:atributo]%></dd>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row"> 
+                            <div class="col-6 text-start">
+                                <div class="row">
+                                    <dt class="col-3">Daño: </dt>
+                                    <dd class="col-5"><%=@id_arma1[:dano]%></dd>
+                                </div>
+                            </div>
+                            <div class="col-6 text-start">
+                                <div class="row">
+                                    <dt class="col-3">Velocidad: </dt>
+                                    <dd class="col-5"><%=@id_arma1[:velocidad]%></dd>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row"> 
+                            <div class="col-6 text-start">
+                                <div class="row">
+                                    <dt class="col-8">Distancia/ Rango: </dt>
+                                    <dd class="col-4"><%=@id_arma1[:distanciaRango]%></dd>
+                                </div>
+                            </div>
+                            <div class="col-6 text-start">
+                                <div class="row">
+                                    <dt class="col-3">Cadencia: </dt>
+                                    <dd class="col-5"><%=@id_arma1[:cadencia]%></dd>
+                                </div>
+                            </div>
+                        </div>
+                    </dl>
                 </div>
             </div>
+
+                    <%= button_to 'Actualizar arsenal', class:'btn btn-danger', action: "update"%>
         </div>
         
         <% end %>
         
     </div>
 
-    <div class="col-md-2 col-xs-12"></div>
+    <div class="col-md-1 col-xs-12"></div>
 </div>
 
 
 
 
 <script>
-    let  radio = document.getElementsByClassName("form-check-input");
-    radio = Object.values(radio);
-    radio.forEach(check => {
-        check.addEventListener('click', function () {
-            x = this
+    let radio = Object.values(document.getElementsByClassName("btn-check"));
+    
+    radio.forEach(element => {
+        element.addEventListener('click', function () {
+            element.parentElement.nextElementSibling.innerHTML = htmlArmasCC;
+            // switch (element.name) {
+            //     case "armasCC":
+                    
+            //     break;
+            //     case "armasDeFuego":
+                
+            //     break;
+            
+            //     default:
+            //     break;
+            
         })
     });
 </script>
+

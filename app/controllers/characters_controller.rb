@@ -23,7 +23,8 @@ class CharactersController < ApplicationController
     @character.hambre = 100
     @character.hidratacion = 100
     @character.save
-    @weapon = Weapon.create(character_id:@character[:id])
+    @weapon = Weapon.create(character_id:@character[:id],id_arma1:134,id_arma2:134,id_arma3:134,id_arma4:134,id_arma5:134,id_arma6:134)
+
     redirect_to characters_path
   end
 
@@ -38,7 +39,52 @@ class CharactersController < ApplicationController
 
   def show
     @character = Character.find(params[:id])
+    @weapon = Weapon.where(character_id:(params[:id]))
     @armas = Arma.all
+    # @objetoCharacterWeapon = Character.find(@character.id).weapons[0]
+    @id_arma1 = {nombre:Arma.find(@weapon[0].id_arma1).nombre,
+                tipo:Arma.find(@weapon[0].id_arma1).tipo,
+                dano:Arma.find(@weapon[0].id_arma1).dano,
+                velocidad:Arma.find(@weapon[0].id_arma1).velocidad,
+                distanciaRango:Arma.find(@weapon[0].id_arma1).distanciaRango,
+                atributo: Arma.find(@weapon[0].id_arma1).atributo,
+                cadencia: Arma.find(@weapon[0].id_arma1).cadencia
+              }
+    # @id_arma2 = {nombre:Arma.find(Character.find(@character.id).weapons[0].id_arma2).nombre,
+    #               tipo:Arma.find(Character.find(@character.id).weapons[0].id_arma2).tipo,
+    #               dano:Arma.find(Character.find(@character.id).weapons[0].id_arma2).dano,
+    #               distancia:Arma.find(Character.find(@character.id).weapons[0].id_arma2).distanciaRango,
+    #               atributo: Arma.find(Character.find(@character.id).weapons[0].id_arma2).atributo,
+    #               cadencia: Arma.find(Character.find(@character.id).weapons[0].id_arma2).cadencia
+    #             }
+    # @id_arma3 = {nombre:Arma.find(Character.find(@character.id).weapons[0].id_arma3).nombre,
+    #               tipo:Arma.find(Character.find(@character.id).weapons[0].id_arma3).tipo,
+    #               dano:Arma.find(Character.find(@character.id).weapons[0].id_arma3).dano,
+    #               distancia:Arma.find(Character.find(@character.id).weapons[0].id_arma3).distanciaRango,
+    #               atributo: Arma.find(Character.find(@character.id).weapons[0].id_arma3).atributo,
+    #               cadencia: Arma.find(Character.find(@character.id).weapons[0].id_arma3).cadencia
+    #             }
+    # @id_arma4 = {nombre:Arma.find(Character.find(@character.id).weapons[0].id_arma4).nombre,
+    #               tipo:Arma.find(Character.find(@character.id).weapons[0].id_arma4).tipo,
+    #               dano:Arma.find(Character.find(@character.id).weapons[0].id_arma4).dano,
+    #               distancia:Arma.find(Character.find(@character.id).weapons[0].id_arma4).distanciaRango,
+    #               atributo: Arma.find(Character.find(@character.id).weapons[0].id_arma4).atributo,
+    #               cadencia: Arma.find(Character.find(@character.id).weapons[0].id_arma4).cadencia
+    #             }
+    # @id_arma5 = {nombre:Arma.find(Character.find(@character.id).weapons[0].id_arma5).nombre,
+    #               tipo:Arma.find(Character.find(@character.id).weapons[0].id_arma5).tipo,
+    #               dano:Arma.find(Character.find(@character.id).weapons[0].id_arma5).dano,
+    #               distancia:Arma.find(Character.find(@character.id).weapons[0].id_arma5).distanciaRango,
+    #               atributo: Arma.find(Character.find(@character.id).weapons[0].id_arma5).atributo,
+    #               cadencia: Arma.find(Character.find(@character.id).weapons[0].id_arma5).cadencia
+    #             }
+    # @id_arma6 = {nombre:Arma.find(Character.find(@character.id).weapons[0].id_arma6).nombre,
+    #               tipo:Arma.find(Character.find(@character.id).weapons[0].id_arma6).tipo,
+    #               dano:Arma.find(Character.find(@character.id).weapons[0].id_arma6).dano,
+    #               distancia:Arma.find(Character.find(@character.id).weapons[0].id_arma6).distanciaRango,
+    #               atributo: Arma.find(Character.find(@character.id).weapons[0].id_arma6).atributo,
+    #               cadencia: Arma.find(Character.find(@character.id).weapons[0].id_arma6).cadencia
+    #             }
   end
 
   def destroy
