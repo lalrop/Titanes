@@ -1,0 +1,201 @@
+<h1 class="mt-3">Combate</h1>
+
+<div class="d-flex align-items-start">
+  <div class="nav flex-column nav-pills me-3" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+    <button class="nav-link" id="v-pills-conflicto-tab" data-bs-toggle="pill" data-bs-target="#v-pills-conflicto" type="button" role="tab" aria-controls="v-pills-conflicto" aria-selected="true">Mecanica Conflictos</button>
+    <button class="nav-link" id="v-pills-armasfuego-tab" data-bs-toggle="pill" data-bs-target="#v-pills-armasfuego" type="button" role="tab" aria-controls="v-pills-armasfuego" aria-selected="true">Uso armas de fuego</button>  
+    <button class="nav-link" id="v-pills-fincombate-tab" data-bs-toggle="pill" data-bs-target="#v-pills-fincombate" type="button" role="tab" aria-controls="v-pills-fincombate" aria-selected="true">Termino de combate</button>   
+    <button class="nav-link" id="v-pills-ptosCombate-tab" data-bs-toggle="pill" data-bs-target="#v-pills-ptosCombate" type="button" role="tab" aria-controls="v-pills-ptosCombate" aria-selected="true">Descripcion puntos</button>
+    <button class="nav-link" id="v-pills-velocidades-tab" data-bs-toggle="pill" data-bs-target="#v-pills-velocidades" type="button" role="tab" aria-controls="v-pills-velocidades" aria-selected="true">Velocidades</button>    
+  </div>
+
+  <div class="tab-content container text-start" id="v-pills-tabContent">
+    <div class="tab-pane fade show active" id="v-pills-conflicto" role="tabpanel" aria-labelledby="v-pills-conflicto-tab">
+        <h2 class="my-2">Mecanica conflictos</h2>
+        <p>Cada combate se compone por una serie de turnos donde cada uno de ellos equivale a un segundo.</p>
+        <p><strong>Iniciativa:</strong></p>
+        <p>Cada jugador debe lanzar un dado. Quien alcance el mayor valor tendrá la “iniciativa” de combate; es decir, este jugador es el que realiza las primeras Acciones de combate. Estas se descomponen entre: Acciones Principales y Acciones Secundarias.</p>
+        <p><strong>Acciones principales:</strong></p>
+        <p>Se consideran Acciones Principales a los distintos movimientos que ejecuta el personaje a través del uso de los aspectos en la sección Combate, por ejemplo: realizar una tirada de Pelea para que el personaje dirija un golpe hacia su rival, también a las técnicas definidas según esta categoría.</p>
+        <p class="border text-center">Existe un máximo de sólo una Acción Principal por turno.</p>
+        <p><strong>Acciones secundarias:</strong></p>
+        <p>Este tipo de acciones son complementarias a la Acción Principal, sirven para agregar más velocidad y/o daño. Estos aspectos se componen por: Finta, Alerta, Sigilo y técnicas definidas como tal.</p>
+        <p class="border text-center">Existe un máximo de dos Acciones Secundarias por turno.</p>
+        <p><strong>Contraataques:</strong></p>
+        <p>Se define una situación de contraataque cuando un personaje A reacciona de forma ofensiva ante el ataque de un personaje B. En esta situación, el procedimiento a seguir es el siguiente:</p>
+        <p>Quien realiza el contraataque, el personaje A, tiene la libertad de ejecutar una acción principal y dos secundarias para responder al personaje B. Si en esta maniobra supera la velocidad del personaje B, entonces el personaje B tiene las siguientes opciones:</p>
+        <ul>
+            <li><strong>Recibir el ataque del personaje A de forma plena sin realizar maniobra.</strong><br>
+            Se finaliza el turno y se procede a la resolución de daños.</li> 
+            <li><strong>Decidir actuar ante el ataque del personaje A:</strong>
+            <p>Quien recibe el contraataque puede actuar como si fuese un turno cualquiera, resistiéndose al contraataque, pero ateniéndose a que no goza de Arrepentimiento en esta maniobra. Se finaliza el turno sin proceder a la resolución de daños.</p>
+            </li>
+        </ul>
+        <p><strong>Arrepentimiento:</strong></p>
+        <p>Todo jugador dispone de la facultad de cancelar cualquier maniobra en caso de que sea consciente de alguna nueva amenaza o si se encuentra inconforme con sus tiradas, replanteando su turno. El número de Arrepentimientos posibles dentro de un turno quedan a criterio del Narrador.
+        </p>
+    </div>
+    <div class="tab-pane fade" id="v-pills-velocidades" role="tabpanel" aria-labelledby="v-pills-velocidades-tab">
+        <h2 class="my-2">Combate cuerpo a cuerpo</h2>
+        <p>En general todas las maniobras de la sección Combate funcionan bajo la siguiente fórmula para determinar la velocidad del movimiento:</p>
+         <p class="text-center"><var>velocidad en mts/seg</var> = (<var>2</var> * <var> nro exitos) + 2</var></p>
+         <p>Fuera de esta regla, están los siguientes movimientos:</p>
+         <ol>
+             <li>Golpes de pelea dirigidos a la quijada, riñón o con motivo de aturdir.</li>
+             <li>Golpes con armas cuyo objeto sea fulminar de un golpe al enemigo en un punto vital.</li>
+             <li>Disparos con armas de fuego a puntos vitales.</li>
+             <li>Ataques con armas de ataque a distancia dirigidos a puntos vitales.</li>
+         </ol>
+         <p>Para los casos señalados en los puntos 1 y 2, la velocidad de la maniobra se regirá por la siguiente fórmula:</p>
+         <p class="text-center"><var>velocidad en mts/seg</var> = <var> nro exitos + 2</var></p>
+         <p>Para las armas o técnicas con atributo Aturdir, su velocidad está definida por la primera fórmula; excepto si el golpe con la técnica o arma tiene por finalidad atacar un punto vital. En ese caso se aplica la segunda fórmula.</p>
+
+         <h3 class="my-2">Defensa instintiva</h3>
+         <p>Existe un caso especial en el que el personaje es incapaz de superar o igualar la velocidad de un ataque oponente y, a modo de autodefensa, prefiere recibir parte del impacto con alguna postura defensiva para mitigar parte del daño.
+        <br>
+        Para poder realizar esto, el jugador debe realizar una tirada de Estabilidad y con esta <strong>alcanzar un 80% de la velocidad del ataque oponente</strong> . Cumplida esta condición, el personaje es capaz de mitigar el daño haciendo uso de sus puntos de Resistencia, teniendo en cuenta que sólo puede optar a <strong>disminuir el daño total en un 60%.</strong> 
+        </p>
+    </div>
+    <div class="tab-pane fade" id="v-pills-armasfuego" role="tabpanel" aria-labelledby="v-pills-armasfuego-tab">
+        <h2 class="my-2">Uso Armas de Fuego</h2>
+        <p class="mt-4">Para comprender el uso de estas armas es necesario entender cómo funciona la cadencia. La cadencia es la cantidad de balas que son disparadas por el arma en un turno. El daño que un arma genera a su objetivo (siempre y cuando acierte a este) puede ir desde el daño de una sola munición (valor de daño en la tabla respectiva) hasta el daño completo de toda la cadencia del arma. Es decir, se debe multiplicar el daño “base” por la cadencia, el resultado de este se considera el daño máximo.</p>
+        <p><strong>¿Cómo calcular el daño que recibe el oponente?</strong></p>
+        <p>Teniendo claro que el daño mínimo es el respectivo al valor de daño en la tabla y el valor máximo a la multiplicación de este por la cadencia, se procede a lanzar un dado el cual indica el porcentaje del daño acertado. 
+        <br>
+        <strong>Ejemplo:</strong> 
+        <br>
+        Usando una pistola 9 mm con daño 15 y cadencia 4, debemos entender que su daño mínimo será 15 y su daño máximo será 60 (15 * 4). Luego se procede a lanzar un dado, suponiendo el resultado fuese 7, esto indica que el oponente recibe un 70% del daño máximo; es decir, 42 (70% de 60). 
+        Si el dado de probabilidad hubiese sido un 1, el daño recibido es 15, y no el 10% de 60, ya que el daño mínimo no puede ser inferior a 15.</p>
+    </div>
+    <div class="tab-pane fade" id="v-pills-fincombate" role="tabpanel" aria-labelledby="v-pills-fincombate-tab">
+        <h2 class="my-2">Termino del combate</h2>
+        <ol>
+            <li>Cuando la Salud de uno de los personajes llega a cero.
+                <br>
+                <p>En este caso el personaje en cuestión se considera <strong>Caído</strong> ; es decir, está en los límites de la vida y la muerte. No tiene acceso a ningún tipo de acción, e incluso el ser más débil puede darle el golpe final para acabar con él. En caso de no existir nadie que ejecute el golpe final, dependiendo de las heridas, el personaje puede morir a los pocos segundos, aunque también podría sobrevivir por causas extraordinarias.</p>
+            </li>
+            <li>Cuando la Potencialidad de uno de los personajes llega a cero.
+                <br>
+                <p>En este caso el personaje se considera <strong>Fulminado</strong> . En este escenario el personaje cae y es <strong>incapaz de realizar cualquier otro movimiento físico</strong> , independiente del estado de su Salud.</p>
+            </li>
+            <li>Cuando el Frènesis de uno de los personajes llegan a cero.
+                <br>
+                <p>En este caso el personaje se considera <strong>Letargado</strong>. En este escenario el personaje cae de rodillas y se desmaya perdiendo completamente el conocimiento.</p>
+            </li>
+        </ol>
+        <div class="border px-2 py-2">
+            <p> <strong>¿Qué ocurre cuando se consume toda la Fuerza de Voluntad?</strong></p>
+            <p>Cuando un personaje ha consumido la totalidad de los Puntos en Fuerza de Voluntad entra en un estado de <strong>penumbra</strong>. Esto quiere decir que el personaje sólo podrá gozar del <strong>50% de la velocidad total alcanzada para sus maniobras.</strong>  
+            <br>
+            Ejemplo: Si un personaje está escapando de una avalancha en un estado de penumbra y lanza una maniobra de Atletismo más alguna técnica secundaria que aumente su velocidad a un total de 24 mt/seg, el estado de penumbra le descuenta el 50% de aquel total; es decir, escaparía a 12 mt/seg.</p>
+        </div>
+        
+    </div>
+
+    <div class="tab-pane fade" id="v-pills-ptosCombate" role="tabpanel" aria-labelledby="v-pills-ptosCombate-tab">        
+        <h2 class="mt-2 mb-4">Atletismo</h2>
+        <p>Este rasgo es la capacidad física que posee el personaje para ejecutar maniobras de desplazamiento no ofensivas en un radio mayor a tres metros, es decir, volteretas, saltos, correr, trotar, etc.
+        Cada punto representa la posibilidad de lanzar un dado para acceder a una velocidad determinada.</p>
+        <p>Cada punto representa la posibilidad de lanzar un dado para acceder a una velocidad determinada.
+        <br>
+        <strong>Ejemplo:</strong> Si un personaje tiene dos puntos en Atletismo, lanza dos dados. El resultado de estos determinará la velocidad de desplazamiento del personaje.</p>
+        
+        <h2 class="my-4">Esquivar</h2>
+        <p>Este rasgo es la capacidad física para evadir un ataque dentro de un radio de tres metros.
+        Esquivar considera: movimientos de hombros, flexiones de rodillas, saltos laterales o verticales, etc.
+        Cada punto representa la posibilidad de lanzar un dado para acceder a una velocidad determinada.
+        <br>
+        <strong> Ejemplo: </strong> Si un personaje tiene tres puntos en Esquivar, lanza tres dados. El resultado de estos determinará la velocidad del movimiento evasivo del personaje.</p>
+        <h2 class="my-4">Estabilidad</h2>
+        <p>Este rasgo es la capacidad física para contener o resistir el impacto de un ataque mediante una postura sin desplazamiento.
+        Estabilidad considera movimientos tales como capturar un puño, endurecer un musculo, cubrirse, etc.
+        <br>
+        <strong> Ejemplo: </strong> Si un personaje tiene cuatro puntos en Estabilidad, lanza cuatro dados. El resultado de estos determinará la velocidad con la que el personaje ejecuta la maniobra de contención.</p>
+        <h2 class="my-4">Pelea</h2>
+        <p>Este rasgo es la capacidad física para ejecutar movimientos ofensivos y/o defensivos sin uso de armas, en un radio de tres metros; entiéndase como golpes de puño, patadas, cabezazos, llaves, etc.
+        <br>
+        <strong> Ejemplo: </strong> Si un personaje tiene cinco puntos en Pelea, lanza cinco dados. El resultado de estos determinará la velocidad con la que el personaje ejecuta el golpe.</p>
+        <h2 class="my-4">Destreza</h2>
+        <p>Es la habilidad física que posee el personaje para apuntar o ejecutar golpes con armas a una velocidad y distancia determinada de acuerdo a la naturaleza del arma.</p>
+        <ol>
+            <li>
+                <p> <strong>Armas cuerpo a cuerpo (C.C.)</strong></p>
+                <p>La Destreza en Armas C.C involucra la velocidad en el uso de armas que requieran asestar golpes directos para generar cortes, contenciones y/o perforaciones.
+                <br>
+                <strong> Ejemplo: </strong> Si un personaje posee dos puntos en Destreza, lanza dos dados. El resultado de la tirada determinará la velocidad a la cual se ejecuta la maniobra.</p>
+            </li>
+            <li>
+               <p> <strong>Armas de larga distancia y fuego:</strong></p>
+               <p>La Destreza en este tipo de armas se utiliza para apuntar a una velocidad en un tiempo determinado. 
+                <br>
+                <strong> Ejemplo: </strong> Si un personaje posee ocho puntos en Destreza, lanza ocho dados. El resultado de la tirada determinará la velocidad a la cual el personaje apunta a su objetivo. </p> 
+            </li>
+        </ol>
+        
+        <h2 class="my-4">Resistencia</h2>
+        <p>Es la capacidad física para mitigar o anular completamente un daño entrante usando la propia fortaleza corporal.
+        <br>
+        <strong> Ejemplo: </strong> Si un personaje posee cinco puntos en Resistencia, significa que:
+            <ul>
+                <li>Aguanta 25 de daño usando cualquier tipo de postura o guardia. 
+                    <br>
+                    Cuando un personaje recibe daño, el jugador puede lanzar los puntos de Resistencia con el fin de aumentar la cantidad de daño absorbido en 5 por cada éxito.
+                </li>
+                <li>
+                    Puede anular todos los daños por debajo de 25 generados por alguna condición externa no relativa a un golpe (por ejemplo, el daño de una ventisca).
+                </li>
+            </ul>
+            
+        </p>
+        <h2 class="my-4">Fuerza</h2>
+        <p>Es la potencia física que representa el daño que puede generar el personaje con una acción. Este recurso también ilustra la capacidad del personaje para mover distintas magnitudes de peso.
+        <br>
+        <strong>Ejemplos:</strong>  Si un personaje posee cuatro puntos de Fuerza, significa que:
+            <ul>
+                <li>Genera 20 de Daño con cualquier acción física. 
+                    <br>
+                    Cuando un personaje genera daño, el jugador puede lanzar los puntos de Fuerza con el fin de aumentar la cantidad de daño infringido en 5 por cada éxito.
+                </li>   
+                <li>Puede mover objetos que requieran cuatro puntos en Fuerza (por ejemplo, lanzar una motocicleta).</li> 
+            </ul>
+        </p>
+        <h2 class="my-4">Finta</h2>
+        <p>Es la habilidad para engañar al oponente realizando una simulación, un amague, de golpes con objeto de mermar la capacidad de reacción del oponente.
+        <br>
+        <strong>Ejemplo:</strong>  Si un personaje posee tres puntos en Finta, puede realizar una tirada de tres dados para afectar la reacción de su oponente de responder o esquivar.
+        <br>
+        Finta sólo tiene efecto para los aspectos: Pelea y Esquivar. </p>
+        <h2 class="my-4">Alerta</h2>
+        <p>Es la capacidad para detectar cualquier tipo de reacción sorpresiva por parte del oponente, incluso detectar sus movimientos ocultos.</p>
+        <ul>
+            <li>
+                <p><strong>Caso Sigilo:</strong></p>
+                <p>La Alerta en este caso sirve para advertir o vislumbrar el ataque de un personaje que no se puede ver o que está siendo ocultado.
+                <br>
+                <strong>Ejemplo:</strong>  Si un personaje posee dos puntos de Alerta, puede realizar una tirada de dos dados para disminuir el efecto del Sigilo de un oponente o anularlo por completo dependiendo de la cantidad de éxitos.</p>
+            </li>
+            <li>
+                <p><strong>Caso Finta:</strong></p>
+                <p>La Alerta en este caso sirve para distinguir entre una maniobra real y una ilusoria.
+                <br>
+                <strong>Ejemplo:</strong>  Si un personaje posee tres puntos de Alerta, puede realizar una tirada de tres dados que le permiten disminuir la finta de su oponente o anularla por completo dependiendo de la cantidad de éxitos.</p>
+            </li>
+        </ul>
+        <h2 class="my-4">Sigilo</h2>
+        <p>Es la habilidad para esconder la presencia haciendo uso del espacio y/o las condiciones del ambiente, con el fin realizar un ataque sorpresa hacia el objetivo.
+        <br>
+        <strong>Ejemplo:</strong> Si un personaje posee cinco puntos en Sigilo, puede realizar un tirada de cinco dados para esconderse y potenciar su maniobra de ataque a mayor velocidad aprovechando la sorpresa.
+        </p>
+        <h2 class="my-4">Percepcion espacial</h2>
+        <p>Es la capacidad de ser consciente del entorno a través de los sentidos con el fin de ubicar objetos, personas, aromas, texturas, huellas, sabores o cualquier tipo de rastro que le sea de ayuda para alcanzar un objetivo.</p>
+        <h2 class="my-4">Medicina</h2>
+        <p>Es la capacidad que posee un personaje sobre la base de sus conocimientos para asistir médicamente, y con el material necesario, gran parte de las heridas propias y de sus compañeros.
+        <br>
+        <strong>Ejemplo:</strong> Si un personaje posee cuatro puntos en Medicina, es capaz de curar los Puntos de Salud de un compañero o propios (siempre que tenga los implementos y condiciones necesarias) en un 60% como límite. Es decir, el caso de un herido con 300 puntos de vida al cual le han hecho 200 puntos de daño, el personaje puede optar a curarlo como límite sólo en 120 puntos. El resto del daño se cura con el tiempo o mediante el tratamiento de otro personaje con mayor habilidad.</p>
+        <p class="border text-center">El uso de Medicina en combate implica el gasto de un turno completo realizando el tratamiento respectivo.</p>
+
+    </div>
+  </div>
+</div>
+    <%= button_to 'Salir', characters_path, method: 'get', class:"my-4 btn btn-danger"%>
+

@@ -33,6 +33,15 @@ class MastersController < ApplicationController
     def estados
 
     end
+
+    def combate
+
+    end
+
+    def psicologia
+        
+    end
+    
     
     def armas
         @armas = Arma.all

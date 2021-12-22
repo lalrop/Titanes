@@ -219,6 +219,8 @@
                                     <dd class="col-4"><%=character.supervivencia%>/7</dd>
                                 </dl>
                             </div>
+                        
+                        
                         </div>
                     </div>
                     
@@ -227,8 +229,93 @@
                         <button class="accordion-button bg-dark text-light" type="button" data-bs-toggle="collapse" data-bs-target="#collapseNine" aria-expanded="true" aria-controls="collapseNine">
                             <h3 class="accordion-header bg-dark text-light py-2 text-center">Armas</h2>
                         </button>
-                        <div id="collapseNine" class="accordion-collapse collapse bg-transparent" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                        <div id="collapseNine" class="accordion-collapse collapse bg-dark" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
                             <div class="accordion-body bg-dark">
+                                <dl class="row border-top py-2">
+                                    <dt class="col-12"><%=Arma.find(Character.find(character.id).weapons[0].id_arma1).nombre%></dt>
+                                    <dd class="col-12 text-center"><%=Arma.find(Character.find(character.id).weapons[0].id_arma1).tipo%></dd>
+                                    <dt class="col-3 text-start">Daño: </dt>
+                                    <dd class="col-3"><%=Arma.find(Character.find(character.id).weapons[0].id_arma1).dano%></dd>
+                                    <dt class="col-4 text-start">Velocidad: </dt>
+                                    <dd class="col-2"><%=Arma.find(Character.find(character.id).weapons[0].id_arma1).velocidad%></dd>
+                                    <dt class="col-4 text-start">Distancia: </dt>
+                                    <dd class="col-2"><%=Arma.find(Character.find(character.id).weapons[0].id_arma1).distanciaRango%></dd>
+                                    <dt class="col-4 text-start">Atributo: </dt>
+                                    <dd class="col-2"><%=Arma.find(Character.find(character.id).weapons[0].id_arma1).atributo%></dd>
+                                    <dt class="col-4 text-start">Cadencia: </dt>
+                                    <dd class="col-2"><%=Arma.find(Character.find(character.id).weapons[0].id_arma1).cadencia%></dd>
+                                
+                                </dl>
+                                <dl class="row border-top py-2">
+                                    <dt class="col-12"><%=Arma.find(Character.find(character.id).weapons[0].id_arma2).nombre%></dt>
+                                    <dd class="col-12 text-center"><%=Arma.find(Character.find(character.id).weapons[0].id_arma2).tipo%></dd>
+                                    <dt class="col-3 text-start">Daño: </dt>
+                                    <dd class="col-3"><%=Arma.find(Character.find(character.id).weapons[0].id_arma2).dano%></dd>
+                                    <dt class="col-4 text-start">Velocidad: </dt>
+                                    <dd class="col-2"><%=Arma.find(Character.find(character.id).weapons[0].id_arma2).velocidad%></dd>
+                                    <dt class="col-4 text-start">Distancia: </dt>
+                                    <dd class="col-2"><%=Arma.find(Character.find(character.id).weapons[0].id_arma2).distanciaRango%></dd>
+                                    <dt class="col-4 text-start">Atributo: </dt>
+                                    <dd class="col-2"><%=Arma.find(Character.find(character.id).weapons[0].id_arma2).atributo%></dd>
+                                    <dt class="col-4 text-start">Cadencia: </dt>
+                                    <dd class="col-2"><%=Arma.find(Character.find(character.id).weapons[0].id_arma2).cadencia%></dd>
+                                </dl>
+                                <dl class="row border-top py-2">
+                                    <dt class="col-12"><%=Arma.find(Character.find(character.id).weapons[0].id_arma3).nombre%></dt>
+                                    <dd class="col-12 text-center"><%=Arma.find(Character.find(character.id).weapons[0].id_arma3).tipo%></dd>
+                                    <dt class="col-3 text-start">Daño: </dt>
+                                    <dd class="col-3"><%=Arma.find(Character.find(character.id).weapons[0].id_arma3).dano%></dd>
+                                    <dt class="col-4 text-start">Velocidad: </dt>
+                                    <dd class="col-2"><%=Arma.find(Character.find(character.id).weapons[0].id_arma3).velocidad%></dd>
+                                    <dt class="col-4 text-start">Distancia: </dt>
+                                    <dd class="col-2"><%=Arma.find(Character.find(character.id).weapons[0].id_arma3).distanciaRango%></dd>
+                                    <dt class="col-4 text-start">Atributo: </dt>
+                                    <dd class="col-2"><%=Arma.find(Character.find(character.id).weapons[0].id_arma3).atributo%></dd>
+                                    <dt class="col-4 text-start">Cadencia: </dt>
+                                    <dd class="col-2"><%=Arma.find(Character.find(character.id).weapons[0].id_arma3).cadencia%></dd>
+                                </dl>
+                                <dl class="row border-top py-2">
+                                    <dt class="col-12"><%=Arma.find(Character.find(character.id).weapons[0].id_arma4).nombre%></dt>
+                                    <dd class="col-12 text-center"><%=Arma.find(Character.find(character.id).weapons[0].id_arma4).tipo%></dd>
+                                    <dt class="col-3 text-start">Daño: </dt>
+                                    <dd class="col-3"><%=Arma.find(Character.find(character.id).weapons[0].id_arma4).dano%></dd>
+                                    <dt class="col-4 text-start">Velocidad: </dt>
+                                    <dd class="col-2"><%=Arma.find(Character.find(character.id).weapons[0].id_arma4).velocidad%></dd>
+                                    <dt class="col-4 text-start">Distancia: </dt>
+                                    <dd class="col-2"><%=Arma.find(Character.find(character.id).weapons[0].id_arma4).distanciaRango%></dd>
+                                    <dt class="col-4 text-start">Atributo: </dt>
+                                    <dd class="col-2"><%=Arma.find(Character.find(character.id).weapons[0].id_arma4).atributo%></dd>
+                                    <dt class="col-4 text-start">Cadencia: </dt>
+                                    <dd class="col-2"><%=Arma.find(Character.find(character.id).weapons[0].id_arma4).cadencia%></dd>
+                                </dl>
+                                <dl class="row border-top py-2">
+                                    <dt class="col-12"><%=Arma.find(Character.find(character.id).weapons[0].id_arma5).nombre%></dt>
+                                    <dd class="col-12 text-center"><%=Arma.find(Character.find(character.id).weapons[0].id_arma5).tipo%></dd>
+                                    <dt class="col-3 text-start">Daño: </dt>
+                                    <dd class="col-3"><%=Arma.find(Character.find(character.id).weapons[0].id_arma5).dano%></dd>
+                                    <dt class="col-4 text-start">Velocidad: </dt>
+                                    <dd class="col-2"><%=Arma.find(Character.find(character.id).weapons[0].id_arma5).velocidad%></dd>
+                                    <dt class="col-4 text-start">Distancia: </dt>
+                                    <dd class="col-2"><%=Arma.find(Character.find(character.id).weapons[0].id_arma5).distanciaRango%></dd>
+                                    <dt class="col-4 text-start">Atributo: </dt>
+                                    <dd class="col-2"><%=Arma.find(Character.find(character.id).weapons[0].id_arma5).atributo%></dd>
+                                    <dt class="col-4 text-start">Cadencia: </dt>
+                                    <dd class="col-2"><%=Arma.find(Character.find(character.id).weapons[0].id_arma5).cadencia%></dd>
+                                </dl>
+                                <dl class="row border-top py-2">
+                                    <dt class="col-12"><%=Arma.find(Character.find(character.id).weapons[0].id_arma6).nombre%></dt>
+                                    <dd class="col-12 text-center"><%=Arma.find(Character.find(character.id).weapons[0].id_arma6).tipo%></dd>
+                                    <dt class="col-3 text-start">Daño: </dt>
+                                    <dd class="col-3"><%=Arma.find(Character.find(character.id).weapons[0].id_arma6).dano%></dd>
+                                    <dt class="col-4 text-start">Velocidad: </dt>
+                                    <dd class="col-2"><%=Arma.find(Character.find(character.id).weapons[0].id_arma6).velocidad%></dd>
+                                    <dt class="col-4 text-start">Distancia: </dt>
+                                    <dd class="col-2"><%=Arma.find(Character.find(character.id).weapons[0].id_arma6).distanciaRango%></dd>
+                                    <dt class="col-4 text-start">Atributo: </dt>
+                                    <dd class="col-2"><%=Arma.find(Character.find(character.id).weapons[0].id_arma6).atributo%></dd>
+                                    <dt class="col-4 text-start">Cadencia: </dt>
+                                    <dd class="col-2"><%=Arma.find(Character.find(character.id).weapons[0].id_arma6).cadencia%></dd>
+                                </dl>
                                 <%=link_to 'Arsenal', character_path(character), class:"btn btn-warning" %>
                             </div>
                         </div>
@@ -237,7 +324,6 @@
 
                 </div>
 
-                <%# Asignar armas %>
 
                 <%# Botones Editar y Eliminar %>
                 <div class="row my-3">

@@ -1,4 +1,5 @@
 class WeaponsController < ApplicationController
+  skip_before_action :verify_authenticity_token
     def update
         @character = Character.find(params[:character_id])
         @weapon = @character.weapons.update(weapon_params)
