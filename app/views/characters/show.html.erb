@@ -10,29 +10,158 @@
             <div class="row border-top border-bottom py-3">
                 <%# Seccion de seleccion %>
                 <div class="col-md-4 col-xs-12">
-                    <div class="row text-start d-flex">
-                        <div class="col-6">
-                            <input type="radio" class="btn-check" name="options" id="option1" autocomplete="off">
-                            <label class="btn btn-secondary" for="option1">Armas CC</label>
-
-                            <input type="radio" class="btn-check" name="options" id="option2" autocomplete="off">
-                            <label class="btn btn-secondary" for="option2">Armas de Fuego</label>
-
-                            <input type="radio" class="btn-check" name="options" id="option3" autocomplete="off">
-                            <label class="btn btn-secondary" for="option3">Armaduras</label>
-                        </div>
-                        <div class="col-6">
-                            <div>
-                                <%= form.collection_select :id_arma1, Arma.where(tipo:["Sencilla","Marcial","Exotica"]), :id, :nombre, options = {:prompt => 'Selecciona un arma'}, html_options = {class: "form-select form-select-sm col-md-4"}%>
-                            </div>
-                            <div>
-                                <%= form.collection_select :id_arma1, Arma.where(tipo:["Rifle","Subfusil","Revolver","Pistola","Fusil de Asalto","Arma pesada","Escopeta","Ametralladora ligera"]), :id, :nombre, options = {:prompt => 'Selecciona un arma'}, html_options = {class: "form-select form-select-sm col-md-4 disabled"}%>
-                            </div>
-                            <div>
-                                <%= form.collection_select :id_arma1, Arma.where(tipo:["Armadura"]), :id, :nombre, options = {:prompt => 'Selecciona un arma'}, html_options = {class: "form-select form-select-sm col-md-4 disabled"}%>
-                            </div> 
-                        </div>
-                    </div>
+                    <p class="text-start"> Arma 1</p>    
+                    <!-- 134 opciones de armas -->
+                    <select class="form-select form-select-sm col-md-4" name="weapon[id_arma1]" id="weapon_id_arma1">
+                        <option value="<%=@weapon[0].id_arma1%>" selected>Selecciona un arma</option>
+                        <option value="134">Ninguna</option>
+                        <option value="" class="bg-secondary text-white text-center" disabled>Sencillas</option>
+                        <option value="1">Daga</option>
+                        <option value="2">Guantelete</option>
+                        <option value="3">Hoz</option>
+                        <option value="4">Maza ligera</option>
+                        <option value="5">Clava</option>
+                        <option value="6">Maza de armas</option>
+                        <option value="7">Maza pesada</option>
+                        <option value="8">Lanza corta</option>
+                        <option value="9">Bastón</option>
+                        <option value="10">Lanza</option>
+                        <option value="11">Lanza larga</option>
+                        <option value="12">Ballesta ligera</option>
+                        <option value="13">Ballesta pesada</option>
+                        <option value="14">Dardo</option>
+                        <option value="15">Honda</option>
+                        <option value="16">Jabalina</option>
+                        <option value="17">Porra</option>
+                        <option value="" class="bg-secondary text-white text-center" disabled>Marciales</option>
+                        <option value="18">Escudo ligero</option>
+                        <option value="19">Escudo con púas, ligero</option>
+                        <option value="20">Espada corta</option>
+                        <option value="21">Hacha arrojadiza</option>
+                        <option value="22">Hacha de mano</option>
+                        <option value="23">Kukri</option>
+                        <option value="24">Martillo ligero</option>
+                        <option value="25">Pico ligero</option>
+                        <option value="26">Cimitarra</option>
+                        <option value="27">Espada larga</option>
+                        <option value="28">Florete</option>
+                        <option value="29">Hacha de batalla</option>
+                        <option value="30">Maza pesada doble</option>
+                        <option value="31">Martillo de guerra</option>
+                        <option value="32">Tridente simple</option>
+                        <option value="33">Alabarda</option>
+                        <option value="34">Alabarda oriental</option>
+                        <option value="35">Bisarma</option>
+                        <option value="36">Espadón</option>
+                        <option value="37">Gran clava</option>
+                        <option value="38">Gran hacha</option>
+                        <option value="39">Guadaña</option>
+                        <option value="40">Guja</option>
+                        <option value="41">Lanza de caballería</option>
+                        <option value="42">Arco corto</option>
+                        <option value="43">Arco corto compuesto</option>
+                        <option value="44">Arco largo</option>
+                        <option value="45">Arco largo compuesto</option>
+                        <option value="" class="bg-secondary text-white text-center" disabled>Exotica</option>
+                        <option value="46">Bota con cuchilla</option>
+                        <option value="47">Brazal de garra</option>
+                        <option value="48">Kama</option>
+                        <option value="49">Nunchaku</option>
+                        <option value="50">Sai</option>
+                        <option value="51">Siangham</option>
+                        <option value="52">Espada bastarda</option>
+                        <option value="53">Flagelo</option>
+                        <option value="54">Hacha de guerra enana</option>
+                        <option value="55">Katana</option>
+                        <option value="56">Khopesh</option>
+                        <option value="57">Látigo</option>
+                        <option value="58">Atarraga</option>
+                        <option value="59">Espada de dos hojas</option>
+                        <option value="60">Ultra Espadón</option>
+                        <option value="61">Matagigantes (Gran Hacha especial)</option>
+                        <option value="62">Martillo ganchudo gnomo</option>
+                        <option value="63">Montante</option>
+                        <option value="64">Urgrosh enano</option>
+                        <option value="65">Ballesta de mano</option>
+                        <option value="66">Ballesta de repetición6, ligera</option>
+                        <option value="67">Ballesta de repetición7, pesada</option>
+                        <option value="68">Bolas</option>
+                        <option value="69">Chakram</option>
+                        <option value="70">Fukumi-bari</option>
+                        <option value="71">Red</option>
+                        <option value="72">Shuriken</option>
+                        <option value="" class="bg-secondary text-white text-center" disabled>Pistolas</option>
+                        <option value="73">.30</option>
+                        <option value="74">9mm</option>
+                        <option value="75">7.62T</option>
+                        <option value="76">.45</option>
+                        <option value="77">10mm</option>
+                        <option value="78">.50</option>
+                        <option value="79">.45</option>
+                        <option value="80">.40</option>
+                        <option value="81">.22</option>
+                        <option value="82">.40</option>
+                        <option value="83">380</option>
+                        <option value="" class="bg-secondary text-white text-center" disabled>Revolver</option>
+                        <option value="84">44</option>
+                        <option value="85">357</option>
+                        <option value="86">454</option>
+                        <option value="87">221</option>
+                        <option value="88">.38spl</option>
+                        <option value="89">.22 M</option>
+                        <option value="" class="bg-secondary text-white text-center" disabled>Subfusil</option>
+                        <option value="90">7.62 S</option>
+                        <option value="91">5.45</option>
+                        <option value="92">9mm</option>
+                        <option value="" class="bg-secondary text-white text-center" disabled>Ametralladora ligera</option>
+                        <option value="93">9mm</option>
+                        <option value="94">.32</option>
+                        <option value="95">5.56</option>
+                        <option value="96">.22</option>
+                        <option value="97">.40</option>
+                        <option value="98">10mm</option>
+                        <option value="99">.45</option>
+                        <option value="100">380</option>
+                        <option value="" class="bg-secondary text-white text-center" disabled>Rifle</option>
+                        <option value="101">7.62</option>
+                        <option value="102">.50</option>
+                        <option value="103">600</option>
+                        <option value="104">.30</option>
+                        <option value="105">300</option>
+                        <option value="106">.30-06</option>
+                        <option value="107">223</option>
+                        <option value="108">.22</option>
+                        <option value="109">15mm</option>
+                        <option value="110">460</option>
+                        <option value="" class="bg-secondary text-white text-center" disabled>Fusil</option>
+                        <option value="111">5mm</option>
+                        <option value="112">7.62</option>
+                        <option value="113">5.45</option>
+                        <option value="114">5.56</option>
+                        <option value="115">4.7mm</option>
+                        <option value="" class="bg-secondary text-white text-center" disabled>Escopeta</option>
+                        <option value="116">12ga</option>
+                        <option value="117">10ga</option>
+                        <option value="" class="bg-secondary text-white text-center" disabled>Armas pesadas</option>
+                        <option value="118">Misil</option>
+                        <option value="119">.50in</option>
+                        <option value="120">7.62</option>
+                        <option value="121">5.56</option>
+                        <option value="122">Antitanque</option>
+                        <option value="123">.50</option>
+                        <option value="124">58.3</option>
+                        <option value="125">Misil</option>
+                        <option value="126">Lanzallamas</option>
+                        <option value="" class="bg-secondary text-white text-center" disabled>Armaduras</option>
+                        <option value="127">Cuero endurecido</option>
+                        <option value="128">Cota de mallas</option>
+                        <option value="129">Armadura Lamelar</option>
+                        <option value="130">Armadura de escamas</option>
+                        <option value="131">Armadura Samurái</option>
+                        <option value="132">Placas de acero</option>
+                        <option value="133">Kevlar militar</option>
+                        <option value="134"></option>
+                    </select>
                 </div>
                 <%# Seccion detalle del arma actual %>
                 <div class="col-md-8 col-xs-12">
@@ -88,11 +217,1062 @@
                 </div>
             </div>
 
-                    <%= button_to 'Actualizar arsenal', class:'btn btn-danger', action: "update"%>
+            <%# Seccion Arma 2 %>
+            <div class="row border-top border-bottom py-3">
+                <%# Seccion de seleccion %>
+                <div class="col-md-4 col-xs-12">
+                    <p class="text-start"> Arma 2</p>    
+                    <!-- 134 opciones de armas -->
+                    <select class="form-select form-select-sm col-md-4" name="weapon[id_arma2]" id="weapon_id_arma2">
+                        <option value="<%=@weapon[0].id_arma2%>" selected>Selecciona un arma</option>
+                        <option value="134">Ninguna</option>
+                        <option value="" class="bg-secondary text-white text-center" disabled>Sencillas</option>
+                        <option value="1">Daga</option>
+                        <option value="2">Guantelete</option>
+                        <option value="3">Hoz</option>
+                        <option value="4">Maza ligera</option>
+                        <option value="5">Clava</option>
+                        <option value="6">Maza de armas</option>
+                        <option value="7">Maza pesada</option>
+                        <option value="8">Lanza corta</option>
+                        <option value="9">Bastón</option>
+                        <option value="10">Lanza</option>
+                        <option value="11">Lanza larga</option>
+                        <option value="12">Ballesta ligera</option>
+                        <option value="13">Ballesta pesada</option>
+                        <option value="14">Dardo</option>
+                        <option value="15">Honda</option>
+                        <option value="16">Jabalina</option>
+                        <option value="17">Porra</option>
+                        <option value="" class="bg-secondary text-white text-center" disabled>Marciales</option>
+                        <option value="18">Escudo ligero</option>
+                        <option value="19">Escudo con púas, ligero</option>
+                        <option value="20">Espada corta</option>
+                        <option value="21">Hacha arrojadiza</option>
+                        <option value="22">Hacha de mano</option>
+                        <option value="23">Kukri</option>
+                        <option value="24">Martillo ligero</option>
+                        <option value="25">Pico ligero</option>
+                        <option value="26">Cimitarra</option>
+                        <option value="27">Espada larga</option>
+                        <option value="28">Florete</option>
+                        <option value="29">Hacha de batalla</option>
+                        <option value="30">Maza pesada doble</option>
+                        <option value="31">Martillo de guerra</option>
+                        <option value="32">Tridente simple</option>
+                        <option value="33">Alabarda</option>
+                        <option value="34">Alabarda oriental</option>
+                        <option value="35">Bisarma</option>
+                        <option value="36">Espadón</option>
+                        <option value="37">Gran clava</option>
+                        <option value="38">Gran hacha</option>
+                        <option value="39">Guadaña</option>
+                        <option value="40">Guja</option>
+                        <option value="41">Lanza de caballería</option>
+                        <option value="42">Arco corto</option>
+                        <option value="43">Arco corto compuesto</option>
+                        <option value="44">Arco largo</option>
+                        <option value="45">Arco largo compuesto</option>
+                        <option value="" class="bg-secondary text-white text-center" disabled>Exotica</option>
+                        <option value="46">Bota con cuchilla</option>
+                        <option value="47">Brazal de garra</option>
+                        <option value="48">Kama</option>
+                        <option value="49">Nunchaku</option>
+                        <option value="50">Sai</option>
+                        <option value="51">Siangham</option>
+                        <option value="52">Espada bastarda</option>
+                        <option value="53">Flagelo</option>
+                        <option value="54">Hacha de guerra enana</option>
+                        <option value="55">Katana</option>
+                        <option value="56">Khopesh</option>
+                        <option value="57">Látigo</option>
+                        <option value="58">Atarraga</option>
+                        <option value="59">Espada de dos hojas</option>
+                        <option value="60">Ultra Espadón</option>
+                        <option value="61">Matagigantes (Gran Hacha especial)</option>
+                        <option value="62">Martillo ganchudo gnomo</option>
+                        <option value="63">Montante</option>
+                        <option value="64">Urgrosh enano</option>
+                        <option value="65">Ballesta de mano</option>
+                        <option value="66">Ballesta de repetición6, ligera</option>
+                        <option value="67">Ballesta de repetición7, pesada</option>
+                        <option value="68">Bolas</option>
+                        <option value="69">Chakram</option>
+                        <option value="70">Fukumi-bari</option>
+                        <option value="71">Red</option>
+                        <option value="72">Shuriken</option>
+                        <option value="" class="bg-secondary text-white text-center" disabled>Pistolas</option>
+                        <option value="73">.30</option>
+                        <option value="74">9mm</option>
+                        <option value="75">7.62T</option>
+                        <option value="76">.45</option>
+                        <option value="77">10mm</option>
+                        <option value="78">.50</option>
+                        <option value="79">.45</option>
+                        <option value="80">.40</option>
+                        <option value="81">.22</option>
+                        <option value="82">.40</option>
+                        <option value="83">380</option>
+                        <option value="" class="bg-secondary text-white text-center" disabled>Revolver</option>
+                        <option value="84">44</option>
+                        <option value="85">357</option>
+                        <option value="86">454</option>
+                        <option value="87">221</option>
+                        <option value="88">.38spl</option>
+                        <option value="89">.22 M</option>
+                        <option value="" class="bg-secondary text-white text-center" disabled>Subfusil</option>
+                        <option value="90">7.62 S</option>
+                        <option value="91">5.45</option>
+                        <option value="92">9mm</option>
+                        <option value="" class="bg-secondary text-white text-center" disabled>Ametralladora ligera</option>
+                        <option value="93">9mm</option>
+                        <option value="94">.32</option>
+                        <option value="95">5.56</option>
+                        <option value="96">.22</option>
+                        <option value="97">.40</option>
+                        <option value="98">10mm</option>
+                        <option value="99">.45</option>
+                        <option value="100">380</option>
+                        <option value="" class="bg-secondary text-white text-center" disabled>Rifle</option>
+                        <option value="101">7.62</option>
+                        <option value="102">.50</option>
+                        <option value="103">600</option>
+                        <option value="104">.30</option>
+                        <option value="105">300</option>
+                        <option value="106">.30-06</option>
+                        <option value="107">223</option>
+                        <option value="108">.22</option>
+                        <option value="109">15mm</option>
+                        <option value="110">460</option>
+                        <option value="" class="bg-secondary text-white text-center" disabled>Fusil</option>
+                        <option value="111">5mm</option>
+                        <option value="112">7.62</option>
+                        <option value="113">5.45</option>
+                        <option value="114">5.56</option>
+                        <option value="115">4.7mm</option>
+                        <option value="" class="bg-secondary text-white text-center" disabled>Escopeta</option>
+                        <option value="116">12ga</option>
+                        <option value="117">10ga</option>
+                        <option value="" class="bg-secondary text-white text-center" disabled>Armas pesadas</option>
+                        <option value="118">Misil</option>
+                        <option value="119">.50in</option>
+                        <option value="120">7.62</option>
+                        <option value="121">5.56</option>
+                        <option value="122">Antitanque</option>
+                        <option value="123">.50</option>
+                        <option value="124">58.3</option>
+                        <option value="125">Misil</option>
+                        <option value="126">Lanzallamas</option>
+                        <option value="" class="bg-secondary text-white text-center" disabled>Armaduras</option>
+                        <option value="127">Cuero endurecido</option>
+                        <option value="128">Cota de mallas</option>
+                        <option value="129">Armadura Lamelar</option>
+                        <option value="130">Armadura de escamas</option>
+                        <option value="131">Armadura Samurái</option>
+                        <option value="132">Placas de acero</option>
+                        <option value="133">Kevlar militar</option>
+                    </select>
+                </div>
+                <%# Seccion detalle del arma actual %>
+                <div class="col-md-8 col-xs-12">
+                    <dl>
+                        <div class="row"> 
+                            <div class="row text-start">
+                                <dt class="col-6">Nombre :</dt>
+                                <dd class="col-6 text-start"><%=@id_arma2[:nombre]%><dd>
+                            </div>
+                            <div class="col-6 text-start">
+                                <div class="row">
+                                    <dt class="col-3">Tipo: </dt>
+                                    <dd class="col-5"><%=@id_arma2[:tipo]%>
+                                    </dd>
+                                </div>
+                            </div>
+                            <div class="col-6 text-start">
+                                <div class="row">
+                                    <dt class="col-3">Atributo: </dt>
+                                    <dd class="col-5"><%=@id_arma2[:atributo]%></dd>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row"> 
+                            <div class="col-6 text-start">
+                                <div class="row">
+                                    <dt class="col-3">Daño: </dt>
+                                    <dd class="col-5"><%=@id_arma2[:dano]%></dd>
+                                </div>
+                            </div>
+                            <div class="col-6 text-start">
+                                <div class="row">
+                                    <dt class="col-3">Velocidad: </dt>
+                                    <dd class="col-5"><%=@id_arma2[:velocidad]%></dd>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row"> 
+                            <div class="col-6 text-start">
+                                <div class="row">
+                                    <dt class="col-8">Distancia/ Rango: </dt>
+                                    <dd class="col-4"><%=@id_arma2[:distanciaRango]%></dd>
+                                </div>
+                            </div>
+                            <div class="col-6 text-start">
+                                <div class="row">
+                                    <dt class="col-3">Cadencia: </dt>
+                                    <dd class="col-5"><%=@id_arma2[:cadencia]%></dd>
+                                </div>
+                            </div>
+                        </div>
+                    </dl>
+                </div>
+            </div>
+
+            <%# Seccion Arma 3 %>
+            <div class="row border-top border-bottom py-3">
+                <%# Seccion de seleccion %>
+                <div class="col-md-4 col-xs-12">
+                    <p class="text-start"> Arma 3</p>    
+                    <!-- 134 opciones de armas -->
+                    <select class="form-select form-select-sm col-md-4" name="weapon[id_arma3]" id="weapon_id_arma3">
+                        <option value="<%=@weapon[0].id_arma3%>" selected>Selecciona un arma</option>
+                        <option value="134">Ninguna</option>
+                        <option value="" class="bg-secondary text-white text-center" disabled>Sencillas</option>
+                        <option value="1">Daga</option>
+                        <option value="2">Guantelete</option>
+                        <option value="3">Hoz</option>
+                        <option value="4">Maza ligera</option>
+                        <option value="5">Clava</option>
+                        <option value="6">Maza de armas</option>
+                        <option value="7">Maza pesada</option>
+                        <option value="8">Lanza corta</option>
+                        <option value="9">Bastón</option>
+                        <option value="10">Lanza</option>
+                        <option value="11">Lanza larga</option>
+                        <option value="12">Ballesta ligera</option>
+                        <option value="13">Ballesta pesada</option>
+                        <option value="14">Dardo</option>
+                        <option value="15">Honda</option>
+                        <option value="16">Jabalina</option>
+                        <option value="17">Porra</option>
+                        <option value="" class="bg-secondary text-white text-center" disabled>Marciales</option>
+                        <option value="18">Escudo ligero</option>
+                        <option value="19">Escudo con púas, ligero</option>
+                        <option value="20">Espada corta</option>
+                        <option value="21">Hacha arrojadiza</option>
+                        <option value="22">Hacha de mano</option>
+                        <option value="23">Kukri</option>
+                        <option value="24">Martillo ligero</option>
+                        <option value="25">Pico ligero</option>
+                        <option value="26">Cimitarra</option>
+                        <option value="27">Espada larga</option>
+                        <option value="28">Florete</option>
+                        <option value="29">Hacha de batalla</option>
+                        <option value="30">Maza pesada doble</option>
+                        <option value="31">Martillo de guerra</option>
+                        <option value="32">Tridente simple</option>
+                        <option value="33">Alabarda</option>
+                        <option value="34">Alabarda oriental</option>
+                        <option value="35">Bisarma</option>
+                        <option value="36">Espadón</option>
+                        <option value="37">Gran clava</option>
+                        <option value="38">Gran hacha</option>
+                        <option value="39">Guadaña</option>
+                        <option value="40">Guja</option>
+                        <option value="41">Lanza de caballería</option>
+                        <option value="42">Arco corto</option>
+                        <option value="43">Arco corto compuesto</option>
+                        <option value="44">Arco largo</option>
+                        <option value="45">Arco largo compuesto</option>
+                        <option value="" class="bg-secondary text-white text-center" disabled>Exotica</option>
+                        <option value="46">Bota con cuchilla</option>
+                        <option value="47">Brazal de garra</option>
+                        <option value="48">Kama</option>
+                        <option value="49">Nunchaku</option>
+                        <option value="50">Sai</option>
+                        <option value="51">Siangham</option>
+                        <option value="52">Espada bastarda</option>
+                        <option value="53">Flagelo</option>
+                        <option value="54">Hacha de guerra enana</option>
+                        <option value="55">Katana</option>
+                        <option value="56">Khopesh</option>
+                        <option value="57">Látigo</option>
+                        <option value="58">Atarraga</option>
+                        <option value="59">Espada de dos hojas</option>
+                        <option value="60">Ultra Espadón</option>
+                        <option value="61">Matagigantes (Gran Hacha especial)</option>
+                        <option value="62">Martillo ganchudo gnomo</option>
+                        <option value="63">Montante</option>
+                        <option value="64">Urgrosh enano</option>
+                        <option value="65">Ballesta de mano</option>
+                        <option value="66">Ballesta de repetición6, ligera</option>
+                        <option value="67">Ballesta de repetición7, pesada</option>
+                        <option value="68">Bolas</option>
+                        <option value="69">Chakram</option>
+                        <option value="70">Fukumi-bari</option>
+                        <option value="71">Red</option>
+                        <option value="72">Shuriken</option>
+                        <option value="" class="bg-secondary text-white text-center" disabled>Pistolas</option>
+                        <option value="73">.30</option>
+                        <option value="74">9mm</option>
+                        <option value="75">7.62T</option>
+                        <option value="76">.45</option>
+                        <option value="77">10mm</option>
+                        <option value="78">.50</option>
+                        <option value="79">.45</option>
+                        <option value="80">.40</option>
+                        <option value="81">.22</option>
+                        <option value="82">.40</option>
+                        <option value="83">380</option>
+                        <option value="" class="bg-secondary text-white text-center" disabled>Revolver</option>
+                        <option value="84">44</option>
+                        <option value="85">357</option>
+                        <option value="86">454</option>
+                        <option value="87">221</option>
+                        <option value="88">.38spl</option>
+                        <option value="89">.22 M</option>
+                        <option value="" class="bg-secondary text-white text-center" disabled>Subfusil</option>
+                        <option value="90">7.62 S</option>
+                        <option value="91">5.45</option>
+                        <option value="92">9mm</option>
+                        <option value="" class="bg-secondary text-white text-center" disabled>Ametralladora ligera</option>
+                        <option value="93">9mm</option>
+                        <option value="94">.32</option>
+                        <option value="95">5.56</option>
+                        <option value="96">.22</option>
+                        <option value="97">.40</option>
+                        <option value="98">10mm</option>
+                        <option value="99">.45</option>
+                        <option value="100">380</option>
+                        <option value="" class="bg-secondary text-white text-center" disabled>Rifle</option>
+                        <option value="101">7.62</option>
+                        <option value="102">.50</option>
+                        <option value="103">600</option>
+                        <option value="104">.30</option>
+                        <option value="105">300</option>
+                        <option value="106">.30-06</option>
+                        <option value="107">223</option>
+                        <option value="108">.22</option>
+                        <option value="109">15mm</option>
+                        <option value="110">460</option>
+                        <option value="" class="bg-secondary text-white text-center" disabled>Fusil</option>
+                        <option value="111">5mm</option>
+                        <option value="112">7.62</option>
+                        <option value="113">5.45</option>
+                        <option value="114">5.56</option>
+                        <option value="115">4.7mm</option>
+                        <option value="" class="bg-secondary text-white text-center" disabled>Escopeta</option>
+                        <option value="116">12ga</option>
+                        <option value="117">10ga</option>
+                        <option value="" class="bg-secondary text-white text-center" disabled>Armas pesadas</option>
+                        <option value="118">Misil</option>
+                        <option value="119">.50in</option>
+                        <option value="120">7.62</option>
+                        <option value="121">5.56</option>
+                        <option value="122">Antitanque</option>
+                        <option value="123">.50</option>
+                        <option value="124">58.3</option>
+                        <option value="125">Misil</option>
+                        <option value="126">Lanzallamas</option>
+                        <option value="" class="bg-secondary text-white text-center" disabled>Armaduras</option>
+                        <option value="127">Cuero endurecido</option>
+                        <option value="128">Cota de mallas</option>
+                        <option value="129">Armadura Lamelar</option>
+                        <option value="130">Armadura de escamas</option>
+                        <option value="131">Armadura Samurái</option>
+                        <option value="132">Placas de acero</option>
+                        <option value="133">Kevlar militar</option>
+                    </select>
+                </div>
+                <%# Seccion detalle del arma actual %>
+                <div class="col-md-8 col-xs-12">
+                    <dl>
+                        <div class="row"> 
+                            <div class="row text-start">
+                                <dt class="col-6">Nombre :</dt>
+                                <dd class="col-6 text-start"><%=@id_arma3[:nombre]%><dd>
+                            </div>
+                            <div class="col-6 text-start">
+                                <div class="row">
+                                    <dt class="col-3">Tipo: </dt>
+                                    <dd class="col-5"><%=@id_arma3[:tipo]%>
+                                    </dd>
+                                </div>
+                            </div>
+                            <div class="col-6 text-start">
+                                <div class="row">
+                                    <dt class="col-3">Atributo: </dt>
+                                    <dd class="col-5"><%=@id_arma3[:atributo]%></dd>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row"> 
+                            <div class="col-6 text-start">
+                                <div class="row">
+                                    <dt class="col-3">Daño: </dt>
+                                    <dd class="col-5"><%=@id_arma3[:dano]%></dd>
+                                </div>
+                            </div>
+                            <div class="col-6 text-start">
+                                <div class="row">
+                                    <dt class="col-3">Velocidad: </dt>
+                                    <dd class="col-5"><%=@id_arma3[:velocidad]%></dd>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row"> 
+                            <div class="col-6 text-start">
+                                <div class="row">
+                                    <dt class="col-8">Distancia/ Rango: </dt>
+                                    <dd class="col-4"><%=@id_arma3[:distanciaRango]%></dd>
+                                </div>
+                            </div>
+                            <div class="col-6 text-start">
+                                <div class="row">
+                                    <dt class="col-3">Cadencia: </dt>
+                                    <dd class="col-5"><%=@id_arma3[:cadencia]%></dd>
+                                </div>
+                            </div>
+                        </div>
+                    </dl>
+                </div>
+            </div>
+
+            <%# Seccion Arma 4 %>
+            <div class="row border-top border-bottom py-3">
+                <%# Seccion de seleccion %>
+                <div class="col-md-4 col-xs-12">
+                    <p class="text-start"> Arma 4</p>    
+                    <!-- 134 opciones de armas -->
+                    <select class="form-select form-select-sm col-md-4" name="weapon[id_arma4]" id="weapon_id_arma4">
+                        <option value="<%=@weapon[0].id_arma4%>" selected>Selecciona un arma</option>
+                        <option value="134">Ninguna</option>
+                        <option value="" class="bg-secondary text-white text-center" disabled>Sencillas</option>
+                        <option value="1">Daga</option>
+                        <option value="2">Guantelete</option>
+                        <option value="3">Hoz</option>
+                        <option value="4">Maza ligera</option>
+                        <option value="5">Clava</option>
+                        <option value="6">Maza de armas</option>
+                        <option value="7">Maza pesada</option>
+                        <option value="8">Lanza corta</option>
+                        <option value="9">Bastón</option>
+                        <option value="10">Lanza</option>
+                        <option value="11">Lanza larga</option>
+                        <option value="12">Ballesta ligera</option>
+                        <option value="13">Ballesta pesada</option>
+                        <option value="14">Dardo</option>
+                        <option value="15">Honda</option>
+                        <option value="16">Jabalina</option>
+                        <option value="17">Porra</option>
+                        <option value="" class="bg-secondary text-white text-center" disabled>Marciales</option>
+                        <option value="18">Escudo ligero</option>
+                        <option value="19">Escudo con púas, ligero</option>
+                        <option value="20">Espada corta</option>
+                        <option value="21">Hacha arrojadiza</option>
+                        <option value="22">Hacha de mano</option>
+                        <option value="23">Kukri</option>
+                        <option value="24">Martillo ligero</option>
+                        <option value="25">Pico ligero</option>
+                        <option value="26">Cimitarra</option>
+                        <option value="27">Espada larga</option>
+                        <option value="28">Florete</option>
+                        <option value="29">Hacha de batalla</option>
+                        <option value="30">Maza pesada doble</option>
+                        <option value="31">Martillo de guerra</option>
+                        <option value="32">Tridente simple</option>
+                        <option value="33">Alabarda</option>
+                        <option value="34">Alabarda oriental</option>
+                        <option value="35">Bisarma</option>
+                        <option value="36">Espadón</option>
+                        <option value="37">Gran clava</option>
+                        <option value="38">Gran hacha</option>
+                        <option value="39">Guadaña</option>
+                        <option value="40">Guja</option>
+                        <option value="41">Lanza de caballería</option>
+                        <option value="42">Arco corto</option>
+                        <option value="43">Arco corto compuesto</option>
+                        <option value="44">Arco largo</option>
+                        <option value="45">Arco largo compuesto</option>
+                        <option value="" class="bg-secondary text-white text-center" disabled>Exotica</option>
+                        <option value="46">Bota con cuchilla</option>
+                        <option value="47">Brazal de garra</option>
+                        <option value="48">Kama</option>
+                        <option value="49">Nunchaku</option>
+                        <option value="50">Sai</option>
+                        <option value="51">Siangham</option>
+                        <option value="52">Espada bastarda</option>
+                        <option value="53">Flagelo</option>
+                        <option value="54">Hacha de guerra enana</option>
+                        <option value="55">Katana</option>
+                        <option value="56">Khopesh</option>
+                        <option value="57">Látigo</option>
+                        <option value="58">Atarraga</option>
+                        <option value="59">Espada de dos hojas</option>
+                        <option value="60">Ultra Espadón</option>
+                        <option value="61">Matagigantes (Gran Hacha especial)</option>
+                        <option value="62">Martillo ganchudo gnomo</option>
+                        <option value="63">Montante</option>
+                        <option value="64">Urgrosh enano</option>
+                        <option value="65">Ballesta de mano</option>
+                        <option value="66">Ballesta de repetición6, ligera</option>
+                        <option value="67">Ballesta de repetición7, pesada</option>
+                        <option value="68">Bolas</option>
+                        <option value="69">Chakram</option>
+                        <option value="70">Fukumi-bari</option>
+                        <option value="71">Red</option>
+                        <option value="72">Shuriken</option>
+                        <option value="" class="bg-secondary text-white text-center" disabled>Pistolas</option>
+                        <option value="73">.30</option>
+                        <option value="74">9mm</option>
+                        <option value="75">7.62T</option>
+                        <option value="76">.45</option>
+                        <option value="77">10mm</option>
+                        <option value="78">.50</option>
+                        <option value="79">.45</option>
+                        <option value="80">.40</option>
+                        <option value="81">.22</option>
+                        <option value="82">.40</option>
+                        <option value="83">380</option>
+                        <option value="" class="bg-secondary text-white text-center" disabled>Revolver</option>
+                        <option value="84">44</option>
+                        <option value="85">357</option>
+                        <option value="86">454</option>
+                        <option value="87">221</option>
+                        <option value="88">.38spl</option>
+                        <option value="89">.22 M</option>
+                        <option value="" class="bg-secondary text-white text-center" disabled>Subfusil</option>
+                        <option value="90">7.62 S</option>
+                        <option value="91">5.45</option>
+                        <option value="92">9mm</option>
+                        <option value="" class="bg-secondary text-white text-center" disabled>Ametralladora ligera</option>
+                        <option value="93">9mm</option>
+                        <option value="94">.32</option>
+                        <option value="95">5.56</option>
+                        <option value="96">.22</option>
+                        <option value="97">.40</option>
+                        <option value="98">10mm</option>
+                        <option value="99">.45</option>
+                        <option value="100">380</option>
+                        <option value="" class="bg-secondary text-white text-center" disabled>Rifle</option>
+                        <option value="101">7.62</option>
+                        <option value="102">.50</option>
+                        <option value="103">600</option>
+                        <option value="104">.30</option>
+                        <option value="105">300</option>
+                        <option value="106">.30-06</option>
+                        <option value="107">223</option>
+                        <option value="108">.22</option>
+                        <option value="109">15mm</option>
+                        <option value="110">460</option>
+                        <option value="" class="bg-secondary text-white text-center" disabled>Fusil</option>
+                        <option value="111">5mm</option>
+                        <option value="112">7.62</option>
+                        <option value="113">5.45</option>
+                        <option value="114">5.56</option>
+                        <option value="115">4.7mm</option>
+                        <option value="" class="bg-secondary text-white text-center" disabled>Escopeta</option>
+                        <option value="116">12ga</option>
+                        <option value="117">10ga</option>
+                        <option value="" class="bg-secondary text-white text-center" disabled>Armas pesadas</option>
+                        <option value="118">Misil</option>
+                        <option value="119">.50in</option>
+                        <option value="120">7.62</option>
+                        <option value="121">5.56</option>
+                        <option value="122">Antitanque</option>
+                        <option value="123">.50</option>
+                        <option value="124">58.3</option>
+                        <option value="125">Misil</option>
+                        <option value="126">Lanzallamas</option>
+                        <option value="" class="bg-secondary text-white text-center" disabled>Armaduras</option>
+                        <option value="127">Cuero endurecido</option>
+                        <option value="128">Cota de mallas</option>
+                        <option value="129">Armadura Lamelar</option>
+                        <option value="130">Armadura de escamas</option>
+                        <option value="131">Armadura Samurái</option>
+                        <option value="132">Placas de acero</option>
+                        <option value="133">Kevlar militar</option>
+                    </select>
+                </div>
+                <%# Seccion detalle del arma actual %>
+                <div class="col-md-8 col-xs-12">
+                    <dl>
+                        <div class="row"> 
+                            <div class="row text-start">
+                                <dt class="col-6">Nombre :</dt>
+                                <dd class="col-6 text-start"><%=@id_arma4[:nombre]%><dd>
+                            </div>
+                            <div class="col-6 text-start">
+                                <div class="row">
+                                    <dt class="col-3">Tipo: </dt>
+                                    <dd class="col-5"><%=@id_arma4[:tipo]%>
+                                    </dd>
+                                </div>
+                            </div>
+                            <div class="col-6 text-start">
+                                <div class="row">
+                                    <dt class="col-3">Atributo: </dt>
+                                    <dd class="col-5"><%=@id_arma4[:atributo]%></dd>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row"> 
+                            <div class="col-6 text-start">
+                                <div class="row">
+                                    <dt class="col-3">Daño: </dt>
+                                    <dd class="col-5"><%=@id_arma4[:dano]%></dd>
+                                </div>
+                            </div>
+                            <div class="col-6 text-start">
+                                <div class="row">
+                                    <dt class="col-3">Velocidad: </dt>
+                                    <dd class="col-5"><%=@id_arma4[:velocidad]%></dd>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row"> 
+                            <div class="col-6 text-start">
+                                <div class="row">
+                                    <dt class="col-8">Distancia/ Rango: </dt>
+                                    <dd class="col-4"><%=@id_arma4[:distanciaRango]%></dd>
+                                </div>
+                            </div>
+                            <div class="col-6 text-start">
+                                <div class="row">
+                                    <dt class="col-3">Cadencia: </dt>
+                                    <dd class="col-5"><%=@id_arma4[:cadencia]%></dd>
+                                </div>
+                            </div>
+                        </div>
+                    </dl>
+                </div>
+            </div>
+
+            <%# Seccion Arma 5 %>
+            <div class="row border-top border-bottom py-3">
+                <%# Seccion de seleccion %>
+                <div class="col-md-4 col-xs-12">
+                    <p class="text-start"> Arma 5</p>    
+                    <!-- 134 opciones de armas -->
+                    <select class="form-select form-select-sm col-md-4" name="weapon[id_arma5]" id="weapon_id_arma5">
+                        <option value="<%=@weapon[0].id_arma5%>" selected>Selecciona un arma</option>
+                        <option value="134">Ninguna</option>
+                        <option value="" class="bg-secondary text-white text-center" disabled>Sencillas</option>
+                        <option value="1">Daga</option>
+                        <option value="2">Guantelete</option>
+                        <option value="3">Hoz</option>
+                        <option value="4">Maza ligera</option>
+                        <option value="5">Clava</option>
+                        <option value="6">Maza de armas</option>
+                        <option value="7">Maza pesada</option>
+                        <option value="8">Lanza corta</option>
+                        <option value="9">Bastón</option>
+                        <option value="10">Lanza</option>
+                        <option value="11">Lanza larga</option>
+                        <option value="12">Ballesta ligera</option>
+                        <option value="13">Ballesta pesada</option>
+                        <option value="14">Dardo</option>
+                        <option value="15">Honda</option>
+                        <option value="16">Jabalina</option>
+                        <option value="17">Porra</option>
+                        <option value="" class="bg-secondary text-white text-center" disabled>Marciales</option>
+                        <option value="18">Escudo ligero</option>
+                        <option value="19">Escudo con púas, ligero</option>
+                        <option value="20">Espada corta</option>
+                        <option value="21">Hacha arrojadiza</option>
+                        <option value="22">Hacha de mano</option>
+                        <option value="23">Kukri</option>
+                        <option value="24">Martillo ligero</option>
+                        <option value="25">Pico ligero</option>
+                        <option value="26">Cimitarra</option>
+                        <option value="27">Espada larga</option>
+                        <option value="28">Florete</option>
+                        <option value="29">Hacha de batalla</option>
+                        <option value="30">Maza pesada doble</option>
+                        <option value="31">Martillo de guerra</option>
+                        <option value="32">Tridente simple</option>
+                        <option value="33">Alabarda</option>
+                        <option value="34">Alabarda oriental</option>
+                        <option value="35">Bisarma</option>
+                        <option value="36">Espadón</option>
+                        <option value="37">Gran clava</option>
+                        <option value="38">Gran hacha</option>
+                        <option value="39">Guadaña</option>
+                        <option value="40">Guja</option>
+                        <option value="41">Lanza de caballería</option>
+                        <option value="42">Arco corto</option>
+                        <option value="43">Arco corto compuesto</option>
+                        <option value="44">Arco largo</option>
+                        <option value="45">Arco largo compuesto</option>
+                        <option value="" class="bg-secondary text-white text-center" disabled>Exotica</option>
+                        <option value="46">Bota con cuchilla</option>
+                        <option value="47">Brazal de garra</option>
+                        <option value="48">Kama</option>
+                        <option value="49">Nunchaku</option>
+                        <option value="50">Sai</option>
+                        <option value="51">Siangham</option>
+                        <option value="52">Espada bastarda</option>
+                        <option value="53">Flagelo</option>
+                        <option value="54">Hacha de guerra enana</option>
+                        <option value="55">Katana</option>
+                        <option value="56">Khopesh</option>
+                        <option value="57">Látigo</option>
+                        <option value="58">Atarraga</option>
+                        <option value="59">Espada de dos hojas</option>
+                        <option value="60">Ultra Espadón</option>
+                        <option value="61">Matagigantes (Gran Hacha especial)</option>
+                        <option value="62">Martillo ganchudo gnomo</option>
+                        <option value="63">Montante</option>
+                        <option value="64">Urgrosh enano</option>
+                        <option value="65">Ballesta de mano</option>
+                        <option value="66">Ballesta de repetición6, ligera</option>
+                        <option value="67">Ballesta de repetición7, pesada</option>
+                        <option value="68">Bolas</option>
+                        <option value="69">Chakram</option>
+                        <option value="70">Fukumi-bari</option>
+                        <option value="71">Red</option>
+                        <option value="72">Shuriken</option>
+                        <option value="" class="bg-secondary text-white text-center" disabled>Pistolas</option>
+                        <option value="73">.30</option>
+                        <option value="74">9mm</option>
+                        <option value="75">7.62T</option>
+                        <option value="76">.45</option>
+                        <option value="77">10mm</option>
+                        <option value="78">.50</option>
+                        <option value="79">.45</option>
+                        <option value="80">.40</option>
+                        <option value="81">.22</option>
+                        <option value="82">.40</option>
+                        <option value="83">380</option>
+                        <option value="" class="bg-secondary text-white text-center" disabled>Revolver</option>
+                        <option value="84">44</option>
+                        <option value="85">357</option>
+                        <option value="86">454</option>
+                        <option value="87">221</option>
+                        <option value="88">.38spl</option>
+                        <option value="89">.22 M</option>
+                        <option value="" class="bg-secondary text-white text-center" disabled>Subfusil</option>
+                        <option value="90">7.62 S</option>
+                        <option value="91">5.45</option>
+                        <option value="92">9mm</option>
+                        <option value="" class="bg-secondary text-white text-center" disabled>Ametralladora ligera</option>
+                        <option value="93">9mm</option>
+                        <option value="94">.32</option>
+                        <option value="95">5.56</option>
+                        <option value="96">.22</option>
+                        <option value="97">.40</option>
+                        <option value="98">10mm</option>
+                        <option value="99">.45</option>
+                        <option value="100">380</option>
+                        <option value="" class="bg-secondary text-white text-center" disabled>Rifle</option>
+                        <option value="101">7.62</option>
+                        <option value="102">.50</option>
+                        <option value="103">600</option>
+                        <option value="104">.30</option>
+                        <option value="105">300</option>
+                        <option value="106">.30-06</option>
+                        <option value="107">223</option>
+                        <option value="108">.22</option>
+                        <option value="109">15mm</option>
+                        <option value="110">460</option>
+                        <option value="" class="bg-secondary text-white text-center" disabled>Fusil</option>
+                        <option value="111">5mm</option>
+                        <option value="112">7.62</option>
+                        <option value="113">5.45</option>
+                        <option value="114">5.56</option>
+                        <option value="115">4.7mm</option>
+                        <option value="" class="bg-secondary text-white text-center" disabled>Escopeta</option>
+                        <option value="116">12ga</option>
+                        <option value="117">10ga</option>
+                        <option value="" class="bg-secondary text-white text-center" disabled>Armas pesadas</option>
+                        <option value="118">Misil</option>
+                        <option value="119">.50in</option>
+                        <option value="120">7.62</option>
+                        <option value="121">5.56</option>
+                        <option value="122">Antitanque</option>
+                        <option value="123">.50</option>
+                        <option value="124">58.3</option>
+                        <option value="125">Misil</option>
+                        <option value="126">Lanzallamas</option>
+                        <option value="" class="bg-secondary text-white text-center" disabled>Armaduras</option>
+                        <option value="127">Cuero endurecido</option>
+                        <option value="128">Cota de mallas</option>
+                        <option value="129">Armadura Lamelar</option>
+                        <option value="130">Armadura de escamas</option>
+                        <option value="131">Armadura Samurái</option>
+                        <option value="132">Placas de acero</option>
+                        <option value="133">Kevlar militar</option>
+                    </select>
+                </div>
+                <%# Seccion detalle del arma actual %>
+                <div class="col-md-8 col-xs-12">
+                    <dl>
+                        <div class="row"> 
+                            <div class="row text-start">
+                                <dt class="col-6">Nombre :</dt>
+                                <dd class="col-6 text-start"><%=@id_arma5[:nombre]%><dd>
+                            </div>
+                            <div class="col-6 text-start">
+                                <div class="row">
+                                    <dt class="col-3">Tipo: </dt>
+                                    <dd class="col-5"><%=@id_arma5[:tipo]%>
+                                    </dd>
+                                </div>
+                            </div>
+                            <div class="col-6 text-start">
+                                <div class="row">
+                                    <dt class="col-3">Atributo: </dt>
+                                    <dd class="col-5"><%=@id_arma5[:atributo]%></dd>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row"> 
+                            <div class="col-6 text-start">
+                                <div class="row">
+                                    <dt class="col-3">Daño: </dt>
+                                    <dd class="col-5"><%=@id_arma5[:dano]%></dd>
+                                </div>
+                            </div>
+                            <div class="col-6 text-start">
+                                <div class="row">
+                                    <dt class="col-3">Velocidad: </dt>
+                                    <dd class="col-5"><%=@id_arma5[:velocidad]%></dd>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row"> 
+                            <div class="col-6 text-start">
+                                <div class="row">
+                                    <dt class="col-8">Distancia/ Rango: </dt>
+                                    <dd class="col-4"><%=@id_arma5[:distanciaRango]%></dd>
+                                </div>
+                            </div>
+                            <div class="col-6 text-start">
+                                <div class="row">
+                                    <dt class="col-3">Cadencia: </dt>
+                                    <dd class="col-5"><%=@id_arma5[:cadencia]%></dd>
+                                </div>
+                            </div>
+                        </div>
+                    </dl>
+                </div>
+            </div>
+
+             <%# Seccion Arma 6 %>
+            <div class="row border-top border-bottom py-3">
+                <%# Seccion de seleccion %>
+                <div class="col-md-4 col-xs-12">
+                    <p class="text-start"> Arma 6</p>    
+                    <!-- 134 opciones de armas -->
+                    <select class="form-select form-select-sm col-md-4" name="weapon[id_arma6]" id="weapon_id_arma6">
+                        <option value="<%=@weapon[0].id_arma6%>" selected>Selecciona un arma</option>
+                        <option value="134">Ninguna</option>
+                        <option value="" class="bg-secondary text-white text-center" disabled>Sencillas</option>
+                        <option value="1">Daga</option>
+                        <option value="2">Guantelete</option>
+                        <option value="3">Hoz</option>
+                        <option value="4">Maza ligera</option>
+                        <option value="5">Clava</option>
+                        <option value="6">Maza de armas</option>
+                        <option value="7">Maza pesada</option>
+                        <option value="8">Lanza corta</option>
+                        <option value="9">Bastón</option>
+                        <option value="10">Lanza</option>
+                        <option value="11">Lanza larga</option>
+                        <option value="12">Ballesta ligera</option>
+                        <option value="13">Ballesta pesada</option>
+                        <option value="14">Dardo</option>
+                        <option value="15">Honda</option>
+                        <option value="16">Jabalina</option>
+                        <option value="17">Porra</option>
+                        <option value="" class="bg-secondary text-white text-center" disabled>Marciales</option>
+                        <option value="18">Escudo ligero</option>
+                        <option value="19">Escudo con púas, ligero</option>
+                        <option value="20">Espada corta</option>
+                        <option value="21">Hacha arrojadiza</option>
+                        <option value="22">Hacha de mano</option>
+                        <option value="23">Kukri</option>
+                        <option value="24">Martillo ligero</option>
+                        <option value="25">Pico ligero</option>
+                        <option value="26">Cimitarra</option>
+                        <option value="27">Espada larga</option>
+                        <option value="28">Florete</option>
+                        <option value="29">Hacha de batalla</option>
+                        <option value="30">Maza pesada doble</option>
+                        <option value="31">Martillo de guerra</option>
+                        <option value="32">Tridente simple</option>
+                        <option value="33">Alabarda</option>
+                        <option value="34">Alabarda oriental</option>
+                        <option value="35">Bisarma</option>
+                        <option value="36">Espadón</option>
+                        <option value="37">Gran clava</option>
+                        <option value="38">Gran hacha</option>
+                        <option value="39">Guadaña</option>
+                        <option value="40">Guja</option>
+                        <option value="41">Lanza de caballería</option>
+                        <option value="42">Arco corto</option>
+                        <option value="43">Arco corto compuesto</option>
+                        <option value="44">Arco largo</option>
+                        <option value="45">Arco largo compuesto</option>
+                        <option value="" class="bg-secondary text-white text-center" disabled>Exotica</option>
+                        <option value="46">Bota con cuchilla</option>
+                        <option value="47">Brazal de garra</option>
+                        <option value="48">Kama</option>
+                        <option value="49">Nunchaku</option>
+                        <option value="50">Sai</option>
+                        <option value="51">Siangham</option>
+                        <option value="52">Espada bastarda</option>
+                        <option value="53">Flagelo</option>
+                        <option value="54">Hacha de guerra enana</option>
+                        <option value="55">Katana</option>
+                        <option value="56">Khopesh</option>
+                        <option value="57">Látigo</option>
+                        <option value="58">Atarraga</option>
+                        <option value="59">Espada de dos hojas</option>
+                        <option value="60">Ultra Espadón</option>
+                        <option value="61">Matagigantes (Gran Hacha especial)</option>
+                        <option value="62">Martillo ganchudo gnomo</option>
+                        <option value="63">Montante</option>
+                        <option value="64">Urgrosh enano</option>
+                        <option value="65">Ballesta de mano</option>
+                        <option value="66">Ballesta de repetición6, ligera</option>
+                        <option value="67">Ballesta de repetición7, pesada</option>
+                        <option value="68">Bolas</option>
+                        <option value="69">Chakram</option>
+                        <option value="70">Fukumi-bari</option>
+                        <option value="71">Red</option>
+                        <option value="72">Shuriken</option>
+                        <option value="" class="bg-secondary text-white text-center" disabled>Pistolas</option>
+                        <option value="73">.30</option>
+                        <option value="74">9mm</option>
+                        <option value="75">7.62T</option>
+                        <option value="76">.45</option>
+                        <option value="77">10mm</option>
+                        <option value="78">.50</option>
+                        <option value="79">.45</option>
+                        <option value="80">.40</option>
+                        <option value="81">.22</option>
+                        <option value="82">.40</option>
+                        <option value="83">380</option>
+                        <option value="" class="bg-secondary text-white text-center" disabled>Revolver</option>
+                        <option value="84">44</option>
+                        <option value="85">357</option>
+                        <option value="86">454</option>
+                        <option value="87">221</option>
+                        <option value="88">.38spl</option>
+                        <option value="89">.22 M</option>
+                        <option value="" class="bg-secondary text-white text-center" disabled>Subfusil</option>
+                        <option value="90">7.62 S</option>
+                        <option value="91">5.45</option>
+                        <option value="92">9mm</option>
+                        <option value="" class="bg-secondary text-white text-center" disabled>Ametralladora ligera</option>
+                        <option value="93">9mm</option>
+                        <option value="94">.32</option>
+                        <option value="95">5.56</option>
+                        <option value="96">.22</option>
+                        <option value="97">.40</option>
+                        <option value="98">10mm</option>
+                        <option value="99">.45</option>
+                        <option value="100">380</option>
+                        <option value="" class="bg-secondary text-white text-center" disabled>Rifle</option>
+                        <option value="101">7.62</option>
+                        <option value="102">.50</option>
+                        <option value="103">600</option>
+                        <option value="104">.30</option>
+                        <option value="105">300</option>
+                        <option value="106">.30-06</option>
+                        <option value="107">223</option>
+                        <option value="108">.22</option>
+                        <option value="109">15mm</option>
+                        <option value="110">460</option>
+                        <option value="" class="bg-secondary text-white text-center" disabled>Fusil</option>
+                        <option value="111">5mm</option>
+                        <option value="112">7.62</option>
+                        <option value="113">5.45</option>
+                        <option value="114">5.56</option>
+                        <option value="115">4.7mm</option>
+                        <option value="" class="bg-secondary text-white text-center" disabled>Escopeta</option>
+                        <option value="116">12ga</option>
+                        <option value="117">10ga</option>
+                        <option value="" class="bg-secondary text-white text-center" disabled>Armas pesadas</option>
+                        <option value="118">Misil</option>
+                        <option value="119">.50in</option>
+                        <option value="120">7.62</option>
+                        <option value="121">5.56</option>
+                        <option value="122">Antitanque</option>
+                        <option value="123">.50</option>
+                        <option value="124">58.3</option>
+                        <option value="125">Misil</option>
+                        <option value="126">Lanzallamas</option>
+                        <option value="" class="bg-secondary text-white text-center" disabled>Armaduras</option>
+                        <option value="127">Cuero endurecido</option>
+                        <option value="128">Cota de mallas</option>
+                        <option value="129">Armadura Lamelar</option>
+                        <option value="130">Armadura de escamas</option>
+                        <option value="131">Armadura Samurái</option>
+                        <option value="132">Placas de acero</option>
+                        <option value="133">Kevlar militar</option>
+                    </select>
+                </div>
+                <%# Seccion detalle del arma actual %>
+                <div class="col-md-8 col-xs-12">
+                    <dl>
+                        <div class="row"> 
+                            <div class="row text-start">
+                                <dt class="col-6">Nombre :</dt>
+                                <dd class="col-6 text-start"><%=@id_arma6[:nombre]%><dd>
+                            </div>
+                            <div class="col-6 text-start">
+                                <div class="row">
+                                    <dt class="col-3">Tipo: </dt>
+                                    <dd class="col-5"><%=@id_arma6[:tipo]%>
+                                    </dd>
+                                </div>
+                            </div>
+                            <div class="col-6 text-start">
+                                <div class="row">
+                                    <dt class="col-3">Atributo: </dt>
+                                    <dd class="col-5"><%=@id_arma6[:atributo]%></dd>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row"> 
+                            <div class="col-6 text-start">
+                                <div class="row">
+                                    <dt class="col-3">Daño: </dt>
+                                    <dd class="col-5"><%=@id_arma6[:dano]%></dd>
+                                </div>
+                            </div>
+                            <div class="col-6 text-start">
+                                <div class="row">
+                                    <dt class="col-3">Velocidad: </dt>
+                                    <dd class="col-5"><%=@id_arma6[:velocidad]%></dd>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row"> 
+                            <div class="col-6 text-start">
+                                <div class="row">
+                                    <dt class="col-8">Distancia/ Rango: </dt>
+                                    <dd class="col-4"><%=@id_arma6[:distanciaRango]%></dd>
+                                </div>
+                            </div>
+                            <div class="col-6 text-start">
+                                <div class="row">
+                                    <dt class="col-3">Cadencia: </dt>
+                                    <dd class="col-5"><%=@id_arma6[:cadencia]%></dd>
+                                </div>
+                            </div>
+                        </div>
+                    </dl>
+                </div>
+            </div>
+                    <%= button_to 'Actualizar arsenal', {action: "update"}, {class:'btn btn-secondary'}%>
+                    
         </div>
         
-        <% end %>
         
+            <% end %>
+                    <%= button_to 'Volver', characters_path, method: :get, class:'btn btn-danger mt-2'%>
     </div>
 
     <div class="col-md-1 col-xs-12"></div>
@@ -102,23 +1282,5 @@
 
 
 <script>
-    let radio = Object.values(document.getElementsByClassName("btn-check"));
-    
-    radio.forEach(element => {
-        element.addEventListener('click', function () {
-            element.parentElement.nextElementSibling.innerHTML = htmlArmasCC;
-            // switch (element.name) {
-            //     case "armasCC":
-                    
-            //     break;
-            //     case "armasDeFuego":
-                
-            //     break;
-            
-            //     default:
-            //     break;
-            
-        })
-    });
 </script>
 
