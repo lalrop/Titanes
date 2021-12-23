@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_12_17_125333) do
+ActiveRecord::Schema.define(version: 2021_12_23_124414) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -114,6 +114,33 @@ ActiveRecord::Schema.define(version: 2021_12_17_125333) do
     t.text "level5"
   end
 
+  create_table "skills", force: :cascade do |t|
+    t.bigint "character_id", null: false
+    t.integer "skill1"
+    t.integer "skill2"
+    t.integer "skill3"
+    t.integer "skill4"
+    t.integer "skill5"
+    t.integer "skill6"
+    t.integer "skill7"
+    t.integer "skill8"
+    t.integer "skill9"
+    t.integer "skill10"
+    t.integer "skill11"
+    t.integer "skill12"
+    t.integer "skill13"
+    t.integer "skill14"
+    t.integer "skill15"
+    t.integer "skill16"
+    t.integer "skill17"
+    t.integer "skill18"
+    t.integer "skill19"
+    t.integer "skill20"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["character_id"], name: "index_skills_on_character_id"
+  end
+
   create_table "tecnicas", force: :cascade do |t|
     t.string "name"
     t.text "description"
@@ -166,5 +193,6 @@ ActiveRecord::Schema.define(version: 2021_12_17_125333) do
   end
 
   add_foreign_key "characters", "users"
+  add_foreign_key "skills", "characters"
   add_foreign_key "weapons", "characters"
 end

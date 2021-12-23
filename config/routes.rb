@@ -2,6 +2,7 @@ Rails.application.routes.draw do
   devise_for :users
   resources :characters do
     resources :weapons
+    resources :skills
   end
   get '/masters/distritos', to: 'masters#distritos'
   get '/masters/razas', to: 'masters#razas'
