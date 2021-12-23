@@ -1,0 +1,8 @@
+<%= form_with(model: [ @character, @character.skills.build ], url: character_skill_path(@character), method:"patch") do |f| %>
+    <p>Tecnica 1: 
+    <%= f.collection_select(:skill, :skill1, Tecnica.all, :id, :name, prompt: true)
+%>
+    </p>
+    <%=@character.skills[0].skill1%>
+    <%= button_to 'Actualizar ', {action: "update"}, {class:'btn btn-secondary'}%>   
+<% end %>
