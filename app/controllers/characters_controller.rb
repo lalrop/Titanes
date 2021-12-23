@@ -23,7 +23,7 @@ class CharactersController < ApplicationController
     @character.hidratacion = 100
     @character.save
     @weapon = Weapon.create(character_id:@character[:id],id_arma1:134,id_arma2:134,id_arma3:134,id_arma4:134,id_arma5:134,id_arma6:134)
-
+    @skill = Skill.new
     redirect_to characters_path
   end
 
