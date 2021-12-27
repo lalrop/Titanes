@@ -24,7 +24,7 @@ class CharactersController < ApplicationController
     @character.save
     @weapon = Weapon.create(character_id:@character[:id],id_arma1:134,id_arma2:134,id_arma3:134,id_arma4:134,id_arma5:134,id_arma6:134)
     @skill = Skill.create(character_id:@character[:id],skill1:247,skill2:247,skill3:247,skill4:247,skill5:247,skill6:247,skill7:247,skill8:247,skill9:247,skill10:247,skill11:247,skill12:247,skill13:247,skill14:247,skill15:247,skill16:247,skill17:247,skill18:247,skill19:247,skill20:247)
-    redirect_to characters_path
+    redirect_to edit_character_skill_path(@character.id,@skill.id)
   end
 
   def edit
