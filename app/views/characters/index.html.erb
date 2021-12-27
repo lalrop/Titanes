@@ -316,7 +316,7 @@
                                     <dt class="col-4 text-start">Cadencia: </dt>
                                     <dd class="col-2"><%=Arma.find(Character.find(character.id).weapons[0].id_arma6).cadencia%></dd>
                                 </dl>
-                                <%=link_to 'Arsenal', character_path(character), class:"btn btn-warning" %>
+                                <%=link_to 'Arsenal', character_path(character), class:"btn btn-danger text-white" %>
                             </div>
                         </div>
 
@@ -329,7 +329,7 @@
                         </button>
                         <div id="collapseTen" class="accordion-collapse collapse bg-dark" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
                             <div class="accordion-body bg-dark">
-                                <%=link_to 'Tecnicas', character_skills_path(character), class:"btn btn-warning", target:"_blank" %>
+                                <%=link_to 'Compendio de Tecnicas', character_skills_path(character), class:"btn btn-danger text-white", target:"_blank" %>
                             </div>
                         </div>
                     </div>
@@ -346,7 +346,6 @@
                 </div>
                 <div class="my-2">
                 </div>
-
                 
             </div>
         </div>

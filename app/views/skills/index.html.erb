@@ -1,472 +1,635 @@
-<h1>Tecnicas</h1>
+<h1 class="mb-3">Tecnicas de <%=@character.name%></h1>
 
-<!-- Tecnica 1 -->
-<dl class="border container by-2">
-    <h3><%= Tecnica.find(@skillsCharacter["skill1"]).name%>
-    </h3>
-    <dt><%= Tecnica.find(@skillsCharacter["skill1"]).tipo%>
-    </dt>
-    <dd class="text-start"><em><%= Tecnica.find(@skillsCharacter["skill1"]).description%></em>
-    </dd>
-    <div class="row bg-secondary bg-gradient  border py-1">
-        <dt class="col-3 ">Costo:</dt>
-        <dd class="col-3 "><%= Tecnica.find(@skillsCharacter["skill1"]).cost%></dd>
-        <dt class="col-3 ">Dificultad:</dt>
-        <dd class="col-3 "><%= Tecnica.find(@skillsCharacter["skill1"]).dif%></dd>
-    </div>
-    <div class="row bg-secondary bg-gradient  border py-1">
-        <dt class="col-3 ">Daño:</dt>
-        <dd class="col-3 "><%= Tecnica.find(@skillsCharacter["skill1"]).damage%></dd>
-        <dt class="col-3 ">Velocidad:</dt>
-        <dd class="col-3 "><%= Tecnica.find(@skillsCharacter["skill1"]).velocidad%></dd>
-    </div>
-</dl>
-
-<!-- Tecnica 2 -->
-<dl class="border container by-2">
-    <h3><%= Tecnica.find(@skillsCharacter["skill2"]).name%>
-    </h3>
-    <dt><%= Tecnica.find(@skillsCharacter["skill2"]).tipo%>
-    </dt>
-    <dd class="text-start"><em><%= Tecnica.find(@skillsCharacter["skill2"]).description%></em>
-    </dd>
-    <div class="row bg-secondary bg-gradient  border py-1">
-        <dt class="col-3 ">Costo:</dt>
-        <dd class="col-3 "><%= Tecnica.find(@skillsCharacter["skill2"]).cost%></dd>
-        <dt class="col-3 ">Dificultad:</dt>
-        <dd class="col-3 "><%= Tecnica.find(@skillsCharacter["skill2"]).dif%></dd>
-    </div>
-    <div class="row bg-secondary bg-gradient  border py-1">
-        <dt class="col-3 ">Daño:</dt>
-        <dd class="col-3 "><%= Tecnica.find(@skillsCharacter["skill2"]).damage%></dd>
-        <dt class="col-3 ">Velocidad:</dt>
-        <dd class="col-3 "><%= Tecnica.find(@skillsCharacter["skill2"]).velocidad%></dd>
-    </div>
-</dl>
-<!-- Tecnica 3 -->
-<dl class="border container by-2">
-    <h3><%= Tecnica.find(@skillsCharacter["skill3"]).name%>
-    </h3>
-    <dt><%= Tecnica.find(@skillsCharacter["skill3"]).tipo%>
-    </dt>
-    <dd class="text-start"><em><%= Tecnica.find(@skillsCharacter["skill3"]).description%></em>
-    </dd>
-    <div class="row bg-secondary bg-gradient  border py-1">
-        <dt class="col-3 ">Costo:</dt>
-        <dd class="col-3 "><%= Tecnica.find(@skillsCharacter["skill3"]).cost%></dd>
-        <dt class="col-3 ">Dificultad:</dt>
-        <dd class="col-3 "><%= Tecnica.find(@skillsCharacter["skill3"]).dif%></dd>
-    </div>
-    <div class="row bg-secondary bg-gradient  border py-1">
-        <dt class="col-3 ">Daño:</dt>
-        <dd class="col-3 "><%= Tecnica.find(@skillsCharacter["skill3"]).damage%></dd>
-        <dt class="col-3 ">Velocidad:</dt>
-        <dd class="col-3 "><%= Tecnica.find(@skillsCharacter["skill3"]).velocidad%></dd>
-    </div>
-</dl>
-
-<!-- Tecnica 4 -->
-<dl class="border container by-2">
-    <h3><%= Tecnica.find(@skillsCharacter["skill4"]).name%>
-    </h3>
-    <dt><%= Tecnica.find(@skillsCharacter["skill4"]).tipo%>
-    </dt>
-    <dd class="text-start"><em><%= Tecnica.find(@skillsCharacter["skill4"]).description%></em>
-    </dd>
-    <div class="row bg-secondary bg-gradient  border py-1">
-        <dt class="col-3 ">Costo:</dt>
-        <dd class="col-3 "><%= Tecnica.find(@skillsCharacter["skill4"]).cost%></dd>
-        <dt class="col-3 ">Dificultad:</dt>
-        <dd class="col-3 "><%= Tecnica.find(@skillsCharacter["skill4"]).dif%></dd>
-    </div>
-    <div class="row bg-secondary bg-gradient  border py-1">
-        <dt class="col-3 ">Daño:</dt>
-        <dd class="col-3 "><%= Tecnica.find(@skillsCharacter["skill4"]).damage%></dd>
-        <dt class="col-3 ">Velocidad:</dt>
-        <dd class="col-3 "><%= Tecnica.find(@skillsCharacter["skill4"]).velocidad%></dd>
-    </div>
-</dl>
-
-<!-- Tecnica 5 -->
-<dl class="border container by-2">
-    <h3><%= Tecnica.find(@skillsCharacter["skill5"]).name%>
-    </h3>
-    <dt><%= Tecnica.find(@skillsCharacter["skill5"]).tipo%>
-    </dt>
-    <dd class="text-start"><em><%= Tecnica.find(@skillsCharacter["skill5"]).description%></em>
-    </dd>
-    <div class="row bg-secondary bg-gradient  border py-1">
-        <dt class="col-3 ">Costo:</dt>
-        <dd class="col-3 "><%= Tecnica.find(@skillsCharacter["skill5"]).cost%></dd>
-        <dt class="col-3 ">Dificultad:</dt>
-        <dd class="col-3 "><%= Tecnica.find(@skillsCharacter["skill5"]).dif%></dd>
-    </div>
-    <div class="row bg-secondary bg-gradient  border py-1">
-        <dt class="col-3 ">Daño:</dt>
-        <dd class="col-3 "><%= Tecnica.find(@skillsCharacter["skill5"]).damage%></dd>
-        <dt class="col-3 ">Velocidad:</dt>
-        <dd class="col-3 "><%= Tecnica.find(@skillsCharacter["skill5"]).velocidad%></dd>
-    </div>
-</dl>
-
-<!-- Boton Ver Mas -->
-<div>
-    <a class="btn" data-bs-toggle="collapse" href="#cincoTecnicasMas" role="button" aria-expanded="false" aria-controls="cincoTecnicasMas">
-        <h2><i class="bi bi-arrow-down-circle-fill text-danger"></i></h2>
-    </a>
-</div>
-<div class="collapse" id="cincoTecnicasMas">
-
-    <!-- Tecnica 6 -->
-    <dl class="border container by-2">
-        <h3><%= Tecnica.find(@skillsCharacter["skill6"]).name%>
-        </h3>
-        <dt><%= Tecnica.find(@skillsCharacter["skill6"]).tipo%>
-        </dt>
-        <dd class="text-start"><em><%= Tecnica.find(@skillsCharacter["skill6"]).description%></em>
-        </dd>
-        <div class="row bg-secondary bg-gradient  border py-1">
-            <dt class="col-3 ">Costo:</dt>
-            <dd class="col-3 "><%= Tecnica.find(@skillsCharacter["skill6"]).cost%></dd>
-            <dt class="col-3 ">Dificultad:</dt>
-            <dd class="col-3 "><%= Tecnica.find(@skillsCharacter["skill6"]).dif%></dd>
-        </div>
-        <div class="row bg-secondary bg-gradient  border py-1">
-            <dt class="col-3 ">Daño:</dt>
-            <dd class="col-3 "><%= Tecnica.find(@skillsCharacter["skill6"]).damage%></dd>
-            <dt class="col-3 ">Velocidad:</dt>
-            <dd class="col-3 "><%= Tecnica.find(@skillsCharacter["skill6"]).velocidad%></dd>
-        </div>
-    </dl>
-
-    <!-- Tecnica 7 -->
-    <dl class="border container by-2">
-        <h3><%= Tecnica.find(@skillsCharacter["skill7"]).name%>
-        </h3>
-        <dt><%= Tecnica.find(@skillsCharacter["skill7"]).tipo%>
-        </dt>
-        <dd class="text-start"><em><%= Tecnica.find(@skillsCharacter["skill7"]).description%></em>
-        </dd>
-        <div class="row bg-secondary bg-gradient  border py-1">
-            <dt class="col-3 ">Costo:</dt>
-            <dd class="col-3 "><%= Tecnica.find(@skillsCharacter["skill7"]).cost%></dd>
-            <dt class="col-3 ">Dificultad:</dt>
-            <dd class="col-3 "><%= Tecnica.find(@skillsCharacter["skill7"]).dif%></dd>
-        </div>
-        <div class="row bg-secondary bg-gradient  border py-1">
-            <dt class="col-3 ">Daño:</dt>
-            <dd class="col-3 "><%= Tecnica.find(@skillsCharacter["skill7"]).damage%></dd>
-            <dt class="col-3 ">Velocidad:</dt>
-            <dd class="col-3 "><%= Tecnica.find(@skillsCharacter["skill7"]).velocidad%></dd>
-        </div>
-    </dl>
-
-    <!-- Tecnica 8 -->
-    <dl class="border container by-2">
-        <h3><%= Tecnica.find(@skillsCharacter["skill8"]).name%>
-        </h3>
-        <dt><%= Tecnica.find(@skillsCharacter["skill8"]).tipo%>
-        </dt>
-        <dd class="text-start"><em><%= Tecnica.find(@skillsCharacter["skill8"]).description%></em>
-        </dd>
-        <div class="row bg-secondary bg-gradient  border py-1">
-            <dt class="col-3 ">Costo:</dt>
-            <dd class="col-3 "><%= Tecnica.find(@skillsCharacter["skill8"]).cost%></dd>
-            <dt class="col-3 ">Dificultad:</dt>
-            <dd class="col-3 "><%= Tecnica.find(@skillsCharacter["skill8"]).dif%></dd>
-        </div>
-        <div class="row bg-secondary bg-gradient  border py-1">
-            <dt class="col-3 ">Daño:</dt>
-            <dd class="col-3 "><%= Tecnica.find(@skillsCharacter["skill8"]).damage%></dd>
-            <dt class="col-3 ">Velocidad:</dt>
-            <dd class="col-3 "><%= Tecnica.find(@skillsCharacter["skill8"]).velocidad%></dd>
-        </div>
-    </dl>
-
-    <!-- Tecnica 9 -->
-    <dl class="border container by-2">
-        <h3><%= Tecnica.find(@skillsCharacter["skill9"]).name%>
-        </h3>
-        <dt><%= Tecnica.find(@skillsCharacter["skill9"]).tipo%>
-        </dt>
-        <dd class="text-start"><em><%= Tecnica.find(@skillsCharacter["skill9"]).description%></em>
-        </dd>
-        <div class="row bg-secondary bg-gradient  border py-1">
-            <dt class="col-3 ">Costo:</dt>
-            <dd class="col-3 "><%= Tecnica.find(@skillsCharacter["skill9"]).cost%></dd>
-            <dt class="col-3 ">Dificultad:</dt>
-            <dd class="col-3 "><%= Tecnica.find(@skillsCharacter["skill9"]).dif%></dd>
-        </div>
-        <div class="row bg-secondary bg-gradient  border py-1">
-            <dt class="col-3 ">Daño:</dt>
-            <dd class="col-3 "><%= Tecnica.find(@skillsCharacter["skill9"]).damage%></dd>
-            <dt class="col-3 ">Velocidad:</dt>
-            <dd class="col-3 "><%= Tecnica.find(@skillsCharacter["skill9"]).velocidad%></dd>
-        </div>
-    </dl>
-
-    <!-- Tecnica 10 -->
-    <dl class="border container by-2">
-        <h3><%= Tecnica.find(@skillsCharacter["skill10"]).name%>
-        </h3>
-        <dt><%= Tecnica.find(@skillsCharacter["skill10"]).tipo%>
-        </dt>
-        <dd class="text-start"><em><%= Tecnica.find(@skillsCharacter["skill10"]).description%></em>
-        </dd>
-        <div class="row bg-secondary bg-gradient  border py-1">
-            <dt class="col-3 ">Costo:</dt>
-            <dd class="col-3 "><%= Tecnica.find(@skillsCharacter["skill10"]).cost%></dd>
-            <dt class="col-3 ">Dificultad:</dt>
-            <dd class="col-3 "><%= Tecnica.find(@skillsCharacter["skill10"]).dif%></dd>
-        </div>
-        <div class="row bg-secondary bg-gradient  border py-1">
-            <dt class="col-3 ">Daño:</dt>
-            <dd class="col-3 "><%= Tecnica.find(@skillsCharacter["skill10"]).damage%></dd>
-            <dt class="col-3 ">Velocidad:</dt>
-            <dd class="col-3 "><%= Tecnica.find(@skillsCharacter["skill10"]).velocidad%></dd>
-        </div>
-    </dl>
-
-
-    <!-- Boton Ver Mas -->
-    <div>
-        <a class="btn" data-bs-toggle="collapse" href="#cincoTecnicasMas2" role="button" aria-expanded="false" aria-controls="cincoTecnicasMas2">
-            <h2><i class="bi bi-arrow-down-circle-fill text-danger"></i></h2>
-        </a>
-    </div>
-    <div class="collapse" id="cincoTecnicasMas2">
-        <!-- Tecnica 11 -->
-        <dl class="border container by-2">
-            <h3><%= Tecnica.find(@skillsCharacter["skill11"]).name%>
+<div class="row d-flex">
+    <div class="col-1"></div>
+    <div class="col-9 container">
+        <!-- Tecnica 1 -->
+        <dl class="border-top by-2">
+            <h3 class="my-3"><%= Tecnica.find(@skillsCharacter["skill1"]).name%>
             </h3>
-            <dt><%= Tecnica.find(@skillsCharacter["skill11"]).tipo%>
+            <dt class="my-2"><%= Tecnica.find(@skillsCharacter["skill1"]).tipo%>
             </dt>
-            <dd class="text-start"><em><%= Tecnica.find(@skillsCharacter["skill11"]).description%></em>
+            <dd class="text-start"><em><%= Tecnica.find(@skillsCharacter["skill1"]).description%></em>
             </dd>
-            <div class="row bg-secondary bg-gradient  border py-1">
-                <dt class="col-3 ">Costo:</dt>
-                <dd class="col-3 "><%= Tecnica.find(@skillsCharacter["skill11"]).cost%></dd>
-                <dt class="col-3 ">Dificultad:</dt>
-                <dd class="col-3 "><%= Tecnica.find(@skillsCharacter["skill11"]).dif%></dd>
-            </div>
-            <div class="row bg-secondary bg-gradient  border py-1">
-                <dt class="col-3 ">Daño:</dt>
-                <dd class="col-3 "><%= Tecnica.find(@skillsCharacter["skill11"]).damage%></dd>
-                <dt class="col-3 ">Velocidad:</dt>
-                <dd class="col-3 "><%= Tecnica.find(@skillsCharacter["skill11"]).velocidad%></dd>
+            <div class="d-flex flex-column">
+                <table class="bg-sencondary bg-gradient mt-2">
+                    <tr class="border-top border-secondary">
+                        <td> Costo: </td>
+                        <td> <%= Tecnica.find(@skillsCharacter["skill1"]).cost%></td>
+                    </tr>
+                    <tr class="border-top border-secondary">
+                        <td> Dificultad:  </td>
+                        <td> <%= Tecnica.find(@skillsCharacter["skill1"]).dif%> </td>
+                    </tr>
+                    <tr class="border-top border-secondary">
+                        <td> Daño: </td>
+                        <td> <%= Tecnica.find(@skillsCharacter["skill1"]).damage%></td>
+                    </tr>
+                    <tr class="border-top border-secondary">
+                        <td> Velocidad:  </td>
+                        <td> <%= Tecnica.find(@skillsCharacter["skill1"]).velocidad%> </td>
+                    </tr>
+                </table>
             </div>
         </dl>
 
-        <!-- Tecnica 12 -->
-        <dl class="border container by-2">
-            <h3><%= Tecnica.find(@skillsCharacter["skill12"]).name%>
+        <!-- Tecnica 2 -->
+        <dl class="border-top by-2">
+            <h3 class="my-3"><%= Tecnica.find(@skillsCharacter["skill2"]).name%>
             </h3>
-            <dt><%= Tecnica.find(@skillsCharacter["skill12"]).tipo%>
+            <dt class="my-2"><%= Tecnica.find(@skillsCharacter["skill2"]).tipo%>
             </dt>
-            <dd class="text-start"><em><%= Tecnica.find(@skillsCharacter["skill12"]).description%></em>
+            <dd class="text-start"><em><%= Tecnica.find(@skillsCharacter["skill2"]).description%></em>
             </dd>
-            <div class="row bg-secondary bg-gradient  border py-1">
-                <dt class="col-3 ">Costo:</dt>
-                <dd class="col-3 "><%= Tecnica.find(@skillsCharacter["skill12"]).cost%></dd>
-                <dt class="col-3 ">Dificultad:</dt>
-                <dd class="col-3 "><%= Tecnica.find(@skillsCharacter["skill12"]).dif%></dd>
+            <div class="d-flex flex-column">
+                <table class="bg-sencondary bg-gradient mt-2">
+                    <tr class="border-top border-secondary">
+                        <td> Costo: </td>
+                        <td> <%= Tecnica.find(@skillsCharacter["skill2"]).cost%></td>
+                    </tr>
+                    <tr class="border-top border-secondary">
+                        <td> Dificultad:  </td>
+                        <td> <%= Tecnica.find(@skillsCharacter["skill2"]).dif%> </td>
+                    </tr>
+                    <tr class="border-top border-secondary">
+                        <td> Daño: </td>
+                        <td> <%= Tecnica.find(@skillsCharacter["skill2"]).damage%></td>
+                    </tr>
+                    <tr class="border-top border-secondary">
+                        <td> Velocidad:  </td>
+                        <td> <%= Tecnica.find(@skillsCharacter["skill2"]).velocidad%> </td>
+                    </tr>
+                </table>
             </div>
-            <div class="row bg-secondary bg-gradient  border py-1">
-                <dt class="col-3 ">Daño:</dt>
-                <dd class="col-3 "><%= Tecnica.find(@skillsCharacter["skill12"]).damage%></dd>
-                <dt class="col-3 ">Velocidad:</dt>
-                <dd class="col-3 "><%= Tecnica.find(@skillsCharacter["skill12"]).velocidad%></dd>
+        </dl>
+        <!-- Tecnica 3 -->
+        <dl class="border-top by-2">
+            <h3 class="my-3"><%= Tecnica.find(@skillsCharacter["skill3"]).name%>
+            </h3>
+            <dt class="my-2"><%= Tecnica.find(@skillsCharacter["skill3"]).tipo%>
+            </dt>
+            <dd class="text-start"><em><%= Tecnica.find(@skillsCharacter["skill3"]).description%></em>
+            </dd>
+            <div class="d-flex flex-column">
+                <table class="bg-sencondary bg-gradient mt-2">
+                    <tr class="border-top border-secondary">
+                        <td> Costo: </td>
+                        <td> <%= Tecnica.find(@skillsCharacter["skill3"]).cost%></td>
+                    </tr>
+                    <tr class="border-top border-secondary">
+                        <td> Dificultad:  </td>
+                        <td> <%= Tecnica.find(@skillsCharacter["skill3"]).dif%> </td>
+                    </tr>
+                    <tr class="border-top border-secondary">
+                        <td> Daño: </td>
+                        <td> <%= Tecnica.find(@skillsCharacter["skill3"]).damage%></td>
+                    </tr>
+                    <tr class="border-top border-secondary">
+                        <td> Velocidad:  </td>
+                        <td> <%= Tecnica.find(@skillsCharacter["skill3"]).velocidad%> </td>
+                    </tr>
+                </table>
             </div>
         </dl>
 
-        <!-- Tecnica 13 -->
-        <dl class="border container by-2">
-            <h3><%= Tecnica.find(@skillsCharacter["skill13"]).name%>
+        <!-- Tecnica 4 -->
+        <dl class="border-top by-2">
+            <h3 class="my-3"><%= Tecnica.find(@skillsCharacter["skill4"]).name%>
             </h3>
-            <dt><%= Tecnica.find(@skillsCharacter["skill13"]).tipo%>
+            <dt class="my-2"><%= Tecnica.find(@skillsCharacter["skill4"]).tipo%>
             </dt>
-            <dd class="text-start"><em><%= Tecnica.find(@skillsCharacter["skill13"]).description%></em>
+            <dd class="text-start"><em><%= Tecnica.find(@skillsCharacter["skill4"]).description%></em>
             </dd>
-            <div class="row bg-secondary bg-gradient  border py-1">
-                <dt class="col-3 ">Costo:</dt>
-                <dd class="col-3 "><%= Tecnica.find(@skillsCharacter["skill13"]).cost%></dd>
-                <dt class="col-3 ">Dificultad:</dt>
-                <dd class="col-3 "><%= Tecnica.find(@skillsCharacter["skill13"]).dif%></dd>
-            </div>
-            <div class="row bg-secondary bg-gradient  border py-1">
-                <dt class="col-3 ">Daño:</dt>
-                <dd class="col-3 "><%= Tecnica.find(@skillsCharacter["skill13"]).damage%></dd>
-                <dt class="col-3 ">Velocidad:</dt>
-                <dd class="col-3 "><%= Tecnica.find(@skillsCharacter["skill13"]).velocidad%></dd>
+            <div class="d-flex flex-column">
+                <table class="bg-sencondary bg-gradient mt-2">
+                    <tr class="border-top border-secondary">
+                        <td> Costo: </td>
+                        <td> <%= Tecnica.find(@skillsCharacter["skill4"]).cost%></td>
+                    </tr>
+                    <tr class="border-top border-secondary">
+                        <td> Dificultad:  </td>
+                        <td> <%= Tecnica.find(@skillsCharacter["skill4"]).dif%> </td>
+                    </tr>
+                    <tr class="border-top border-secondary">
+                        <td> Daño: </td>
+                        <td> <%= Tecnica.find(@skillsCharacter["skill4"]).damage%></td>
+                    </tr>
+                    <tr class="border-top border-secondary">
+                        <td> Velocidad:  </td>
+                        <td> <%= Tecnica.find(@skillsCharacter["skill4"]).velocidad%> </td>
+                    </tr>
+                </table>
             </div>
         </dl>
 
-        <!-- Tecnica 14 -->
-        <dl class="border container by-2">
-            <h3><%= Tecnica.find(@skillsCharacter["skill14"]).name%>
+        <!-- Tecnica 5 -->
+        <dl class="border-top by-2">
+            <h3 class="my-3"><%= Tecnica.find(@skillsCharacter["skill5"]).name%>
             </h3>
-            <dt><%= Tecnica.find(@skillsCharacter["skill14"]).tipo%>
+            <dt class="my-2"><%= Tecnica.find(@skillsCharacter["skill5"]).tipo%>
             </dt>
-            <dd class="text-start"><em><%= Tecnica.find(@skillsCharacter["skill14"]).description%></em>
+            <dd class="text-start"><em><%= Tecnica.find(@skillsCharacter["skill5"]).description%></em>
             </dd>
-            <div class="row bg-secondary bg-gradient  border py-1">
-                <dt class="col-3 ">Costo:</dt>
-                <dd class="col-3 "><%= Tecnica.find(@skillsCharacter["skill14"]).cost%></dd>
-                <dt class="col-3 ">Dificultad:</dt>
-                <dd class="col-3 "><%= Tecnica.find(@skillsCharacter["skill14"]).dif%></dd>
-            </div>
-            <div class="row bg-secondary bg-gradient  border py-1">
-                <dt class="col-3 ">Daño:</dt>
-                <dd class="col-3 "><%= Tecnica.find(@skillsCharacter["skill14"]).damage%></dd>
-                <dt class="col-3 ">Velocidad:</dt>
-                <dd class="col-3 "><%= Tecnica.find(@skillsCharacter["skill14"]).velocidad%></dd>
-            </div>
-        </dl>
-
-        <!-- Tecnica 15 -->
-        <dl class="border container by-2">
-            <h3><%= Tecnica.find(@skillsCharacter["skill15"]).name%>
-            </h3>
-            <dt><%= Tecnica.find(@skillsCharacter["skill15"]).tipo%>
-            </dt>
-            <dd class="text-start"><em><%= Tecnica.find(@skillsCharacter["skill15"]).description%></em>
-            </dd>
-            <div class="row bg-secondary bg-gradient  border py-1">
-                <dt class="col-3 ">Costo:</dt>
-                <dd class="col-3 "><%= Tecnica.find(@skillsCharacter["skill15"]).cost%></dd>
-                <dt class="col-3 ">Dificultad:</dt>
-                <dd class="col-3 "><%= Tecnica.find(@skillsCharacter["skill15"]).dif%></dd>
-            </div>
-            <div class="row bg-secondary bg-gradient  border py-1">
-                <dt class="col-3 ">Daño:</dt>
-                <dd class="col-3 "><%= Tecnica.find(@skillsCharacter["skill15"]).damage%></dd>
-                <dt class="col-3 ">Velocidad:</dt>
-                <dd class="col-3 "><%= Tecnica.find(@skillsCharacter["skill15"]).velocidad%></dd>
+            <div class="d-flex flex-column">
+                <table class="bg-sencondary bg-gradient mt-2">
+                    <tr class="border-top border-secondary">
+                        <td> Costo: </td>
+                        <td> <%= Tecnica.find(@skillsCharacter["skill5"]).cost%></td>
+                    </tr>
+                    <tr class="border-top border-secondary">
+                        <td> Dificultad:  </td>
+                        <td> <%= Tecnica.find(@skillsCharacter["skill5"]).dif%> </td>
+                    </tr>
+                    <tr class="border-top border-secondary">
+                        <td> Daño: </td>
+                        <td> <%= Tecnica.find(@skillsCharacter["skill5"]).damage%></td>
+                    </tr>
+                    <tr class="border-top border-secondary">
+                        <td> Velocidad:  </td>
+                        <td> <%= Tecnica.find(@skillsCharacter["skill5"]).velocidad%> </td>
+                    </tr>
+                </table>
             </div>
         </dl>
 
         <!-- Boton Ver Mas -->
         <div>
-            <a class="btn" data-bs-toggle="collapse" href="#cincoTecnicasMas3" role="button" aria-expanded="false" aria-controls="cincoTecnicasMas3">
+            <a class="btn" data-bs-toggle="collapse" href="#cincoTecnicasMas" role="button" aria-expanded="false" aria-controls="cincoTecnicasMas">
                 <h2><i class="bi bi-arrow-down-circle-fill text-danger"></i></h2>
             </a>
         </div>
-        <div class="collapse" id="cincoTecnicasMas3">
-            <!-- Tecnica 16 -->
-            <dl class="border container by-2">
-                <h3><%= Tecnica.find(@skillsCharacter["skill16"]).name%>
+        <div class="collapse" id="cincoTecnicasMas">
+
+            <!-- Tecnica 6 -->
+            <dl class="border-top by-2">
+                <h3 class="my-3"><%= Tecnica.find(@skillsCharacter["skill6"]).name%>
                 </h3>
-                <dt><%= Tecnica.find(@skillsCharacter["skill16"]).tipo%>
+                <dt class="my-2"><%= Tecnica.find(@skillsCharacter["skill6"]).tipo%>
                 </dt>
-                <dd class="text-start"><em><%= Tecnica.find(@skillsCharacter["skill16"]).description%></em>
+                <dd class="text-start"><em><%= Tecnica.find(@skillsCharacter["skill6"]).description%></em>
                 </dd>
-                <div class="row bg-secondary bg-gradient  border py-1">
-                    <dt class="col-3 ">Costo:</dt>
-                    <dd class="col-3 "><%= Tecnica.find(@skillsCharacter["skill16"]).cost%></dd>
-                    <dt class="col-3 ">Dificultad:</dt>
-                    <dd class="col-3 "><%= Tecnica.find(@skillsCharacter["skill16"]).dif%></dd>
-                </div>
-                <div class="row bg-secondary bg-gradient  border py-1">
-                    <dt class="col-3 ">Daño:</dt>
-                    <dd class="col-3 "><%= Tecnica.find(@skillsCharacter["skill16"]).damage%></dd>
-                    <dt class="col-3 ">Velocidad:</dt>
-                    <dd class="col-3 "><%= Tecnica.find(@skillsCharacter["skill16"]).velocidad%></dd>
+                <div class="d-flex flex-column">
+                    <table class="bg-sencondary bg-gradient mt-2">
+                        <tr class="border-top border-secondary">
+                            <td> Costo: </td>
+                            <td> <%= Tecnica.find(@skillsCharacter["skill6"]).cost%></td>
+                        </tr>
+                        <tr class="border-top border-secondary">
+                            <td> Dificultad:  </td>
+                            <td> <%= Tecnica.find(@skillsCharacter["skill6"]).dif%> </td>
+                        </tr>
+                        <tr class="border-top border-secondary">
+                            <td> Daño: </td>
+                            <td> <%= Tecnica.find(@skillsCharacter["skill6"]).damage%></td>
+                        </tr>
+                        <tr class="border-top border-secondary">
+                            <td> Velocidad:  </td>
+                            <td> <%= Tecnica.find(@skillsCharacter["skill6"]).velocidad%> </td>
+                        </tr>
+                    </table>
                 </div>
             </dl>
 
-            <!-- Tecnica 17 -->
-            <dl class="border container by-2">
-                <h3><%= Tecnica.find(@skillsCharacter["skill17"]).name%>
+            <!-- Tecnica 7 -->
+            <dl class="border-top by-2">
+                <h3 class="my-3"><%= Tecnica.find(@skillsCharacter["skill7"]).name%>
                 </h3>
-                <dt><%= Tecnica.find(@skillsCharacter["skill17"]).tipo%>
+                <dt class="my-2"><%= Tecnica.find(@skillsCharacter["skill7"]).tipo%>
                 </dt>
-                <dd class="text-start"><em><%= Tecnica.find(@skillsCharacter["skill17"]).description%></em>
+                <dd class="text-start"><em><%= Tecnica.find(@skillsCharacter["skill7"]).description%></em>
                 </dd>
-                <div class="row bg-secondary bg-gradient  border py-1">
-                    <dt class="col-3 ">Costo:</dt>
-                    <dd class="col-3 "><%= Tecnica.find(@skillsCharacter["skill17"]).cost%></dd>
-                    <dt class="col-3 ">Dificultad:</dt>
-                    <dd class="col-3 "><%= Tecnica.find(@skillsCharacter["skill17"]).dif%></dd>
-                </div>
-                <div class="row bg-secondary bg-gradient  border py-1">
-                    <dt class="col-3 ">Daño:</dt>
-                    <dd class="col-3 "><%= Tecnica.find(@skillsCharacter["skill17"]).damage%></dd>
-                    <dt class="col-3 ">Velocidad:</dt>
-                    <dd class="col-3 "><%= Tecnica.find(@skillsCharacter["skill17"]).velocidad%></dd>
+                <div class="d-flex flex-column">
+                    <table class="bg-sencondary bg-gradient mt-2">
+                        <tr class="border-top border-secondary">
+                            <td> Costo: </td>
+                            <td> <%= Tecnica.find(@skillsCharacter["skill7"]).cost%></td>
+                        </tr>
+                        <tr class="border-top border-secondary">
+                            <td> Dificultad:  </td>
+                            <td> <%= Tecnica.find(@skillsCharacter["skill7"]).dif%> </td>
+                        </tr>
+                        <tr class="border-top border-secondary">
+                            <td> Daño: </td>
+                            <td> <%= Tecnica.find(@skillsCharacter["skill7"]).damage%></td>
+                        </tr>
+                        <tr class="border-top border-secondary">
+                            <td> Velocidad:  </td>
+                            <td> <%= Tecnica.find(@skillsCharacter["skill7"]).velocidad%> </td>
+                        </tr>
+                    </table>
                 </div>
             </dl>
 
-            <!-- Tecnica 18 -->
-            <dl class="border container by-2">
-                <h3><%= Tecnica.find(@skillsCharacter["skill18"]).name%>
+            <!-- Tecnica 8 -->
+            <dl class="border-top by-2">
+                <h3 class="my-3"><%= Tecnica.find(@skillsCharacter["skill8"]).name%>
                 </h3>
-                <dt><%= Tecnica.find(@skillsCharacter["skill18"]).tipo%>
+                <dt class="my-2"><%= Tecnica.find(@skillsCharacter["skill8"]).tipo%>
                 </dt>
-                <dd class="text-start"><em><%= Tecnica.find(@skillsCharacter["skill18"]).description%></em>
+                <dd class="text-start"><em><%= Tecnica.find(@skillsCharacter["skill8"]).description%></em>
                 </dd>
-                <div class="row bg-secondary bg-gradient  border py-1">
-                    <dt class="col-3 ">Costo:</dt>
-                    <dd class="col-3 "><%= Tecnica.find(@skillsCharacter["skill18"]).cost%></dd>
-                    <dt class="col-3 ">Dificultad:</dt>
-                    <dd class="col-3 "><%= Tecnica.find(@skillsCharacter["skill18"]).dif%></dd>
-                </div>
-                <div class="row bg-secondary bg-gradient  border py-1">
-                    <dt class="col-3 ">Daño:</dt>
-                    <dd class="col-3 "><%= Tecnica.find(@skillsCharacter["skill18"]).damage%></dd>
-                    <dt class="col-3 ">Velocidad:</dt>
-                    <dd class="col-3 "><%= Tecnica.find(@skillsCharacter["skill18"]).velocidad%></dd>
+                <div class="d-flex flex-column">
+                    <table class="bg-sencondary bg-gradient mt-2">
+                        <tr class="border-top border-secondary">
+                            <td> Costo: </td>
+                            <td> <%= Tecnica.find(@skillsCharacter["skill8"]).cost%></td>
+                        </tr>
+                        <tr class="border-top border-secondary">
+                            <td> Dificultad:  </td>
+                            <td> <%= Tecnica.find(@skillsCharacter["skill8"]).dif%> </td>
+                        </tr>
+                        <tr class="border-top border-secondary">
+                            <td> Daño: </td>
+                            <td> <%= Tecnica.find(@skillsCharacter["skill8"]).damage%></td>
+                        </tr>
+                        <tr class="border-top border-secondary">
+                            <td> Velocidad:  </td>
+                            <td> <%= Tecnica.find(@skillsCharacter["skill8"]).velocidad%> </td>
+                        </tr>
+                    </table>
                 </div>
             </dl>
 
-            <!-- Tecnica 19 -->
-            <dl class="border container by-2">
-                <h3><%= Tecnica.find(@skillsCharacter["skill19"]).name%>
+            <!-- Tecnica 9 -->
+            <dl class="border-top by-2">
+                <h3 class="my-3"><%= Tecnica.find(@skillsCharacter["skill9"]).name%>
                 </h3>
-                <dt><%= Tecnica.find(@skillsCharacter["skill19"]).tipo%>
+                <dt class="my-2"><%= Tecnica.find(@skillsCharacter["skill9"]).tipo%>
                 </dt>
-                <dd class="text-start"><em><%= Tecnica.find(@skillsCharacter["skill19"]).description%></em>
+                <dd class="text-start"><em><%= Tecnica.find(@skillsCharacter["skill9"]).description%></em>
                 </dd>
-                <div class="row bg-secondary bg-gradient  border py-1">
-                    <dt class="col-3 ">Costo:</dt>
-                    <dd class="col-3 "><%= Tecnica.find(@skillsCharacter["skill19"]).cost%></dd>
-                    <dt class="col-3 ">Dificultad:</dt>
-                    <dd class="col-3 "><%= Tecnica.find(@skillsCharacter["skill19"]).dif%></dd>
-                </div>
-                <div class="row bg-secondary bg-gradient  border py-1">
-                    <dt class="col-3 ">Daño:</dt>
-                    <dd class="col-3 "><%= Tecnica.find(@skillsCharacter["skill19"]).damage%></dd>
-                    <dt class="col-3 ">Velocidad:</dt>
-                    <dd class="col-3 "><%= Tecnica.find(@skillsCharacter["skill19"]).velocidad%></dd>
+                <div class="d-flex flex-column">
+                    <table class="bg-sencondary bg-gradient mt-2">
+                        <tr class="border-top border-secondary">
+                            <td> Costo: </td>
+                            <td> <%= Tecnica.find(@skillsCharacter["skill9"]).cost%></td>
+                        </tr>
+                        <tr class="border-top border-secondary">
+                            <td> Dificultad:  </td>
+                            <td> <%= Tecnica.find(@skillsCharacter["skill9"]).dif%> </td>
+                        </tr>
+                        <tr class="border-top border-secondary">
+                            <td> Daño: </td>
+                            <td> <%= Tecnica.find(@skillsCharacter["skill9"]).damage%></td>
+                        </tr>
+                        <tr class="border-top border-secondary">
+                            <td> Velocidad:  </td>
+                            <td> <%= Tecnica.find(@skillsCharacter["skill9"]).velocidad%> </td>
+                        </tr>
+                    </table>
                 </div>
             </dl>
 
-            <!-- Tecnica 20 -->
-            <dl class="border container by-2">
-                <h3><%= Tecnica.find(@skillsCharacter["skill20"]).name%>
+            <!-- Tecnica 10 -->
+            <dl class="border-top by-2">
+                <h3 class="my-3"><%= Tecnica.find(@skillsCharacter["skill10"]).name%>
                 </h3>
-                <dt><%= Tecnica.find(@skillsCharacter["skill20"]).tipo%>
+                <dt class="my-2"><%= Tecnica.find(@skillsCharacter["skill10"]).tipo%>
                 </dt>
-                <dd class="text-start"><em><%= Tecnica.find(@skillsCharacter["skill20"]).description%></em>
+                <dd class="text-start"><em><%= Tecnica.find(@skillsCharacter["skill10"]).description%></em>
                 </dd>
-                <div class="row bg-secondary bg-gradient  border py-1">
-                    <dt class="col-3 ">Costo:</dt>
-                    <dd class="col-3 "><%= Tecnica.find(@skillsCharacter["skill20"]).cost%></dd>
-                    <dt class="col-3 ">Dificultad:</dt>
-                    <dd class="col-3 "><%= Tecnica.find(@skillsCharacter["skill20"]).dif%></dd>
-                </div>
-                <div class="row bg-secondary bg-gradient  border py-1">
-                    <dt class="col-3 ">Daño:</dt>
-                    <dd class="col-3 "><%= Tecnica.find(@skillsCharacter["skill20"]).damage%></dd>
-                    <dt class="col-3 ">Velocidad:</dt>
-                    <dd class="col-3 "><%= Tecnica.find(@skillsCharacter["skill20"]).velocidad%></dd>
+                <div class="d-flex flex-column">
+                    <table class="bg-sencondary bg-gradient mt-2">
+                        <tr class="border-top border-secondary">
+                            <td> Costo: </td>
+                            <td> <%= Tecnica.find(@skillsCharacter["skill10"]).cost%></td>
+                        </tr>
+                        <tr class="border-top border-secondary">
+                            <td> Dificultad:  </td>
+                            <td> <%= Tecnica.find(@skillsCharacter["skill10"]).dif%> </td>
+                        </tr>
+                        <tr class="border-top border-secondary">
+                            <td> Daño: </td>
+                            <td> <%= Tecnica.find(@skillsCharacter["skill10"]).damage%></td>
+                        </tr>
+                        <tr class="border-top border-secondary">
+                            <td> Velocidad:  </td>
+                            <td> <%= Tecnica.find(@skillsCharacter["skill10"]).velocidad%> </td>
+                        </tr>
+                    </table>
                 </div>
             </dl>
+
+
+            <!-- Boton Ver Mas -->
+            <div>
+                <a class="btn" data-bs-toggle="collapse" href="#cincoTecnicasMas2" role="button" aria-expanded="false" aria-controls="cincoTecnicasMas2">
+                    <h2><i class="bi bi-arrow-down-circle-fill text-danger"></i></h2>
+                </a>
+            </div>
+            <div class="collapse" id="cincoTecnicasMas2">
+                <!-- Tecnica 11 -->
+                <dl class="border-top by-2">
+                    <h3 class="my-3"><%= Tecnica.find(@skillsCharacter["skill11"]).name%>
+                    </h3>
+                    <dt class="my-2"><%= Tecnica.find(@skillsCharacter["skill11"]).tipo%>
+                    </dt>
+                    <dd class="text-start"><em><%= Tecnica.find(@skillsCharacter["skill11"]).description%></em>
+                    </dd>
+                    <div class="d-flex flex-column">
+                        <table class="bg-sencondary bg-gradient mt-2">
+                            <tr class="border-top border-secondary">
+                                <td> Costo: </td>
+                                <td> <%= Tecnica.find(@skillsCharacter["skill11"]).cost%></td>
+                            </tr>
+                            <tr class="border-top border-secondary">
+                                <td> Dificultad:  </td>
+                                <td> <%= Tecnica.find(@skillsCharacter["skill11"]).dif%> </td>
+                            </tr>
+                            <tr class="border-top border-secondary">
+                                <td> Daño: </td>
+                                <td> <%= Tecnica.find(@skillsCharacter["skill11"]).damage%></td>
+                            </tr>
+                            <tr class="border-top border-secondary">
+                                <td> Velocidad:  </td>
+                                <td> <%= Tecnica.find(@skillsCharacter["skill11"]).velocidad%> </td>
+                            </tr>
+                        </table>
+                    </div>
+                </dl>
+
+                <!-- Tecnica 12 -->
+                <dl class="border-top by-2">
+                    <h3 class="my-3"><%= Tecnica.find(@skillsCharacter["skill12"]).name%>
+                    </h3>
+                    <dt class="my-2"><%= Tecnica.find(@skillsCharacter["skill12"]).tipo%>
+                    </dt>
+                    <dd class="text-start"><em><%= Tecnica.find(@skillsCharacter["skill12"]).description%></em>
+                    </dd>
+                    <div class="d-flex flex-column">
+                        <table class="bg-sencondary bg-gradient mt-2">
+                            <tr class="border-top border-secondary">
+                                <td> Costo: </td>
+                                <td> <%= Tecnica.find(@skillsCharacter["skill12"]).cost%></td>
+                            </tr>
+                            <tr class="border-top border-secondary">
+                                <td> Dificultad:  </td>
+                                <td> <%= Tecnica.find(@skillsCharacter["skill12"]).dif%> </td>
+                            </tr>
+                            <tr class="border-top border-secondary">
+                                <td> Daño: </td>
+                                <td> <%= Tecnica.find(@skillsCharacter["skill12"]).damage%></td>
+                            </tr>
+                            <tr class="border-top border-secondary">
+                                <td> Velocidad:  </td>
+                                <td> <%= Tecnica.find(@skillsCharacter["skill12"]).velocidad%> </td>
+                            </tr>
+                        </table>
+                    </div>
+                </dl>
+
+                <!-- Tecnica 13 -->
+                <dl class="border-top by-2">
+                    <h3 class="my-3"><%= Tecnica.find(@skillsCharacter["skill13"]).name%>
+                    </h3>
+                    <dt class="my-2"><%= Tecnica.find(@skillsCharacter["skill13"]).tipo%>
+                    </dt>
+                    <dd class="text-start"><em><%= Tecnica.find(@skillsCharacter["skill13"]).description%></em>
+                    </dd>
+                    <div class="d-flex flex-column">
+                        <table class="bg-sencondary bg-gradient mt-2">
+                            <tr class="border-top border-secondary">
+                                <td> Costo: </td>
+                                <td> <%= Tecnica.find(@skillsCharacter["skill13"]).cost%></td>
+                            </tr>
+                            <tr class="border-top border-secondary">
+                                <td> Dificultad:  </td>
+                                <td> <%= Tecnica.find(@skillsCharacter["skill13"]).dif%> </td>
+                            </tr>
+                            <tr class="border-top border-secondary">
+                                <td> Daño: </td>
+                                <td> <%= Tecnica.find(@skillsCharacter["skill13"]).damage%></td>
+                            </tr>
+                            <tr class="border-top border-secondary">
+                                <td> Velocidad:  </td>
+                                <td> <%= Tecnica.find(@skillsCharacter["skill13"]).velocidad%> </td>
+                            </tr>
+                        </table>
+                    </div>
+                </dl>
+
+                <!-- Tecnica 14 -->
+                <dl class="border-top by-2">
+                    <h3 class="my-3"><%= Tecnica.find(@skillsCharacter["skill14"]).name%>
+                    </h3>
+                    <dt class="my-2"><%= Tecnica.find(@skillsCharacter["skill14"]).tipo%>
+                    </dt>
+                    <dd class="text-start"><em><%= Tecnica.find(@skillsCharacter["skill14"]).description%></em>
+                    </dd>
+                    <div class="d-flex flex-column">
+                        <table class="bg-sencondary bg-gradient mt-2">
+                            <tr class="border-top border-secondary">
+                                <td> Costo: </td>
+                                <td> <%= Tecnica.find(@skillsCharacter["skill14"]).cost%></td>
+                            </tr>
+                            <tr class="border-top border-secondary">
+                                <td> Dificultad:  </td>
+                                <td> <%= Tecnica.find(@skillsCharacter["skill14"]).dif%> </td>
+                            </tr>
+                            <tr class="border-top border-secondary">
+                                <td> Daño: </td>
+                                <td> <%= Tecnica.find(@skillsCharacter["skill14"]).damage%></td>
+                            </tr>
+                            <tr class="border-top border-secondary">
+                                <td> Velocidad:  </td>
+                                <td> <%= Tecnica.find(@skillsCharacter["skill14"]).velocidad%> </td>
+                            </tr>
+                        </table>
+                    </div>
+                </dl>
+
+                <!-- Tecnica 15 -->
+                <dl class="border-top by-2">
+                    <h3 class="my-3"><%= Tecnica.find(@skillsCharacter["skill15"]).name%>
+                    </h3>
+                    <dt class="my-2"><%= Tecnica.find(@skillsCharacter["skill15"]).tipo%>
+                    </dt>
+                    <dd class="text-start"><em><%= Tecnica.find(@skillsCharacter["skill15"]).description%></em>
+                    </dd>
+                    <div class="d-flex flex-column">
+                        <table class="bg-sencondary bg-gradient mt-2">
+                            <tr class="border-top border-secondary">
+                                <td> Costo: </td>
+                                <td> <%= Tecnica.find(@skillsCharacter["skill15"]).cost%></td>
+                            </tr>
+                            <tr class="border-top border-secondary">
+                                <td> Dificultad:  </td>
+                                <td> <%= Tecnica.find(@skillsCharacter["skill15"]).dif%> </td>
+                            </tr>
+                            <tr class="border-top border-secondary">
+                                <td> Daño: </td>
+                                <td> <%= Tecnica.find(@skillsCharacter["skill15"]).damage%></td>
+                            </tr>
+                            <tr class="border-top border-secondary">
+                                <td> Velocidad:  </td>
+                                <td> <%= Tecnica.find(@skillsCharacter["skill15"]).velocidad%> </td>
+                            </tr>
+                        </table>
+                    </div>
+                </dl>
+
+                <!-- Boton Ver Mas -->
+                <div>
+                    <a class="btn" data-bs-toggle="collapse" href="#cincoTecnicasMas3" role="button" aria-expanded="false" aria-controls="cincoTecnicasMas3">
+                        <h2><i class="bi bi-arrow-down-circle-fill text-danger"></i></h2>
+                    </a>
+                </div>
+                <div class="collapse" id="cincoTecnicasMas3">
+                    <!-- Tecnica 16 -->
+                    <dl class="border-top by-2">
+                        <h3 class="my-3"><%= Tecnica.find(@skillsCharacter["skill16"]).name%>
+                        </h3>
+                        <dt class="my-2"><%= Tecnica.find(@skillsCharacter["skill16"]).tipo%>
+                        </dt>
+                        <dd class="text-start"><em><%= Tecnica.find(@skillsCharacter["skill16"]).description%></em>
+                        </dd>
+                        <div class="d-flex flex-column">
+                            <table class="bg-sencondary bg-gradient mt-2">
+                                <tr class="border-top border-secondary">
+                                    <td> Costo: </td>
+                                    <td> <%= Tecnica.find(@skillsCharacter["skill16"]).cost%></td>
+                                </tr>
+                                <tr class="border-top border-secondary">
+                                    <td> Dificultad:  </td>
+                                    <td> <%= Tecnica.find(@skillsCharacter["skill16"]).dif%> </td>
+                                </tr>
+                                <tr class="border-top border-secondary">
+                                    <td> Daño: </td>
+                                    <td> <%= Tecnica.find(@skillsCharacter["skill16"]).damage%></td>
+                                </tr>
+                                <tr class="border-top border-secondary">
+                                    <td> Velocidad:  </td>
+                                    <td> <%= Tecnica.find(@skillsCharacter["skill16"]).velocidad%> </td>
+                                </tr>
+                            </table>
+                        </div>
+                    </dl>
+
+                    <!-- Tecnica 17 -->
+                    <dl class="border-top by-2">
+                        <h3 class="my-3"><%= Tecnica.find(@skillsCharacter["skill17"]).name%>
+                        </h3>
+                        <dt class="my-2"><%= Tecnica.find(@skillsCharacter["skill17"]).tipo%>
+                        </dt>
+                        <dd class="text-start"><em><%= Tecnica.find(@skillsCharacter["skill17"]).description%></em>
+                        </dd>
+                        <div class="d-flex flex-column">
+                            <table class="bg-sencondary bg-gradient mt-2">
+                                <tr class="border-top border-secondary">
+                                    <td> Costo: </td>
+                                    <td> <%= Tecnica.find(@skillsCharacter["skill17"]).cost%></td>
+                                </tr>
+                                <tr class="border-top border-secondary">
+                                    <td> Dificultad:  </td>
+                                    <td> <%= Tecnica.find(@skillsCharacter["skill17"]).dif%> </td>
+                                </tr>
+                                <tr class="border-top border-secondary">
+                                    <td> Daño: </td>
+                                    <td> <%= Tecnica.find(@skillsCharacter["skill17"]).damage%></td>
+                                </tr>
+                                <tr class="border-top border-secondary">
+                                    <td> Velocidad:  </td>
+                                    <td> <%= Tecnica.find(@skillsCharacter["skill17"]).velocidad%> </td>
+                                </tr>
+                            </table>
+                        </div>
+                    </dl>
+
+                    <!-- Tecnica 18 -->
+                    <dl class="border-top by-2">
+                        <h3 class="my-3"><%= Tecnica.find(@skillsCharacter["skill18"]).name%>
+                        </h3>
+                        <dt class="my-2"><%= Tecnica.find(@skillsCharacter["skill18"]).tipo%>
+                        </dt>
+                        <dd class="text-start"><em><%= Tecnica.find(@skillsCharacter["skill18"]).description%></em>
+                        </dd>
+                        <div class="d-flex flex-column">
+                            <table class="bg-sencondary bg-gradient mt-2">
+                                <tr class="border-top border-secondary">
+                                    <td> Costo: </td>
+                                    <td> <%= Tecnica.find(@skillsCharacter["skill18"]).cost%></td>
+                                </tr>
+                                <tr class="border-top border-secondary">
+                                    <td> Dificultad:  </td>
+                                    <td> <%= Tecnica.find(@skillsCharacter["skill18"]).dif%> </td>
+                                </tr>
+                                <tr class="border-top border-secondary">
+                                    <td> Daño: </td>
+                                    <td> <%= Tecnica.find(@skillsCharacter["skill18"]).damage%></td>
+                                </tr>
+                                <tr class="border-top border-secondary">
+                                    <td> Velocidad:  </td>
+                                    <td> <%= Tecnica.find(@skillsCharacter["skill18"]).velocidad%> </td>
+                                </tr>
+                            </table>
+                        </div>
+                    </dl>
+
+                    <!-- Tecnica 19 -->
+                    <dl class="border-top by-2">
+                        <h3 class="my-3"><%= Tecnica.find(@skillsCharacter["skill19"]).name%>
+                        </h3>
+                        <dt class="my-2"><%= Tecnica.find(@skillsCharacter["skill19"]).tipo%>
+                        </dt>
+                        <dd class="text-start"><em><%= Tecnica.find(@skillsCharacter["skill19"]).description%></em>
+                        </dd>
+                        <div class="d-flex flex-column">
+                            <table class="bg-sencondary bg-gradient mt-2">
+                                <tr class="border-top border-secondary">
+                                    <td> Costo: </td>
+                                    <td> <%= Tecnica.find(@skillsCharacter["skill19"]).cost%></td>
+                                </tr>
+                                <tr class="border-top border-secondary">
+                                    <td> Dificultad:  </td>
+                                    <td> <%= Tecnica.find(@skillsCharacter["skill19"]).dif%> </td>
+                                </tr>
+                                <tr class="border-top border-secondary">
+                                    <td> Daño: </td>
+                                    <td> <%= Tecnica.find(@skillsCharacter["skill19"]).damage%></td>
+                                </tr>
+                                <tr class="border-top border-secondary">
+                                    <td> Velocidad:  </td>
+                                    <td> <%= Tecnica.find(@skillsCharacter["skill19"]).velocidad%> </td>
+                                </tr>
+                            </table>
+                        </div>
+                    </dl>
+
+                    <!-- Tecnica 20 -->
+                    <dl class="border-top by-2">
+                        <h3 class="my-3"><%= Tecnica.find(@skillsCharacter["skill20"]).name%>
+                        </h3>
+                        <dt class="my-2"><%= Tecnica.find(@skillsCharacter["skill20"]).tipo%>
+                        </dt>
+                        <dd class="text-start"><em><%= Tecnica.find(@skillsCharacter["skill20"]).description%></em>
+                        </dd>
+                        <div class="d-flex flex-column">
+                            <table class="bg-sencondary bg-gradient mt-2">
+                                <tr class="border-top border-secondary">
+                                    <td> Costo: </td>
+                                    <td> <%= Tecnica.find(@skillsCharacter["skill20"]).cost%></td>
+                                </tr>
+                                <tr class="border-top border-secondary">
+                                    <td> Dificultad:  </td>
+                                    <td> <%= Tecnica.find(@skillsCharacter["skill20"]).dif%> </td>
+                                </tr>
+                                <tr class="border-top border-secondary">
+                                    <td> Daño: </td>
+                                    <td> <%= Tecnica.find(@skillsCharacter["skill20"]).damage%></td>
+                                </tr>
+                                <tr class="border-top border-secondary">
+                                    <td> Velocidad:  </td>
+                                    <td> <%= Tecnica.find(@skillsCharacter["skill20"]).velocidad%> </td>
+                                </tr>
+                            </table>
+                        </div>
+                    </dl>
+                </div>
+            </div>
         </div>
 
-
-
-
     </div>
+    <div class="col-1"></div>
 </div>
 
 <%= link_to 'Editar Tecnicas', edit_character_skill_path(@character.id,@character.skills), class:"btn btn-danger"%>
